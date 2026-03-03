@@ -179,6 +179,7 @@
                 "product_meta_available_hVC3VU": {
                   "type": "_product-meta-available",
                   "name": "t:sections.main-product.blocks.meta.settings.show_available.label",
+                  "disabled": true,
                   "settings": {},
                   "blocks": {}
                 },
@@ -189,11 +190,13 @@
                 },
                 "product_meta_category_4Gq4HK": {
                   "type": "_product-meta-category",
+                  "disabled": true,
                   "settings": {},
                   "blocks": {}
                 },
                 "product_meta_tags_bePDzg": {
                   "type": "_product-meta-tags",
+                  "disabled": true,
                   "settings": {},
                   "blocks": {}
                 }
