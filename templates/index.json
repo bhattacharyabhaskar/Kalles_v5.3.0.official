@@ -446,8 +446,8 @@
         "collection_manual_item_tXNANF": {
           "type": "_collection_manual-item",
           "settings": {
-            "collection": "women",
-            "title": "Women",
+            "collection": "banarasi-silk-saree",
+            "title": "",
             "collection_link": "",
             "column_width": "6",
             "row_count": 2,
@@ -461,8 +461,8 @@
         "collection_manual_item_AEWjQE": {
           "type": "_collection_manual-item",
           "settings": {
-            "collection": "accessories",
-            "title": "Accessories",
+            "collection": "gadwal-silk-saree",
+            "title": "",
             "collection_link": "",
             "column_width": "3",
             "row_count": 1,
@@ -476,8 +476,8 @@
         "collection_manual_item_YDPY8G": {
           "type": "_collection_manual-item",
           "settings": {
-            "collection": "watch",
-            "title": "Watches",
+            "collection": "dhakai-jamdani-sarees",
+            "title": "",
             "collection_link": "",
             "column_width": "3",
             "row_count": 2,
@@ -491,8 +491,8 @@
         "collection_manual_item_D67f4i": {
           "type": "_collection_manual-item",
           "settings": {
-            "collection": "footwear",
-            "title": "Footwear",
+            "collection": "bishnupur-silk-saree",
+            "title": "",
             "collection_link": "",
             "column_width": "3",
             "row_count": 1,
