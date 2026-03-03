@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "purchase_code": "",
+    "purchase_code": "ac82ee1c-42bc-46ca-ba07-fec66c04717c",
     "color_scheme_body": "scheme-1",
     "color_focus": "#56cfe1",
     "color_scheme_dialog": "scheme-1",
@@ -273,7 +273,7 @@
   "platform_customizations": {
     "custom_css": [
       ".hdt-card-product hdt-wishlist:not([action=\"add\"]) svg {color: rgb(236, 35, 97);}",
-      ".hdt-badge.hdt-badge__on-sale {background-color: #F54E05}"
+      ".hdt-badge.hdt-badge__on-sale {background-color: #f54e05;}"
     ]
   }
 }
