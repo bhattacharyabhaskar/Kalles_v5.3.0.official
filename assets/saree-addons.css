@@ -266,3 +266,21 @@ tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
   margin-top: 6px;
   max-width: 160px;
 }
+
+/* Constrain image to its own row */
+.hdt-page-cart__image .hdt-page-cart__img {
+  width: 160px;
+  min-width: 160px;
+}
+
+@media (max-width: 767px) {
+  .hdt-page-cart__image .hdt-page-cart__img {
+    width: 80px;
+    min-width: 80px;
+  }
+  .ivy-cart-sku,
+  .ivy-cart-features,
+  .ivy-cart-note {
+    max-width: 80px;
+  }
+}
