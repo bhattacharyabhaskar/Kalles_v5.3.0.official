@@ -203,3 +203,28 @@ tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
 .hdt-page-cart__meta-variant {
   display: none;
 }
+
+/* Cart page — below image info */
+.ivy-cart-sku {
+  font-size: 1.1rem;
+  color: #888;
+  margin-top: 6px;
+}
+.ivy-cart-features {
+  margin-top: 6px;
+}
+.ivy-cart-feature {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 2px;
+}
+.ivy-check {
+  color: #0b9155;
+  margin-right: 4px;
+}
+.ivy-cart-note {
+  font-size: 1.1rem;
+  color: #b7499b;
+  margin-top: 6px;
+  max-width: 160px;
+}
