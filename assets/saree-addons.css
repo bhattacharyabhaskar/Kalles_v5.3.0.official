@@ -205,13 +205,37 @@ tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
   tr.ivy-addon-row td:first-child { padding-left: 24px !important; }
 }
 
+/* Hide +/- buttons, show quantity number only */
+.hdt-page-cart__quantity .hdt-quantity__button {
+  display: none !important;
+}
 .hdt-page-cart__quantity .hdt-quantity-input {
   border: none !important;
   background: transparent !important;
+  pointer-events: none !important;
   width: auto !important;
-  pointer-events: none;
+}
+.hdt-page-cart__quantity .hdt-quantity-wrapp {
+  border: none !important;
+  background: transparent !important;
+  min-width: unset !important;
+  width: auto !important;
 }
 .hdt-page-cart__quantity .hdt-quantity-wrapper {
   border: none !important;
   background: transparent !important;
+}
+
+.hdt-page-cart__quantity .hdt-quantity-input {
+  display: block !important;
+  border: none !important;
+  background: transparent !important;
+  pointer-events: none !important;
+  width: 30px !important;
+  text-align: center !important;
+}
+
+/* Hide delete icon in quantity column — already in product column */
+.hdt-page-cart__quantity wrapp-remove-item-oncart {
+  display: none !important;
 }
