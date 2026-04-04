@@ -67,7 +67,7 @@
             "border_w_btn": "",
             "border_btn": "#222222",
             "border_hover_btn": "#333333",
-            "size": "m",
+            "size": "custom hdt-btn--size-custom-1",
             "text_size": "hdt-text-base",
             "font_weight": "normal",
             "font_size_btn": 14,
@@ -76,8 +76,8 @@
             "min_width_dt_btn": 100,
             "min_height_btn": 40,
             "rounded": "",
-            "icon": "none",
-            "icon_position": "before",
+            "icon": "arrow_right",
+            "icon_position": "after",
             "icon_height": 16,
             "icon_spacing": 5
           }
