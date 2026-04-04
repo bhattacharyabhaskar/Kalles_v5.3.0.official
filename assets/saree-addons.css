@@ -234,3 +234,8 @@ tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
   width: 30px !important;
   text-align: center !important;
 }
+
+/* Hide delete icon in quantity column — already in product column */
+.hdt-page-cart__quantity wrapp-remove-item-oncart {
+  display: none !important;
+}
