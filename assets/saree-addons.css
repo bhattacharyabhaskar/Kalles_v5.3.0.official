@@ -204,3 +204,14 @@ tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
 @media (max-width: 767px) {
   tr.ivy-addon-row td:first-child { padding-left: 24px !important; }
 }
+
+.hdt-page-cart__quantity .hdt-quantity-input {
+  border: none !important;
+  background: transparent !important;
+  width: auto !important;
+  pointer-events: none;
+}
+.hdt-page-cart__quantity .hdt-quantity-wrapper {
+  border: none !important;
+  background: transparent !important;
+}
