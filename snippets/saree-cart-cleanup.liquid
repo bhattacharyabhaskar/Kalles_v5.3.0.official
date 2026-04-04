@@ -3,6 +3,7 @@
   Monkey-patches fetch to intercept cart/change.js calls.
   When a saree is removed, bundles addon removal in the same request
   so everything disappears in one single operation with zero lag.
+  Works for both cart drawer and main cart page.
 {% endcomment %}
 
 <script>
@@ -16,7 +17,7 @@
 
       try {
         const body = JSON.parse(options.body);
-        const lineIndex = body.line; // 1-based line number
+        const lineIndex = body.line;
 
         if (lineIndex && body.quantity === 0) {
           // Get the cart to find which item is being removed
@@ -32,25 +33,32 @@
               .map(item => item.key);
 
             if (linkedKeys.length > 0) {
-              // Build updates object: set removed item + all linked addons to 0
+              // Build updates: removed item + all linked addons set to 0
               const updates = { [removedItem.key]: 0 };
               linkedKeys.forEach(key => { updates[key] = 0; });
 
-              // Use cart/update.js instead of cart/change.js to remove all at once
-              const sectionId = document.querySelector('hdt-cart-drawer')?.getAttribute('section-id');
-              const newOptions = {
+              // Collect ALL section IDs that need re-rendering
+              // Both cart drawer and main cart page
+              const sectionIds = [];
+              const cartDrawer = document.querySelector('hdt-cart-drawer');
+              if (cartDrawer) sectionIds.push(cartDrawer.getAttribute('section-id'));
+              const mainCart = document.querySelector('hdt-main-cart');
+              if (mainCart) sectionIds.push(mainCart.getAttribute('section-id'));
+
+              // Also pass original sections from body in case Kalles added any
+              if (body.sections) {
+                const orig = Array.isArray(body.sections) ? body.sections : [body.sections];
+                orig.forEach(s => { if (!sectionIds.includes(s)) sectionIds.push(s); });
+              }
+
+              const res = await originalFetch('/cart/update.js', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ updates, sections: sectionId })
-              };
-
-              // Replace the original change.js call with our update.js call
-              // but return a response shaped like change.js so Kalles doesn't break
-              const res = await originalFetch('/cart/update.js', newOptions);
+                body: JSON.stringify({ updates, sections: sectionIds.join(',') })
+              });
               const cartData = await res.json();
 
-              // Return a fake Response that looks like cart/change.js output
-              // CartItemsComponent expects the cart JSON back
+              // Return response shaped like cart/change.js so Kalles processes it normally
               return new Response(JSON.stringify(cartData), {
                 status: 200,
                 headers: { 'Content-Type': 'application/json' }
@@ -59,12 +67,11 @@
           }
         }
       } catch (e) {
-        // If anything goes wrong, fall through to original fetch
         console.error('Saree cleanup intercept error:', e);
       }
     }
 
-    // Default: call original fetch unchanged
+    // Default: pass through unchanged
     return originalFetch.apply(this, arguments);
   };
 

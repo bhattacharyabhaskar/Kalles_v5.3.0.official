@@ -152,3 +152,66 @@
     font-size: 1.2rem;
   }
 }
+
+/* =============================================
+   Cart drawer — hide quantity, variant, properties
+   ============================================= */
+
+.hdt-mini-cart__quantity {
+  display: none;
+}
+
+.hdt-mini-cart__meta-variant {
+  display: none;
+}
+
+.hdt-mini-cart_meta_propertyList {
+  display: none;
+}
+
+/* =============================================
+   Cart page — saree group styling (Option C)
+   ============================================= */
+
+.hdt-cart-items {
+  border-collapse: separate !important;
+  border-spacing: 0 8px !important;
+}
+
+tr.ivy-group-start td { border-top: 1.5px solid #b7499b !important; }
+tr.ivy-group-start td:first-child { border-left: 1.5px solid #b7499b !important; border-top-left-radius: 8px !important; }
+tr.ivy-group-start td:last-child { border-right: 1.5px solid #b7499b !important; border-top-right-radius: 8px !important; }
+tr.ivy-group-row td:first-child { border-left: 1.5px solid #b7499b !important; }
+tr.ivy-group-row td:last-child { border-right: 1.5px solid #b7499b !important; }
+tr.ivy-group-end td { border-bottom: 1.5px solid #b7499b !important; }
+tr.ivy-group-end td:first-child { border-left: 1.5px solid #b7499b !important; border-bottom-left-radius: 8px !important; }
+tr.ivy-group-end td:last-child { border-right: 1.5px solid #b7499b !important; border-bottom-right-radius: 8px !important; }
+tr.ivy-group-row td { border-top: none !important; }
+tr.ivy-addon-row td { background: #fdf6fc !important; }
+tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
+
+/* Hide properties and variant options on cart page */
+.hdt-page-cart__meta-propertyList { display: none; }
+.hdt-page-cart__meta-variant { display: none; }
+
+/* SKU, features and blouse note */
+.ivy-cart-sku { font-size: 1.1rem; color: #888; margin-top: 4px; }
+.ivy-cart-features { margin-top: 4px; }
+.ivy-cart-feature { font-size: 1.1rem; color: #333; margin-bottom: 2px; }
+.ivy-check { color: #0b9155; margin-right: 4px; }
+.ivy-cart-note { font-size: 1.1rem; color: #b7499b; margin-top: 6px; }
+
+@media (max-width: 767px) {
+  tr.ivy-addon-row td:first-child { padding-left: 24px !important; }
+}
+
+.hdt-page-cart__quantity .hdt-quantity-input {
+  border: none !important;
+  background: transparent !important;
+  width: auto !important;
+  pointer-events: none;
+}
+.hdt-page-cart__quantity .hdt-quantity-wrapper {
+  border: none !important;
+  background: transparent !important;
+}
