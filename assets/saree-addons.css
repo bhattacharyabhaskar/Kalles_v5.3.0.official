@@ -152,3 +152,54 @@
     font-size: 1.2rem;
   }
 }
+
+/* =============================================
+   Cart drawer — hide quantity, variant, properties
+   ============================================= */
+
+.hdt-mini-cart__quantity {
+  display: none;
+}
+
+.hdt-mini-cart__meta-variant {
+  display: none;
+}
+
+.hdt-mini-cart_meta_propertyList {
+  display: none;
+}
+
+/* =============================================
+   Cart page — saree group styling (Option C)
+   ============================================= */
+
+/* Required for border-radius on td to work */
+.hdt-cart-items {
+  border-collapse: separate !important;
+  border-spacing: 0 8px !important;
+}
+
+tr.ivy-group-start td { border-top: 1.5px solid #b7499b !important; }
+tr.ivy-group-start td:first-child { border-left: 1.5px solid #b7499b !important; border-top-left-radius: 8px !important; }
+tr.ivy-group-start td:last-child { border-right: 1.5px solid #b7499b !important; border-top-right-radius: 8px !important; }
+tr.ivy-group-row td:first-child { border-left: 1.5px solid #b7499b !important; }
+tr.ivy-group-row td:last-child { border-right: 1.5px solid #b7499b !important; }
+tr.ivy-group-end td { border-bottom: 1.5px solid #b7499b !important; }
+tr.ivy-group-end td:first-child { border-left: 1.5px solid #b7499b !important; border-bottom-left-radius: 8px !important; }
+tr.ivy-group-end td:last-child { border-right: 1.5px solid #b7499b !important; border-bottom-right-radius: 8px !important; }
+tr.ivy-group-row td { border-top: none !important; }
+tr.ivy-addon-row td { background: #fdf6fc !important; }
+tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
+
+@media (max-width: 767px) {
+  tr.ivy-addon-row td:first-child { padding-left: 24px !important; }
+}
+
+.hdt-page-cart__meta-propertyList {
+  display: none;
+}
+
+/* Hide variant options on cart page */
+.hdt-page-cart__meta-variant {
+  display: none;
+}
