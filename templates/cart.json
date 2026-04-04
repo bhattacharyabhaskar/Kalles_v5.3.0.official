@@ -112,7 +112,7 @@
         "show_cart_note": true,
         "show_free_shipping_bar": true,
         "show_gift": true,
-        "show_estimate": true,
+        "show_estimate": false,
         "show_cart_discount": true,
         "discount_error_message": "Enter a valid discount code",
         "mg": "",
