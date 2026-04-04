@@ -1,0 +1,188 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // --- Get parent variant ID ---
+  const formEl = document.querySelector('form[action="/cart/add"]') 
+    || document.querySelector('form[data-type="add-to-cart-form"]');
+  const submitButton = formEl?.querySelector('button[type="submit"]');
+  const hiddenInput = formEl?.querySelector('input[name="id"]');
+
+
+  const parentVariantId = hiddenInput?.value
+    || window.product?.selected_or_first_available_variant?.id?.toString();
+
+
+  if (!formEl || !submitButton || !parentVariantId) {
+    console.error("❌ Missing required elements — script stopped");
+    return;
+  }
+
+  // --- Check addon boxes and checkboxes ---
+  const addonBoxes = document.querySelectorAll('.js-addon-box');
+  const checkboxes = document.querySelectorAll('.addon-checkbox');
+  
+  checkboxes.forEach((cb, i) => {
+    console.log(`  checkbox[${i}] data-variant-id:`, cb.getAttribute('data-variant-id'));
+  });
+
+  // --- Check button text span ---
+  const textSpan = submitButton.querySelector('.hdt-btn-atc_text');
+
+  // --- Floating button ---
+  const floatingBtn = document.createElement('button');
+  floatingBtn.type = 'button';
+  floatingBtn.id = 'ivy-floating-atc-btn';
+  floatingBtn.textContent = textSpan?.textContent || 'Add to Cart';
+  Object.assign(floatingBtn.style, {
+    backgroundColor: '#5b1a1a', color: '#ffffff', fontSize: '14px',
+    fontWeight: '600', fontFamily: 'Poppins, sans-serif', borderRadius: '40px',
+    padding: '5px 25px', textTransform: 'uppercase', border: 'none',
+    width: '90%', maxWidth: '570px', height: '40px', display: 'none',
+    position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)',
+    zIndex: '9999', boxShadow: '0 4px 12px rgba(0,0,0,0.25)', cursor: 'pointer',
+    transition: 'background-color 0.3s ease'
+  });
+  floatingBtn.addEventListener('mouseenter', () => floatingBtn.style.backgroundColor = '#a03e87');
+  floatingBtn.addEventListener('mouseleave', () => floatingBtn.style.backgroundColor = '#5b1a1a');
+  document.body.appendChild(floatingBtn);
+
+  // --- Toggle floating button ---
+  function toggleFloatingButton() {
+    if (window.innerWidth > 767) { floatingBtn.style.display = 'none'; return; }
+    const rect = submitButton.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    floatingBtn.style.display = (!isVisible && window.scrollY > 300) ? 'flex' : 'none';
+  }
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(() => { toggleFloatingButton(); scrollTimeout = null; }, 100);
+  });
+
+  // --- Update button text ---
+  function updateButtonText() {
+    const anyChecked = document.querySelectorAll('.addon-checkbox:checked').length > 0;
+    const label = anyChecked ? 'Add to Cart with Add-ons' : 'Add to Cart';
+    const span = submitButton.querySelector('.hdt-btn-atc_text');
+    if (span) span.textContent = label;
+    else submitButton.firstChild.textContent = label;
+    floatingBtn.textContent = label;
+  }
+
+  // --- Checkbox interaction ---
+  addonBoxes.forEach((box, i) => {
+    const checkbox = box.querySelector('.addon-checkbox');
+    if (!checkbox) {
+      console.warn(`❌ No checkbox found in box[${i}]`);
+      return;
+    }
+
+    box.addEventListener('click', function (e) {
+      if (e.target.tagName === 'INPUT') return;
+      checkbox.checked = !checkbox.checked;
+      box.classList.toggle('selected', checkbox.checked);
+      updateButtonText();
+    });
+
+    checkbox.addEventListener('change', function () {
+      box.classList.toggle('selected', checkbox.checked);
+      updateButtonText();
+    });
+  });
+
+  // --- Add to cart ---
+  let isSubmitting = false;
+
+  async function handleAddToCart(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isSubmitting) return;
+    isSubmitting = true;
+
+    submitButton.disabled = true;
+    floatingBtn.disabled = true;
+    const span = submitButton.querySelector('.hdt-btn-atc_text');
+    if (span) span.textContent = 'Adding...';
+    floatingBtn.textContent = 'Adding...';
+
+    const checkedAddons = Array.from(document.querySelectorAll('.addon-checkbox:checked'))
+      .map(cb => cb.getAttribute('data-variant-id'))
+      .filter(Boolean);
+
+    try {
+      // Remove previously linked items
+      const cart = await fetch('/cart.js').then(r => r.json());
+      const updates = {};
+      cart.items.forEach(item => {
+        const linked = item.properties?.['Linked to Saree'];
+        if (String(item.variant_id) === parentVariantId || linked === parentVariantId) {
+          updates[item.key] = 0;
+        }
+      });
+      if (Object.keys(updates).length > 0) {
+        await fetch('/cart/update.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ updates })
+        });
+        await new Promise(r => setTimeout(r, 300));
+      }
+
+      // Build items array
+      const itemsToAdd = [
+        ...checkedAddons.map(id => ({
+          id,
+          quantity: 1,
+          properties: { 'Linked to Saree': parentVariantId }
+        })),
+        { id: parentVariantId, quantity: 1 }
+      ];
+
+      const addRes = await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: itemsToAdd })
+      });
+      if (!addRes.ok) {
+        const errBody = await addRes.text();
+        console.error("❌ addRes error body:", errBody);
+        throw new Error('Failed to add items to cart');
+      }
+
+      // Fetch cart with sections
+      const cartDrawer = document.querySelector('hdt-cart-drawer');
+      const sectionId = cartDrawer?.getAttribute('section-id');
+
+      const sectionsRes = await fetch('/cart/update.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sections: sectionId })
+      });
+      const cartWithSections = await sectionsRes.json();
+
+      document.dispatchEvent(new CustomEvent('cart:update', {
+        bubbles: true,
+        detail: {
+          resource: cartWithSections,
+          sourceId: 'product-form-component',
+          cartData: cartWithSections,
+          actionAfterATC: 'open_cart_drawer',
+          source: 'product-form-component'
+        }
+      }));
+
+    } catch (err) {
+      console.error("❌ Cart Error:", err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      submitButton.disabled = false;
+      floatingBtn.disabled = false;
+      isSubmitting = false;
+      updateButtonText();
+    }
+  }
+
+  submitButton.addEventListener('click', handleAddToCart);
+  floatingBtn.addEventListener('click', handleAddToCart);
+});
+</script>

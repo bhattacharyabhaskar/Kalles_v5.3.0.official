@@ -1,0 +1,40 @@
+{% comment %}
+  Individual add-on product box
+  Params:
+    - addon_product: the add-on product object
+    - variant: the variant to add to cart
+{% endcomment %}
+
+<div class="ivy-upsell-box js-addon-box">
+  <input
+    type="checkbox"
+    class="addon-checkbox ivy-upsell-checkbox"
+    data-variant-id="{{ variant.id }}"
+    aria-label="Add {{ addon_product.title }} to cart"
+  />
+  <div class="ivy-upsell-content">
+    <div class="ivy-upsell-left">
+      <img
+        src="{{ addon_product.featured_image | image_url: width: 100 }}"
+        alt="{{ addon_product.title | escape }}"
+        width="60"
+        height="60"
+        loading="lazy"
+      />
+      <div class="ivy-upsell-text">
+        <div class="ivy-upsell-title">{{ addon_product.title }}</div>
+        <div class="ivy-upsell-price-row">
+          {% if variant.compare_at_price > variant.price %}
+            <del>{{ variant.compare_at_price | money }}</del>
+            <ins>+{{ variant.price | money }}</ins>
+            <span class="ivy-upsell-savings">
+              SAVE {{ variant.compare_at_price | minus: variant.price | money }}
+            </span>
+          {% else %}
+            <ins>+{{ variant.price | money }}</ins>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+{% comment %}
+  Saree Cart Cleanup
+  Monkey-patches fetch to intercept cart/change.js calls.
+  When a saree is removed, bundles addon removal in the same request
+  so everything disappears in one single operation with zero lag.
+{% endcomment %}
+
+<script>
+(function () {
+  const originalFetch = window.fetch;
+
+  window.fetch = async function (url, options) {
+
+    // Only intercept cart/change.js calls
+    if (typeof url === 'string' && url.includes('cart/change.js') && options?.body) {
+
+      try {
+        const body = JSON.parse(options.body);
+        const lineIndex = body.line; // 1-based line number
+
+        if (lineIndex && body.quantity === 0) {
+          // Get the cart to find which item is being removed
+          const cart = await originalFetch('/cart.js').then(r => r.json());
+          const removedItem = cart.items[lineIndex - 1];
+
+          if (removedItem) {
+            const removedVariantId = String(removedItem.variant_id);
+
+            // Find any add-ons linked to this item
+            const linkedKeys = cart.items
+              .filter(item => item.properties?.['Linked to Saree'] == removedVariantId)
+              .map(item => item.key);
+
+            if (linkedKeys.length > 0) {
+              // Build updates object: set removed item + all linked addons to 0
+              const updates = { [removedItem.key]: 0 };
+              linkedKeys.forEach(key => { updates[key] = 0; });
+
+              // Use cart/update.js instead of cart/change.js to remove all at once
+              const sectionId = document.querySelector('hdt-cart-drawer')?.getAttribute('section-id');
+              const newOptions = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ updates, sections: sectionId })
+              };
+
+              // Replace the original change.js call with our update.js call
+              // but return a response shaped like change.js so Kalles doesn't break
+              const res = await originalFetch('/cart/update.js', newOptions);
+              const cartData = await res.json();
+
+              // Return a fake Response that looks like cart/change.js output
+              // CartItemsComponent expects the cart JSON back
+              return new Response(JSON.stringify(cartData), {
+                status: 200,
+                headers: { 'Content-Type': 'application/json' }
+              });
+            }
+          }
+        }
+      } catch (e) {
+        // If anything goes wrong, fall through to original fetch
+        console.error('Saree cleanup intercept error:', e);
+      }
+    }
+
+    // Default: call original fetch unchanged
+    return originalFetch.apply(this, arguments);
+  };
+
+})();
+</script>

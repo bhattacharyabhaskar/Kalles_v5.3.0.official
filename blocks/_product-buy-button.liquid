@@ -125,8 +125,17 @@
             {%- endcomment -%}
           {%- endif -%}
         </hdt-buy-buttons>
+        
       {%- endform -%}
     </wrapp-hdt-pr-frm>
+
+    <!-- ✅ BEGIN SPECIAL SAREE ADD ON SECTION -->
+    {% if product.type == "Saree" %}
+      {% render 'saree-addons', fabric_type: product.metafields.saree.fabric_type, blouse_piece_value: product.metafields.saree.BlousePiece %}
+      {% render 'saree-addons-script' %}
+    {% endif %}
+    <!-- ✅ END SPECIAL SAREE ADD ON SECTION -->
+
   {%- else -%}
     <div class="hdt-product-form">
       <div class="hdt-product-form__buttons form">

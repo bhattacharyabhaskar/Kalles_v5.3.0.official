@@ -1,0 +1,51 @@
+{% comment %}
+  Saree Add-ons — "Complete Your Look" upsell section
+  Rendered on product pages where product.type == 'Saree'
+  Params:
+    - fabric_type: product.metafields.saree.fabric_type
+    - blouse_piece_value: product.metafields.saree.BlousePiece
+{% endcomment %}
+
+{% assign addon_collection = collections['saree-addons'] %}
+
+{% if addon_collection and addon_collection.products.size > 0 %}
+
+  {{ 'saree-addons.css' | asset_url | stylesheet_tag }}
+
+  {%- assign fabric_type_lower = fabric_type | downcase -%}
+  {%- assign blouse_piece_lower = blouse_piece_value | downcase -%}
+
+  <div class="ivy-upsell-wrapper">
+    <h4 class="ivy-upsell-header">COMPLETE YOUR LOOK</h4>
+
+    <div class="ivy-upsell-border">
+      {% for addon_product in addon_collection.products %}
+        {%- assign variant = addon_product.variants.first -%}
+        {%- assign addon_title = addon_product.title | downcase -%}
+        {%- assign addon_sku = variant.sku -%}
+
+        {% if addon_title contains 'stitched designer blouse' %}
+          {%- comment -%} Determine correct SKU based on fabric type {%- endcomment -%}
+          {%- if fabric_type_lower contains 'silk mark' -%}
+            {%- assign expected_sku = '11112222-3B' -%}
+          {%- elsif fabric_type_lower contains 'cotton' -%}
+            {%- assign expected_sku = '11112222-2B' -%}
+          {%- else -%}
+            {%- assign expected_sku = '11112222-1B' -%}
+          {%- endif -%}
+
+          {%- unless blouse_piece_lower contains 'no blouse piece' -%}
+            {%- if addon_sku == expected_sku -%}
+              {% render 'ivy-upsell-box', addon_product: addon_product, variant: variant %}
+            {%- endif -%}
+          {%- endunless -%}
+
+        {% else %}
+          {% render 'ivy-upsell-box', addon_product: addon_product, variant: variant %}
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  </div>
+
+{% endif %}
