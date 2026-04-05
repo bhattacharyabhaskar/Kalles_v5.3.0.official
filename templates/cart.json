@@ -109,9 +109,9 @@
       ],
       "settings": {
         "color_scheme": "",
-        "show_cart_note": true,
-        "show_free_shipping_bar": true,
-        "show_gift": true,
+        "show_cart_note": false,
+        "show_free_shipping_bar": false,
+        "show_gift": false,
         "show_estimate": false,
         "show_cart_discount": true,
         "discount_error_message": "Enter a valid discount code",
@@ -120,10 +120,27 @@
         "pd": "70px,,50px,",
         "pd_mb": "70px,,50px,"
       }
+    },
+    "custom_liquid_8QiDKR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<div data-romw-token=\"I5W5JlfJ0oFDYzcwh88kG73Q2SIlGH1yZsOr7IaOROdze3nWlT\" data-romw-lazy></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
     }
   },
   "order": [
     "main_heading_zHKQUU",
-    "main-cart"
+    "main-cart",
+    "custom_liquid_8QiDKR"
   ]
 }
