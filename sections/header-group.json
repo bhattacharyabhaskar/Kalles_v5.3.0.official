@@ -14,45 +14,45 @@
     "announcement_bar_QKnWCh": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_1": {
-          "type": "announcement",
-          "settings": {
-            "link": "/collections/buy-silk-mark-certified-saree",
-            "text": "🌸 Spring Special — Up to 10% Off on Handwoven Silk Sarees! <a href=\"/collections/buy-silk-mark-certified-saree\">Shop Now →</a>",
-            "adding_border": false,
-            "countdown": "2025-12-30 15:00:00",
-            "txt_day": "days",
-            "text_highlight": "",
-            "hdt_font_size": 14
-          }
-        },
-        "announcement_2": {
+        "announcement_izeF7X": {
           "type": "announcement",
           "settings": {
             "link": "",
-            "text": "🚚 Free Shipping on orders above $75 | 100% Authentic Handwoven Sarees",
+            "text": "Today deal sale off <strong>70%</strong>. End in[countdown].  <a href=\"/collections/all\" title=\"All products\">Hurry Up [icon_arrow]</a>",
             "adding_border": false,
             "countdown": "2025-12-30 15:00:00",
             "txt_day": "days",
             "text_highlight": "",
-            "hdt_font_size": 14
+            "hdt_font_size": 16
+          }
+        },
+        "announcement_fekMnb": {
+          "type": "announcement",
+          "settings": {
+            "link": "",
+            "text": "Welcome to our store",
+            "adding_border": false,
+            "countdown": "2024-12-30 15:00:00",
+            "txt_day": "days",
+            "text_highlight": "",
+            "hdt_font_size": 16
           }
         }
       },
       "block_order": [
-        "announcement_1",
-        "announcement_2"
+        "announcement_izeF7X",
+        "announcement_fekMnb"
       ],
       "settings": {
         "show_line_separator": false,
         "close_btn": "1",
-        "height": 40,
-        "fontsize": 13,
+        "height": 45,
+        "fontsize": 12,
         "design": "slider",
         "hdt_using_image_icon": false,
         "space_item": 30,
         "speed": 0.3,
-        "direction": "ltr",
+        "direction": "rtl",
         "pausable": false,
         "effect": "carousel",
         "au_time": 5,
@@ -66,118 +66,107 @@
     "header_inline_blocks_xePFbC": {
       "type": "header-inline-blocks",
       "blocks": {
-        "nav_sarees": {
+        "mega_block_7DJYPE": {
           "type": "_mega_block",
           "settings": {
-            "title": "SAREES",
+            "title": "Home",
             "mega_menu_colors": "",
-            "mega_width": "custom",
+            "mega_width": "full",
             "mega_position": "bottom",
-            "mega_custom_width": 1050,
-            "mega_presets": "child_menu",
-            "html": "",
-            "page": "",
-            "blog": "",
-            "product_list": [],
-            "collection_list": [],
-            "limit": 8,
-            "image_ratio": "adapt_image",
-            "image_size": true,
-            "navUI": true,
-            "collection_colors": "",
-            "product_list_title": "",
-            "child_menu": "sarees"
-          },
-          "blocks": {}
-        },
-        "nav_suits": {
-          "type": "_mega_block",
-          "settings": {
-            "title": "SUITS & DRESSES",
-            "mega_menu_colors": "",
-            "mega_width": "custom",
-            "mega_position": "bottom",
-            "mega_custom_width": 600,
-            "mega_presets": "child_menu",
-            "html": "",
-            "page": "",
-            "blog": "",
-            "product_list": [],
-            "collection_list": [],
-            "limit": 8,
-            "image_ratio": "adapt_image",
-            "image_size": true,
-            "navUI": true,
-            "collection_colors": "",
-            "product_list_title": "",
-            "child_menu": "suites-dresses"
-          },
-          "blocks": {}
-        },
-        "nav_exclusives": {
-          "type": "_mega_block",
-          "settings": {
-            "title": "EXCLUSIVES",
-            "mega_menu_colors": "",
-            "mega_width": "custom",
-            "mega_position": "bottom",
-            "mega_custom_width": 1000,
-            "mega_presets": "child_menu",
-            "html": "",
-            "page": "",
-            "blog": "",
-            "product_list": [],
-            "collection_list": [],
-            "limit": 8,
-            "image_ratio": "adapt_image",
-            "image_size": true,
-            "navUI": true,
-            "collection_colors": "",
-            "product_list_title": "",
-            "child_menu": "header-special-collection"
-          },
-          "blocks": {}
-        },
-        "nav_accessories": {
-          "type": "_mega_block",
-          "settings": {
-            "title": "ACCESSORIES",
-            "mega_menu_colors": "",
-            "mega_width": "custom",
-            "mega_position": "bottom",
-            "mega_custom_width": 600,
-            "mega_presets": "child_menu",
-            "html": "",
-            "page": "",
-            "blog": "",
-            "product_list": [],
-            "collection_list": [],
-            "limit": 8,
-            "image_ratio": "adapt_image",
-            "image_size": true,
-            "navUI": true,
-            "collection_colors": "",
-            "product_list_title": "",
-            "child_menu": "accessories"
-          },
-          "blocks": {}
-        },
-        "nav_sale": {
-          "type": "_mega_block",
-          "settings": {
-            "title": "SALE",
-            "mega_menu_colors": "",
-            "mega_width": "custom",
-            "mega_position": "bottom",
-            "mega_custom_width": 600,
+            "mega_custom_width": 1200,
             "mega_presets": "html",
             "html": "",
+            "page": "demos",
+            "blog": "",
+            "product_list": [],
+            "collection_list": [],
+            "limit": 8,
+            "image_ratio": "adapt_image",
+            "image_size": true,
+            "navUI": true,
+            "collection_colors": "",
+            "product_list_title": "BEST SELLER",
+            "child_menu": ""
+          },
+          "blocks": {}
+        },
+        "mega_block_PKdDaN": {
+          "type": "_mega_block",
+          "settings": {
+            "title": "Shop",
+            "mega_menu_colors": "scheme-1",
+            "mega_width": "custom",
+            "mega_position": "center_on_screen",
+            "mega_custom_width": 1200,
+            "mega_presets": "mega_shop",
+            "html": "",
+            "page": "",
+            "blog": "",
+            "product_list": [],
+            "collection_list": [
+              "women",
+              "men"
+            ],
+            "limit": 8,
+            "image_ratio": "asos",
+            "image_size": true,
+            "navUI": true,
+            "collection_colors": "scheme-1",
+            "product_list_title": "BEST SELLER",
+            "child_menu": ""
+          },
+          "blocks": {}
+        },
+        "mega_block_ntakNQ": {
+          "type": "_mega_block",
+          "settings": {
+            "title": "Products",
+            "mega_menu_colors": "",
+            "mega_width": "custom",
+            "mega_position": "center_on_screen",
+            "mega_custom_width": 1200,
+            "mega_presets": "mega_product",
+            "html": "",
             "page": "",
             "blog": "",
             "product_list": [],
             "collection_list": [],
             "limit": 8,
             "image_ratio": "adapt_image",
+            "image_size": true,
+            "navUI": true,
+            "collection_colors": "",
+            "product_list_title": "BEST SELLER",
+            "child_menu": ""
+          },
+          "blocks": {}
+        },
+        "mega_block_7qDM6U": {
+          "type": "_mega_block",
+          "settings": {
+            "title": "Sale",
+            "mega_menu_colors": "scheme-1",
+            "mega_width": "custom",
+            "mega_position": "center_on_screen",
+            "mega_custom_width": 1200,
+            "mega_presets": "mega_sale",
+            "html": "",
+            "page": "",
+            "blog": "",
+            "product_list": [
+              "91-short-sleeve-shirt",
+              "disney-silver-rings",
+              "copy-of-antique-sewing-scissors",
+              "adidas-copa-primeknit-sneakers",
+              "copy-of-adhesive-tape-dispenser",
+              "9thirty-corduroy-blue-cap",
+              "all-day-contour-7-8-gym-leggings",
+              "mookis-yoga-mat-bag",
+              "analogue-resin-strap"
+            ],
+            "collection_list": [],
+            "limit": 8,
+            "image_ratio": "asos",
             "image_size": true,
             "navUI": true,
             "collection_colors": "",
@@ -186,15 +175,15 @@
           },
           "blocks": {}
         },
-        "nav_about": {
+        "mega_block_MtwFkx": {
           "type": "_mega_block",
           "settings": {
-            "title": "ABOUT US",
+            "title": "Pages",
             "mega_menu_colors": "",
             "mega_width": "custom",
-            "mega_position": "bottom",
-            "mega_custom_width": 600,
-            "mega_presets": "html",
+            "mega_position": "center_on_screen",
+            "mega_custom_width": 1200,
+            "mega_presets": "mega_page",
             "html": "",
             "page": "",
             "blog": "",
@@ -205,55 +194,31 @@
             "image_size": true,
             "navUI": true,
             "collection_colors": "",
-            "product_list_title": "",
+            "product_list_title": "BEST SELLER",
             "child_menu": ""
           },
           "blocks": {}
         },
-        "nav_reviews": {
+        "mega_block_Jbe4K9": {
           "type": "_mega_block",
           "settings": {
-            "title": "REVIEWS",
-            "mega_menu_colors": "",
+            "title": "Blog",
+            "mega_menu_colors": "scheme-1",
             "mega_width": "custom",
-            "mega_position": "bottom",
-            "mega_custom_width": 600,
-            "mega_presets": "html",
-            "html": "",
-            "page": "",
-            "blog": "",
-            "product_list": [],
-            "collection_list": [],
-            "limit": 8,
-            "image_ratio": "adapt_image",
-            "image_size": true,
-            "navUI": true,
-            "collection_colors": "",
-            "product_list_title": "",
-            "child_menu": ""
-          },
-          "blocks": {}
-        },
-        "nav_blogs": {
-          "type": "_mega_block",
-          "settings": {
-            "title": "BLOGS",
-            "mega_menu_colors": "",
-            "mega_width": "custom",
-            "mega_position": "bottom",
-            "mega_custom_width": 800,
+            "mega_position": "center_on_screen",
+            "mega_custom_width": 1200,
             "mega_presets": "mega_blog",
             "html": "",
             "page": "",
-            "blog": "indyvogue-fashion-center",
+            "blog": "fashion",
             "product_list": [],
             "collection_list": [],
-            "limit": 4,
+            "limit": 8,
             "image_ratio": "adapt_image",
             "image_size": true,
             "navUI": true,
             "collection_colors": "",
-            "product_list_title": "",
+            "product_list_title": "BEST SELLER",
             "child_menu": ""
           },
           "blocks": {}
@@ -266,36 +231,33 @@
             "menu_categories": "",
             "only_click_icon": false,
             "header_mobile_colors": "",
-            "note_mobile": "<span class=\"hdt-flex hdt-flex-col hdt-text-base\" style=\"line-height: 24px;\"><span>Email: <b>sumanab@indyvogue.com</b></span><span>Phone: <b>+1 913-378-4722</b></span></span>"
+            "note_mobile": "<span class=\"hdt-inline-flex hdt-text-base\" style=\"margin-bottom: 10px\">Need help ? </span><span class=\"hdt-flex hdt-flex-col hdt-text-base\" style=\"line-height: 24px;\"><span>Email: <b>info@fashionshop.com</b></span><span>Phone: <b>(212) 555-1234</b></span></span>"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "nav_sarees",
-        "nav_suits",
-        "nav_exclusives",
-        "nav_accessories",
-        "nav_sale",
-        "nav_about",
-        "nav_reviews",
-        "nav_blogs"
+        "mega_block_7DJYPE",
+        "mega_block_PKdDaN",
+        "mega_block_ntakNQ",
+        "mega_block_7qDM6U",
+        "mega_block_MtwFkx",
+        "mega_block_Jbe4K9"
       ],
       "settings": {
         "header_layout": "logo_left",
         "header_fullwidth": true,
         "header_height": 70,
-        "logo": "",
-        "logo_width": 120,
+        "logo_width": 95,
         "header_colors": "",
         "main_menu": "01-desktop-header",
         "lazy_mn": false,
         "menu_position": "center",
-        "menu_size": "sm",
-        "menu_weight": "medium",
-        "text_transform": true,
+        "menu_size": "base",
+        "menu_weight": "normal",
+        "text_transform": false,
         "dropdown_arrow": false,
-        "spacing_nav": 24,
+        "spacing_nav": 30,
         "open_event": "hover",
         "menu_type": "default",
         "header_menu_colors": "",
@@ -303,12 +265,12 @@
         "hover_icon": "2",
         "search_type": "icon",
         "enabled_user": true,
-        "enabled_wishlist": false,
+        "enabled_wishlist": true,
         "enabled_cart": true,
         "cart_des": "1",
         "header_socials": false,
         "header_height_mb": 60,
-        "logo_width_mb": 100,
+        "logo_width_mb": 95,
         "header_transparent": false,
         "header_transparent_colors": "",
         "background_opacity_transparent": 0,
