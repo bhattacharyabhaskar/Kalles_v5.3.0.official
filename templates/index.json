@@ -1490,291 +1490,31 @@
         "pd_mb": ""
       }
     },
-    "shipping_9pXycT": {
-      "type": "shipping",
+    "1755067183c661e3bf": {
+      "type": "apps",
       "blocks": {
-        "shipping_hRKwnn": {
-          "type": "_shipping",
+        "instafeed_app_block_w9zNGW": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "icon_themes": "car",
-            "icon": ""
-          },
-          "blocks": {
-            "heading_GVDr7i": {
-              "type": "heading",
-              "settings": {
-                "heading": "<p>FREE SHIPPING</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "line_height": "",
-                "font_weight": "medium",
-                "heading_size": "h6",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 16,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            },
-            "spacer_NEFf8W": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 4,
-                "space_md": 4,
-                "space": 4
-              },
-              "blocks": {}
-            },
-            "text_dMrMq7": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Free shipping on all US orders or orders above $100</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "sm",
-                "line_height": "",
-                "font_weight": "normal",
-                "text_color": "hdt-text-secondary",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_GVDr7i",
-            "spacer_NEFf8W",
-            "text_dMrMq7"
-          ]
-        },
-        "shipping_CirHre": {
-          "type": "_shipping",
-          "settings": {
-            "icon_themes": "help",
-            "icon": ""
-          },
-          "blocks": {
-            "heading_K8g4ny": {
-              "type": "heading",
-              "settings": {
-                "heading": "<p>SUPPORT 24/7</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "line_height": "",
-                "font_weight": "medium",
-                "heading_size": "h6",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 16,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            },
-            "spacer_pqetkW": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 4,
-                "space_md": 4,
-                "space": 4
-              },
-              "blocks": {}
-            },
-            "text_CUr68b": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Contact us 24 hours a day, 7 days a week</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "sm",
-                "line_height": "",
-                "font_weight": "normal",
-                "text_color": "hdt-text-secondary",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_K8g4ny",
-            "spacer_pqetkW",
-            "text_CUr68b"
-          ]
-        },
-        "shipping_Qqget3": {
-          "type": "_shipping",
-          "settings": {
-            "icon_themes": "refesh",
-            "icon": ""
-          },
-          "blocks": {
-            "heading_4YwXcW": {
-              "type": "heading",
-              "settings": {
-                "heading": "<p>30 DAYS RETURN</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "line_height": "",
-                "font_weight": "medium",
-                "heading_size": "h6",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 16,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            },
-            "spacer_CFWFcq": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 4,
-                "space_md": 4,
-                "space": 4
-              },
-              "blocks": {}
-            },
-            "text_XtgbKd": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Simply return it within 30 days for an exchange.</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "sm",
-                "line_height": "",
-                "font_weight": "normal",
-                "text_color": "hdt-text-secondary",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_4YwXcW",
-            "spacer_CFWFcq",
-            "text_XtgbKd"
-          ]
-        },
-        "shipping_iBieM3": {
-          "type": "_shipping",
-          "settings": {
-            "icon_themes": "door-lock",
-            "icon": ""
-          },
-          "blocks": {
-            "heading_FkL9Ep": {
-              "type": "heading",
-              "settings": {
-                "heading": "<p>100% PAYMENT SECURE</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "line_height": "",
-                "font_weight": "medium",
-                "heading_size": "h6",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 16,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            },
-            "spacer_MVek93": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 4,
-                "space_md": 4,
-                "space": 4
-              },
-              "blocks": {}
-            },
-            "text_YHBMin": {
-              "type": "text",
-              "settings": {
-                "text": "<p>We ensure secure payment with PEV</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "sm",
-                "line_height": "",
-                "font_weight": "normal",
-                "text_color": "hdt-text-secondary",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_FkL9Ep",
-            "spacer_MVek93",
-            "text_YHBMin"
-          ]
-        },
-        "section-heading-shipping": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "1",
-            "horizontal": false,
-            "alignment": "left",
-            "heading_gap": 15,
-            "margin_bottom": 30
-          },
-          "blocks": {}
+            "title": "@ FOLLOW US ON INSTAGRAM",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "center",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
         }
       },
       "block_order": [
-        "shipping_hRKwnn",
-        "shipping_CirHre",
-        "shipping_Qqget3",
-        "shipping_iBieM3"
+        "instafeed_app_block_w9zNGW"
       ],
-      "settings": {
-        "content_align": "left",
-        "align_center": false,
-        "icon_design": "default",
-        "use_border": false,
-        "space_padding": false,
-        "icon_size": "medium",
-        "icon_color": "hdt-icon-secondary",
-        "col_dk": "4",
-        "col_tb": "2",
-        "col_mb": "1",
-        "carousel_mobile": true,
-        "dot_color": "",
-        "dot_rounded": true,
-        "colors_by_section": false,
-        "color_scheme": "scheme-1",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": "",
-        "mg_mb": "",
-        "pd": "40px,,40px,",
-        "pd_mb": "40px,,40px,"
-      }
-    },
-    "1755067183c661e3bf": {
-      "type": "apps",
       "settings": {
         "include_margins": true
       }
@@ -1806,7 +1546,6 @@
     "featured_collection_CKUpWw",
     "blog_post_DcUjga",
     "lookbook_carousel_VeWgrg",
-    "shipping_9pXycT",
     "1755067183c661e3bf",
     "custom_liquid_jxkK9w"
   ]
