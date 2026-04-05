@@ -337,12 +337,6 @@
             "page": ""
           }
         },
-        "tab_add_HXf3yk": {
-          "type": "tab_add",
-          "settings": {
-            "title": "Additional Information"
-          }
-        },
         "tab_html_7dKb7L": {
           "type": "tab_html",
           "settings": {
@@ -372,7 +366,6 @@
         "tab_liquid_zQg7gf",
         "tab_liquid_LDr3jc",
         "tab_html_wRtYPQ",
-        "tab_add_HXf3yk",
         "tab_html_7dKb7L",
         "tab_html_qgY3Kz",
         "tab_liquid_ipfAzd"
