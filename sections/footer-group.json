@@ -605,15 +605,6 @@
             "pd_mb": ""
           },
           "blocks": {
-            "payment_icons_p4KVqX": {
-              "type": "_payment_icons",
-              "name": "t:blocks.payment.name",
-              "settings": {
-                "svg": "amazon,american_express,apple_pay,bitcoin",
-                "height": 30
-              },
-              "blocks": {}
-            },
             "copyright_text": {
               "type": "_liquid",
               "settings": {
@@ -634,7 +625,6 @@
             }
           },
           "block_order": [
-            "payment_icons_p4KVqX",
             "copyright_text"
           ]
         }
