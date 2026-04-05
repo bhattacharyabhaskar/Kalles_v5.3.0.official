@@ -271,12 +271,12 @@
               </div>
             </hdt-slider>
             {%- render 'badges', product: product, use_variant: true, update_hidden: true,form_id: product_form_id, class: 'hdt-absolute hdt-top-0 hdt-right-0 hdt-media-badges' -%}
-            {%- assign fabric_value = product.metafields.saree.fabric_type | metafield_text -%}
-              {%- if fabric_value contains 'Silk Mark Certified' -%}
-                <div class="ivy-badge-logo-left">
-                  <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="70" height="70" loading="lazy">
-                </div>
-              {%- endif -%}
+              {%- assign fabric_value = product.metafields.saree.fabric_type | metafield_text -%}
+                {%- if fabric_value contains 'Silk Mark Certified' -%}
+                  <div class="ivy-badge-logo-left">
+                    <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="70" height="70" loading="lazy">
+                  </div>
+                {%- endif -%}
             {%- if block.settings.enable_lightbox_icon -%}
               {%- render 'open_lightbox_icon' -%}
             {%- endif -%}

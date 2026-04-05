@@ -49,6 +49,7 @@
       render 'css-variables', is_rtl: is_rtl
       render 'js-variables'
       render 'scripts'
+      echo 'saree-addons.css' | asset_url | stylesheet_tag
       if settings.custom_html_head != blank
         echo settings.custom_html_head
       endif

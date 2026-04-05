@@ -92,6 +92,15 @@
       </div>
       {% render 'scrolling_badge', product: card_product %}
     </div>
+   <!-- BADGE-TEST: {{ card_product.metafields.saree.fabric_type.value }} -->
+   {%- if card_product.metafields.saree.fabric_type.value != blank -%}
+      {%- assign fabric_check = card_product.metafields.saree.fabric_type.value | downcase -%}
+      {%- if fabric_check contains 'silk mark' -%}
+        <div class="ivy-badge-logo-left">
+          <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="60" height="60" loading="lazy">
+        </div>
+      {%- endif -%}
+    {%- endif -%}
     <div class="hdt-card-product__info hdt-card-align-{{ settings.pr_card_alignment }}">
       {%- if settings.show_rating %}{% render 'hdt-pr-card-rating', product: card_product %}{% endif -%}
       {%- liquid

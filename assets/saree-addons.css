@@ -394,3 +394,43 @@ tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
     height: 50px;
   }
 }
+
+/* Silk Mark badge on collection cards */
+.hdt-card-product__wrapper {
+  position: relative;
+}
+
+.hdt-card-product__wrapper .ivy-badge-logo-left {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 12;
+  pointer-events: none;
+}
+
+/* Silk Mark badge on collection cards */
+.hdt-card-product__wrapper {
+  position: relative;
+}
+
+.hdt-card-product__wrapper > .ivy-badge-logo-left {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 12;
+  pointer-events: none;
+}
+
+.hdt-card-product__wrapper > .ivy-badge-logo-left img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+/* Silk Mark badge on collection cards — mobile */
+@media (max-width: 767px) {
+  .hdt-card-product__wrapper > .ivy-badge-logo-left img {
+    width: 40px;
+    height: 40px;
+  }
+}
