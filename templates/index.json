@@ -1681,11 +1681,29 @@
           "settings": {
             "design_heading": "1",
             "horizontal": false,
-            "alignment": "left",
+            "alignment": "center",
             "heading_gap": 15,
             "margin_bottom": 30
           },
-          "blocks": {}
+          "blocks": {
+            "heading_section_a6rHNW": {
+              "type": "_heading_section",
+              "name": "t:blocks.section_heading.name",
+              "settings": {
+                "heading": "EXCLUSIVE INDYVOGUE COLLECTIONS",
+                "line_height": "",
+                "heading_size": "h5",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_section_a6rHNW"
+          ]
         }
       },
       "block_order": [
