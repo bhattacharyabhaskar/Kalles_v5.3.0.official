@@ -675,7 +675,7 @@
           "type": "_collection_item",
           "name": "t:sections.collections-list.blocks.collection_item",
           "settings": {
-            "collection": "",
+            "collection": "shop-designer-sarees",
             "image": "shopify://shop_images/15.webp",
             "hdt_collection_list_svg": "",
             "svg_width": 60,
