@@ -51,6 +51,7 @@
       render 'scripts'
       echo 'ivy-badges.css' | asset_url | stylesheet_tag
       echo 'ivy-discounts.css' | asset_url | stylesheet_tag
+      echo 'ivy-collection-banner.css' | asset_url | stylesheet_tag
       if settings.custom_html_head != blank
         echo settings.custom_html_head
       endif

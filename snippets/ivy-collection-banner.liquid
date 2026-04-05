@@ -1,0 +1,66 @@
+{%- comment -%}
+  IndyVogue — Collection Promo Banner
+  Injected into the product grid after a configurable position.
+  Data comes from collection metafields — different per collection.
+
+  Metafields used (namespace: custom):
+  - banner_image      → File (image)
+  - banner_heading    → Single line text
+  - banner_subtext    → Single line text
+  - banner_link       → URL
+  - banner_position   → Integer (after which product #, default 8)
+  - banner_bg_color   → Color
+
+  Usage:
+  {%- render 'ivy-collection-banner', collection: collection -%}
+{%- endcomment -%}
+
+{%- liquid
+  assign banner_image    = collection.metafields.custom.banner_image.value
+  assign banner_heading  = collection.metafields.custom.banner_heading.value
+  assign banner_subtext  = collection.metafields.custom.banner_subtext.value
+  assign banner_link     = collection.metafields.custom.banner_link.value
+  assign banner_bg_color = collection.metafields.custom.banner_bg_color.value | default: '#fef9ec'
+-%}
+
+{%- if banner_image != blank or banner_heading != blank -%}
+  {%- assign banner_tag = 'div' -%}
+  {%- if banner_link != blank -%}{%- assign banner_tag = 'a' -%}{%- endif -%}
+
+  <{{ banner_tag }} class="ivy-collection-banner"
+    {%- if banner_link != blank %} href="{{ banner_link }}"{% endif %}
+    {%- if banner_image == blank %} style="background-color: {{ banner_bg_color }};"{% endif %}
+  >
+    {%- if banner_image != blank -%}
+      <img
+        src="{{ banner_image | image_url: width: 1200 }}"
+        srcset="{{ banner_image | image_url: width: 600 }} 600w, {{ banner_image | image_url: width: 900 }} 900w, {{ banner_image | image_url: width: 1200 }} 1200w"
+        sizes="(max-width: 767px) 100vw, calc(100vw - 40px)"
+        alt="{{ banner_heading | default: collection.title | escape }}"
+        width="{{ banner_image.width }}"
+        height="{{ banner_image.height }}"
+        loading="lazy"
+        class="ivy-collection-banner__img"
+      >
+      {%- if banner_heading != blank or banner_subtext != blank -%}
+        <div class="ivy-collection-banner__overlay">
+          {%- if banner_heading != blank -%}
+            <h3 class="ivy-collection-banner__heading">{{ banner_heading }}</h3>
+          {%- endif -%}
+          {%- if banner_subtext != blank -%}
+            <p class="ivy-collection-banner__subtext">{{ banner_subtext }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- else -%}
+      <div class="ivy-collection-banner__text">
+        {%- if banner_heading != blank -%}
+          <h3 class="ivy-collection-banner__heading">{{ banner_heading }}</h3>
+        {%- endif -%}
+        {%- if banner_subtext != blank -%}
+          <p class="ivy-collection-banner__subtext">{{ banner_subtext }}</p>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </{{ banner_tag }}>
+{%- endif -%}
