@@ -666,6 +666,213 @@
         "pd_mb": ""
       }
     },
+    "tabs_collection_dWUhRB": {
+      "type": "tabs-collection",
+      "blocks": {
+        "tab_collection_3zV7ji": {
+          "type": "_tab-collection",
+          "settings": {
+            "title": "Assam Silk",
+            "collection": "",
+            "hdt_show_icon_image": false,
+            "hdt_icon_spacing": 8
+          },
+          "blocks": {
+            "product_grid_Uz9Kw3": {
+              "type": "_product-grid",
+              "settings": {
+                "collection": "assam-silk-sarees",
+                "products_count": 4,
+                "product_list": [],
+                "pr_border": "none",
+                "product_des": "1",
+                "image_ratio": "adapt_image",
+                "image_size": true,
+                "show_vendor": false,
+                "col_dk": "4",
+                "col_tb": "3",
+                "col_mb": "2",
+                "space_items": "x",
+                "pagination": true,
+                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+                "pagination_type": "view_all",
+                "enable_progressbar": false,
+                "paginate_pos": "center",
+                "dis_pagination": 30,
+                "btn_label": "",
+                "btn_style": "",
+                "endable_btn_icon": false,
+                "size": "m",
+                "btn_fw": "medium",
+                "rounded": "",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_grid_Uz9Kw3"
+          ]
+        },
+        "tab_collection_BjUW6T": {
+          "type": "_tab-collection",
+          "settings": {
+            "title": "Bishnupuri Silk",
+            "collection": "",
+            "hdt_show_icon_image": false,
+            "hdt_icon_spacing": 8
+          },
+          "blocks": {
+            "product_grid_QhFbxx": {
+              "type": "_product-grid",
+              "settings": {
+                "collection": "bishnupur-silk-saree",
+                "products_count": 8,
+                "product_list": [],
+                "pr_border": "none",
+                "product_des": "1",
+                "image_ratio": "adapt_image",
+                "image_size": true,
+                "show_vendor": false,
+                "col_dk": "4",
+                "col_tb": "3",
+                "col_mb": "2",
+                "space_items": "x",
+                "pagination": true,
+                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+                "pagination_type": "view_all",
+                "enable_progressbar": false,
+                "paginate_pos": "center",
+                "dis_pagination": 30,
+                "btn_label": "",
+                "btn_style": "",
+                "endable_btn_icon": false,
+                "size": "m",
+                "btn_fw": "medium",
+                "rounded": "",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_grid_QhFbxx"
+          ]
+        },
+        "tab_collection_xw8mXx": {
+          "type": "_tab-collection",
+          "settings": {
+            "title": "White N Red",
+            "collection": "",
+            "hdt_show_icon_image": false,
+            "hdt_icon_spacing": 8
+          },
+          "blocks": {
+            "product_grid_n3kbxw": {
+              "type": "_product-grid",
+              "settings": {
+                "collection": "red-and-white-saree-collection",
+                "products_count": 8,
+                "product_list": [],
+                "pr_border": "none",
+                "product_des": "1",
+                "image_ratio": "adapt_image",
+                "image_size": true,
+                "show_vendor": false,
+                "col_dk": "4",
+                "col_tb": "3",
+                "col_mb": "2",
+                "space_items": "x",
+                "pagination": true,
+                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+                "pagination_type": "view_all",
+                "enable_progressbar": false,
+                "paginate_pos": "center",
+                "dis_pagination": 30,
+                "btn_label": "",
+                "btn_style": "",
+                "endable_btn_icon": false,
+                "size": "m",
+                "btn_fw": "medium",
+                "rounded": "",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_grid_n3kbxw"
+          ]
+        },
+        "tabs-collection-heading": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "1",
+            "horizontal": false,
+            "alignment": "center",
+            "heading_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {
+            "heading_section_MRFy69": {
+              "type": "_heading_section",
+              "name": "t:blocks.section_heading.name",
+              "settings": {
+                "heading": "Hot Trends of the Week",
+                "line_height": "",
+                "heading_size": "h5",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_section_MRFy69"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_collection_3zV7ji",
+        "tab_collection_BjUW6T",
+        "tab_collection_xw8mXx"
+      ],
+      "name": "t:sections.tabs_collections.grid_name",
+      "settings": {
+        "enable_tabs_on_heading": false,
+        "tabs_des": "has_border_bg",
+        "tabs_list_pos": "center",
+        "tab_item_size": "lg",
+        "tab_item_border": "solid",
+        "border_width": 2,
+        "spacing_tabs_items": 30,
+        "tabs_head_spacing": 30,
+        "colors_by_section": false,
+        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "featured_collection_PTq36A": {
       "type": "featured-collection",
       "blocks": {
@@ -1627,213 +1834,6 @@
         "pd": "",
         "pd_mb": ""
       }
-    },
-    "tabs_collection_dWUhRB": {
-      "type": "tabs-collection",
-      "blocks": {
-        "tab_collection_3zV7ji": {
-          "type": "_tab-collection",
-          "settings": {
-            "title": "Assam Silk",
-            "collection": "",
-            "hdt_show_icon_image": false,
-            "hdt_icon_spacing": 8
-          },
-          "blocks": {
-            "product_grid_Uz9Kw3": {
-              "type": "_product-grid",
-              "settings": {
-                "collection": "assam-silk-sarees",
-                "products_count": 4,
-                "product_list": [],
-                "pr_border": "none",
-                "product_des": "1",
-                "image_ratio": "adapt_image",
-                "image_size": true,
-                "show_vendor": false,
-                "col_dk": "4",
-                "col_tb": "3",
-                "col_mb": "2",
-                "space_items": "x",
-                "pagination": true,
-                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-                "pagination_type": "view_all",
-                "enable_progressbar": false,
-                "paginate_pos": "center",
-                "dis_pagination": 30,
-                "btn_label": "",
-                "btn_style": "",
-                "endable_btn_icon": false,
-                "size": "m",
-                "btn_fw": "medium",
-                "rounded": "",
-                "font_size_btn": 14,
-                "padding_btn": 30,
-                "min_width_btn": 100,
-                "min_width_dt_btn": 100,
-                "min_height_btn": 40
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_grid_Uz9Kw3"
-          ]
-        },
-        "tab_collection_BjUW6T": {
-          "type": "_tab-collection",
-          "settings": {
-            "title": "Bishnupuri Silk",
-            "collection": "",
-            "hdt_show_icon_image": false,
-            "hdt_icon_spacing": 8
-          },
-          "blocks": {
-            "product_grid_QhFbxx": {
-              "type": "_product-grid",
-              "settings": {
-                "collection": "bishnupur-silk-saree",
-                "products_count": 8,
-                "product_list": [],
-                "pr_border": "none",
-                "product_des": "1",
-                "image_ratio": "adapt_image",
-                "image_size": true,
-                "show_vendor": false,
-                "col_dk": "4",
-                "col_tb": "3",
-                "col_mb": "2",
-                "space_items": "x",
-                "pagination": true,
-                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-                "pagination_type": "view_all",
-                "enable_progressbar": false,
-                "paginate_pos": "center",
-                "dis_pagination": 30,
-                "btn_label": "",
-                "btn_style": "",
-                "endable_btn_icon": false,
-                "size": "m",
-                "btn_fw": "medium",
-                "rounded": "",
-                "font_size_btn": 14,
-                "padding_btn": 30,
-                "min_width_btn": 100,
-                "min_width_dt_btn": 100,
-                "min_height_btn": 40
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_grid_QhFbxx"
-          ]
-        },
-        "tab_collection_xw8mXx": {
-          "type": "_tab-collection",
-          "settings": {
-            "title": "White N Red",
-            "collection": "",
-            "hdt_show_icon_image": false,
-            "hdt_icon_spacing": 8
-          },
-          "blocks": {
-            "product_grid_n3kbxw": {
-              "type": "_product-grid",
-              "settings": {
-                "collection": "red-and-white-saree-collection",
-                "products_count": 8,
-                "product_list": [],
-                "pr_border": "none",
-                "product_des": "1",
-                "image_ratio": "adapt_image",
-                "image_size": true,
-                "show_vendor": false,
-                "col_dk": "4",
-                "col_tb": "3",
-                "col_mb": "2",
-                "space_items": "x",
-                "pagination": true,
-                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-                "pagination_type": "view_all",
-                "enable_progressbar": false,
-                "paginate_pos": "center",
-                "dis_pagination": 30,
-                "btn_label": "",
-                "btn_style": "",
-                "endable_btn_icon": false,
-                "size": "m",
-                "btn_fw": "medium",
-                "rounded": "",
-                "font_size_btn": 14,
-                "padding_btn": 30,
-                "min_width_btn": 100,
-                "min_width_dt_btn": 100,
-                "min_height_btn": 40
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_grid_n3kbxw"
-          ]
-        },
-        "tabs-collection-heading": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "1",
-            "horizontal": false,
-            "alignment": "center",
-            "heading_gap": 15,
-            "margin_bottom": 30
-          },
-          "blocks": {
-            "heading_section_MRFy69": {
-              "type": "_heading_section",
-              "name": "t:blocks.section_heading.name",
-              "settings": {
-                "heading": "Trending this Week",
-                "line_height": "",
-                "heading_size": "h5",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 50,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_section_MRFy69"
-          ]
-        }
-      },
-      "block_order": [
-        "tab_collection_3zV7ji",
-        "tab_collection_BjUW6T",
-        "tab_collection_xw8mXx"
-      ],
-      "name": "t:sections.tabs_collections.grid_name",
-      "settings": {
-        "enable_tabs_on_heading": false,
-        "tabs_des": "has_border_bg",
-        "tabs_list_pos": "center",
-        "tab_item_size": "lg",
-        "tab_item_border": "solid",
-        "border_width": 2,
-        "spacing_tabs_items": 30,
-        "tabs_head_spacing": 30,
-        "colors_by_section": false,
-        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
     }
   },
   "order": [
@@ -1841,13 +1841,13 @@
     "logo_list_xmLAtH",
     "custom_liquid_UJhBxJ",
     "collections_packery_NNr3d8",
+    "tabs_collection_dWUhRB",
     "featured_collection_PTq36A",
     "banner_VyWanM",
     "featured_collection_CKUpWw",
     "blog_post_DcUjga",
     "lookbook_carousel_VeWgrg",
     "1755067183c661e3bf",
-    "custom_liquid_jxkK9w",
-    "tabs_collection_dWUhRB"
+    "custom_liquid_jxkK9w"
   ]
 }
