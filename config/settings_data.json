@@ -10,7 +10,7 @@
 {
   "current": {
     "purchase_code": "ac82ee1c-42bc-46ca-ba07-fec66c04717c",
-    "color_scheme_body": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
+    "color_scheme_body": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
     "color_focus": "#56cfe1",
     "color_scheme_dialog": "scheme-1",
     "badge_sale": "#f8a802",
@@ -288,10 +288,10 @@
           "line_border": "#e5ddd5",
           "overlay": "#b22222",
           "pr_text": "#2c2c2c",
-          "price": "#696969",
-          "sale_price": "#ec0101",
+          "price": "#6f6f6f",
+          "sale_price": "#b22222",
           "input_primary": "#ffffff",
-          "input_secondary": "#878787"
+          "input_secondary": "#6f6f6f"
         }
       }
     }
