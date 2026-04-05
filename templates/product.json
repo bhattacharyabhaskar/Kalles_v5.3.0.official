@@ -133,9 +133,9 @@
               "settings": {
                 "mess": "",
                 "size": 16,
-                "source": "1",
+                "source": "2",
                 "wimg": 370,
-                "svg": "amazon,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa",
+                "svg": "visa, master, american_express, discover, amazon, apple_pay, google_pay, paypal, shopify_pay",
                 "height": 30
               },
               "blocks": {}
