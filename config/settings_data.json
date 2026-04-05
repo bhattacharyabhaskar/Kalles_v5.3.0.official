@@ -62,6 +62,8 @@
     "price_varies_style": "1",
     "badge_shape": "rectangle",
     "label_onsale_style": "percentage",
+    "use_preorder_badge": false,
+    "use_custom_badge": false,
     "wis_atc_added": "2",
     "enable_compare_popup": true,
     "use_url_collection_vendor": true,
