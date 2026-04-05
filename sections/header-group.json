@@ -39,7 +39,10 @@
           }
         }
       },
-      "block_order": ["announcement_1", "announcement_2"],
+      "block_order": [
+        "announcement_1",
+        "announcement_2"
+      ],
       "settings": {
         "show_line_separator": false,
         "close_btn": "1",
@@ -107,9 +110,7 @@
             "navUI": true,
             "collection_colors": "",
             "product_list_title": "",
-            "child_menu": "suites-dresses",
-            "label": "Just Launched",
-            "label_color": "#ec0101"
+            "child_menu": "suites-dresses"
           },
           "blocks": {}
         },
@@ -133,9 +134,7 @@
             "navUI": true,
             "collection_colors": "",
             "product_list_title": "",
-            "child_menu": "header-special-collection",
-            "label": "New",
-            "label_color": "#00badb"
+            "child_menu": "header-special-collection"
           },
           "blocks": {}
         },
@@ -183,9 +182,7 @@
             "navUI": true,
             "collection_colors": "",
             "product_list_title": "",
-            "child_menu": "",
-            "label": "🔥 Hot",
-            "label_color": "#b7499b"
+            "child_menu": ""
           },
           "blocks": {}
         },
@@ -324,5 +321,8 @@
       }
     }
   },
-  "order": ["announcement_bar_QKnWCh", "header_inline_blocks_xePFbC"]
+  "order": [
+    "announcement_bar_QKnWCh",
+    "header_inline_blocks_xePFbC"
+  ]
 }
