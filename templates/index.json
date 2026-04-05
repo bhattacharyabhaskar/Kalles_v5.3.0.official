@@ -995,9 +995,9 @@
         "banner_item_CCbabr": {
           "type": "_banner-item",
           "settings": {
-            "banner_url": "shopify://collections/women",
+            "banner_url": "shopify://collections/silk-mark",
             "banner_target": false,
-            "img_effect": "rotate",
+            "img_effect": "zoom",
             "b_effect": "none",
             "colors_by_block": false,
             "color_scheme": "scheme-1",
@@ -1034,32 +1034,14 @@
             "border_pd": 0
           },
           "blocks": {
-            "liquid_HiCy9a": {
-              "type": "_liquid",
-              "settings": {
-                "option_type": "liquid",
-                "page": "",
-                "text": "LOOKBOOK {{ 'now' | date: \"%Y\"}}",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "custom",
-                "font_weight": "medium",
-                "text_color": "hdt-s-text",
-                "font_size_text_lg": 24,
-                "font_size_text": 24,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
             "text_hrzh66": {
               "type": "text",
               "settings": {
-                "text": "<p>MAKE LOVE THIS LOOK</p>",
+                "text": "<p>SILK AT ITS BEST, ONLY AT INDYVOGUE</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
-                "text_size": "base",
+                "text_size": "xl",
                 "line_height": "",
                 "font_weight": "semibold",
                 "text_color": "hdt-s-text",
@@ -1076,6 +1058,7 @@
               "static": true,
               "settings": {
                 "source": "image",
+                "image": "shopify://shop_images/Silk-Mark_a719d733-e8e5-4cc2-bd92-914c1089f005.webp",
                 "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                 "video_loop": true
               },
@@ -1083,7 +1066,6 @@
             }
           },
           "block_order": [
-            "liquid_HiCy9a",
             "text_hrzh66"
           ]
         },
@@ -1198,11 +1180,29 @@
           "settings": {
             "design_heading": "2",
             "horizontal": false,
-            "alignment": "left",
+            "alignment": "center",
             "heading_gap": 18,
             "margin_bottom": 30
           },
-          "blocks": {}
+          "blocks": {
+            "heading_section_z6H7FV": {
+              "type": "_heading_section",
+              "name": "t:blocks.section_heading.name",
+              "settings": {
+                "heading": "Special Collections",
+                "line_height": "",
+                "heading_size": "h5",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_section_z6H7FV"
+          ]
         }
       },
       "block_order": [
