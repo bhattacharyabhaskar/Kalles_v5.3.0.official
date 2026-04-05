@@ -151,7 +151,7 @@
             "image_mb": "shopify://shop_images/Mobile_2_0fb15156-c19b-4fdf-a259-19c649e8d70c.webp",
             "url": "",
             "banner_target": false,
-            "color_scheme": "",
+            "color_scheme": "scheme-e0b73555-c767-4eda-aa6d-4e44e10aefce",
             "content_position_type": "container",
             "position_x": 50,
             "position_y": 50,
@@ -239,8 +239,8 @@
             "button_3yEDm1": {
               "type": "button",
               "settings": {
-                "label": "Explore Now",
-                "link": "shopify://collections",
+                "label": "Shop Now",
+                "link": "shopify://collections/dhakai-jamdani-sarees",
                 "open_in_new_tab": false,
                 "full_width": false,
                 "btn_style": "hdt-btn-hover-accent",
