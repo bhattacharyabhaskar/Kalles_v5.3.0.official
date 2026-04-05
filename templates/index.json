@@ -461,98 +461,184 @@
         "pd_mb": ""
       }
     },
-    "collections_list_manual_eErqxt": {
-      "type": "collections-list-manual",
+    "collections_packery_NNr3d8": {
+      "type": "collections-packery",
       "blocks": {
-        "collection_manual_item_tXNANF": {
-          "type": "_collection_manual-item",
+        "collection_item_Gy4xpE": {
+          "type": "_collection_item",
+          "name": "t:sections.collections-list.blocks.collection_item",
           "settings": {
             "collection": "banarasi-silk-saree",
-            "title": "",
+            "image": "shopify://shop_images/3.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Banarasi Collection",
             "collection_link": "",
-            "column_width": "6",
-            "row_count": 2,
-            "tb_column_width": "6",
-            "tb_row_count": 1,
-            "mb_column_width": "2",
-            "mb_row_count": 2
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "6"
           },
           "blocks": {}
         },
-        "collection_manual_item_AEWjQE": {
-          "type": "_collection_manual-item",
+        "collection_item_dqrGCn": {
+          "type": "_collection_item",
+          "name": "t:sections.collections-list.blocks.collection_item",
+          "settings": {
+            "collection": "organza-silk-saree",
+            "image": "shopify://shop_images/14.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Organza Collection",
+            "collection_link": "",
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "6"
+          },
+          "blocks": {}
+        },
+        "collection_item_NYctwL": {
+          "type": "_collection_item",
           "settings": {
             "collection": "gadwal-silk-saree",
-            "title": "",
+            "image": "shopify://shop_images/1.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Gadwal Collection",
             "collection_link": "",
-            "column_width": "3",
-            "row_count": 1,
-            "tb_column_width": "6",
-            "tb_row_count": 1,
-            "mb_column_width": "1",
-            "mb_row_count": 1
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12"
           },
           "blocks": {}
         },
-        "collection_manual_item_YDPY8G": {
-          "type": "_collection_manual-item",
+        "collection_item_qgYHtR": {
+          "type": "_collection_item",
+          "settings": {
+            "collection": "kantha-stitch-hand-embroidery",
+            "image": "shopify://shop_images/16.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Hand Embroidery Collection",
+            "collection_link": "",
+            "col_dk": "3",
+            "col_tb": "3",
+            "col_mb": "6"
+          },
+          "blocks": {}
+        },
+        "collection_item_VREwza": {
+          "type": "_collection_item",
+          "settings": {
+            "collection": "kanchipuram-sarees",
+            "image": "shopify://shop_images/10.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Kanchipuram Collection",
+            "collection_link": "",
+            "col_dk": "3",
+            "col_tb": "3",
+            "col_mb": "6"
+          },
+          "blocks": {}
+        },
+        "collection_item_bRiKxG": {
+          "type": "_collection_item",
           "settings": {
             "collection": "dhakai-jamdani-sarees",
-            "title": "",
+            "image": "shopify://shop_images/4.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Jamdani Collection",
             "collection_link": "",
-            "column_width": "3",
-            "row_count": 2,
-            "tb_column_width": "6",
-            "tb_row_count": 1,
-            "mb_column_width": "1",
-            "mb_row_count": 2
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12"
           },
           "blocks": {}
         },
-        "collection_manual_item_D67f4i": {
-          "type": "_collection_manual-item",
+        "collection_item_FegDYD": {
+          "type": "_collection_item",
           "settings": {
-            "collection": "bishnupur-silk-saree",
-            "title": "",
+            "collection": "ikat-silk-saree",
+            "image": "shopify://shop_images/13.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Ikkat Collection",
             "collection_link": "",
-            "column_width": "3",
-            "row_count": 1,
-            "tb_column_width": "6",
-            "tb_row_count": 1,
-            "mb_column_width": "1",
-            "mb_row_count": 1
+            "col_dk": "3",
+            "col_tb": "3",
+            "col_mb": "6"
           },
           "blocks": {}
         },
-        "collections-list-manual-heading": {
+        "collection_item_pGXbch": {
+          "type": "_collection_item",
+          "settings": {
+            "collection": "tissue-silk-saree",
+            "image": "shopify://shop_images/8.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Tissue Collection",
+            "collection_link": "",
+            "col_dk": "3",
+            "col_tb": "3",
+            "col_mb": "6"
+          },
+          "blocks": {}
+        },
+        "section-heading-collections-list": {
           "type": "section-heading",
-          "disabled": true,
           "static": true,
           "settings": {
-            "design_heading": "2",
+            "design_heading": "1",
             "horizontal": false,
             "alignment": "center",
-            "heading_gap": 0,
+            "heading_gap": 15,
             "margin_bottom": 30
           },
-          "blocks": {}
+          "blocks": {
+            "heading_section_a6rHNW": {
+              "type": "_heading_section",
+              "name": "t:blocks.section_heading.name",
+              "settings": {
+                "heading": "EXCLUSIVE INDYVOGUE COLLECTIONS",
+                "line_height": "",
+                "heading_size": "h5",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_section_a6rHNW"
+          ]
         }
       },
       "block_order": [
-        "collection_manual_item_tXNANF",
-        "collection_manual_item_AEWjQE",
-        "collection_manual_item_YDPY8G",
-        "collection_manual_item_D67f4i"
+        "collection_item_Gy4xpE",
+        "collection_item_dqrGCn",
+        "collection_item_NYctwL",
+        "collection_item_qgYHtR",
+        "collection_item_VREwza",
+        "collection_item_bRiKxG",
+        "collection_item_FegDYD",
+        "collection_item_pGXbch"
       ],
+      "name": "t:sections.collections-list.name_packery",
       "settings": {
         "collection_des": "1",
-        "rounded": "hdt-btn-radius-lg",
         "content_size": "base",
-        "font_size_text_lg": 22,
-        "font_size_text_md": 14,
-        "font_size_text": 14,
-        "font_weight_text": 400,
-        "letter_spacing_text": 0,
         "content_weight": "semibold",
         "content_position": "end-center",
         "content_space": 20,
@@ -561,23 +647,23 @@
         "image_rounded": false,
         "enable_border": false,
         "image_padding": 30,
+        "image_ratio": "adapt_image",
+        "image_size": true,
         "img_effect": "zoom",
         "b_effect": "none",
-        "row_height": 300,
-        "row_height_tb": 300,
-        "row_height_mb": 200,
-        "space_items": "var(--spacing-x)",
-        "space_items_tb": "var(--spacing-x)",
-        "space_items_mb": "var(--spacing-x)",
+        "layout_mode": "packery",
+        "gap_item_dk": "30",
+        "gap_item_tb": "20",
+        "gap_item_mb": "10",
         "colors_by_section": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "background_opacity": 0,
-        "section_layout": "wrapper_container",
+        "section_layout": "container",
         "hdt_background_parallax": false,
-        "mg": "",
-        "mg_mb": "",
-        "pd": ",,100px,",
-        "pd_mb": ",,75px,"
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
       }
     },
     "featured_collection_PTq36A": {
@@ -1541,225 +1627,19 @@
         "pd": "",
         "pd_mb": ""
       }
-    },
-    "collections_packery_NNr3d8": {
-      "type": "collections-packery",
-      "blocks": {
-        "collection_item_Gy4xpE": {
-          "type": "_collection_item",
-          "name": "t:sections.collections-list.blocks.collection_item",
-          "settings": {
-            "collection": "banarasi-silk-saree",
-            "image": "shopify://shop_images/3.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Banarasi Collection",
-            "collection_link": "",
-            "col_dk": "6",
-            "col_tb": "6",
-            "col_mb": "6"
-          },
-          "blocks": {}
-        },
-        "collection_item_dqrGCn": {
-          "type": "_collection_item",
-          "name": "t:sections.collections-list.blocks.collection_item",
-          "settings": {
-            "collection": "organza-silk-saree",
-            "image": "shopify://shop_images/14.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Organza Collection",
-            "collection_link": "",
-            "col_dk": "6",
-            "col_tb": "6",
-            "col_mb": "6"
-          },
-          "blocks": {}
-        },
-        "collection_item_NYctwL": {
-          "type": "_collection_item",
-          "settings": {
-            "collection": "gadwal-silk-saree",
-            "image": "shopify://shop_images/1.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Gadwal Collection",
-            "collection_link": "",
-            "col_dk": "6",
-            "col_tb": "6",
-            "col_mb": "12"
-          },
-          "blocks": {}
-        },
-        "collection_item_qgYHtR": {
-          "type": "_collection_item",
-          "settings": {
-            "collection": "kantha-stitch-hand-embroidery",
-            "image": "shopify://shop_images/16.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Hand Embroidery Collection",
-            "collection_link": "",
-            "col_dk": "3",
-            "col_tb": "3",
-            "col_mb": "6"
-          },
-          "blocks": {}
-        },
-        "collection_item_VREwza": {
-          "type": "_collection_item",
-          "settings": {
-            "collection": "kanchipuram-sarees",
-            "image": "shopify://shop_images/10.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Kanchipuram Collection",
-            "collection_link": "",
-            "col_dk": "3",
-            "col_tb": "3",
-            "col_mb": "6"
-          },
-          "blocks": {}
-        },
-        "collection_item_bRiKxG": {
-          "type": "_collection_item",
-          "settings": {
-            "collection": "dhakai-jamdani-sarees",
-            "image": "shopify://shop_images/4.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Jamdani Collection",
-            "collection_link": "",
-            "col_dk": "6",
-            "col_tb": "6",
-            "col_mb": "12"
-          },
-          "blocks": {}
-        },
-        "collection_item_FegDYD": {
-          "type": "_collection_item",
-          "settings": {
-            "collection": "ikat-silk-saree",
-            "image": "shopify://shop_images/13.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Ikkat Collection",
-            "collection_link": "",
-            "col_dk": "3",
-            "col_tb": "3",
-            "col_mb": "6"
-          },
-          "blocks": {}
-        },
-        "collection_item_pGXbch": {
-          "type": "_collection_item",
-          "settings": {
-            "collection": "tissue-silk-saree",
-            "image": "shopify://shop_images/8.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Tissue Collection",
-            "collection_link": "",
-            "col_dk": "3",
-            "col_tb": "3",
-            "col_mb": "6"
-          },
-          "blocks": {}
-        },
-        "section-heading-collections-list": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "1",
-            "horizontal": false,
-            "alignment": "center",
-            "heading_gap": 15,
-            "margin_bottom": 30
-          },
-          "blocks": {
-            "heading_section_a6rHNW": {
-              "type": "_heading_section",
-              "name": "t:blocks.section_heading.name",
-              "settings": {
-                "heading": "EXCLUSIVE INDYVOGUE COLLECTIONS",
-                "line_height": "",
-                "heading_size": "h5",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 50,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_section_a6rHNW"
-          ]
-        }
-      },
-      "block_order": [
-        "collection_item_Gy4xpE",
-        "collection_item_dqrGCn",
-        "collection_item_NYctwL",
-        "collection_item_qgYHtR",
-        "collection_item_VREwza",
-        "collection_item_bRiKxG",
-        "collection_item_FegDYD",
-        "collection_item_pGXbch"
-      ],
-      "name": "t:sections.collections-list.name_packery",
-      "settings": {
-        "collection_des": "1",
-        "content_size": "base",
-        "content_weight": "semibold",
-        "content_position": "end-center",
-        "content_space": 20,
-        "show_count": false,
-        "count_label": "Products",
-        "image_rounded": false,
-        "enable_border": false,
-        "image_padding": 30,
-        "image_ratio": "adapt_image",
-        "image_size": true,
-        "img_effect": "zoom",
-        "b_effect": "none",
-        "layout_mode": "packery",
-        "gap_item_dk": "30",
-        "gap_item_tb": "20",
-        "gap_item_mb": "10",
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
     }
   },
   "order": [
     "slideshow_EVrUzi",
     "logo_list_xmLAtH",
     "custom_liquid_UJhBxJ",
-    "collections_list_manual_eErqxt",
+    "collections_packery_NNr3d8",
     "featured_collection_PTq36A",
     "banner_VyWanM",
     "featured_collection_CKUpWw",
     "blog_post_DcUjga",
     "lookbook_carousel_VeWgrg",
     "1755067183c661e3bf",
-    "custom_liquid_jxkK9w",
-    "collections_packery_NNr3d8"
+    "custom_liquid_jxkK9w"
   ]
 }
