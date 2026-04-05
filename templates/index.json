@@ -15,9 +15,10 @@
         "slide_item_GJUjrM": {
           "type": "_slide-item",
           "settings": {
+            "image": "shopify://shop_images/HomePage_1.webp",
             "url": "",
             "banner_target": false,
-            "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+            "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
             "content_position_type": "container",
             "position_x": 50,
             "position_y": 50,
@@ -50,7 +51,7 @@
             "text_YrQhtV": {
               "type": "text",
               "settings": {
-                "text": "<p>SUMMER 2025</p>",
+                "text": "<p>UP TO 10% OFF</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
@@ -79,7 +80,7 @@
             "heading_MzV9Ty": {
               "type": "heading",
               "settings": {
-                "heading": "<h2>New Arrival Collection</h2>",
+                "heading": "<h2>Best Indian Sarees Online</h2>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "line_height": "hdt-lh-1",
@@ -541,7 +542,7 @@
       ],
       "settings": {
         "collection_des": "1",
-        "rounded": "",
+        "rounded": "hdt-btn-radius-lg",
         "content_size": "base",
         "font_size_text_lg": 22,
         "font_size_text_md": 14,
