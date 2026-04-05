@@ -82,13 +82,6 @@
           {%- endfor -%}
         </ul>
       {%- endif -%}
-      {%- if item.line_level_discount_allocations.size != 0 -%}
-        <ul class="hdt-discounts hdt-cart_discounts hdt-font-normal" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-          {%- for discount in item.line_level_discount_allocations -%}
-            <li class="hdt-discounts__discount hdt-page-cart-discount_item">{% render 'icon' with 'discount' %} {{ discount.discount_application.title }}</li>
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
       {%- if item.selling_plan_allocation != null %}<p class="hdt-product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>{% endif -%}
       <div class="hdt-flex hdt-align-center hdt-justify-start">
         <hdt-tooltip placement="top" style="margin-inline-end: 10px">      

@@ -72,6 +72,12 @@
                 {{ image | image_url: width: image.width | image_tag: widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946' }}
               </div>
               {%- render 'badges', product: product, use_variant: true, update_hidden: true,form_id: product_form_id, class: 'hdt-absolute hdt-top-0 hdt-right-0 hdt-media-badges' -%}
+              {%- assign fabric_value = product.metafields.saree.fabric_type | metafield_text -%}
+                {%- if fabric_value contains 'Silk Mark Certified' -%}
+                  <div class="ivy-badge-logo-left">
+                    <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="70" height="70" loading="lazy">
+                  </div>
+                {%- endif -%}
               {%- if block.settings.enable_lightbox_icon -%}
                 {%- render 'open_lightbox_icon' -%}
               {%- endif -%}
@@ -81,6 +87,12 @@
           <div class="hdt-product-media__main hdt-relative hdt-ratio--{{ block.settings.image_ratio }}{% unless block.settings.image_size %} hdt-ratio--contain{% endunless %}">
             {%- render 'media', media: product.media.first, lazy_load: false, autoplay: block.settings.enable_media_autoplay, loop: block.settings.enable_video_looping -%}
             {%- render 'badges', product: product, use_variant: true, update_hidden: true,form_id: product_form_id, class: 'hdt-absolute hdt-top-0 hdt-right-0 hdt-media-badges' -%}
+            {%- assign fabric_value = product.metafields.saree.fabric_type | metafield_text -%}
+              {%- if fabric_value contains 'Silk Mark Certified' -%}
+                <div class="ivy-badge-logo-left">
+                  <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="70" height="70" loading="lazy">
+                </div>
+              {%- endif -%}
             {%- if block.settings.enable_lightbox_icon -%}
               {%- render 'open_lightbox_icon' -%}
             {%- endif -%}
@@ -109,6 +121,12 @@
                 </div>
               </div>
               {%- render 'badges', product: product, use_variant: true, update_hidden: true,form_id: product_form_id, class: 'hdt-absolute hdt-top-0 hdt-right-0 hdt-media-badges' -%}
+              {%- assign fabric_value = product.metafields.saree.fabric_type | metafield_text -%}
+                {%- if fabric_value contains 'Silk Mark Certified' -%}
+                  <div class="ivy-badge-logo-left">
+                    <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="70" height="70" loading="lazy">
+                  </div>
+                {%- endif -%}
               {%- if block.settings.navUI -%}
                 <div class="hdt-navigation hdt-position-default hdt-visible-hover hdt-style-{{ block.settings.nav_style }} hdt-shape-{{ block.settings.nav_shape }} hdt-size-{{ block.settings.nav_size }} hdt-hide-mobile-{{ block.settings.nav_hide_mobile }}">
                   <button aria-controls="slider-{{ block.id }}-{{ product.id }}" class="hdt-slider__button hdt-slider__button--prev" type="button" disabled name="previous" aria-label="previous">
@@ -183,6 +201,12 @@
               </div>
             </hdt-slider>
             {%- render 'badges', product: product, use_variant: true, update_hidden: true,form_id: product_form_id, class: 'hdt-absolute hdt-top-0 hdt-right-0 hdt-media-badges' -%}
+            {%- assign fabric_value = product.metafields.saree.fabric_type | metafield_text -%}
+              {%- if fabric_value contains 'Silk Mark Certified' -%}
+                <div class="ivy-badge-logo-left">
+                  <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="70" height="70" loading="lazy">
+                </div>
+              {%- endif -%}
             {%- if block.settings.enable_lightbox_icon -%}
               {%- render 'open_lightbox_icon' -%}
             {%- endif -%}
@@ -247,6 +271,12 @@
               </div>
             </hdt-slider>
             {%- render 'badges', product: product, use_variant: true, update_hidden: true,form_id: product_form_id, class: 'hdt-absolute hdt-top-0 hdt-right-0 hdt-media-badges' -%}
+            {%- assign fabric_value = product.metafields.saree.fabric_type | metafield_text -%}
+              {%- if fabric_value contains 'Silk Mark Certified' -%}
+                <div class="ivy-badge-logo-left">
+                  <img src="https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761" alt="Silk Mark Certified" width="70" height="70" loading="lazy">
+                </div>
+              {%- endif -%}
             {%- if block.settings.enable_lightbox_icon -%}
               {%- render 'open_lightbox_icon' -%}
             {%- endif -%}

@@ -155,6 +155,8 @@
       <div class="hdt-page-cart__footer">
         <div class="hdt-page-cart__footer-wrap hdt-row-flex md:hdt-flex-cols-2 hdt-flex-cols-1">
           <div class="hdt-col hdt-page-cart__content">
+            {%- render 'ivy-cart-footer' -%} 
+
             {%- if section.settings.show_gift and gift_wrap_pr_quantity == 0 -%}
               {%- assign gift_pr_money = gift_wrap_pr.variants.first.price | money -%}
               <div class="hdt-page-cart__addgift hdt-flex hdt-align-center hdt-justify-between">

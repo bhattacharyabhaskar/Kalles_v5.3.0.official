@@ -239,3 +239,158 @@ tr.ivy-addon-row td:first-child { padding-left: 48px !important; }
 .hdt-page-cart__quantity wrapp-remove-item-oncart {
   display: none !important;
 }
+
+/* =============================================
+   Cart footer — order summary + trust section
+   ============================================= */
+
+.ivy-order-summary {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 12px 0;
+}
+
+.ivy-order-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+
+.ivy-order-summary__row:first-child { border-top: 0; }
+
+.ivy-order-summary__label {
+  font-size: 12px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  opacity: .75;
+  font-weight: 700;
+}
+
+.ivy-order-summary__value {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ivy-order-summary__row--discount .ivy-order-summary__value { color: #8a1f1f; }
+.ivy-order-summary__row--shippingfree .ivy-order-summary__value { color: #8a1f1f; font-weight: 900; }
+.ivy-order-summary__row--total .ivy-order-summary__label { opacity: 1; }
+.ivy-order-summary__row--total .ivy-order-summary__value { font-size: 16px; font-weight: 900; }
+
+.ivy-summary-card {
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 18px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.ivy-precheckout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ivy-precheckout-left,
+.ivy-precheckout-right {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.ivy-summary-card__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #4b0000;
+  margin-bottom: 10px;
+}
+
+.ivy-trust-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ivy-trust-list li {
+  position: relative;
+  padding-left: 18px;
+  margin: 7px 0;
+  font-size: 13.5px;
+  color: #3e3e3e;
+}
+
+.ivy-trust-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: #1e7a2f;
+}
+
+.ivy-divider {
+  height: 1px;
+  background: #ededed;
+  margin: 10px 0;
+}
+
+.ivy-keep-shopping {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #6b1d1d;
+}
+
+.ivy-keep-shopping:hover { opacity: .85; }
+
+.ivy-order-note__label {
+  display: block;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #4b0000;
+}
+
+.ivy-order-note__input {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  resize: vertical;
+}
+
+@media (max-width: 767px) {
+  .ivy-precheckout-grid { grid-template-columns: 1fr; }
+}
+
+/* Silk Mark badge on product images */
+.ivy-badge-logo-left {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 12;
+  pointer-events: none;
+}
+
+.ivy-badge-logo-left img {
+  width: 70px;
+  height: 70px;
+  display: block;
+  padding: 4px;
+}
+
+@media (max-width: 767px) {
+  .ivy-badge-logo-left img {
+    width: 50px;
+    height: 50px;
+  }
+}

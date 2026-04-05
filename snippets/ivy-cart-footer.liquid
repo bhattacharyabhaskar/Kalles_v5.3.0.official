@@ -1,0 +1,69 @@
+{% comment %}
+  IndyVogue Cart Footer
+  Order summary, trust section, keep shopping link
+  Rendered in sections/main-cart.liquid inside the left footer column
+{% endcomment %}
+
+{%- assign subtotal = cart.original_total_price -%}
+{%- assign discount_amount = cart.total_discount -%}
+{%- assign net_total = cart.total_price -%}
+{%- assign shipping_amount = settings.free_ship_pr.metafields.theme.shipping_money.value | default: settings.free_ship_pr.price | default: -1 -%}
+
+<div class="ivy-order-summary">
+  <div class="ivy-order-summary__row">
+    <div class="ivy-order-summary__label">Order Subtotal</div>
+    <div class="ivy-order-summary__value">{{ subtotal | money }}</div>
+  </div>
+  <div class="ivy-order-summary__row ivy-order-summary__row--discount">
+    <div class="ivy-order-summary__label">Discount</div>
+    <div class="ivy-order-summary__value">
+      {%- if discount_amount > 0 -%}
+        -{{ discount_amount | money }}
+      {%- else -%}
+        {{ 0 | money }}
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="ivy-order-summary__row{% if shipping_amount > -1 and net_total >= shipping_amount %} ivy-order-summary__row--shippingfree{% endif %}">
+    <div class="ivy-order-summary__label">Shipping</div>
+    <div class="ivy-order-summary__value">
+      {%- if shipping_amount > -1 and net_total >= shipping_amount -%}
+        FREE SHIPPING
+      {%- else -%}
+        Calculated at checkout
+      {%- endif -%}
+    </div>
+  </div>
+  <div class="ivy-order-summary__row ivy-order-summary__row--total">
+    <div class="ivy-order-summary__label">Total</div>
+    <div class="ivy-order-summary__value">{{ net_total | money }}</div>
+  </div>
+</div>
+
+<div class="ivy-summary-card">
+  <div class="ivy-precheckout-grid">
+
+    <div class="ivy-precheckout-left">
+      <label class="ivy-order-note__label">Add Order Note</label>
+      <textarea name="note" class="ivy-order-note__input" placeholder="How can we help you?">{{ cart.note }}</textarea>
+    </div>
+
+    <div class="ivy-precheckout-right">
+      <div class="ivy-summary-card__head">
+        <div class="ivy-summary-card__title">
+          <span class="ivy-lock">🔒</span>
+          <strong>Why Shop With IndyVogue?</strong>
+        </div>
+      </div>
+      <ul class="ivy-trust-list">
+        <li>700+ 5 Star Reviews</li>
+        <li>8+ Years in Business</li>
+        <li>10,000+ Patrons Globally</li>
+        <li>Woman Owned Small Business</li>
+      </ul>
+      <div class="ivy-divider"></div>
+      <a class="ivy-keep-shopping" href="{{ routes.collections_url }}/buy-silk-mark-certified-saree">← Keep Shopping</a>
+    </div>
+
+  </div>
+</div>
