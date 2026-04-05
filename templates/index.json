@@ -671,6 +671,22 @@
     "collections_packery_NNr3d8": {
       "type": "collections-packery",
       "blocks": {
+        "collection_item_NYctwL": {
+          "type": "_collection_item",
+          "settings": {
+            "collection": "gadwal-silk-saree",
+            "image": "shopify://shop_images/1.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Gadwal Collection",
+            "collection_link": "",
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12"
+          },
+          "blocks": {}
+        },
         "collection_item_RU8Y8B": {
           "type": "_collection_item",
           "name": "t:sections.collections-list.blocks.collection_item",
@@ -719,22 +735,6 @@
             "col_dk": "6",
             "col_tb": "6",
             "col_mb": "6"
-          },
-          "blocks": {}
-        },
-        "collection_item_NYctwL": {
-          "type": "_collection_item",
-          "settings": {
-            "collection": "gadwal-silk-saree",
-            "image": "shopify://shop_images/1.webp",
-            "hdt_collection_list_svg": "",
-            "svg_width": 60,
-            "svg_width_mb": 40,
-            "title": "Gadwal Collection",
-            "collection_link": "",
-            "col_dk": "6",
-            "col_tb": "6",
-            "col_mb": "12"
           },
           "blocks": {}
         },
@@ -850,10 +850,10 @@
         }
       },
       "block_order": [
+        "collection_item_NYctwL",
         "collection_item_RU8Y8B",
         "collection_item_Gy4xpE",
         "collection_item_dqrGCn",
-        "collection_item_NYctwL",
         "collection_item_qgYHtR",
         "collection_item_VREwza",
         "collection_item_bRiKxG",
