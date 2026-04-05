@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "link": "",
-            "text": "Today deal sale off <strong>70%</strong>. End in[countdown].  <a href=\"/collections/all\" title=\"All products\">Hurry Up [icon_arrow]</a>",
+            "text": "",
             "adding_border": false,
             "countdown": "2025-12-30 15:00:00",
             "txt_day": "days",
