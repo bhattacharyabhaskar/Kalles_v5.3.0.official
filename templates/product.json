@@ -336,11 +336,11 @@
         "tab_html_7dKb7L"
       ],
       "settings": {
-        "tabs_design": "tab",
+        "tabs_design": "accordion",
         "enable_first_tab": false,
         "full_width": false,
         "colors_by_section": true,
-        "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
+        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "background_opacity": 1,
         "mg": "",
         "mg_mb": "",
