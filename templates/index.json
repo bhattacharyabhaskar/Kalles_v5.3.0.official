@@ -1175,10 +1175,9 @@
         },
         "banner-heading": {
           "type": "section-heading",
-          "disabled": true,
           "static": true,
           "settings": {
-            "design_heading": "2",
+            "design_heading": "11",
             "horizontal": false,
             "alignment": "center",
             "heading_gap": 18,
