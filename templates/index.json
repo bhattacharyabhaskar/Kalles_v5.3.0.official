@@ -615,7 +615,7 @@
           "type": "section-heading",
           "static": true,
           "settings": {
-            "design_heading": "1",
+            "design_heading": "11",
             "horizontal": false,
             "alignment": "center",
             "heading_gap": 15,
@@ -822,7 +822,7 @@
           "type": "section-heading",
           "static": true,
           "settings": {
-            "design_heading": "1",
+            "design_heading": "11",
             "horizontal": false,
             "alignment": "center",
             "heading_gap": 15,
@@ -833,7 +833,7 @@
               "type": "_heading_section",
               "name": "t:blocks.section_heading.name",
               "settings": {
-                "heading": "EXCLUSIVE INDYVOGUE COLLECTIONS",
+                "heading": "IndyVogue Exclusives",
                 "line_height": "",
                 "heading_size": "h5",
                 "text_color": "hdt-s-text",
