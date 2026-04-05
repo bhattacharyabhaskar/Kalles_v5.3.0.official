@@ -586,10 +586,10 @@
         "product_grid_JJ7DRU": {
           "type": "_product-grid",
           "settings": {
-            "collection": "women",
+            "collection": "baluchari-silk-saree",
             "products_count": 8,
             "product_list": [],
-            "pr_border": "none",
+            "pr_border": "in_image",
             "product_des": "1",
             "image_ratio": "adapt_image",
             "image_size": true,
@@ -599,7 +599,7 @@
             "col_mb": "2",
             "space_items": "x",
             "pagination": true,
-            "pagination_color_scheme": "",
+            "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
             "pagination_type": "load_more",
             "enable_progressbar": false,
             "paginate_pos": "center",
@@ -1493,12 +1493,6 @@
     "1755067183c661e3bf": {
       "type": "apps",
       "blocks": {
-        "omnisend_email_marketing_sms_embedded_form_WTyLXb": {
-          "type": "shopify://apps/omnisend-email-marketing-sms/blocks/embedded-form/44704aa2-794f-4c5d-8c8e-039c841158e9",
-          "settings": {
-            "form_id": "69d2be27fa5e3e50715041e7"
-          }
-        },
         "instafeed_app_block_w9zNGW": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
@@ -1516,11 +1510,17 @@
             "feed_id": "",
             "html_area": ""
           }
+        },
+        "omnisend_email_marketing_sms_embedded_form_WTyLXb": {
+          "type": "shopify://apps/omnisend-email-marketing-sms/blocks/embedded-form/44704aa2-794f-4c5d-8c8e-039c841158e9",
+          "settings": {
+            "form_id": "69d2be27fa5e3e50715041e7"
+          }
         }
       },
       "block_order": [
-        "omnisend_email_marketing_sms_embedded_form_WTyLXb",
-        "instafeed_app_block_w9zNGW"
+        "instafeed_app_block_w9zNGW",
+        "omnisend_email_marketing_sms_embedded_form_WTyLXb"
       ],
       "settings": {
         "include_margins": true
