@@ -1564,11 +1564,12 @@
         "collection_item_qgYHtR": {
           "type": "_collection_item",
           "settings": {
-            "collection": "",
+            "collection": "kantha-stitch-hand-embroidery",
+            "image": "shopify://shop_images/16.webp",
             "hdt_collection_list_svg": "",
             "svg_width": 60,
             "svg_width_mb": 40,
-            "title": "Collection name",
+            "title": "",
             "collection_link": "",
             "col_dk": "3",
             "col_tb": "3",
