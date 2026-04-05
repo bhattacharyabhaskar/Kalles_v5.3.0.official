@@ -51,7 +51,6 @@
     assign on_sale = false
   endif
   assign price_varies_item = ''
-  #if target == product and product.price_varies
   if product.price_varies
     assign price_varies_item = ' hdt-price-item--range'
     if settings.price_varies_style == "1"
@@ -62,8 +61,33 @@
   endif
 -%}
 
+{%- comment -%} IndyVogue — promo price calculation {%- endcomment -%}
+{%- unless product.price_varies -%}
+  {%- assign ivy_is_sale = false -%}
+  {%- assign ivy_is_suite = false -%}
+  {%- for col in product.collections -%}
+    {%- if col.handle == 'sale' -%}{%- assign ivy_is_sale = true -%}{%- endif -%}
+    {%- if col.handle == 'suits-dresses' -%}{%- assign ivy_is_suite = true -%}{%- endif -%}
+  {%- endfor -%}
+  {%- capture ivy_raw -%}
+    {%- render 'ivy-discount-calc', price_cents: price, is_sale_collection: ivy_is_sale, is_suite_collection: ivy_is_suite -%}
+  {%- endcapture -%}
+  {%- assign ivy_final = ivy_raw | split: '<!-- IVY PRICE START -->' | last | split: '<!-- IVY PRICE END -->' | first | strip | plus: 0 -%}
+  {%- if ivy_final > 0 and ivy_final != price -%}
+    {%- assign on_sale = true -%}
+    {%- if settings.currency_code_enabled -%}
+      {%- assign money_compare_at_price = price | money_with_currency -%}
+      {%- assign money_price = ivy_final | money_with_currency -%}
+    {%- else -%}
+      {%- assign money_compare_at_price = price | money -%}
+      {%- assign money_price = ivy_final | money -%}
+    {%- endif -%}
+    {%- assign ivy_discount_pct = price | minus: ivy_final | times: 100 | divided_by: price -%}
+  {%- endif -%}
+{%- endunless -%}
+
 <div class="hdt-price-wrapp {{ price_class }}{% if show_badges %} hdt-price--show-badge{% endif %} hdt-font-{{ settings.pr_price_weight }} hdt-text-{{ settings.pr_price_size }}">
-  <div class="hdt-price__list">
+  <div class="hdt-price__list ivy-price__row">
     {%- if product.quantity_price_breaks_configured? -%}
       {%- if show_compare_at_price and compare_at_price -%}
         {%- unless product.price_varies == false and product.compare_at_price_varies -%}
@@ -88,22 +112,25 @@
         <span class="sr-only sr-only--inline">{{ 'products.product.price.sale_price' | t }}</span>
         {%- if price_varies_item != '' %}{{ money_price }}{% else %}<span class="hdt-money">{{ money_price }}</span>{% endif -%}
       </hdt-price>
+      {%- if ivy_discount_pct > 0 -%}
+        <span class="ivy-discount-pill">{{ ivy_discount_pct }}% off</span>
+      {%- endif -%}
     {%- endif -%}
     {%- if selected_or_first_available_variant.unit_price_measurement -%}
-    <hdt-unit-price class="hdt-unit-price">
-      <span class="sr-only">{{ 'products.product.price.unit_price' | t }}</span>
-      <span class="hdt-hdt-price-item hdt-price-item--last">
-        <span class="hdt-money">{{- selected_or_first_available_variant.unit_price | money -}}</span>
-        <span aria-hidden="true">/</span>
-        <span class="sr-only">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
-        <span>
-          {%- if selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
-            {{- selected_or_first_available_variant.unit_price_measurement.reference_value -}}
-          {%- endif -%}
-          {{ selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+      <hdt-unit-price class="hdt-unit-price">
+        <span class="sr-only">{{ 'products.product.price.unit_price' | t }}</span>
+        <span class="hdt-hdt-price-item hdt-price-item--last">
+          <span class="hdt-money">{{- selected_or_first_available_variant.unit_price | money -}}</span>
+          <span aria-hidden="true">/</span>
+          <span class="sr-only">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
+          <span>
+            {%- if selected_or_first_available_variant.unit_price_measurement.reference_value != 1 -%}
+              {{- selected_or_first_available_variant.unit_price_measurement.reference_value -}}
+            {%- endif -%}
+            {{ selected_or_first_available_variant.unit_price_measurement.reference_unit }}
+          </span>
         </span>
-      </span>
-    </hdt-unit-price>
+      </hdt-unit-price>
     {%- endif -%}
   </div>
   {%- if show_badges %}{% render 'badges', product: product, use_variant: use_variant %}{% endif -%}

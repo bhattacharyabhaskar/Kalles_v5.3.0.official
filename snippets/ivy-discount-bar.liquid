@@ -1,0 +1,108 @@
+{%- comment -%}
+  IndyVogue — Tiered Discount Bar
+  Shows current discount tier status and next tier nudge.
+  Render on PDP and PLP near the price.
+
+  Accepts:
+  - product: {Object} Product Liquid object (required)
+{%- endcomment -%}
+
+{%- liquid
+  assign is_sale_collection = false
+  assign is_suite_collection = false
+  for collection in product.collections
+    if collection.handle == 'sale'
+      assign is_sale_collection = true
+    endif
+    if collection.handle == 'suits-dresses'
+      assign is_suite_collection = true
+    endif
+  endfor
+-%}
+
+{%- if is_sale_collection -%}
+  <div class="ivy-discount-bar ivy-discount-bar--sale">
+    😎 Incredible Markdown Sale!
+  </div>
+
+{%- elsif is_suite_collection -%}
+  {%- assign suite_discount = settings.suites_dresses_discount | default: '10%' -%}
+  <div class="ivy-discount-bar ivy-discount-bar--suite">
+    👗 Save flat {{ suite_discount }} on Suites &amp; Dresses!
+  </div>
+
+{%- else -%}
+
+  {%- assign general_tiers_raw = settings.general_discount_tiers | default: '7500:1000,20000:5%,30000:6%,50000:7%,80000:8%,100000:10%' -%}
+  {%- assign tiers = general_tiers_raw | split: ',' -%}
+
+  {%- comment -%} Calculate cart total excluding sale + suite items {%- endcomment -%}
+  {%- assign cart_total = 0 -%}
+  {%- for item in cart.items -%}
+    {%- assign item_in_sale = false -%}
+    {%- assign item_in_suite = false -%}
+    {%- for col in item.product.collections -%}
+      {%- if col.handle == 'sale' -%}{%- assign item_in_sale = true -%}{%- endif -%}
+      {%- if col.handle == 'suits-dresses' -%}{%- assign item_in_suite = true -%}{%- endif -%}
+    {%- endfor -%}
+    {%- unless item_in_sale or item_in_suite -%}
+      {%- assign cart_total = cart_total | plus: item.line_price -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- assign cart_total_dollars = cart_total | divided_by: 100.0 -%}
+
+  {%- assign unlocked_tier = '' -%}
+  {%- assign unlocked_min = 0 -%}
+  {%- assign next_tier_discount = '' -%}
+  {%- assign next_tier_min = 0 -%}
+  {%- assign next_tier_diff = 0 -%}
+
+  {%- for tier in tiers -%}
+    {%- assign parts = tier | split: ':' -%}
+    {%- assign min_cents = parts[0] | strip | plus: 0 -%}
+    {%- assign min_dollars = min_cents | divided_by: 100.0 -%}
+    {%- assign disc = parts[1] | strip -%}
+
+    {%- if cart_total >= min_cents -%}
+      {%- assign unlocked_tier = disc -%}
+      {%- assign unlocked_min = min_cents -%}
+    {%- elsif next_tier_discount == '' -%}
+      {%- assign next_tier_discount = disc -%}
+      {%- assign next_tier_min = min_cents -%}
+      {%- assign next_tier_diff = next_tier_min | minus: cart_total -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <div class="ivy-discount-bar">
+    {%- if unlocked_tier != '' -%}
+      <span class="ivy-discount-bar__unlocked">
+        🎉 
+        {%- if unlocked_tier contains '%' -%}
+          {{ unlocked_tier }} OFF unlocked on your order!
+        {%- else -%}
+          {{ unlocked_tier | money }} OFF unlocked on your order!
+        {%- endif -%}
+      </span>
+      {%- if next_tier_discount != '' -%}
+        <span class="ivy-discount-bar__next">
+          &nbsp;Add {{ next_tier_diff | money }} more to save
+          {%- if next_tier_discount contains '%' -%}
+            {{ next_tier_discount }}
+          {%- else -%}
+            {{ next_tier_discount | money }}
+          {%- endif -%}
+        </span>
+      {%- endif -%}
+    {%- else -%}
+      <span class="ivy-discount-bar__empty">
+        😎 Add {{ next_tier_diff | money }} to unlock
+        {%- if next_tier_discount contains '%' -%}
+          {{ next_tier_discount }} OFF
+        {%- else -%}
+          {{ next_tier_discount | money }} OFF
+        {%- endif -%}
+      </span>
+    {%- endif -%}
+  </div>
+
+{%- endif -%}

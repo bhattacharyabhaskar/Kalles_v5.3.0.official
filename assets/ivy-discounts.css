@@ -1,0 +1,31 @@
+/* =============================================
+   IndyVogue — Discount Pill + Price Row
+   Loaded via: layout/theme.liquid (global)
+   ============================================= */
+
+/* Inline price row — strikethrough + sale + pill on one line */
+.ivy-price__row {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+}
+
+/* Discount pill */
+.ivy-discount-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffc107;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .ivy-discount-pill { font-size: 1rem; }
+}
