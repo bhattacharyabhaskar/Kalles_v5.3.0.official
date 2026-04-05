@@ -615,7 +615,7 @@
           "type": "section-heading",
           "static": true,
           "settings": {
-            "design_heading": "1",
+            "design_heading": "11",
             "horizontal": false,
             "alignment": "center",
             "heading_gap": 15,
