@@ -444,7 +444,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.name",
       "settings": {
-        "custom_liquid": "<div data-romw-token=\"C93CVxMQ3cwYpzwTEQsT4iKRPJtX7wxu3PXlbtGLapcJnHPS9i\" data-romw-lazy></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
+        "custom_liquid": "<div data-romw-token=\"hWgYjUoN5hQTBoogWfUZrBaxzCjskm5C0iBlPN5u5g872IuAPM\" data-romw-lazy></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
         "colors_by_section": false,
         "color_scheme": "",
         "background_opacity": 0,
