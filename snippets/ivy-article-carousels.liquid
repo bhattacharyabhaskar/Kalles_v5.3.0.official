@@ -41,25 +41,35 @@
   {%- endif -%}
 {%- endcapture -%}
 
-{%- assign ivy_carousel_collections = c1, c2, c3, c4, c5 -%}
-{%- assign ivy_carousel_titles = t1, t2, t3, t4, t5 -%}
+{%- assign ivy_carousel_collections = '' -%}
+{%- assign ivy_carousel_titles = '' -%}
 
-{%- for carousel_collection in ivy_carousel_collections -%}
+{%- for i in (1..5) -%}
+  {%- liquid
+    case i
+      when 1
+        assign carousel_collection = c1
+        assign carousel_title = t1
+      when 2
+        assign carousel_collection = c2
+        assign carousel_title = t2
+      when 3
+        assign carousel_collection = c3
+        assign carousel_title = t3
+      when 4
+        assign carousel_collection = c4
+        assign carousel_title = t4
+      when 5
+        assign carousel_collection = c5
+        assign carousel_title = t5
+    endcase
+  -%}
   {%- if carousel_collection != blank -%}
-    {%- assign carousel_title = ivy_carousel_titles[forloop.index0] -%}
-    {%- assign carousel_id = 'ivy-carousel-' | append: article.id | append: '-' | append: forloop.index -%}
-
+    {%- assign carousel_id = 'ivy-carousel-' | append: article.id | append: '-' | append: i -%}
     <div class="ivy-article-carousel" style="margin-top: 48px; margin-bottom: 16px;">
-      {%- if carousel_title != blank -%}
-        <h3 class="ivy-article-carousel__title hdt-text-xl hdt-font-semibold hdt-text-center" style="margin-bottom: 24px;">
-          {{ carousel_title }}
-        </h3>
-      {%- else -%}
-        <h3 class="ivy-article-carousel__title hdt-text-xl hdt-font-semibold hdt-text-center" style="margin-bottom: 24px;">
-          {{ carousel_collection.title }}
-        </h3>
-      {%- endif -%}
-
+      <h3 class="ivy-article-carousel__title hdt-text-xl hdt-font-semibold hdt-text-center" style="margin-bottom: 24px;">
+        {{ carousel_title | default: carousel_collection.title }}
+      </h3>
       {%- paginate carousel_collection.products by 8 -%}
         <hdt-slider
           id="{{ carousel_id }}"
@@ -93,7 +103,6 @@
             </button>
           </div>
         </hdt-slider>
-
         {%- if paginate.next -%}
           <div class="hdt-text-center" style="margin-top: 20px;">
             <a href="{{ carousel_collection.url }}" class="hdt-btn hdt-btn-outline hdt-btn--size-m">
