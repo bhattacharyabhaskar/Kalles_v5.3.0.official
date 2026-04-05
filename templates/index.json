@@ -1545,6 +1545,40 @@
     "collections_packery_NNr3d8": {
       "type": "collections-packery",
       "blocks": {
+        "collection_item_Gy4xpE": {
+          "type": "_collection_item",
+          "name": "t:sections.collections-list.blocks.collection_item",
+          "settings": {
+            "collection": "banarasi-silk-saree",
+            "image": "shopify://shop_images/3.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Banarasi Collection",
+            "collection_link": "",
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "6"
+          },
+          "blocks": {}
+        },
+        "collection_item_dqrGCn": {
+          "type": "_collection_item",
+          "name": "t:sections.collections-list.blocks.collection_item",
+          "settings": {
+            "collection": "organza-silk-saree",
+            "image": "shopify://shop_images/14.webp",
+            "hdt_collection_list_svg": "",
+            "svg_width": 60,
+            "svg_width_mb": 40,
+            "title": "Organza Collection",
+            "collection_link": "",
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "6"
+          },
+          "blocks": {}
+        },
         "collection_item_NYctwL": {
           "type": "_collection_item",
           "settings": {
@@ -1553,7 +1587,7 @@
             "hdt_collection_list_svg": "",
             "svg_width": 60,
             "svg_width_mb": 40,
-            "title": "",
+            "title": "Gadwal Collection",
             "collection_link": "",
             "col_dk": "6",
             "col_tb": "6",
@@ -1569,7 +1603,7 @@
             "hdt_collection_list_svg": "",
             "svg_width": 60,
             "svg_width_mb": 40,
-            "title": "",
+            "title": "Hand Embroidery Collection",
             "collection_link": "",
             "col_dk": "3",
             "col_tb": "3",
@@ -1580,11 +1614,12 @@
         "collection_item_VREwza": {
           "type": "_collection_item",
           "settings": {
-            "collection": "",
+            "collection": "kanchipuram-sarees",
+            "image": "shopify://shop_images/10.webp",
             "hdt_collection_list_svg": "",
             "svg_width": 60,
             "svg_width_mb": 40,
-            "title": "Collection name",
+            "title": "Kanchipuram Collection",
             "collection_link": "",
             "col_dk": "3",
             "col_tb": "3",
@@ -1595,11 +1630,12 @@
         "collection_item_bRiKxG": {
           "type": "_collection_item",
           "settings": {
-            "collection": "",
+            "collection": "dhakai-jamdani-sarees",
+            "image": "shopify://shop_images/4.webp",
             "hdt_collection_list_svg": "",
             "svg_width": 60,
             "svg_width_mb": 40,
-            "title": "Collection name",
+            "title": "Jamdani Collection",
             "collection_link": "",
             "col_dk": "6",
             "col_tb": "6",
@@ -1610,11 +1646,12 @@
         "collection_item_FegDYD": {
           "type": "_collection_item",
           "settings": {
-            "collection": "",
+            "collection": "ikat-silk-saree",
+            "image": "shopify://shop_images/13.webp",
             "hdt_collection_list_svg": "",
             "svg_width": 60,
             "svg_width_mb": 40,
-            "title": "Collection name",
+            "title": "Ikkat Collection",
             "collection_link": "",
             "col_dk": "3",
             "col_tb": "3",
@@ -1625,11 +1662,12 @@
         "collection_item_pGXbch": {
           "type": "_collection_item",
           "settings": {
-            "collection": "",
+            "collection": "tissue-silk-saree",
+            "image": "shopify://shop_images/8.webp",
             "hdt_collection_list_svg": "",
             "svg_width": 60,
             "svg_width_mb": 40,
-            "title": "Collection name",
+            "title": "Tissue Collection",
             "collection_link": "",
             "col_dk": "3",
             "col_tb": "3",
@@ -1651,6 +1689,8 @@
         }
       },
       "block_order": [
+        "collection_item_Gy4xpE",
+        "collection_item_dqrGCn",
         "collection_item_NYctwL",
         "collection_item_qgYHtR",
         "collection_item_VREwza",
