@@ -16,6 +16,7 @@
           "type": "_slide-item",
           "settings": {
             "image": "shopify://shop_images/HomePage_1.webp",
+            "image_mb": "shopify://shop_images/HomePage_-_Mobile.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
