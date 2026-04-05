@@ -42,7 +42,7 @@
                 "heading_size": "h_custom",
                 "font_size_heading_lg": 16,
                 "font_size_heading": 16,
-                "font_weight": "semibold",
+                "font_weight": "medium",
                 "letter_spacing_heading": 0
               },
               "blocks": {}
