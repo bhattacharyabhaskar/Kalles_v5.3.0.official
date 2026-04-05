@@ -1493,6 +1493,12 @@
     "1755067183c661e3bf": {
       "type": "apps",
       "blocks": {
+        "omnisend_email_marketing_sms_embedded_form_WTyLXb": {
+          "type": "shopify://apps/omnisend-email-marketing-sms/blocks/embedded-form/44704aa2-794f-4c5d-8c8e-039c841158e9",
+          "settings": {
+            "form_id": "6918be545000977f5041ca3e"
+          }
+        },
         "instafeed_app_block_w9zNGW": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
@@ -1513,6 +1519,7 @@
         }
       },
       "block_order": [
+        "omnisend_email_marketing_sms_embedded_form_WTyLXb",
         "instafeed_app_block_w9zNGW"
       ],
       "settings": {
