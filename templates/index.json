@@ -440,6 +440,22 @@
         "pd_mb": ",,22px,"
       }
     },
+    "custom_liquid_UJhBxJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<div data-romw-token=\"C93CVxMQ3cwYpzwTEQsT4iKRPJtX7wxu3PXlbtGLapcJnHPS9i\" data-romw-lazy></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "collections_list_manual_eErqxt": {
       "type": "collections-list-manual",
       "blocks": {
@@ -1757,26 +1773,11 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "custom_liquid_UJhBxJ": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.name",
-      "settings": {
-        "custom_liquid": "<div data-romw-token=\"C93CVxMQ3cwYpzwTEQsT4iKRPJtX7wxu3PXlbtGLapcJnHPS9i\" data-romw-lazy></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
     }
   },
   "order": [
     "slideshow_EVrUzi",
+    "custom_liquid_UJhBxJ",
     "collections_list_manual_eErqxt",
     "featured_collection_PTq36A",
     "banner_VyWanM",
@@ -1784,7 +1785,6 @@
     "blog_post_DcUjga",
     "lookbook_carousel_VeWgrg",
     "shipping_9pXycT",
-    "1755067183c661e3bf",
-    "custom_liquid_UJhBxJ"
+    "1755067183c661e3bf"
   ]
 }
