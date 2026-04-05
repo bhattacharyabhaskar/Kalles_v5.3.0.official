@@ -1,0 +1,107 @@
+{%- comment -%}
+  IndyVogue — Article Product Carousels
+  Renders up to 5 product carousels from collection metafields.
+
+  Metafields used (namespace: custom):
+  - carousel_1_collection  → Collection reference
+  - carousel_1_title       → Single line text
+  - carousel_2_collection  → Collection reference
+  - carousel_2_title       → Single line text
+  - carousel_3_collection  → Collection reference
+  - carousel_3_title       → Single line text
+  - carousel_4_collection  → Collection reference
+  - carousel_4_title       → Single line text
+  - carousel_5_collection  → Collection reference
+  - carousel_5_title       → Single line text
+
+  Usage:
+  {%- render 'ivy-article-carousels', article: article, section: section -%}
+{%- endcomment -%}
+
+{%- liquid
+  assign color_list = 'products.theme_settings.color' | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
+  assign size_list = 'products.theme_settings.size' | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
+
+  assign c1 = article.metafields.custom.carousel_1_collection.value
+  assign c2 = article.metafields.custom.carousel_2_collection.value
+  assign c3 = article.metafields.custom.carousel_3_collection.value
+  assign c4 = article.metafields.custom.carousel_4_collection.value
+  assign c5 = article.metafields.custom.carousel_5_collection.value
+
+  assign t1 = article.metafields.custom.carousel_1_title.value
+  assign t2 = article.metafields.custom.carousel_2_title.value
+  assign t3 = article.metafields.custom.carousel_3_title.value
+  assign t4 = article.metafields.custom.carousel_4_title.value
+  assign t5 = article.metafields.custom.carousel_5_title.value
+-%}
+
+{%- capture btn_wishlist_code -%}
+  {%- if settings.wishlist_mode != '0' -%}
+    {%- render 'btn-wishlist', class: 'hdt-card-product__btn-wishlist hdt-pr_btn', placement: 'right' -%}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- assign ivy_carousel_collections = c1, c2, c3, c4, c5 -%}
+{%- assign ivy_carousel_titles = t1, t2, t3, t4, t5 -%}
+
+{%- for carousel_collection in ivy_carousel_collections -%}
+  {%- if carousel_collection != blank -%}
+    {%- assign carousel_title = ivy_carousel_titles[forloop.index0] -%}
+    {%- assign carousel_id = 'ivy-carousel-' | append: article.id | append: '-' | append: forloop.index -%}
+
+    <div class="ivy-article-carousel" style="margin-top: 48px; margin-bottom: 16px;">
+      {%- if carousel_title != blank -%}
+        <h3 class="ivy-article-carousel__title hdt-text-xl hdt-font-semibold hdt-text-center" style="margin-bottom: 24px;">
+          {{ carousel_title }}
+        </h3>
+      {%- else -%}
+        <h3 class="ivy-article-carousel__title hdt-text-xl hdt-font-semibold hdt-text-center" style="margin-bottom: 24px;">
+          {{ carousel_collection.title }}
+        </h3>
+      {%- endif -%}
+
+      {%- paginate carousel_collection.products by 8 -%}
+        <hdt-slider
+          id="{{ carousel_id }}"
+          class="hdt-collection-products hdt-slider__products hdt-collection-has-pr1 hdt-pr-border_none hdt-ratio--adapt_image hdt-slider hdt-slider-parent hdt-slide-spacing-x hdt-relative hdt-slider-has-nav lg:hdt-slides-4 md:hdt-slides-3 hdt-slides-2"
+          config='{ "id": "{{ carousel_id }}", "navUI": true, "dotUI": false, "navUICenter": true }'>
+          <div class="hdt-slider__viewport hdt-relative">
+            <div class="hdt-slider__container">
+              {%- for product in carousel_collection.products -%}
+                {%- assign product_url = product.url | within: carousel_collection -%}
+                {%- render 'card-product1',
+                  card_product: product,
+                  class: 'hdt-slider__slide hdt-pr-style1',
+                  section_id: section.id,
+                  sizes: '(min-width: 1150px) 25vw, (min-width: 768px) 33vw, 50vw',
+                  image_ratio: 'adapt_image',
+                  color_list: color_list,
+                  size_list: size_list,
+                  product_url: product_url,
+                  btn_wishlist_code: btn_wishlist_code,
+                  show_vendor: false
+                -%}
+              {%- endfor -%}
+            </div>
+          </div>
+          <div class="hdt-navigation hdt-position-on_border hdt-visible-always hdt-style-default hdt-shape-default hdt-size-small">
+            <button aria-controls="{{ carousel_id }}" class="hdt-slider__button hdt-slider__button--prev" type="button" name="previous" aria-label="previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none"><path d="M5.5 11L0 5.5L5.5 0L6.47625 0.97625L1.9525 5.5L6.47625 10.0238L5.5 11Z" fill="currentColor"/></svg>
+            </button>
+            <button aria-controls="{{ carousel_id }}" class="hdt-slider__button hdt-slider__button--next" type="button" name="next" aria-label="next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none"><path d="M1.5 11L7 5.5L1.5 0L0.52375 0.97625L5.0475 5.5L0.52375 10.0238L1.5 11Z" fill="currentColor"/></svg>
+            </button>
+          </div>
+        </hdt-slider>
+
+        {%- if paginate.next -%}
+          <div class="hdt-text-center" style="margin-top: 20px;">
+            <a href="{{ carousel_collection.url }}" class="hdt-btn hdt-btn-outline hdt-btn--size-m">
+              View All {{ carousel_collection.title }}
+            </a>
+          </div>
+        {%- endif -%}
+      {%- endpaginate -%}
+    </div>
+  {%- endif -%}
+{%- endfor -%}
