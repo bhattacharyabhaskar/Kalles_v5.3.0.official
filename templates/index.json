@@ -437,7 +437,7 @@
         "colors_by_section": false,
         "color_scheme": "",
         "background_opacity": 0,
-        "section_layout": "full_width",
+        "section_layout": "wrapper_container",
         "hdt_background_parallax": false,
         "mg": ",,50px,",
         "mg_mb": ",,30px,",
