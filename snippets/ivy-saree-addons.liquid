@@ -10,7 +10,7 @@
 
 {% if addon_collection and addon_collection.products.size > 0 %}
 
-  {{ 'saree-addons.css' | asset_url | stylesheet_tag }}
+  {{ 'ivy-addons.css' | asset_url | stylesheet_tag }}
 
   {%- assign fabric_type_lower = fabric_type | downcase -%}
   {%- assign blouse_piece_lower = blouse_piece_value | downcase -%}

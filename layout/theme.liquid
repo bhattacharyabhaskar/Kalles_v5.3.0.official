@@ -49,7 +49,7 @@
       render 'css-variables', is_rtl: is_rtl
       render 'js-variables'
       render 'scripts'
-      echo 'saree-addons.css' | asset_url | stylesheet_tag
+      echo 'ivy-badges.css' | asset_url | stylesheet_tag
       if settings.custom_html_head != blank
         echo settings.custom_html_head
       endif
@@ -91,7 +91,7 @@
         echo settings.custom_html_footer
       endif
       render 'structured-data'
-      render 'saree-cart-cleanup'
+      render 'ivy-saree-cart-cleanup'
     -%}
    {%- endunless -%}
   </body>
