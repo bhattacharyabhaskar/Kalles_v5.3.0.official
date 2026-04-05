@@ -107,8 +107,8 @@
             "button_3yEDmG": {
               "type": "button",
               "settings": {
-                "label": "Explore Now",
-                "link": "shopify://collections",
+                "label": "Shop Now",
+                "link": "shopify://collections/buy-silk-mark-certified-saree",
                 "open_in_new_tab": false,
                 "full_width": false,
                 "btn_style": "hdt-btn-hover-accent",
