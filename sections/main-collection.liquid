@@ -233,7 +233,7 @@
                             unless settings.remove_collection_url
                               assign product_url = product.url | within: collection
                             endunless
-                            render 'card-product1', card_product: product, class: "hdt-pr-style1", section_id: section.id, sizes: sizes, image_ratio: section.settings.image_ratio, color_list: color_list, size_list: size_list, product_url: product_url, btn_wishlist_code: btn_wishlist_code, show_vendor: section.settings.show_vendor, show_sku: section.settings.show_sku, lazy: forloop.first == false
+                            render 'card-product1', card_product: product, class: "hdt-pr-style1", section_id: section.id, sizes: sizes, image_ratio: section.settings.image_ratio, color_list: color_list, size_list: size_list, product_url: product_url, btn_wishlist_code: btn_wishlist_code, show_vendor: section.settings.show_vendor, show_sku: section.settings.show_sku
                             assign ivy_banner_pos = collection.metafields.custom.banner_position.value | default: 8 | plus: 0
                             if forloop.index == ivy_banner_pos
                               render 'ivy-collection-banner', collection: collection
