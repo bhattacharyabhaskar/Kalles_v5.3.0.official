@@ -63,6 +63,60 @@
         "full_width": true
       }
     },
+    "top_bar_RfKkY6": {
+      "type": "top-bar",
+      "blocks": {
+        "liquid_BWdJTA": {
+          "type": "liquid",
+          "settings": {
+            "custom_liquid": "Welcome customers to your store",
+            "hide": true
+          }
+        },
+        "text_iRiP87": {
+          "type": "text",
+          "settings": {
+            "text1": "<strong>FREE SHIPPING ON ALL ORDERS ABOVE $75 USD</strong>",
+            "text2": "<strong>YOU ENJOY SHOPPING, WE TAKE CARE OF DUTIES</strong>",
+            "text3": "",
+            "adding_border": false,
+            "countdown": "2024-12-30 15:00:00",
+            "txt_day": "days",
+            "effect": "carousel",
+            "au_time": 3,
+            "pause_when_hover": false,
+            "hide": false
+          }
+        },
+        "cur_tXMYC3": {
+          "type": "cur",
+          "settings": {
+            "show_currency": true,
+            "show_language": true,
+            "use_location": false,
+            "txt_location": "Location",
+            "url_location": "",
+            "open_link": "_self",
+            "hide": true
+          }
+        }
+      },
+      "block_order": [
+        "liquid_BWdJTA",
+        "text_iRiP87",
+        "cur_tXMYC3"
+      ],
+      "name": "t:sections.top-bar.name",
+      "settings": {
+        "height": 41,
+        "fontsize": 12,
+        "show_line_separator": false,
+        "full_width": false,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0
+      }
+    },
     "header_inline_blocks_xePFbC": {
       "type": "header-inline-blocks",
       "blocks": {
@@ -286,6 +340,7 @@
   },
   "order": [
     "announcement_bar_QKnWCh",
+    "top_bar_RfKkY6",
     "header_inline_blocks_xePFbC"
   ]
 }
