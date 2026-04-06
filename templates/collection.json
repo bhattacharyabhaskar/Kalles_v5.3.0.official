@@ -124,6 +124,7 @@
     },
     "custom_liquid_mhDtCh": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.name",
       "settings": {
         "custom_liquid": "{% if collection.metafields.custom_collection.additional_description != blank %}  <div id=\"t4s-desc-collection\" class=\"t4s-desc-collection t4s-desc-before\">{{collection.metafields.custom_collection.additional_description}}</div>\n{% endif %}",
