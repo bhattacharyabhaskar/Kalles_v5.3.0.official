@@ -117,9 +117,10 @@
     "social_whatsapp_link": "https://wa.me/9133784722",
     "social_linked_in_link": "https://www.linkedin.com/company/indyvogue/",
     "predictive_search_enabled": true,
+    "search_form_by_type": false,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": true,
-    "search_fullwidth": false,
+    "predictive_search_show_price": false,
+    "search_fullwidth": true,
     "products_suggest": [
       "analogue-resin-strap",
       "asos-ridley-high-waist",
