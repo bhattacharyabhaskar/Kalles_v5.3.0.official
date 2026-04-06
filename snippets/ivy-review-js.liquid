@@ -1,53 +1,52 @@
 <script>
-  window.openIvyReviewsModal = function () {
+  console.log('ivy-review-js loaded');
+
+  function openIvyReviewsModal() {
+    console.log('openIvyReviewsModal fired');
     var modal = document.getElementById('ivy-reviews-modal');
-    if (!modal) return;
+    if (!modal) {
+      console.log('modal not found');
+      return;
+    }
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
-  };
+  }
 
-  window.closeIvyReviewsModal = function () {
+  function closeIvyReviewsModal() {
+    console.log('closeIvyReviewsModal fired');
     var modal = document.getElementById('ivy-reviews-modal');
     if (!modal) return;
     modal.classList.remove('is-open');
     document.body.style.overflow = '';
-  };
+  }
 
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') closeIvyReviewsModal();
+  window.openIvyReviewsModal = openIvyReviewsModal;
+  window.closeIvyReviewsModal = closeIvyReviewsModal;
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeIvyReviewsModal();
+    }
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    function attachToBadge(reviewBadge) {
-      if (!reviewBadge || reviewBadge.dataset.ivyBound === 'true') return;
+  document.addEventListener('click', function(e) {
+    var badge = e.target.closest('.romw-review-panel');
+    if (!badge) return;
 
-      reviewBadge.dataset.ivyBound = 'true';
-      reviewBadge.removeAttribute('target');
-      reviewBadge.removeAttribute('rel');
+    console.log('badge clicked');
+    console.log('badge href before:', badge.getAttribute('href'));
+    console.log('badge target before:', badge.getAttribute('target'));
 
-      reviewBadge.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        openIvyReviewsModal();
-      });
-    }
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.stopImmediatePropagation) e.stopImmediatePropagation();
 
-    function bindBadge() {
-      var badge = document.querySelector('.romw-review-panel');
-      attachToBadge(badge);
-    }
+    badge.removeAttribute('target');
+    badge.removeAttribute('rel');
+    badge.setAttribute('href', 'javascript:void(0)');
 
-    bindBadge();
+    openIvyReviewsModal();
 
-    var observer = new MutationObserver(function () {
-      bindBadge();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-  });
+    return false;
+  }, true);
 </script>
-
-<script src="https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a" defer></script>
