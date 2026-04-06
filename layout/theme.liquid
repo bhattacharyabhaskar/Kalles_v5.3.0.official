@@ -55,15 +55,16 @@
       render 'css-variables', is_rtl: is_rtl
       render 'js-variables'
       render 'scripts'
-      <link href="{{ 'ivy-badges.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
-      <link href="{{ 'ivy-discounts.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
-      <link href="{{ 'ivy-collection-banner.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
       if settings.custom_html_head != blank
         echo settings.custom_html_head
       endif
     -%}
+    <link href="{{ 'ivy-badges.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="{{ 'ivy-discounts.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="{{ 'ivy-collection-banner.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
 
     {{ content_for_header }}
+    
     {%- endunless -%}
   </head>
 
