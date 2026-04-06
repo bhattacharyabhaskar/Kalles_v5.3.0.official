@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main_heading_fgVmaw": {
@@ -12,7 +21,10 @@
             "text_size": "2xl",
             "text_color": "hdt-s-text",
             "italic": false,
-            "uppercase": false
+            "uppercase": false,
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
           },
           "blocks": {}
         },
@@ -25,7 +37,10 @@
             "text_size": "base",
             "text_color": "hdt-s-text",
             "italic": false,
-            "uppercase": false
+            "uppercase": false,
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
           },
           "blocks": {}
         }
@@ -36,14 +51,13 @@
       ],
       "settings": {
         "use_dynamic_source": false,
-        "image": "shopify://shop_images/shop-banner.jpg",
         "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
         "bg_overlay": 42,
         "space_item": 12,
-        "pd": "84px,,84px,",
-        "pd_mb": "56px,,56px,",
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "84px,,84px,",
+        "pd_mb": "56px,,56px,"
       }
     },
     "custom_section_mnTphP": {
@@ -55,6 +69,9 @@
             "column_dk": "5",
             "column_tb": "5",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -62,6 +79,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 0,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center",
             "alignment": "left",
             "alignment_mb": "center",
@@ -72,7 +90,7 @@
             "image_sumana": {
               "type": "image",
               "settings": {
-                "img": "shopify://shop_images/about-founder.jpg",
+                "img": "shopify://shop_images/About-Us-1.jpg",
                 "image_ratio": "adapt_image",
                 "img_effect": "none",
                 "b_effect": "none",
@@ -93,6 +111,9 @@
             "column_dk": "7",
             "column_tb": "7",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -100,6 +121,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 24,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center-start",
             "alignment": "left",
             "alignment_mb": "left",
@@ -115,7 +137,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "2xl",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 1
@@ -140,7 +166,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 0
@@ -160,6 +190,9 @@
             "column_dk": "12",
             "column_tb": "12",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -167,6 +200,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 0,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center",
             "alignment": "center",
             "alignment_mb": "center",
@@ -182,7 +216,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 20,
                 "font_size_text": 18,
                 "letter_spacing_text": 4
@@ -200,6 +238,9 @@
             "column_dk": "7",
             "column_tb": "7",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -207,6 +248,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 24,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center-start",
             "alignment": "left",
             "alignment_mb": "left",
@@ -222,7 +264,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "2xl",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 1
@@ -247,7 +293,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 0
@@ -267,6 +317,9 @@
             "column_dk": "5",
             "column_tb": "5",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -274,6 +327,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 0,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center",
             "alignment": "right",
             "alignment_mb": "center",
@@ -284,7 +338,6 @@
             "image_began": {
               "type": "image",
               "settings": {
-                "img": "shopify://shop_images/about-story.jpg",
                 "image_ratio": "adapt_image",
                 "img_effect": "none",
                 "b_effect": "none",
@@ -305,6 +358,9 @@
             "column_dk": "12",
             "column_tb": "12",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -312,6 +368,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 0,
             "content_position": "start",
+            "align_content": false,
             "content_position_mb": "center-start",
             "alignment": "left",
             "alignment_mb": "left",
@@ -327,7 +384,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "2xl",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 1
@@ -352,7 +413,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 0
@@ -372,6 +437,9 @@
             "column_dk": "5",
             "column_tb": "5",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -379,6 +447,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 0,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center",
             "alignment": "left",
             "alignment_mb": "center",
@@ -389,7 +458,6 @@
             "image_purpose": {
               "type": "image",
               "settings": {
-                "img": "shopify://shop_images/about-artisan.jpg",
                 "image_ratio": "adapt_image",
                 "img_effect": "none",
                 "b_effect": "none",
@@ -410,6 +478,9 @@
             "column_dk": "7",
             "column_tb": "7",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -417,6 +488,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 24,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center-start",
             "alignment": "left",
             "alignment_mb": "left",
@@ -432,7 +504,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "2xl",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 1
@@ -457,7 +533,11 @@
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 0
@@ -477,6 +557,9 @@
             "column_dk": "12",
             "column_tb": "12",
             "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
@@ -484,6 +567,7 @@
             "spacing_h_mb": 0,
             "spacing_v_mb": 0,
             "content_position": "center",
+            "align_content": false,
             "content_position_mb": "center",
             "alignment": "center",
             "alignment_mb": "center",
@@ -494,7 +578,8 @@
             "quote_text": {
               "type": "blockquote",
               "settings": {
-                "quote": "<p><em>Trusted by thousands of patrons across the world, IndyVogue stands for authenticity, thoughtful curation, and timeless Indian elegance.</em></p><p><em>We will win your heart.</em></p>"
+                "quote": "<p><em>Trusted by thousands of patrons across the world, IndyVogue stands for authenticity, thoughtful curation, and timeless Indian elegance.</em></p><p><em>We will win your heart.</em></p>",
+                "text_color": "hdt-s-text"
               },
               "blocks": {}
             }
@@ -520,11 +605,15 @@
         "item_spacing": 36,
         "item_spacing_tb": 24,
         "item_spacing_mb": 24,
+        "colors_by_section": false,
         "color_scheme": "",
-        "pd": "72px,,72px,",
-        "pd_mb": "44px,18px,44px,18px",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "72px,,72px,",
+        "pd_mb": "44px,18px,44px,18px"
       }
     }
   },
