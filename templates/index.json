@@ -394,13 +394,13 @@
                 "open_in_new_tab": false,
                 "full_width": false,
                 "btn_style": "",
-                "color_btn": "#fff",
-                "color_hover_btn": "#fff",
-                "background_btn": "#222",
-                "background_hover_btn": "#333",
+                "color_btn": "#ffffff",
+                "color_hover_btn": "#ffffff",
+                "background_btn": "#222222",
+                "background_hover_btn": "#333333",
                 "border_w_btn": "",
-                "border_btn": "#222",
-                "border_hover_btn": "#333",
+                "border_btn": "#222222",
+                "border_hover_btn": "#333333",
                 "size": "m",
                 "text_size": "hdt-text-base",
                 "font_weight": "normal",
@@ -1512,22 +1512,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "custom_liquid_jxkK9w": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.name",
-      "settings": {
-        "custom_liquid": "<div data-romw-token=\"B1cu6qhdMQxoHwiEVPwX8PJir6ykcauVBghOyQ2bIV59qkMBhV\"></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
     }
   },
   "order": [
@@ -1540,7 +1524,6 @@
     "featured_collection_PTq36A",
     "banner_VyWanM",
     "blog_post_DcUjga",
-    "1755067183c661e3bf",
-    "custom_liquid_jxkK9w"
+    "1755067183c661e3bf"
   ]
 }
