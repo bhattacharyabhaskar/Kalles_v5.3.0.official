@@ -67,7 +67,10 @@
 {{ content_for_header }}
     {%- endunless -%}
   </head>
-
+{{ 'ivy-review.css' | asset_url | stylesheet_tag }}
+{% render 'ivy-reviews-modal' %}
+{% render 'ivy-review-js' %}
+<script src="https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a" defer></script>
   <body class="hdt-page-type-{{ request.page_type }}">
     {% comment %} {%- section 'product-card-configs' -%} {% endcomment %}
     {%- unless template == 'product.only_config' and request.design_mode == false -%}

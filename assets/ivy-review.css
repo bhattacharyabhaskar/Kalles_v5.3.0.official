@@ -1,0 +1,68 @@
+.ivy-reviews-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:999999;
+}
+
+.ivy-reviews-modal.is-open{
+  display:block;
+}
+
+.ivy-reviews-modal__overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.65);
+}
+
+.ivy-reviews-modal__box{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:min(960px,94vw);
+  height:min(85vh,820px);
+  background:#fff;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.ivy-reviews-modal__close{
+  position:absolute;
+  top:10px;
+  right:14px;
+  width:36px;
+  height:36px;
+  border:none;
+  border-radius:999px;
+  background:#fff;
+  color:#111;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+  z-index:3;
+}
+
+.ivy-reviews-modal__content{
+  height:100%;
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:56px 14px 18px;
+}
+
+@media(max-width:768px){
+  .ivy-reviews-modal__box{
+    top:auto;
+    bottom:0;
+    left:0;
+    transform:none;
+    width:100vw;
+    height:92vh;
+    border-radius:18px 18px 0 0;
+  }
+
+  .ivy-reviews-modal__content{
+    padding:56px 10px 16px;
+  }
+}

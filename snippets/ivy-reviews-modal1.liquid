@@ -1,0 +1,53 @@
+<script>
+  window.openIvyReviewsModal = function () {
+    var modal = document.getElementById('ivy-reviews-modal');
+    if (!modal) return;
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeIvyReviewsModal = function () {
+    var modal = document.getElementById('ivy-reviews-modal');
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  };
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeIvyReviewsModal();
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    function attachToBadge(reviewBadge) {
+      if (!reviewBadge || reviewBadge.dataset.ivyBound === 'true') return;
+
+      reviewBadge.dataset.ivyBound = 'true';
+      reviewBadge.removeAttribute('target');
+      reviewBadge.removeAttribute('rel');
+
+      reviewBadge.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openIvyReviewsModal();
+      });
+    }
+
+    function bindBadge() {
+      var badge = document.querySelector('.romw-review-panel');
+      attachToBadge(badge);
+    }
+
+    bindBadge();
+
+    var observer = new MutationObserver(function () {
+      bindBadge();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  });
+</script>
+
+<script src="https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a" defer></script>
