@@ -210,42 +210,6 @@
                 "product_ask_question_nWC4pL"
               ]
             },
-            "product_meta_hnDEjn": {
-              "type": "_product-meta",
-              "settings": {},
-              "blocks": {
-                "product_meta_available_hVC3VU": {
-                  "type": "_product-meta-available",
-                  "name": "t:sections.main-product.blocks.meta.settings.show_available.label",
-                  "disabled": true,
-                  "settings": {},
-                  "blocks": {}
-                },
-                "product_meta_sku_kXHJPJ": {
-                  "type": "_product-meta-sku",
-                  "settings": {},
-                  "blocks": {}
-                },
-                "product_meta_category_4Gq4HK": {
-                  "type": "_product-meta-category",
-                  "disabled": true,
-                  "settings": {},
-                  "blocks": {}
-                },
-                "product_meta_tags_bePDzg": {
-                  "type": "_product-meta-tags",
-                  "disabled": true,
-                  "settings": {},
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "product_meta_available_hVC3VU",
-                "product_meta_sku_kXHJPJ",
-                "product_meta_category_4Gq4HK",
-                "product_meta_tags_bePDzg"
-              ]
-            },
             "socials_XYJPwj": {
               "type": "socials",
               "settings": {
@@ -279,7 +243,6 @@
             "product_pickup_Jpchr6",
             "product_trust_badge_QALnxQ",
             "product_extra_link_HfDmDV",
-            "product_meta_hnDEjn",
             "socials_XYJPwj"
           ]
         },
