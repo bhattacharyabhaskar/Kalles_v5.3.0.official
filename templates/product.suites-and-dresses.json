@@ -76,7 +76,6 @@
             },
             "product_variant_picker_WMmDTM": {
               "type": "_product-variant-picker",
-              "disabled": true,
               "settings": {
                 "color_picker_type": "color_rounded",
                 "color_size": "medium",
