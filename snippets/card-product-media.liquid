@@ -22,7 +22,17 @@
           </template>
         </hdt-video-player>
       {%- else -%}
-        {{ featured_media | image_url: width: featured_media.width | image_tag: loading: 'lazy', fetchpriority: "low", sizes: sizes, widths: '165, 360, 533, 668, 720, 940', data-widths: '[165, 360, 533, 668, 720, 940]', class: 'hdt-card-product__media--main' }}
+        
+        {%- assign img_loading = 'lazy' -%}
+          {%- assign img_priority = 'low' -%}
+          {%- if lazy == false -%}
+            {%- assign img_loading = 'eager' -%}
+            {%- assign img_priority = 'high' -%}
+          {%- endif -%}
+          
+        {{ featured_media | image_url: width: featured_media.width | image_tag: loading: img_loading, fetchpriority: img_priority, sizes: sizes, widths: '165, 360, 533, 668, 720, 940', data-widths: '[165, 360, 533, 668, 720, 940]', class: 'hdt-card-product__media--main' }}
+                
+      
       {%- endif -%}
       {%- if card_product.media[1] != null and settings.show_secondary_image -%}
         {%- assign next_media = card_product.media[featured_media.position] | default: card_product.media[1] -%}
