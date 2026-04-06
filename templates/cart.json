@@ -46,10 +46,6 @@
     "main-cart": {
       "type": "main-cart",
       "blocks": {
-        "subtotal_zWXrDK": {
-          "type": "subtotal",
-          "settings": {}
-        },
         "tax_WBJRLG": {
           "type": "tax",
           "settings": {
@@ -59,7 +55,7 @@
         "btn_checkout_mF3EDB": {
           "type": "btn_checkout",
           "settings": {
-            "btn_style": "hdt-btn-accent",
+            "btn_style": "",
             "color_btn": "#ffffff",
             "color_hover_btn": "#ffffff",
             "background_btn": "#222222",
@@ -67,18 +63,18 @@
             "border_w_btn": "",
             "border_btn": "#222222",
             "border_hover_btn": "#333333",
-            "size": "custom hdt-btn--size-custom-1",
+            "size": "custom custom-inline",
             "text_size": "hdt-text-base",
-            "font_weight": "normal",
+            "font_weight": "bold",
             "font_size_btn": 14,
             "padding_btn": 30,
             "min_width_btn": 100,
             "min_width_dt_btn": 100,
             "min_height_btn": 40,
-            "rounded": "",
-            "icon": "arrow_right",
+            "rounded": "hdt-btn-radius-sm",
+            "icon": "none",
             "icon_position": "after",
-            "icon_height": 16,
+            "icon_height": 50,
             "icon_spacing": 5
           }
         },
@@ -100,7 +96,6 @@
         }
       },
       "block_order": [
-        "subtotal_zWXrDK",
         "tax_WBJRLG",
         "btn_checkout_mF3EDB",
         "accelerated_btns_gxxE7x",
