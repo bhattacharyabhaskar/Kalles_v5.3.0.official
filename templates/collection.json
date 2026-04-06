@@ -12,8 +12,8 @@
     "collections_list_simple_4yRUED": {
       "type": "top-list-collections",
       "settings": {
-        "show_type": "all",
-        "menu": "footer",
+        "show_type": "menu",
+        "menu": "02-top-list-collection",
         "sort": "alphabetical",
         "hide_mobile": false,
         "navUI": true,
