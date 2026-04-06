@@ -33,12 +33,12 @@
         assign img_class = 'hdt-object-pos-mb'
         echo '<picture class="hdt-media-wrapper">'
         if block.settings.image_mb != blank and block.settings.image_mb != block.settings.image
-          assign srcset = block.settings.image_mb | image_url: width: block.settings.image_mb.width | image_tag: widths: '200,400,600,800,1000', alt: null | split: 'srcset="' | last
+          assign srcset = block.settings.image_mb | image_url: width: block.settings.image_mb.width | image_tag: widths: '360,540,720,750,900', alt: null | split: 'srcset="' | last
           unless srcset contains 'src='
             echo '<source media="(max-width: 767px)" srcset="' | append: srcset | replace_first: 'style=', 'data-none='
           endunless
         endif
-        echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'eager', fetchpriority: fetch, class: img_class, sizes: sizes, widths: '400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200,3400,3600'
+        echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'eager', fetchpriority: fetch, preload: fetch == 'high', class: img_class, sizes: sizes, widths: '400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200,3400,3600'
         echo '</picture>'
       else
         capture current
