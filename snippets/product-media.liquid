@@ -51,7 +51,13 @@
       {%- if image != blank -%}
         <div class="hdt-product-media__main hdt-ratio--adapt_image">
           <div class="hdt-ratio hdt-product__media" style="--aspect-ratioapt:{{ image.aspect_ratio }};--mw-media:{{ image.width }}px">
-            {{ image | image_url: width: image.width | image_tag: sizes: sizes, widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946', hdt-el: '' }}
+            {%- assign img_loading = 'lazy' -%}
+              {%- assign img_priority = 'low' -%}
+              {%- if lazy == false -%}
+                {%- assign img_loading = 'eager' -%}
+                {%- assign img_priority = 'high' -%}
+              {%- endif -%}
+              {{ image | image_url: width: image.width | image_tag: sizes: sizes, widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946', hdt-el: '', loading: img_loading, fetchpriority: img_priority }}
           </div>
         </div>
       {%- endif -%}
