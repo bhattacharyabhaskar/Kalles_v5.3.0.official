@@ -30,7 +30,7 @@
           "type": "announcement",
           "settings": {
             "link": "",
-            "text": "🎉 2026 Special, UP TO 10% OFF 🎁<a href=\"/collections/buy-silk-mark-certified-saree\" title=\"Latest Saree Collection\">Shop Now</a>",
+            "text": "<strong>🎉 2026 Special, UP TO 10% OFF 🎁</strong><a href=\"/collections/buy-silk-mark-certified-saree\" title=\"Latest Saree Collection\"><strong>Shop Now</strong></a>",
             "adding_border": false,
             "countdown": "2024-12-30 15:00:00",
             "txt_day": "days",
