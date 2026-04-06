@@ -44,7 +44,7 @@
         "announcement_fekMnb"
       ],
       "settings": {
-        "show_line_separator": false,
+        "show_line_separator": true,
         "close_btn": "1",
         "height": 45,
         "fontsize": 12,
