@@ -115,27 +115,10 @@
         "pd": "70px,,50px,",
         "pd_mb": "70px,,50px,"
       }
-    },
-    "custom_liquid_8QiDKR": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.name",
-      "settings": {
-        "custom_liquid": "<div data-romw-token=\"B1cu6qhdMQxoHwiEVPwX8PJir6ykcauVBghOyQ2bIV59qkMBhV\"></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
     }
   },
   "order": [
     "main_heading_zHKQUU",
-    "main-cart",
-    "custom_liquid_8QiDKR"
+    "main-cart"
   ]
 }
