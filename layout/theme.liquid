@@ -25,6 +25,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    {% render 'website-schema' %}
+        {% if template contains 'index' %}
+            {% render 'organization-schema' %}
+        {% elsif template contains 'collection' %}
+            {% render 'breadcrumb-schema-collection' %}
+        {% elsif template contains 'product' %}
+            {% render 'breadcrumb-schema-product' %}
+        {% elsif template contains 'article' %}
+            {% render 'article-schema' %}
+        {% endif %}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -35,12 +45,8 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endif -%}
     {%- if settings.library_font == 'google' -%}{{ settings.embed_google_font }}{%- endif -%}
-    <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; {{ 'general.meta.tag' | t }} "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t }} {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-    </title>
+    {% render 'page-title-meta-desc' %}
+        {%- render 'meta-tags', t_name: t_name -%}
 
     {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
 
