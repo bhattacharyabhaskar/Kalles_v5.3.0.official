@@ -24,12 +24,6 @@
             "url": ""
           }
         },
-        "agree_y3A6EM": {
-          "type": "agree",
-          "settings": {
-            "content": "I agree with the terms and conditions"
-          }
-        },
         "btn_cart_74AGUK": {
           "type": "btn_cart",
           "settings": {
@@ -62,7 +56,6 @@
       "block_order": [
         "subtotal_hPmjgN",
         "tax_rkEdFK",
-        "agree_y3A6EM",
         "btn_cart_74AGUK",
         "btn_checkout_bcnmpT",
         "img_trust_zatTgB"
