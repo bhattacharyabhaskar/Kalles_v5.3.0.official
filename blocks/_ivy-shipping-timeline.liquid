@@ -1,0 +1,204 @@
+{%- comment -%}
+  IndyVogue — Shipping Timeline Block
+  Shows estimated delivery dates based on product type and shipping metafield.
+  Metafield: product.metafields.custom.shipping (single_line_text)
+  Format: "code: min-max" e.g. "standard: 3-5"
+{%- endcomment -%}
+
+<div class="hdt-product-info__item" {{ block.shopify_attributes }}>
+  <div class="ivy-highlights-wrapper" style="margin-bottom: 16px; text-align: center; position: relative;">
+    <h4 class="ivy-highlights-header" style="display: inline-block; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #fefaf8; z-index: 2; color: #4b0000; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; padding: 6px 20px; border: 2px solid #b7499b; border-radius: 10px; font-family: 'Poppins', sans-serif; white-space: nowrap;">
+      Estimated delivery
+    </h4>
+
+    <div id="shipping-timeline-{{ product.id }}"
+         data-product-type="{{ product.type | escape }}"
+         data-shipping-code="{{ product.metafields.saree.shipping | default: '' | escape }}">
+      <div class="timeline-ui">
+        <div class="timeline-step">
+          <div class="timeline-badge"><span>1</span></div>
+          <div class="timeline-icon"><i class="las la-shopping-bag"></i></div>
+          <div class="timeline-label">Order Placed</div>
+          <div class="timeline-date" id="order-date-{{ product.id }}"></div>
+        </div>
+        <div class="timeline-connector"><i class="las la-chevron-circle-right"></i></div>
+        <div class="timeline-step">
+          <div class="timeline-badge"><span>2</span></div>
+          <div class="timeline-icon"><i class="las la-plane-departure"></i></div>
+          <div class="timeline-label">On its way</div>
+          <div class="timeline-date" id="shipping-date-{{ product.id }}"></div>
+        </div>
+        <div class="timeline-connector"><i class="las la-chevron-circle-right"></i></div>
+        <div class="timeline-step">
+          <div class="timeline-badge"><span>3</span></div>
+          <div class="timeline-icon"><i class="las la-gift"></i></div>
+          <div class="timeline-label">Delivered</div>
+          <div class="timeline-date" id="delivery-date-{{ product.id }}"></div>
+        </div>
+        <div class="customization-note" id="customization-note-{{ product.id }}" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.timeline-ui {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 1.5px solid #b7499b;
+  border-radius: 10px;
+  padding: 30px 2px 4px;
+  margin-top: 10px;
+  background: #fff;
+  text-align: center;
+  gap: 0px;
+  position: relative;
+}
+.timeline-ui::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% / 3);
+  height: 2px;
+  background: #fefaf8;
+  z-index: 1;
+}
+.timeline-step {
+  flex: 1;
+  min-width: 70px;
+  position: relative;
+}
+.timeline-badge {
+  width: 20px;
+  height: 20px;
+  background-color: #b0173f;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 4px;
+}
+.timeline-icon {
+  font-size: 28px;
+  color: #b0173f;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.timeline-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 1px;
+  color: #333;
+}
+.timeline-date {
+  font-size: 13px;
+  color: #000000;
+}
+.timeline-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.1;
+  font-size: 28px;
+  color: #d63a5e;
+}
+.customization-note {
+  flex-basis: 100%;
+  font-size: 11px;
+  text-align: center;
+  color: #222;
+  background: #f7f7f7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+</style>
+
+<script>
+(function() {
+  function addShippingBusinessDays(startDate, daysToAdd) {
+    let count = 0;
+    const result = new Date(startDate);
+    while (count < daysToAdd) {
+      result.setDate(result.getDate() + 1);
+      const day = result.getDay();
+      if (day !== 0 && day !== 6) count++;
+    }
+    return result;
+  }
+
+  function addDeliveryBusinessDays(startDate, daysToAdd) {
+    let count = 0;
+    const result = new Date(startDate);
+    while (count < daysToAdd) {
+      result.setDate(result.getDate() + 1);
+      if (result.getDay() !== 0) count++;
+    }
+    return result;
+  }
+
+  function formatDate(d) {
+    return d.toLocaleDateString("en-US", { month: "short", day: "2-digit" });
+  }
+
+  function initShippingTimeline() {
+    const el = document.getElementById("shipping-timeline-{{ product.id }}");
+    if (!el) return;
+
+    const productType = el.dataset.productType;
+    const rawShippingCode = (el.dataset.shippingCode || '').trim();
+
+    let shipMin = 1, shipMax = 2;
+    const rangeMatch = rawShippingCode.match(/:\s*(\d+)[^\d]+(\d+)/);
+    if (rangeMatch) {
+      shipMin = parseInt(rangeMatch[1]);
+      shipMax = parseInt(rangeMatch[2]);
+    } else if (productType === "Dress") {
+      shipMin = 11;
+      shipMax = 13;
+    }
+
+    const today = new Date();
+    const shipMinDate = addShippingBusinessDays(today, shipMin);
+    const shipMaxDate = addShippingBusinessDays(today, shipMax);
+    const deliveryMinDate = addDeliveryBusinessDays(shipMinDate, 3);
+    const deliveryMaxDate = addDeliveryBusinessDays(shipMaxDate, 4);
+
+    document.getElementById("order-date-{{ product.id }}").innerText = formatDate(today);
+    document.getElementById("shipping-date-{{ product.id }}").innerText = `${formatDate(shipMinDate)} – ${formatDate(shipMaxDate)}`;
+    document.getElementById("delivery-date-{{ product.id }}").innerText = `${formatDate(deliveryMinDate)} – ${formatDate(deliveryMaxDate)}`;
+
+    if (productType === "Saree") {
+      const noteEl = document.getElementById("customization-note-{{ product.id }}");
+      noteEl.style.display = "block";
+      noteEl.innerHTML = "<strong>Add 3–5 days for stitched blouse or pre-stitched saree.</strong>";
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initShippingTimeline);
+  } else {
+    initShippingTimeline();
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Shipping Timeline",
+  "tag": null,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Shipping Timeline"
+    }
+  ]
+}
+{% endschema %}

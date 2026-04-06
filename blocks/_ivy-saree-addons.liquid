@@ -1,0 +1,26 @@
+{%- comment -%}
+  IndyVogue — Saree Add-ons Block
+  Shows "Complete Your Look" upsell for Saree products only.
+  Add this block to the PDP after the buy button block.
+{%- endcomment -%}
+
+{% if product.type == "Saree" %}
+  {% render 'ivy-saree-addons',
+    fabric_type: product.metafields.saree.fabric_type,
+    blouse_piece_value: product.metafields.saree.BlousePiece
+  %}
+  {% render 'ivy-saree-addons-script' %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Saree Add-ons",
+  "tag": null,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Saree Add-ons"
+    }
+  ]
+}
+{% endschema %}
