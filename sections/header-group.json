@@ -69,8 +69,8 @@
         "liquid_BWdJTA": {
           "type": "liquid",
           "settings": {
-            "custom_liquid": "Welcome customers to your store",
-            "hide": true
+            "custom_liquid": "Welcome to IndyVogue where Tradition Meets Elegance",
+            "hide": false
           }
         },
         "text_iRiP87": {
