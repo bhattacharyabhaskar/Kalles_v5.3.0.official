@@ -227,6 +227,16 @@
                 "space_item": 30
               },
               "blocks": {}
+            },
+            "ivy_saree_addons_block": {
+              "type": "_ivy-saree-addons",
+              "settings": {},
+              "blocks": {}
+            },
+            "ivy_shipping_timeline_block": {
+              "type": "_ivy-shipping-timeline",
+              "settings": {},
+              "blocks": {}
             }
           },
           "block_order": [
@@ -236,6 +246,8 @@
             "product_variant_picker_WMmDTM",
             "quantity_selector_tarLcL",
             "product_buy_button_aPmAbD",
+            "ivy_saree_addons_block",
+            "ivy_shipping_timeline_block",
             "product_back_instock_qMdMA6",
             "product_pickup_Jpchr6",
             "product_trust_badge_QALnxQ",
