@@ -38,7 +38,7 @@
             echo '<source media="(max-width: 767px)" srcset="' | append: srcset | replace_first: 'style=', 'data-none='
           endunless
         endif
-        echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'eager', fetchpriority: fetch, preload: fetch == 'high', class: img_class, sizes: sizes, widths: '400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200,3400,3600'
+        echo block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'eager', fetchpriority: fetch, class: img_class, sizes: sizes, widths: '400,600,800,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200,3400,3600'
         echo '</picture>'
       else
         capture current

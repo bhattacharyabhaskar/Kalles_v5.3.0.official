@@ -185,16 +185,7 @@
                 }
               </script>
             {%- endif -%}
-            {% render 'shipping-protection', protect_product: protect_product, is_protect_active: is_protect_active, data_page_id: '#hdt-page-cart' %}
-            {%- if section.settings.show_cart_note -%}
-              <hdt-cart-note class="hdt-page-cart__note">
-                <label for="Cart-note" class="hdt-s-text hdt-block" data-label-note>
-                  <span {% if cart.note != blank %}hidden{% endif %}>{{ 'sections.cart.add_note' | t }}</span>
-                  <span {% if cart.note == blank %}hidden{% endif %}>{{ 'sections.cart.edit_note' | t }}</span>
-                </label>
-                <textarea name="note" id="Cart-note" placeholder="{{ 'sections.cart.placeholder_note' | t | escape }}">{{ cart.note }}</textarea>
-              </hdt-cart-note>
-            {%- endif -%}
+
             {%- if section.settings.show_cart_discount -%}
               <hdt-cart-discount data-cart-scope="main">
                 <div class="hdt-page-cart__coupon hdt-page-cart__field" style="margin-top: 20px;">
@@ -208,6 +199,16 @@
                   <div data-cart-discount-error class="hdt-discount-error hdt-text-error hdt-mt-2" style="display: none;">{{ section.settings.discount_error_message }}</div>
                 </div>
               </hdt-cart-discount>
+            {%- endif -%}
+            {% render 'shipping-protection', protect_product: protect_product, is_protect_active: is_protect_active, data_page_id: '#hdt-page-cart' %}
+            {%- if section.settings.show_cart_note -%}
+              <hdt-cart-note class="hdt-page-cart__note">
+                <label for="Cart-note" class="hdt-s-text hdt-block" data-label-note>
+                  <span {% if cart.note != blank %}hidden{% endif %}>{{ 'sections.cart.add_note' | t }}</span>
+                  <span {% if cart.note == blank %}hidden{% endif %}>{{ 'sections.cart.edit_note' | t }}</span>
+                </label>
+                <textarea name="note" id="Cart-note" placeholder="{{ 'sections.cart.placeholder_note' | t | escape }}">{{ cart.note }}</textarea>
+              </hdt-cart-note>
             {%- endif -%}
           </div>
           <div class="hdt-col hdt-page-cart__content md:hdt-text-end hdt-text-center">
@@ -284,11 +285,7 @@
                             render 'icons', icon: block.settings.icon
                           endif
                         -%}
-                        <span>
-                          {%- liquid
-                            echo 'sections.cart.checkout' | t
-                          -%}
-                        </span>
+                       <span>Secure Checkout — {{ cart.total_price | money }}</span>
                       </button>
                     {%- when 'accelerated_btns' -%}
                       {%- comment %} https://shopify.dev/docs/themes/pricing-payments/accelerated-checkout {% endcomment -%}
