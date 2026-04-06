@@ -115,7 +115,7 @@
     "social_whatsapp_link": "https://wa.me/9133784722",
     "social_linked_in_link": "https://www.linkedin.com/company/indyvogue/",
     "predictive_search_enabled": true,
-    "predictive_search_show_vendor": true,
+    "predictive_search_show_vendor": false,
     "predictive_search_show_price": true,
     "search_fullwidth": false,
     "products_suggest": [
@@ -125,6 +125,7 @@
       "cluse-la-boheme-rose-gold",
       "mercury-tee"
     ],
+    "color_scheme_search": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
     "currency_type": "1",
     "currency_code_enabled": true,
     "flag_currency": true,
