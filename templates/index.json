@@ -384,12 +384,45 @@
                 "space": 20
               },
               "blocks": {}
+            },
+            "button_9qehJ7": {
+              "type": "button",
+              "name": "t:blocks.button.name",
+              "settings": {
+                "label": "Know More",
+                "link": "",
+                "open_in_new_tab": false,
+                "full_width": false,
+                "btn_style": "",
+                "color_btn": "#fff",
+                "color_hover_btn": "#fff",
+                "background_btn": "#222",
+                "background_hover_btn": "#333",
+                "border_w_btn": "",
+                "border_btn": "#222",
+                "border_hover_btn": "#333",
+                "size": "m",
+                "text_size": "hdt-text-base",
+                "font_weight": "normal",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40,
+                "rounded": "",
+                "icon": "none",
+                "icon_position": "after",
+                "icon_height": 14,
+                "icon_spacing": 5
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "heading_twHE3r",
             "text_kM4tjV",
-            "spacer_9NNBBe"
+            "spacer_9NNBBe",
+            "button_9qehJ7"
           ]
         }
       },
