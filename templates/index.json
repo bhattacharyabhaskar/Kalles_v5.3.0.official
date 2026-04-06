@@ -1205,9 +1205,9 @@
         "banner_item_8P4VCT": {
           "type": "_banner-item",
           "settings": {
-            "banner_url": "shopify://collections/automated-collection",
+            "banner_url": "shopify://collections/buy-silk-mark-certified-saree",
             "banner_target": false,
-            "img_effect": "translateToTop",
+            "img_effect": "zoom",
             "b_effect": "none",
             "colors_by_block": false,
             "color_scheme": "scheme-1",
