@@ -114,6 +114,24 @@
               },
               "blocks": {}
             },
+            "ivy_shipping_timeline_block": {
+              "type": "_liquid",
+              "settings": {
+                "option_type": "liquid",
+                "page": "",
+                "text": "{% render 'ivy-shipping-timeline', product: product %}",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "base",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
             "product_back_instock_qMdMA6": {
               "type": "_product_back_instock",
               "name": "Back in stock",
@@ -227,32 +245,6 @@
                 "space_item": 30
               },
               "blocks": {}
-            },
-            "ivy_saree_addons_block": {
-              "type": "_liquid",
-              "settings": {
-                "option_type": "liquid",
-                "text": "{% if product.type == 'Saree' %}{% render 'ivy-saree-addons', fabric_type: product.metafields.saree.fabric_type, blouse_piece_value: product.metafields.saree.BlousePiece %}{% render 'ivy-saree-addons-script' %}{% endif %}",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
-            "ivy_shipping_timeline_block": {
-              "type": "_liquid",
-              "settings": {
-                "option_type": "liquid",
-                "text": "{% render 'ivy-shipping-timeline', product: product %}",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
@@ -262,7 +254,6 @@
             "product_variant_picker_WMmDTM",
             "quantity_selector_tarLcL",
             "product_buy_button_aPmAbD",
-            "ivy_saree_addons_block",
             "ivy_shipping_timeline_block",
             "product_back_instock_qMdMA6",
             "product_pickup_Jpchr6",
