@@ -92,7 +92,7 @@
               "name": "t:blocks.media.name",
               "settings": {
                 "source": "image",
-                "image": "shopify://shop_images/About-Us-1.jpg",
+                "image": "shopify://shop_images/About-us-4.jpg",
                 "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                 "video_loop": true
               },
