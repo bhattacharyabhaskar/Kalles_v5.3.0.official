@@ -333,21 +333,20 @@
             "rounded": "none"
           },
           "blocks": {
-            "image_began": {
-              "type": "image",
+            "media_BrVRkm": {
+              "type": "_media",
+              "name": "t:blocks.media.name",
               "settings": {
-                "image_ratio": "adapt_image",
-                "img_effect": "none",
-                "b_effect": "none",
-                "custom_width": "custom",
-                "image_w": 100,
-                "image_w_mb": 100
+                "source": "image",
+                "image": "shopify://shop_images/About-us-2.jpg",
+                "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                "video_loop": true
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "image_began"
+            "media_BrVRkm"
           ]
         },
         "difference_full": {
