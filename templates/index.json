@@ -750,7 +750,7 @@
       "name": "t:sections.tabs_collections.grid_name",
       "settings": {
         "enable_tabs_on_heading": false,
-        "tabs_des": "has_border_bg",
+        "tabs_des": "underline",
         "tabs_list_pos": "center",
         "tab_item_size": "base",
         "tab_item_border": "solid",
