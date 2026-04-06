@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "link": "",
-            "text": "Only store with over <strong>700+</strong> ⭐⭐⭐⭐⭐  on <strong>Google</strong> & <strong>Facebook</strong>",
+            "text": "<strong>Only store</strong> with over <strong>700+</strong> ⭐⭐⭐⭐⭐  on <strong>Google</strong> & <strong>Facebook</strong>",
             "adding_border": false,
             "countdown": "2025-12-30 15:00:00",
             "txt_day": "days",
@@ -47,7 +47,7 @@
         "show_line_separator": true,
         "close_btn": "1",
         "height": 45,
-        "fontsize": 12,
+        "fontsize": 15,
         "design": "slider",
         "hdt_using_image_icon": false,
         "space_item": 30,
