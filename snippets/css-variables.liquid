@@ -367,8 +367,11 @@
 
 {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
 {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
-{{ 'product-card.css' | asset_url | stylesheet_tag }}
-{{ 'collection-products.css' | asset_url | stylesheet_tag }}
+{% comment %}{{ 'product-card.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{% comment %}{{ 'collection-products.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {% comment %} <link href="{{ 'product-card.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'"> {% endcomment %}
 {% comment %} <link href="{{ 'collection-products.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'"> {% endcomment %}
+
+<link href="{{ 'product-card.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="{{ 'collection-products.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
