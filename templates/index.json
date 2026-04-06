@@ -752,7 +752,7 @@
         "enable_tabs_on_heading": false,
         "tabs_des": "has_border_bg",
         "tabs_list_pos": "center",
-        "tab_item_size": "lg",
+        "tab_item_size": "base",
         "tab_item_border": "solid",
         "border_width": 2,
         "spacing_tabs_items": 30,
