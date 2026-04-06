@@ -262,7 +262,7 @@
         "open_event": "hover",
         "menu_type": "default",
         "header_menu_colors": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-        "h_icon": "kalles",
+        "h_icon": "line",
         "hover_icon": "2",
         "search_type": "icon",
         "enabled_user": true,
