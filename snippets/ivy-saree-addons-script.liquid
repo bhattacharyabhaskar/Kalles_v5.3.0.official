@@ -145,8 +145,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       if (!addRes.ok) {
         const errBody = await addRes.text();
-        console.error("❌ addRes error body:", errBody);
-        throw new Error('Failed to add items to cart');
+        const errJson = JSON.parse(errBody);
+        // 422 with max quantity = item already in cart, not a real error
+        if (addRes.status === 422 && errJson.message?.includes('maximum quantity')) {
+          console.warn("⚠️ Item already at max quantity in cart — continuing");
+        } else {
+          console.error("❌ addRes error body:", errBody);
+          throw new Error('Failed to add items to cart');
+        }
       }
 
       // Fetch cart with sections
@@ -184,5 +190,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   submitButton.addEventListener('click', handleAddToCart);
   floatingBtn.addEventListener('click', handleAddToCart);
+
+  // --- Sticky ATC ---
+  const stickyBtn = document.getElementById('ivy-sticky-atc-btn');
+  if (stickyBtn) {
+    // Update sticky button text when addons change
+    const origUpdateButtonText = updateButtonText;
+    updateButtonText = function() {
+      origUpdateButtonText();
+      const anyChecked = document.querySelectorAll('.addon-checkbox:checked').length > 0;
+      const stickyText = stickyBtn.querySelector('.hdt-btn-atc_text');
+      if (stickyText) stickyText.textContent = anyChecked ? 'Add to Cart with Add-ons' : 'Add to Cart';
+    };
+
+    // Intercept sticky form submit — prevent default and use our handleAddToCart
+    const stickyForm = stickyBtn.closest('form');
+    if (stickyForm) {
+      stickyForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        handleAddToCart(e);
+      }, true);
+    }
+  }
 });
 </script>

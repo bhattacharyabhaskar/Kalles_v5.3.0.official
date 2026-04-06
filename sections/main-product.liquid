@@ -121,12 +121,12 @@
               <input type="hidden" name="id" value="{{ selected_variant.id }}">
               {% endif %}
               <div class="hdt-sticky-atc__btns hdt-flex hdt-align-center">
-                <div class="hdt-sticky-atc__qty-selector">
+                <div class="hdt-sticky-atc__qty-selector" style="display:none;">
                   {%- render 'product-qty-selector', selected_variant: selected_variant, product_form_id: product_form_id_sticky, id: id_sticky -%}
                 </div>
 
                 <hdt-atc-animation class="hdt-contents" config='{ "ani": "{{ section.settings.ani }}", "time": "{{ section.settings.time }}" }'>
-                  <button data-animation type="submit" name="add" class="hdt-sticky-atc__submit hdt-btn hdt-oh {{ section.settings.btn_transform }} {{ section.settings.btn_style }} hdt-font-semibold hdt-relative hdt-truncate hdt-btn-loading__svg"{% if selected_variant.available == false or quantity_rule_soldout %} disabled="true"{% else %} style="--duration-time: 1s"{% endif %}>
+                  <button data-animation type="submit" id="ivy-sticky-atc-btn" name="add" class="hdt-sticky-atc__submit hdt-btn hdt-oh {{ section.settings.btn_transform }} {{ section.settings.btn_style }} hdt-font-semibold hdt-relative hdt-truncate hdt-btn-loading__svg"{% if selected_variant.available == false or quantity_rule_soldout %} disabled="true"{% else %} style="--duration-time: 1s"{% endif %}>
                     <span class="hdt-btn-atc_text">{% if is_pre_order %}{{ 'products.product.pre_order' | t }}{% elsif selected_variant.available == false or quantity_rule_soldout %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endif %}</span> 
                     <span class="hdt-loading__spinner hdt-absolute" hidden>
                       <svg width="16" height="16" class="hdt-svg-spinner" focusable="false" role="presentation" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="hdt-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
