@@ -66,3 +66,14 @@
     padding:56px 10px 16px;
   }
 }
+#romw_floating_badge_widget .romw-review-panel {
+  cursor: pointer !important;
+}
+
+#romw_floating_badge_widget{
+  outline: 3px solid red !important;
+}
+#romw_floating_badge_widget .romw-review-panel{
+  outline: 3px solid blue !important;
+  cursor: pointer !important;
+}

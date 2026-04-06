@@ -2,18 +2,13 @@
   console.log('ivy-review-js loaded');
 
   function openIvyReviewsModal() {
-    console.log('openIvyReviewsModal fired');
     var modal = document.getElementById('ivy-reviews-modal');
-    if (!modal) {
-      console.log('modal not found');
-      return;
-    }
+    if (!modal) return;
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeIvyReviewsModal() {
-    console.log('closeIvyReviewsModal fired');
     var modal = document.getElementById('ivy-reviews-modal');
     if (!modal) return;
     modal.classList.remove('is-open');
@@ -23,30 +18,36 @@
   window.openIvyReviewsModal = openIvyReviewsModal;
   window.closeIvyReviewsModal = closeIvyReviewsModal;
 
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      closeIvyReviewsModal();
-    }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeIvyReviewsModal();
   });
 
-  document.addEventListener('click', function(e) {
-    var badge = e.target.closest('.romw-review-panel');
+  function getBadgeFromEventTarget(target) {
+    return target.closest('#romw_floating_badge_widget .romw-review-panel');
+  }
+
+  function interceptBadge(e) {
+    var badge = getBadgeFromEventTarget(e.target);
     if (!badge) return;
 
-    console.log('badge clicked');
-    console.log('badge href before:', badge.getAttribute('href'));
-    console.log('badge target before:', badge.getAttribute('target'));
+    console.log('badge interaction intercepted:', e.type);
 
     e.preventDefault();
     e.stopPropagation();
     if (e.stopImmediatePropagation) e.stopImmediatePropagation();
 
-    badge.removeAttribute('target');
-    badge.removeAttribute('rel');
-    badge.setAttribute('href', 'javascript:void(0)');
-
     openIvyReviewsModal();
-
     return false;
-  }, true);
+  }
+
+  document.addEventListener('click', interceptBadge, true);
+  document.addEventListener('pointerup', interceptBadge, true);
+  document.addEventListener('touchend', interceptBadge, true);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var badge = document.querySelector('#romw_floating_badge_widget .romw-review-panel');
+    if (badge) {
+      badge.style.cursor = 'pointer';
+    }
+  });
 </script>

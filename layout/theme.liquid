@@ -62,8 +62,6 @@
         echo settings.custom_html_head
       endif
     -%}
-   
-{{ 'ivy-review.css' | asset_url | stylesheet_tag }}
 
 {{ content_for_header }}
     {%- endunless -%}
@@ -104,8 +102,5 @@
       render 'ivy-saree-cart-cleanup'
     -%}
    {%- endunless -%}
-   {% render 'ivy-reviews-modal' %}
-{% render 'ivy-review-js' %}
-<script src="https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a" defer></script>
   </body>
 </html>
