@@ -250,7 +250,7 @@
         "header_height": 70,
         "logo": "shopify://shop_images/Logo-Light-New_dbfec62d-d275-40ff-bb42-1a24183ca365.png",
         "logo_width": 95,
-        "header_colors": "",
+        "header_colors": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "main_menu": "01-desktop-header",
         "lazy_mn": false,
         "menu_position": "center",
