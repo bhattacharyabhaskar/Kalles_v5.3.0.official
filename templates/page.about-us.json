@@ -87,22 +87,20 @@
             "rounded": "none"
           },
           "blocks": {
-            "image_sumana": {
-              "type": "image",
+            "media_MTw3Qf": {
+              "type": "_media",
+              "name": "t:blocks.media.name",
               "settings": {
-                "img": "shopify://shop_images/About-Us-1.jpg",
-                "image_ratio": "adapt_image",
-                "img_effect": "none",
-                "b_effect": "none",
-                "custom_width": "custom",
-                "image_w": 100,
-                "image_w_mb": 100
+                "source": "image",
+                "image": "shopify://shop_images/About-Us-1.jpg",
+                "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                "video_loop": true
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "image_sumana"
+            "media_MTw3Qf"
           ]
         },
         "sumana_text": {
