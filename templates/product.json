@@ -229,13 +229,29 @@
               "blocks": {}
             },
             "ivy_saree_addons_block": {
-              "type": "_ivy-saree-addons",
-              "settings": {},
+              "type": "_liquid",
+              "settings": {
+                "option_type": "liquid",
+                "text": "{% if product.type == 'Saree' %}{% render 'ivy-saree-addons', fabric_type: product.metafields.saree.fabric_type, blouse_piece_value: product.metafields.saree.BlousePiece %}{% render 'ivy-saree-addons-script' %}{% endif %}",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
               "blocks": {}
             },
             "ivy_shipping_timeline_block": {
-              "type": "_ivy-shipping-timeline",
-              "settings": {},
+              "type": "_liquid",
+              "settings": {
+                "option_type": "liquid",
+                "text": "{% render 'ivy-shipping-timeline', product: product %}",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
               "blocks": {}
             }
           },
