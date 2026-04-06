@@ -1024,104 +1024,6 @@
         "pd_mb": ""
       }
     },
-    "featured_collection_PTq36A": {
-      "type": "featured-collection",
-      "blocks": {
-        "product_grid_JJ7DRU": {
-          "type": "_product-grid",
-          "settings": {
-            "collection": "buy-silk-mark-certified-saree",
-            "products_count": 8,
-            "product_list": [],
-            "pr_border": "in_image",
-            "product_des": "1",
-            "image_ratio": "adapt_image",
-            "image_size": true,
-            "show_vendor": false,
-            "col_dk": "4",
-            "col_tb": "3",
-            "col_mb": "2",
-            "space_items": "x",
-            "pagination": true,
-            "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-            "pagination_type": "view_all",
-            "enable_progressbar": false,
-            "paginate_pos": "center",
-            "dis_pagination": 30,
-            "btn_label": "",
-            "btn_style": "hdt-btn-outline-hover-accent",
-            "endable_btn_icon": false,
-            "size": "xl",
-            "btn_fw": "semibold",
-            "rounded": "",
-            "font_size_btn": 14,
-            "padding_btn": 30,
-            "min_width_btn": 100,
-            "min_width_dt_btn": 100,
-            "min_height_btn": 40
-          },
-          "blocks": {}
-        },
-        "pr-heading": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "2",
-            "horizontal": false,
-            "alignment": "center",
-            "heading_gap": 0,
-            "margin_bottom": 30
-          },
-          "blocks": {
-            "heading_section_rgjWE7": {
-              "type": "_heading_section",
-              "settings": {
-                "heading": "TRENDING",
-                "line_height": "",
-                "heading_size": "h5",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 50,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            },
-            "sub_heading_section_URb48x": {
-              "type": "_sub_heading_section",
-              "settings": {
-                "text": "<p><em>Top view in this week</em></p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "text_size": "base",
-                "text_color": "hdt-text-secondary",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_section_rgjWE7",
-            "sub_heading_section_URb48x"
-          ]
-        }
-      },
-      "block_order": [
-        "product_grid_JJ7DRU"
-      ],
-      "settings": {
-        "colors_by_section": false,
-        "color_scheme": "scheme-1",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": "",
-        "mg_mb": "",
-        "pd": ",,90px,",
-        "pd_mb": ",,67px,"
-      }
-    },
     "banner_VyWanM": {
       "type": "banners",
       "blocks": {
@@ -1485,7 +1387,6 @@
     "custom_liquid_UJhBxJ",
     "tabs_collection_dWUhRB",
     "collections_packery_NNr3d8",
-    "featured_collection_PTq36A",
     "banner_VyWanM",
     "blog_post_DcUjga",
     "1755067183c661e3bf"
