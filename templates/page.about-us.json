@@ -452,21 +452,20 @@
             "rounded": "none"
           },
           "blocks": {
-            "image_purpose": {
-              "type": "image",
+            "media_r6bEG4": {
+              "type": "_media",
+              "name": "t:blocks.media.name",
               "settings": {
-                "image_ratio": "adapt_image",
-                "img_effect": "none",
-                "b_effect": "none",
-                "custom_width": "custom",
-                "image_w": 100,
-                "image_w_mb": 100
+                "source": "video",
+                "video": "shopify://files/videos/VIDEO-2023-08-18-10-14-14.mp4",
+                "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                "video_loop": true
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "image_purpose"
+            "media_r6bEG4"
           ]
         },
         "purpose_text": {
