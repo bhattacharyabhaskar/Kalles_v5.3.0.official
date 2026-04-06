@@ -139,6 +139,22 @@
         "pd_mb": ""
       }
     },
+    "custom_line_GyqgA8": {
+      "type": "custom-line",
+      "name": "t:sections.custom_line.name",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 2,
+        "line_cl": "#f8a802",
+        "line_pos": "center",
+        "full_width": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "custom_liquid_439TND": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.name",
@@ -161,6 +177,7 @@
     "main_heading_PHNGje",
     "main-collection",
     "custom_liquid_mhDtCh",
+    "custom_line_GyqgA8",
     "custom_liquid_439TND"
   ]
 }
