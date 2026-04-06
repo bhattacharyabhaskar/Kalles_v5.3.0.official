@@ -46,20 +46,14 @@
             "letter_spacing_text": 0
           },
           "blocks": {}
-        },
-        "heading_brc_pYUK78": {
-          "type": "_heading_brc",
-          "settings": {},
-          "blocks": {}
         }
       },
       "block_order": [
-        "heading_liquid_wcaa7G",
-        "heading_brc_pYUK78"
+        "heading_liquid_wcaa7G"
       ],
       "settings": {
-        "use_dynamic_source": false,
-        "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
+        "use_dynamic_source": true,
+        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "bg_overlay": 54,
         "space_item": 0,
         "mg": "",
@@ -89,6 +83,7 @@
         "image_ratio": "custom-pr",
         "image_size": true,
         "show_vendor": false,
+        "show_sku": true,
         "pr_border": "none",
         "products_count": 24,
         "col_dk": "4",
