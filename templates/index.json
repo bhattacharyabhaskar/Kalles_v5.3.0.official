@@ -313,6 +313,139 @@
         "pd_mb": ",,22px,"
       }
     },
+    "custom_section_8hKy4G": {
+      "type": "custom-section",
+      "blocks": {
+        "multi_column_NDzgXJ": {
+          "type": "_multi_column",
+          "settings": {
+            "column_dk": "6",
+            "column_tb": "6",
+            "column_mb": "12",
+            "column_dk_10": "10",
+            "column_tb_10": "10",
+            "column_mb_10": "10",
+            "spacing_h_dk": 30,
+            "spacing_v_dk": 30,
+            "spacing_h_tb": 30,
+            "spacing_v_tb": 30,
+            "spacing_h_mb": 15,
+            "spacing_v_mb": 15,
+            "content_position": "auto",
+            "align_content": false,
+            "content_position_mb": "auto",
+            "alignment": "center",
+            "alignment_mb": "center",
+            "background_color": "#fffdf9",
+            "rounded": "none"
+          },
+          "blocks": {
+            "heading_twHE3r": {
+              "type": "heading",
+              "settings": {
+                "heading": "<p>About IndyVogue</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "line_height": "",
+                "font_weight": "normal",
+                "heading_size": "h3",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            },
+            "text_kM4tjV": {
+              "type": "text",
+              "settings": {
+                "text": "<p>At IndyVogue, we bring you authentic Indian elegance with a curated collection of <strong>Silk Mark Certified pure silk sarees</strong> and timeless handloom weaves like Banarasi, Kanjeevaram, Gadwal, and Jamdani. As a <strong>US-based, woman-owned small business</strong>, we source directly from skilled artisans in India to ensure every saree reflects heritage, craftsmanship, and unmatched quality.</p><p>Trusted by <strong>10,000+ patrons worldwide</strong> and backed by <strong>700+ verified 5-star reviews</strong>, IndyVogue offers a seamless way to <strong>buy authentic sarees in the USA</strong> with fast, free shipping and personalized service. Whether it’s a wedding, festival, or special occasion, we are here to make every moment elegant — <strong>we will win your heart.</strong></p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "--f_family_1",
+                "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
+            "spacer_9NNBBe": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 20,
+                "space_md": 20,
+                "space": 20
+              },
+              "blocks": {}
+            },
+            "button_9qehJ7": {
+              "type": "button",
+              "name": "t:blocks.button.name",
+              "settings": {
+                "label": "Know More",
+                "link": "",
+                "open_in_new_tab": false,
+                "full_width": false,
+                "btn_style": "",
+                "color_btn": "#fff",
+                "color_hover_btn": "#fff",
+                "background_btn": "#222",
+                "background_hover_btn": "#333",
+                "border_w_btn": "",
+                "border_btn": "#222",
+                "border_hover_btn": "#333",
+                "size": "m",
+                "text_size": "hdt-text-base",
+                "font_weight": "normal",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40,
+                "rounded": "",
+                "icon": "none",
+                "icon_position": "after",
+                "icon_height": 14,
+                "icon_spacing": 5
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_twHE3r",
+            "text_kM4tjV",
+            "spacer_9NNBBe",
+            "button_9qehJ7"
+          ]
+        }
+      },
+      "block_order": [
+        "multi_column_NDzgXJ"
+      ],
+      "name": "t:sections.custom_section.name",
+      "settings": {
+        "layout": "10",
+        "item_spacing": 30,
+        "item_spacing_tb": 15,
+        "item_spacing_mb": 15,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "logo_list_xmLAtH": {
       "type": "logo-list",
       "blocks": {
@@ -650,9 +783,9 @@
       "name": "t:sections.tabs_collections.grid_name",
       "settings": {
         "enable_tabs_on_heading": false,
-        "tabs_des": "has_border_bg",
+        "tabs_des": "underline",
         "tabs_list_pos": "center",
-        "tab_item_size": "lg",
+        "tab_item_size": "base",
         "tab_item_border": "solid",
         "border_width": 2,
         "spacing_tabs_items": 30,
@@ -1399,6 +1532,7 @@
   },
   "order": [
     "slideshow_EVrUzi",
+    "custom_section_8hKy4G",
     "logo_list_xmLAtH",
     "custom_liquid_UJhBxJ",
     "tabs_collection_dWUhRB",
