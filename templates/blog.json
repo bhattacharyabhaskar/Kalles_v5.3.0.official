@@ -12,7 +12,7 @@
     "blog_slider_h7yXkz": {
       "type": "blog-slider",
       "settings": {
-        "blog": "fashion",
+        "blog": "indyvogue-fashion-center",
         "image_ratio": "-adapt_image",
         "image_size": true,
         "show_tags": true,
@@ -43,10 +43,11 @@
         "color_scheme": "scheme-1",
         "background_opacity": 0,
         "section_layout": "full_width",
-        "pd": "",
-        "pd_mb": "",
+        "hdt_background_parallax": false,
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "",
+        "pd_mb": ""
       }
     },
     "main": {
@@ -61,7 +62,7 @@
               "type": "_blog-cate",
               "settings": {
                 "widget_heading": "Product categories",
-                "cat_link_list": "menu-blogs",
+                "cat_link_list": "",
                 "count": true
               },
               "blocks": {}
@@ -70,11 +71,8 @@
               "type": "_blog-gallery",
               "settings": {
                 "widget_heading": "Gallery",
-                "img1": "shopify://shop_images/363032-40-2_1_7d1b2762-f156-4e17-a943-c0f4980ed6c8.jpg",
                 "link1": "",
-                "img2": "shopify://shop_images/361349-217-2_c9d91a63-b4f5-4bc4-b5e5-ab06a6c4ca63.jpg",
                 "link2": "",
-                "img3": "shopify://shop_images/363622-36-2_ecb83ae5-c9e4-4997-b438-4f8bb73dfe3b.jpg",
                 "link3": "",
                 "link4": "",
                 "link5": "",
@@ -163,17 +161,18 @@
         "btn_style": "hdt-btn-outline",
         "size": "xl",
         "btn_fw": "medium",
+        "sidebar_mode": "none",
+        "sidebar_position": "right",
+        "sidebar_size": "medium",
         "colors_by_section": false,
         "color_scheme": "",
         "background_opacity": 0,
         "section_layout": "container",
-        "pd": "60px,,60px,",
-        "pd_mb": "60px,,60px,",
+        "hdt_background_parallax": false,
         "mg": "",
         "mg_mb": "",
-        "sidebar_mode": "none",
-        "sidebar_position": "right",
-        "sidebar_size": "medium"
+        "pd": "60px,,60px,",
+        "pd_mb": "60px,,60px,"
       }
     }
   },
