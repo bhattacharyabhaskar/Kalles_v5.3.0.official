@@ -1191,7 +1191,7 @@
               "static": true,
               "settings": {
                 "source": "image",
-                "image": "shopify://shop_images/Silk-Mark_a719d733-e8e5-4cc2-bd92-914c1089f005.webp",
+                "image": "shopify://shop_images/Silk-Mark_7831bb93-d530-454d-ad29-e4532945a44e.webp",
                 "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                 "video_loop": true
               },
@@ -1244,25 +1244,6 @@
             "border_pd": 0
           },
           "blocks": {
-            "text_qct3Q9": {
-              "type": "text",
-              "settings": {
-                "text": "<p>SUMMER SALE</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "xl",
-                "line_height": "",
-                "font_weight": "medium",
-                "text_color": "hdt-s-text",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
             "spacer_MxJbmB": {
               "type": "spacer",
               "settings": {
@@ -1273,27 +1254,12 @@
               },
               "blocks": {}
             },
-            "heading_yDKf6F": {
-              "type": "heading",
-              "settings": {
-                "heading": "<p>UP TO 70%</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "line_height": "hdt-lh-1",
-                "font_weight": "semibold",
-                "heading_size": "h_custom",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 50,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            },
             "banner-media": {
               "type": "_media",
               "static": true,
               "settings": {
                 "source": "image",
+                "image": "shopify://shop_images/Spring-File.webp",
                 "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                 "video_loop": true
               },
@@ -1301,9 +1267,7 @@
             }
           },
           "block_order": [
-            "text_qct3Q9",
-            "spacer_MxJbmB",
-            "heading_yDKf6F"
+            "spacer_MxJbmB"
           ]
         },
         "banner-heading": {
