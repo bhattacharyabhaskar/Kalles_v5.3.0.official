@@ -1,0 +1,47 @@
+/* About Page Premium Styling */
+
+.hdt-custom-section .hdt-block-text h6{
+  letter-spacing:1.6px;
+  font-size:14px;
+}
+
+.hdt-custom-section .hdt-block-text p{
+  line-height:1.95;
+  color:#555;
+}
+
+.hdt-custom-section blockquote{
+  background:#f6f1ea;
+  text-align:center;
+  padding:48px 32px;
+  font-style:italic;
+}
+
+/* Desktop */
+@media (min-width:768px){
+  .hdt-custom-section .hdt-block-image img{
+    width:100%;
+    height:auto;
+  }
+}
+
+/* Mobile */
+@media (max-width:767px){
+  .hdt-custom-section{
+    overflow:hidden;
+  }
+
+  .hdt-custom-section .hdt-block-text p{
+    font-size:15px;
+    line-height:1.85;
+  }
+
+  .hdt-custom-section .hdt-block-text h6{
+    text-align:left;
+  }
+
+  .hdt-custom-section .hdt-block-image img{
+    width:100%;
+    height:auto;
+  }
+}
