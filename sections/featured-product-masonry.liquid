@@ -180,6 +180,13 @@
     },
     {
       "type": "checkbox",
+      "id": "show_sku",
+      "label": "Show SKU",
+      "default": true,
+      "visible_if": "{{ section.settings.collection != blank }}"
+    },
+    {
+      "type": "checkbox",
       "id": "pagination",
       "label": "t:blocks.product_grid.settings.pagination.use_pagination",
       "default": true,
