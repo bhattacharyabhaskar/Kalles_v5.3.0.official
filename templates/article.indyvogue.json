@@ -44,12 +44,17 @@
           "blocks": {}
         }
       },
-      "block_order": ["heading_title", "heading_time"],
+      "block_order": [
+        "heading_title",
+        "heading_time"
+      ],
       "settings": {
         "use_dynamic_source": true,
         "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
         "bg_overlay": 54,
         "space_item": 5,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
         "pd": "50px,,50px,",
         "pd_mb": "40px,,40px,"
       }
@@ -59,12 +64,19 @@
       "blocks": {
         "article_image": {
           "type": "_article-image",
-          "settings": { "cate_des": "none" },
+          "settings": {
+            "cate_des": "none"
+          },
           "blocks": {}
         },
         "spacer_1": {
           "type": "spacer",
-          "settings": { "direction": false, "space_lg": 20, "space_md": 16, "space": 16 },
+          "settings": {
+            "direction": false,
+            "space_lg": 20,
+            "space_md": 16,
+            "space": 16
+          },
           "blocks": {}
         },
         "article_content": {
@@ -76,9 +88,11 @@
           "type": "_liquid",
           "settings": {
             "option_type": "liquid",
+            "page": "",
             "text": "{%- render 'ivy-article-carousels', article: article -%}",
             "hidden_br_mobile": false,
             "hidden_on_mobile": false,
+            "ffamily": "",
             "text_size": "base",
             "font_weight": "normal",
             "text_color": "hdt-text-primary",
@@ -90,7 +104,12 @@
         },
         "spacer_2": {
           "type": "spacer",
-          "settings": { "direction": false, "space_lg": 20, "space_md": 16, "space": 16 },
+          "settings": {
+            "direction": false,
+            "space_lg": 20,
+            "space_md": 16,
+            "space": 16
+          },
           "blocks": {}
         },
         "article_shares": {
@@ -99,6 +118,8 @@
             "enable_social_facebook": true,
             "enable_social_x": true,
             "enable_social_pinterest": true,
+            "enable_social_tumblr": true,
+            "enable_social_telegram": true,
             "enable_social_whatsapp": true,
             "enable_social_email": true,
             "socials_style": "default",
@@ -111,7 +132,12 @@
         },
         "spacer_3": {
           "type": "spacer",
-          "settings": { "direction": false, "space_lg": 20, "space_md": 16, "space": 16 },
+          "settings": {
+            "direction": false,
+            "space_lg": 20,
+            "space_md": 16,
+            "space": 16
+          },
           "blocks": {}
         },
         "article_navigation": {
@@ -127,38 +153,43 @@
             "cate_des": "none",
             "show_date": true,
             "show_auth": false,
+            "date_post_related": "date",
             "limit": 3,
             "col_dk": "3",
             "col_tb": "2",
             "col_mb": "1",
-            "image_ratio": "adapt_image",
-            "image_size": true,
+            "autoplay": 0,
+            "pauseOnHover": false,
             "navUI": false,
-            "dotUI": false
+            "nav_position": "default",
+            "nav_visible": "always",
+            "nav_style": "default",
+            "nav_shape": "default",
+            "nav_size": "small",
+            "nav_hide_mobile": false,
+            "dotUI": false,
+            "pag_style": "default",
+            "pag_rounded": false,
+            "pag_space": 10,
+            "pag_mgt": 10,
+            "only_show_mobile": false,
+            "pag_hide_mobile": false,
+            "content_align": "start",
+            "image_ratio": "adapt_image",
+            "image_size": true
           },
           "blocks": {
-            "related_heading": {
+            "article-related-heading": {
               "type": "section-heading",
               "static": true,
               "settings": {
                 "design_heading": "1",
                 "horizontal": false,
-                "alignment": "center",
-                "heading_gap": 18,
+                "alignment": "left",
+                "heading_gap": 15,
                 "margin_bottom": 30
               },
-              "blocks": {
-                "heading_text": {
-                  "type": "_heading_section",
-                  "settings": {
-                    "heading": "RELATED ARTICLES",
-                    "heading_size": "h6",
-                    "text_color": "hdt-s-text"
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": ["heading_text"]
+              "blocks": {}
             }
           },
           "block_order": []
@@ -172,7 +203,7 @@
               "type": "_blog-cate",
               "settings": {
                 "widget_heading": "Blog Categories",
-                "cat_link_list": "menu-blogs",
+                "cat_link_list": "",
                 "count": false
               },
               "blocks": {}
@@ -184,7 +215,8 @@
                 "blog": "indyvogue-fashion-center",
                 "image_ratio": "adapt_image",
                 "image_size": true,
-                "blogs_count": 3
+                "blogs_count": 3,
+                "date": "%b %d"
               },
               "blocks": {}
             },
@@ -198,7 +230,11 @@
               "blocks": {}
             }
           },
-          "block_order": ["blog_cate", "blog_post", "blog_socials"]
+          "block_order": [
+            "blog_cate",
+            "blog_post",
+            "blog_socials"
+          ]
         }
       },
       "block_order": [
@@ -213,13 +249,15 @@
         "article_related"
       ],
       "custom_css": [
-        ".hdt-article-content { color: rgb(var(--color-foreground2)); line-height: 1.8; }",
-        ".ivy-article-carousel__title { color: var(--color-foreground); }",
-        "em, blockquote { font-family: var(--f_family_3); font-style: italic; }"
+        ".hdt-article-content {color: rgb(var(--color-foreground2)); line-height: 1.8;}",
+        ".ivy-article-carousel__title {color: var(--color-foreground);}",
+        "em,blockquote {font-family: var(--f_family_3); font-style: italic;}"
       ],
       "settings": {
         "full_width": false,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
         "pd": "40px,,40px,",
         "pd_mb": "30px,,30px,",
         "sidebar_mode": "right",
@@ -228,5 +266,8 @@
       }
     }
   },
-  "order": ["main_heading", "main-article"]
+  "order": [
+    "main_heading",
+    "main-article"
+  ]
 }
