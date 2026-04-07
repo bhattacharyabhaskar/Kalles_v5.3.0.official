@@ -251,7 +251,9 @@
       "custom_css": [
         ".hdt-article-content {color: rgb(var(--color-foreground2)); line-height: 1.8;}",
         ".ivy-article-carousel__title {color: var(--color-foreground);}",
-        "em,blockquote {font-family: var(--f_family_3); font-style: italic;}"
+        "em,blockquote {font-family: var(--f_family_3); font-style: italic;}",
+        ".ivy-article-carousel .hdt-card-product__name,.ivy-article-carousel .hdt-card-product__name a {color: rgb(var(--color-foreground)) !important;}",
+        ".ivy-article-carousel .hdt-card-product__sku {color: rgb(var(--color-foreground2)) !important;}"
       ],
       "settings": {
         "full_width": true,
