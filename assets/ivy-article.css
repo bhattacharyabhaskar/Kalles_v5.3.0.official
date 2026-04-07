@@ -1,0 +1,54 @@
+/* =============================================
+   IndyVogue — Article Page Styles
+   Loaded on: blog article pages
+   ============================================= */
+
+/* --- Article content --- */
+.hdt-article-content {
+  color: rgb(var(--color-foreground2));
+  line-height: 1.8;
+}
+
+em,
+blockquote {
+  font-family: var(--f_family_3);
+  font-style: italic;
+}
+
+/* --- Article carousel heading --- */
+.ivy-article-carousel__title {
+  color: rgb(var(--color-foreground));
+}
+
+/* --- Carousel card titles --- */
+.ivy-article-carousel .hdt-card-product__name,
+.ivy-article-carousel .hdt-card-product__name a {
+  color: rgb(var(--color-foreground)) !important;
+}
+
+.ivy-article-carousel .hdt-card-product__sku {
+  color: rgb(var(--color-foreground2)) !important;
+}
+
+/* --- Equal height cards --- */
+.ivy-article-carousel .hdt-slider__slide {
+  display: flex;
+  flex-direction: column;
+}
+
+.ivy-article-carousel .hdt-card-product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ivy-article-carousel .hdt-card-product__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ivy-article-carousel .hdt-price-wrapp {
+  margin-top: auto;
+}
