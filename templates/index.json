@@ -1363,17 +1363,10 @@
             "feed_id": "",
             "html_area": ""
           }
-        },
-        "omnisend_email_marketing_sms_embedded_form_WTyLXb": {
-          "type": "shopify://apps/omnisend-email-marketing-sms/blocks/embedded-form/44704aa2-794f-4c5d-8c8e-039c841158e9",
-          "settings": {
-            "form_id": "69d2be27fa5e3e50715041e7"
-          }
         }
       },
       "block_order": [
-        "instafeed_app_block_w9zNGW",
-        "omnisend_email_marketing_sms_embedded_form_WTyLXb"
+        "instafeed_app_block_w9zNGW"
       ],
       "settings": {
         "include_margins": true
