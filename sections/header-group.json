@@ -332,7 +332,7 @@
         "header_space_top": 0,
         "header_space_top_mobile": 0,
         "sticky_type": "on_scroll_up",
-        "header_sticky_colors": "",
+        "header_sticky_colors": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "background_opacity_sticky": 1,
         "sticky_glass": false
       }
