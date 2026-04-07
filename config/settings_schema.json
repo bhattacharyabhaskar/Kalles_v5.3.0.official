@@ -1874,7 +1874,7 @@
         "type": "checkbox",
         "id": "enable_confetti",
         "label": "t:settings_schema.cart.settings.enable_confetti.label",
-        "default": true
+        "default": false
       },
       {
         "type": "select",
