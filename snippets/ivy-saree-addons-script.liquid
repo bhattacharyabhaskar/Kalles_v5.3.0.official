@@ -7,10 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitButton = formEl?.querySelector('button[type="submit"]');
   const hiddenInput = formEl?.querySelector('input[name="id"]');
 
-
   const parentVariantId = hiddenInput?.value
     || window.product?.selected_or_first_available_variant?.id?.toString();
-
 
   if (!formEl || !submitButton || !parentVariantId) {
     console.error("❌ Missing required elements — script stopped");
@@ -25,40 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(`  checkbox[${i}] data-variant-id:`, cb.getAttribute('data-variant-id'));
   });
 
-  // --- Check button text span ---
-  const textSpan = submitButton.querySelector('.hdt-btn-atc_text');
-
-  // --- Floating button ---
-  const floatingBtn = document.createElement('button');
-  floatingBtn.type = 'button';
-  floatingBtn.id = 'ivy-floating-atc-btn';
-  floatingBtn.textContent = textSpan?.textContent || 'Add to Cart';
-  Object.assign(floatingBtn.style, {
-    backgroundColor: '#5b1a1a', color: '#ffffff', fontSize: '14px',
-    fontWeight: '600', fontFamily: 'Poppins, sans-serif', borderRadius: '40px',
-    padding: '5px 25px', textTransform: 'uppercase', border: 'none',
-    width: '90%', maxWidth: '570px', height: '40px', display: 'none',
-    position: 'fixed', bottom: '20px', left: '50%', transform: 'translateX(-50%)',
-    zIndex: '9999', boxShadow: '0 4px 12px rgba(0,0,0,0.25)', cursor: 'pointer',
-    transition: 'background-color 0.3s ease'
-  });
-  floatingBtn.addEventListener('mouseenter', () => floatingBtn.style.backgroundColor = '#a03e87');
-  floatingBtn.addEventListener('mouseleave', () => floatingBtn.style.backgroundColor = '#5b1a1a');
-  document.body.appendChild(floatingBtn);
-
-  // --- Toggle floating button ---
-  function toggleFloatingButton() {
-    if (window.innerWidth > 767) { floatingBtn.style.display = 'none'; return; }
-    const rect = submitButton.getBoundingClientRect();
-    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-    floatingBtn.style.display = (!isVisible && window.scrollY > 300) ? 'flex' : 'none';
-  }
-  let scrollTimeout;
-  window.addEventListener('scroll', () => {
-    if (scrollTimeout) return;
-    scrollTimeout = setTimeout(() => { toggleFloatingButton(); scrollTimeout = null; }, 100);
-  });
-
   // --- Update button text ---
   function updateButtonText() {
     const anyChecked = document.querySelectorAll('.addon-checkbox:checked').length > 0;
@@ -66,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const span = submitButton.querySelector('.hdt-btn-atc_text');
     if (span) span.textContent = label;
     else submitButton.firstChild.textContent = label;
-    floatingBtn.textContent = label;
   }
 
   // --- Checkbox interaction ---
@@ -100,10 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
     isSubmitting = true;
 
     submitButton.disabled = true;
-    floatingBtn.disabled = true;
     const span = submitButton.querySelector('.hdt-btn-atc_text');
     if (span) span.textContent = 'Adding...';
-    floatingBtn.textContent = 'Adding...';
 
     const checkedAddons = Array.from(document.querySelectorAll('.addon-checkbox:checked'))
       .map(cb => cb.getAttribute('data-variant-id'))
@@ -146,7 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!addRes.ok) {
         const errBody = await addRes.text();
         const errJson = JSON.parse(errBody);
-        // 422 with max quantity = item already in cart, not a real error
         if (addRes.status === 422 && errJson.message?.includes('maximum quantity')) {
           console.warn("⚠️ Item already at max quantity in cart — continuing");
         } else {
@@ -182,19 +142,16 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Something went wrong. Please try again.");
     } finally {
       submitButton.disabled = false;
-      floatingBtn.disabled = false;
       isSubmitting = false;
       updateButtonText();
     }
   }
 
   submitButton.addEventListener('click', handleAddToCart);
-  floatingBtn.addEventListener('click', handleAddToCart);
 
   // --- Sticky ATC ---
   const stickyBtn = document.getElementById('ivy-sticky-atc-btn');
   if (stickyBtn) {
-    // Update sticky button text when addons change
     const origUpdateButtonText = updateButtonText;
     updateButtonText = function() {
       origUpdateButtonText();
@@ -203,7 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (stickyText) stickyText.textContent = anyChecked ? 'Add to Cart with Add-ons' : 'Add to Cart';
     };
 
-    // Intercept sticky form submit — prevent default and use our handleAddToCart
     const stickyForm = stickyBtn.closest('form');
     if (stickyForm) {
       stickyForm.addEventListener('submit', function(e) {
