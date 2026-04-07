@@ -12,9 +12,9 @@
     }
   }
 </script>
-<link rel="modulepreload" href="{{ 'libs.min.js' | asset_url }}">
-<link rel="modulepreload" href="{{ 'global.min.js' | asset_url }}">
-<script type="module" src="{{ 'libs.min.js' | asset_url }}" fetchpriority="high"></script>
+<link rel="modulepreload" href="{{ 'libs.min.js' | asset_url }}" fetchpriority="low">
+<link rel="modulepreload" href="{{ 'global.min.js' | asset_url }}" fetchpriority="low">
+<script type="module" src="{{ 'libs.min.js' | asset_url }}" ></script>
 <link rel="modulepreload" href="{{ 'events.js' | asset_url }}">
 <link rel="modulepreload" href="{{ 'utilities.js' | asset_url }}">
 <link rel="modulepreload" href="{{ 'floating.min.js' | asset_url }}">
