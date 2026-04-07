@@ -495,6 +495,7 @@
         "spacer_kbECBj",
         "text_kmfX9D"
       ],
+      "disabled": true,
       "name": "t:sections.newsletter_popup.name",
       "settings": {
         "colors_by_section": false,
