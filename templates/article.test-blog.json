@@ -1,0 +1,261 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main_heading": {
+      "type": "heading-article",
+      "blocks": {
+        "heading_title": {
+          "type": "_heading_liquid",
+          "settings": {
+            "text": "{{ article.title }}",
+            "line_height": "",
+            "font_family": "hdt-font-1",
+            "text_size": "2xl",
+            "text_color": "hdt-s-text",
+            "italic": false,
+            "uppercase": false,
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
+          },
+          "blocks": {}
+        },
+        "heading_time": {
+          "type": "_article_time",
+          "settings": {
+            "line_height": "",
+            "font_family": "hdt-font-3",
+            "text_size": "base",
+            "text_color": "hdt-s-text",
+            "italic": true,
+            "uppercase": false,
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_title",
+        "heading_time"
+      ],
+      "settings": {
+        "use_dynamic_source": true,
+        "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
+        "bg_overlay": 54,
+        "space_item": 5,
+        "pd": "50px,,50px,",
+        "pd_mb": "40px,,40px,"
+      }
+    },
+    "main-article": {
+      "type": "main-article",
+      "blocks": {
+        "article_image": {
+          "type": "_article-image",
+          "settings": {
+            "cate_des": "none"
+          },
+          "blocks": {}
+        },
+        "spacer_1": {
+          "type": "spacer",
+          "settings": {
+            "direction": false,
+            "space_lg": 20,
+            "space_md": 16,
+            "space": 16
+          },
+          "blocks": {}
+        },
+        "article_content": {
+          "type": "_article-content",
+          "settings": {},
+          "blocks": {}
+        },
+        "ivy_carousels": {
+          "type": "_liquid",
+          "settings": {
+            "option_type": "liquid",
+            "text": "{%- render 'ivy-article-carousels', article: article -%}",
+            "hidden_br_mobile": false,
+            "hidden_on_mobile": false,
+            "text_size": "base",
+            "font_weight": "normal",
+            "text_color": "hdt-text-primary",
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
+          },
+          "blocks": {}
+        },
+        "spacer_2": {
+          "type": "spacer",
+          "settings": {
+            "direction": false,
+            "space_lg": 20,
+            "space_md": 16,
+            "space": 16
+          },
+          "blocks": {}
+        },
+        "article_shares": {
+          "type": "_article-shares",
+          "settings": {
+            "enable_social_facebook": true,
+            "enable_social_x": true,
+            "enable_social_pinterest": true,
+            "enable_social_whatsapp": true,
+            "enable_social_email": true,
+            "socials_style": "default",
+            "show_share_button": false,
+            "socials_size": "medium",
+            "bd_radius": 30,
+            "space_item": 30
+          },
+          "blocks": {}
+        },
+        "spacer_3": {
+          "type": "spacer",
+          "settings": {
+            "direction": false,
+            "space_lg": 20,
+            "space_md": 16,
+            "space": 16
+          },
+          "blocks": {}
+        },
+        "article_navigation": {
+          "type": "_article-navigation",
+          "settings": {},
+          "blocks": {}
+        },
+        "article_related": {
+          "type": "_article-related",
+          "settings": {
+            "article_style": "1",
+            "uppercase": false,
+            "cate_des": "none",
+            "show_date": true,
+            "show_auth": false,
+            "limit": 3,
+            "col_dk": "3",
+            "col_tb": "2",
+            "col_mb": "1",
+            "image_ratio": "adapt_image",
+            "image_size": true,
+            "navUI": false,
+            "dotUI": false
+          },
+          "blocks": {
+            "related_heading": {
+              "type": "section-heading",
+              "static": true,
+              "settings": {
+                "design_heading": "1",
+                "horizontal": false,
+                "alignment": "center",
+                "heading_gap": 18,
+                "margin_bottom": 30
+              },
+              "blocks": {
+                "heading_text": {
+                  "type": "_heading_section",
+                  "settings": {
+                    "heading": "RELATED ARTICLES",
+                    "heading_size": "h6",
+                    "text_color": "hdt-s-text"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "heading_text"
+              ]
+            }
+          },
+          "block_order": []
+        },
+        "sidebar_article": {
+          "type": "_sidebar_blog",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "blog_cate": {
+              "type": "_blog-cate",
+              "settings": {
+                "widget_heading": "Blog Categories",
+                "cat_link_list": "menu-blogs",
+                "count": false
+              },
+              "blocks": {}
+            },
+            "blog_post": {
+              "type": "_blog-post",
+              "settings": {
+                "widget_heading": "Recent Posts",
+                "blog": "indyvogue-fashion-center",
+                "image_ratio": "adapt_image",
+                "image_size": true,
+                "blogs_count": 3
+              },
+              "blocks": {}
+            },
+            "blog_socials": {
+              "type": "_blog-tags-socials",
+              "settings": {
+                "widget_heading": "Follow Us",
+                "socials_style": "simple",
+                "socials_size": "medium"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "blog_cate",
+            "blog_post",
+            "blog_socials"
+          ]
+        }
+      },
+      "block_order": [
+        "article_image",
+        "spacer_1",
+        "article_content",
+        "ivy_carousels",
+        "spacer_2",
+        "article_shares",
+        "spacer_3",
+        "article_navigation",
+        "article_related"
+      ],
+      "custom_css": [
+        ".hdt-article-content { color: rgb(var(--color-foreground2)); line-height: 1.8; }",
+        ".ivy-article-carousel__title { color: var(--color-foreground); }",
+        "em, blockquote { font-family: var(--f_family_3); font-style: italic; }"
+      ],
+      "settings": {
+        "full_width": false,
+        "color_scheme": "scheme-1",
+        "pd": "40px,,40px,",
+        "pd_mb": "30px,,30px,",
+        "sidebar_mode": "right",
+        "sidebar_position": "right",
+        "sidebar_size": "medium"
+      }
+    }
+  },
+  "order": [
+    "main_heading",
+    "main-article"
+  ]
+}
