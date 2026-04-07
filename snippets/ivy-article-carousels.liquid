@@ -1,26 +1,15 @@
 {%- comment -%}
   IndyVogue — Article Product Carousels
-  Renders up to 5 product carousels from collection metafields.
-
-  Metafields used (namespace: custom):
-  - carousel_1_collection  → Collection reference
-  - carousel_1_title       → Single line text
-  - carousel_2_collection  → Collection reference
-  - carousel_2_title       → Single line text
-  - carousel_3_collection  → Collection reference
-  - carousel_3_title       → Single line text
-  - carousel_4_collection  → Collection reference
-  - carousel_4_title       → Single line text
-  - carousel_5_collection  → Collection reference
-  - carousel_5_title       → Single line text
-
-  Usage:
-  {%- render 'ivy-article-carousels', article: article, section: section -%}
+  Styled to match main-collection PLP carousel exactly.
+  Metafields (namespace: custom):
+  - carousel_N_collection → Collection reference
+  - carousel_N_title      → Single line text (N = 1-5)
+  Usage: {%- render 'ivy-article-carousels', article: article, section: section -%}
 {%- endcomment -%}
 
 {%- liquid
   assign color_list = 'products.theme_settings.color' | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
-  assign size_list = 'products.theme_settings.size' | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
+  assign size_list  = 'products.theme_settings.size'  | t | downcase | strip | replace: ' ,', ',' | replace: ', ', ',' | split: ',' | uniq
 
   assign c1 = article.metafields.custom.carousel_1_collection.value
   assign c2 = article.metafields.custom.carousel_2_collection.value
@@ -33,16 +22,27 @@
   assign t3 = article.metafields.custom.carousel_3_title.value
   assign t4 = article.metafields.custom.carousel_4_title.value
   assign t5 = article.metafields.custom.carousel_5_title.value
+
+  assign col_dk = 4
+  assign col_tb = 3
+  assign col_mb = 2
+  assign space_item = settings.spacing_grid_horizontal
+  assign space_item_tb = settings.spacing_grid_horizontal | divided_by: 2
+  assign space_item_mb = settings.spacing_grid_horizontal | divided_by: 2
+  assign current_width = settings.page_width | append: 'px'
 -%}
+
+{%- capture sizes -%}
+  (min-width: 1150px) calc(({{ current_width }} - ({{ space_item }} * ({{ col_dk }} - 1))) * 1 / {{ col_dk }}),
+  (min-width: 768px) calc((100vw - ({{ space_item_tb }} * ({{ col_tb }} - 1))) * 1 / {{ col_tb }}),
+  calc((100vw - ({{ space_item_mb }} * ({{ col_mb }} - 1))) * 1 / {{ col_mb }})
+{%- endcapture -%}
 
 {%- capture btn_wishlist_code -%}
   {%- if settings.wishlist_mode != '0' -%}
     {%- render 'btn-wishlist', class: 'hdt-card-product__btn-wishlist hdt-pr_btn', placement: 'right' -%}
   {%- endif -%}
 {%- endcapture -%}
-
-{%- assign ivy_carousel_collections = '' -%}
-{%- assign ivy_carousel_titles = '' -%}
 
 {%- for i in (1..5) -%}
   {%- liquid
@@ -64,16 +64,23 @@
         assign carousel_title = t5
     endcase
   -%}
+
   {%- if carousel_collection != blank -%}
     {%- assign carousel_id = 'ivy-carousel-' | append: article.id | append: '-' | append: i -%}
-    <div class="ivy-article-carousel" style="margin-top: 48px; margin-bottom: 16px;">
-      <h3 class="ivy-article-carousel__title hdt-text-xl hdt-font-semibold hdt-text-center" style="margin-bottom: 24px;">
-        {{ carousel_title | default: carousel_collection.title }}
-      </h3>
+    {%- assign display_title = carousel_title | default: carousel_collection.title -%}
+
+    <div class="hdt-product-carousel" style="margin-top: 48px;">
+
+      <div class="hdt-section-heading hdt-text-center" style="margin-bottom: 24px;">
+        <h3 class="hdt-heading hdt-font-semibold" style="font-size: 1.25rem; text-transform: uppercase; letter-spacing: 2px;">
+          {{ display_title }}
+        </h3>
+      </div>
+
       {%- paginate carousel_collection.products by 8 -%}
         <hdt-slider
           id="{{ carousel_id }}"
-          class="hdt-collection-products hdt-slider__products hdt-collection-has-pr1 hdt-pr-border_none hdt-ratio--adapt_image hdt-slider hdt-slider-parent hdt-slide-spacing-x hdt-relative hdt-slider-has-nav lg:hdt-slides-4 md:hdt-slides-3 hdt-slides-2"
+          class="hdt-collection-products hdt-slider__products hdt-collection-has-pr1 hdt-pr-border_none hdt-ratio--portrait hdt-slider hdt-slider-parent hdt-slide-spacing-x hdt-relative hdt-slider-has-nav lg:hdt-slides-4 md:hdt-slides-3 hdt-slides-2"
           config='{ "id": "{{ carousel_id }}", "navUI": true, "dotUI": false, "navUICenter": true }'>
           <div class="hdt-slider__viewport hdt-relative">
             <div class="hdt-slider__container">
@@ -83,13 +90,14 @@
                   card_product: product,
                   class: 'hdt-slider__slide hdt-pr-style1',
                   section_id: section.id,
-                  sizes: '(min-width: 1150px) 25vw, (min-width: 768px) 33vw, 50vw',
-                  image_ratio: 'adapt_image',
+                  sizes: sizes,
+                  image_ratio: 'portrait',
                   color_list: color_list,
                   size_list: size_list,
                   product_url: product_url,
                   btn_wishlist_code: btn_wishlist_code,
-                  show_vendor: false
+                  show_vendor: false,
+                  show_sku: true
                 -%}
               {%- endfor -%}
             </div>
@@ -103,10 +111,11 @@
             </button>
           </div>
         </hdt-slider>
+
         {%- if paginate.next -%}
-          <div class="hdt-text-center" style="margin-top: 20px;">
-            <a href="{{ carousel_collection.url }}" class="hdt-btn hdt-btn-outline hdt-btn--size-m">
-              View All {{ carousel_collection.title }}
+          <div class="hdt-text-center" style="margin-top: 24px;">
+            <a href="{{ carousel_collection.url }}" class="hdt-btn hdt-btn-outline hdt-btn--size-m hdt-font-medium">
+              {{ 'general.pagination.view_all' | t }} {{ carousel_collection.title }}
             </a>
           </div>
         {%- endif -%}
