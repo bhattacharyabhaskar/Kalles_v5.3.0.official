@@ -69,8 +69,9 @@
     {%- assign carousel_id = 'ivy-carousel-' | append: article.id | append: '-' | append: i -%}
     {%- assign display_title = carousel_title | default: carousel_collection.title -%}
 
-    <div class="hdt-product-carousel" style="margin-top: 48px;">
-
+<div class="ivy-article-carousel hdt-section" style="margin-top: 48px; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); width: 100vw;">
+  <div class="hdt-container">
+    
       <div class="hdt-section-heading hdt-text-center" style="margin-bottom: 24px;">
         <h3 class="hdt-heading hdt-font-semibold" style="font-size: 1.25rem; text-transform: uppercase; letter-spacing: 2px;">
           {{ display_title }}
@@ -83,7 +84,7 @@
           class="hdt-collection-products hdt-slider__products hdt-collection-has-pr1 hdt-pr-border_none hdt-ratio--portrait hdt-slider hdt-slider-parent hdt-slide-spacing-x hdt-relative hdt-slider-has-nav lg:hdt-slides-4 md:hdt-slides-3 hdt-slides-2"
           config='{ "id": "{{ carousel_id }}", "navUI": true, "dotUI": false, "navUICenter": true }'>
           <div class="hdt-slider__viewport hdt-relative">
-            <div class="hdt-slider__container">
+            <div class="hdt-slider__container hdt-equal-height">
               {%- for product in carousel_collection.products -%}
                 {%- assign product_url = product.url | within: carousel_collection -%}
                 {%- render 'card-product1',
@@ -120,6 +121,7 @@
           </div>
         {%- endif -%}
       {%- endpaginate -%}
-    </div>
+    </div>{{- '<!-- /hdt-container -->' -}}
+</div>{{- '<!-- /ivy-article-carousel -->' -}}
   {%- endif -%}
 {%- endfor -%}
