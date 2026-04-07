@@ -262,7 +262,7 @@
         "mg_mb": ",,30px,",
         "pd": "40px,,40px,",
         "pd_mb": "30px,,30px,",
-        "sidebar_mode": "right",
+        "sidebar_mode": "none",
         "sidebar_position": "right",
         "sidebar_size": "medium"
       }
