@@ -319,7 +319,7 @@
           "secondary_button_label": "#7a1e1e",
           "accent_color": "#c9a34e",
           "line_border": "#e5ddd5",
-          "overlay": "#b22222",
+          "overlay": "#000000",
           "pr_text": "#2c2c2c",
           "price": "#6f6f6f",
           "sale_price": "#b22222",
