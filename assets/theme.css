@@ -1,3 +1,18 @@
+/* ================ Fix iOS Chrome sticky header flicker ================== */
+* {
+  -webkit-overflow-scrolling: auto !important;
+}
+.site-header,
+.site-header--sticky,
+.site-nav--sticky,
+[class*="sticky"] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* ================ Fix iOS Chrome sticky header flicker ================== */
+
 /* ================ base.css ================== */
 
   .hdt-d-none {
