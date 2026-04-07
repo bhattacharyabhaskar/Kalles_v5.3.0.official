@@ -80,8 +80,11 @@
           "blocks": {}
         },
         "article_content": {
-          "type": "_article-content",
-          "settings": {},
+          "type": "_liquid",
+          "settings": {
+            "option_type": "liquid",
+            "text": "{{ 'ivy-article.css' | asset_url | stylesheet_tag }}{{ article.content }}"
+          },
           "blocks": {}
         },
         "ivy_carousels": {
