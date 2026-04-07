@@ -96,6 +96,9 @@
         if card_product.vendor.size > 0 and show_vendor
           render 'vendor' with card_product.vendor, class: 'hdt-inline-block hdt-text-base hdt-font-normal'
         endif -%}
+        {%- if settings.show_sku %}
+          <p class="hdt-card-sku">SKU: {{ card_product.variants.first.sku }}</p>
+          {%- endif %}
         <a data-pr-url href="{{ product_url }}" class="hdt-card-product__title hdt-text-{{ settings.pr_title_size }} hdt-font-{{ settings.pr_title_weight }} hdt-line-clamp" data-instant>{{ card_product.title | escape }}</a>
         {%- liquid
           render 'card-price', section_id: section_id, product: card_product, show_volume_note: true
