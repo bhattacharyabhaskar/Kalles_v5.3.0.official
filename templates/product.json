@@ -294,7 +294,7 @@
         "hdt_enable_choose_variant": false,
         "hdt_layout_atc_mob": "hdt_layout_atc_mob_default",
         "hdt_show_sticky_atc": "hdt_show_always",
-        "ani": "hdt-ani-shake is--infinite",
+        "ani": "none",
         "time": 6,
         "btn_transform": "hdt-uppercase",
         "btn_style": "hdt-btn-accent",
