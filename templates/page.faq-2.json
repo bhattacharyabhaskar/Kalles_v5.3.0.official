@@ -15,7 +15,7 @@
         "heading_liquid_kCwqhp": {
           "type": "_heading_liquid",
           "settings": {
-            "text": "{{ page_title }}",
+            "text": "Frequently Asked Questions",
             "line_height": "hdt-lh-1",
             "font_family": "hdt-font-1",
             "text_size": "2xl",
@@ -27,17 +27,10 @@
             "letter_spacing_text": 0
           },
           "blocks": {}
-        },
-        "heading_brc_aVn9AW": {
-          "type": "_heading_brc",
-          "name": "Breadcrumb",
-          "settings": {},
-          "blocks": {}
         }
       },
       "block_order": [
-        "heading_liquid_kCwqhp",
-        "heading_brc_aVn9AW"
+        "heading_liquid_kCwqhp"
       ],
       "settings": {
         "use_dynamic_source": false,
