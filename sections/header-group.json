@@ -331,7 +331,7 @@
         "background_opacity_transparent": 0,
         "header_space_top": 0,
         "header_space_top_mobile": 0,
-        "sticky_type": "on_scroll_up",
+        "sticky_type": "always",
         "header_sticky_colors": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "background_opacity_sticky": 1,
         "sticky_glass": false
