@@ -574,7 +574,7 @@
             "quote_text": {
               "type": "blockquote",
               "settings": {
-                "quote": "<p><em>Trusted by thousands of patrons across the world, IndyVogue stands for authenticity, thoughtful curation, and timeless Indian elegance.</em></p><p><em>We will win your heart.</em></p>",
+                "quote": "<p><em>Trusted by thousands of patrons across the world, IndyVogue stands for authenticity, thoughtful curation, and timeless Indian elegance. </em><em><strong>We will win your heart.</strong></em></p>",
                 "text_color": "hdt-s-text"
               },
               "blocks": {}
