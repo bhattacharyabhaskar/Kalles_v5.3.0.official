@@ -92,8 +92,8 @@
           "type": "cur",
           "settings": {
             "show_currency": true,
-            "show_language": true,
-            "use_location": false,
+            "show_language": false,
+            "use_location": true,
             "txt_location": "Location",
             "url_location": "",
             "open_link": "_self",
