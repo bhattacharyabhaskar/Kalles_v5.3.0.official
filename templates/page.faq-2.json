@@ -1,1 +1,207 @@
-{"sections":{"heading":{"type":"main-heading","blocks":{"heading_liquid_kCwqhp":{"type":"_heading_liquid","settings":{"text":"{{ page_title }}","line_height":"hdt-lh-1","font_family":"hdt-font-1","text_size":"2xl","text_color":"hdt-s-text","italic":false,"uppercase":false,"font_size_text_lg":16,"font_size_text":14,"letter_spacing_text":0},"blocks":{}},"heading_brc_aVn9AW":{"type":"_heading_brc","name":"Breadcrumb","settings":{},"blocks":{}}},"block_order":["heading_liquid_kCwqhp","heading_brc_aVn9AW"],"settings":{"use_dynamic_source":false,"image":"shopify:\/\/shop_images\/bg-heading.jpg","color_scheme":"scheme-77e4ef58-56a9-4631-876a-12098ba7d57d","bg_overlay":54,"space_item":12,"mg":"","mg_mb":"","pd":"50px,,50px,","pd_mb":"50px,,50px,"}},"main":{"type":"main-page","disabled":true,"settings":{"full_width":false,"color_scheme":"","mg":"","mg_mb":"","pd":",,30px,","pd_mb":",,22px,"}},"accordion_Tg8fN8":{"type":"accordion","blocks":{"accordion_item_A96ika":{"type":"_accordion-item","settings":{"open":true,"icon":"none","title":"Do I need to open an account in order to shop with you?","content":"<p>No, you don’t need to. You can make purchases and check out as a guest everytime.<\/p><p>However, by setting up an account with us, it will allow you to order without having to enter your details every time you shop with us. You can sign up right now, or you can first start shopping and create your account before you check out at the shopping cart page.<\/p>"},"blocks":{}},"accordion_item_dGWCqH":{"type":"_accordion-item","settings":{"open":false,"icon":"none","title":"How do I \/create an account?","content":"<p>Please click on “Login\/Register” followed by ‘Create An Account’ and fill in your personal particulars.<\/p>"},"blocks":{}},"accordion_item_rdKgg9":{"type":"_accordion-item","settings":{"open":false,"icon":"none","title":"How do I order?","content":"<p>Shop for the items you want and add it to your shopping cart. When you have finished, you can proceed to your shopping cart and check out. Check and ensure that all information is correct before confirming your purchases and payment.<\/p>"},"blocks":{}},"accordion_item_8bVaFV":{"type":"_accordion-item","settings":{"open":false,"icon":"none","title":"How do I pay for my orders?","content":"<p>We accept payments via Paypal and all major credit and debit cards such as Mastercard, VISA and American Express.<\/p>"},"blocks":{}},"accordion_item_RLCHiY":{"type":"_accordion-item","name":"t:sections.accordion.blocks.accordion_item.label","settings":{"open":false,"icon":"none","title":"Can I amend and cancel my order?","content":"<p>Unfortunately we are unable to cancel an order once it has been placed. This will allow us to pack your orders efficiently and to minimize errors. It is advisable to check your order before placing it.<\/p>"},"blocks":{}},"accordion_item_TdnMCL":{"type":"_accordion-item","name":"t:sections.accordion.blocks.accordion_item.label","settings":{"open":false,"icon":"none","title":"I have a discount code, how can I use it?","content":"<p>Unfortunately we are unable to cancel an order once it has been placed. This will allow us to pack your orders efficiently and to minimize errors. It is advisable to check your order before placing it.<\/p>"},"blocks":{}},"accordion_item_hXQN78":{"type":"_accordion-item","name":"t:sections.accordion.blocks.accordion_item.label","settings":{"open":false,"icon":"none","title":"How will I know if my order is confirmed?","content":"<p>After you have placed your order, you will receive an acknowledgement e-mail from us to confirm that your orders have been received. However, do note that orders will only be shipped when your credit card payment has been approved and billing and delivery address is verified. Alternatively, you may check the status of your order in “My Account” if you are a registered user.<\/p>"},"blocks":{}},"accordion_item_jKdRQp":{"type":"_accordion-item","name":"t:sections.accordion.blocks.accordion_item.label","settings":{"open":false,"icon":"none","title":"I have problems adding items to my shopping cart?","content":"<p>You will be able to add the items as long as it is available. There could be an instance where the item is in someone else’s shopping cart hence the status of the items is reflected as “Temporarily Unavailable”.<\/p>"},"blocks":{}},"accordion-heading":{"type":"section-heading","static":true,"settings":{"design_heading":"1","horizontal":false,"alignment":"left","heading_gap":15,"margin_bottom":30},"blocks":{}}},"block_order":["accordion_item_A96ika","accordion_item_dGWCqH","accordion_item_rdKgg9","accordion_item_8bVaFV","accordion_item_RLCHiY","accordion_item_TdnMCL","accordion_item_hXQN78","accordion_item_jKdRQp"],"name":"t:sections.accordion.name","settings":{"accordion_des":"1","color_scheme":"scheme-1","mg":"","mg_mb":"","pd":"70px,,80px,","pd_mb":"35px,,40px,"}}},"order":["heading","main","accordion_Tg8fN8"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "main-heading",
+      "blocks": {
+        "heading_liquid_kCwqhp": {
+          "type": "_heading_liquid",
+          "settings": {
+            "text": "{{ page_title }}",
+            "line_height": "hdt-lh-1",
+            "font_family": "hdt-font-1",
+            "text_size": "2xl",
+            "text_color": "hdt-s-text",
+            "italic": false,
+            "uppercase": false,
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
+          },
+          "blocks": {}
+        },
+        "heading_brc_aVn9AW": {
+          "type": "_heading_brc",
+          "name": "Breadcrumb",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_liquid_kCwqhp",
+        "heading_brc_aVn9AW"
+      ],
+      "settings": {
+        "use_dynamic_source": false,
+        "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
+        "bg_overlay": 54,
+        "space_item": 12,
+        "mg": "",
+        "mg_mb": "",
+        "pd": "50px,,50px,",
+        "pd_mb": "50px,,50px,"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "color_scheme": "",
+        "mg": "",
+        "mg_mb": "",
+        "pd": ",,30px,",
+        "pd_mb": ",,22px,"
+      }
+    },
+    "accordion_Tg8fN8": {
+      "type": "accordion",
+      "blocks": {
+        "accordion_item_A96ika": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": true,
+            "icon": "none",
+            "title": "Where does IndyVogue ship the items from?",
+            "content": "<p>IndyVogue has fulfillment centers in Kolkata, West Bengal(India) and Austin, TX(USA). The Kolkata fulfillment center is managed by IndyVogue Fashions Private Limited which is responsible for shipping & handling of all items. Depending upon what you buy, items will get shipped from either of these 2 fulfillment centers.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_dGWCqH": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "Which are the countries that you ship your items to?",
+            "content": "<p>Currently, we ship our items the following countries - North America: United States, Canada. Europe: Austria, Belgium, France, Germany, Ireland, Italy, Netherlands, Norway, Sweden, Switzerland & United Kingdom. Australia</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_rdKgg9": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "I just bought a saree from your site but now I cannot see it under the saree section anymore. Where did it go?",
+            "content": "<p>Once an item is sold(we only keep one piece of each item), is removed from the main collection. But you can always search for the items with the SKU number OR title and it will show up.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_8bVaFV": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "I want to buy a saree from IndyVogue and also would like to get a blouse stitched. How do I give you the measurements?",
+            "content": "<p>Good question. All Sarees that have the option of getting blouse stitched has a variant called \"Saree & Stitched Designer Blouse\". Please choose the same and place your order. Once an order is placed with a stitched blouse option, the order confirmation email will contain a link to fill up the Blouse measurement form. Please fill up that form and submit to us. Please note that sometimes this email might end up in your spam / junk mail folder. Make sure you check that.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_RLCHiY": {
+          "type": "_accordion-item",
+          "name": "t:sections.accordion.blocks.accordion_item.label",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "How do I know the status of my order?",
+            "content": "<p>We will send you email communication once the status of an order changes. You will receive an Order Confirmation Email, a blouse measurement form(optional, if you have chosen designer blouse option), a shipping confirmation email with the tracking number. Also, feel free to email us at sales.indyvogye@gmail.com OR call/whatsapp at +1 913 579 2118 (9 AM to 10:30 PM CST)</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_TdnMCL": {
+          "type": "_accordion-item",
+          "name": "t:sections.accordion.blocks.accordion_item.label",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "I really like your saree but don't want to pay by paypal or credit card. Is there a way to still get it?",
+            "content": "<p>Sure, just call / whatapp us at +19135792118 or email at sumanab@indyvogue.com and we will be happy to take care of it. Also, we have added a new Payment method in the checkout called \"Pay by Bank Deposit\" specifically for patrons like you. Use that payment method to complete your online order and we will keep the item on hold for you for upto 12 hours for you to complete the order.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_hXQN78": {
+          "type": "_accordion-item",
+          "name": "t:sections.accordion.blocks.accordion_item.label",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "Will the saree look exactly like in the picture?",
+            "content": "<p>Good question.....the saree will \"look\" exactly like the picture as this is the same saree for which the picture was taken. As far as color is concerned, we take the picture in day light. And as you know, the same saree under different lightning conditions might look different. Till date, the only comment we have heard from people is \"The actual Saree looks better than the picture\" !!!! It seems that we need to get better at photography. :-)</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_jKdRQp": {
+          "type": "_accordion-item",
+          "name": "t:sections.accordion.blocks.accordion_item.label",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "Can I select the design of the blouse that Sonakshi wore? I do not see that in your form.",
+            "content": "<p>Of course you can. In the case if you want to get a design of the blouse that is not in our form, call / whatsapp at +1 913 378 4722 & we can discuss and confirm the design.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_BDkFUh": {
+          "type": "_accordion-item",
+          "name": "t:sections.accordion.blocks.accordion_item.label",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "Can I get additional discount on SALE items?",
+            "content": "<p>Unfortunately we cannot give any additional discounts on the SALE items as the prices for those items are already at its lowest. Discount / Promo Codes only apply to Full Priced / Non-Sale Items.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion-heading": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "1",
+            "horizontal": false,
+            "alignment": "left",
+            "heading_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "accordion_item_A96ika",
+        "accordion_item_dGWCqH",
+        "accordion_item_rdKgg9",
+        "accordion_item_8bVaFV",
+        "accordion_item_RLCHiY",
+        "accordion_item_TdnMCL",
+        "accordion_item_hXQN78",
+        "accordion_item_jKdRQp",
+        "accordion_item_BDkFUh"
+      ],
+      "name": "t:sections.accordion.name",
+      "settings": {
+        "accordion_des": "1",
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "colors_by_section": false,
+        "color_scheme": "scheme-1",
+        "background_opacity": 0,
+        "mg": "",
+        "mg_mb": "",
+        "pd": "70px,,80px,",
+        "pd_mb": "35px,,40px,"
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "accordion_Tg8fN8"
+  ]
+}
