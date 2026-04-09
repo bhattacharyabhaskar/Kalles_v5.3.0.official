@@ -650,20 +650,23 @@
             "rounded": "none"
           },
           "blocks": {
-            "media_Y934Gt": {
-              "type": "_media",
-              "name": "t:blocks.media.name",
+            "video_hhVQVm": {
+              "type": "video",
+              "name": "t:blocks.video.name",
               "settings": {
-                "source": "video",
+                "image_height": "adapt_image_first",
+                "fixed_height": 860,
+                "image_height_mb": "adapt_image_first",
+                "fixed_height_mb": 300,
                 "video": "shopify://files/videos/Founder.mp4",
-                "external_video_url": "",
-                "video_loop": true
+                "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                "show_video_controls": true
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "media_Y934Gt"
+            "video_hhVQVm"
           ]
         },
         "quote_block": {
