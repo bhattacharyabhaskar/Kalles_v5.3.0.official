@@ -547,6 +547,125 @@
             "purpose_copy"
           ]
         },
+        "multi_column_azpcnW": {
+          "type": "_multi_column",
+          "settings": {
+            "column_dk": "7",
+            "column_tb": "7",
+            "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
+            "spacing_h_dk": 0,
+            "spacing_v_dk": 0,
+            "spacing_h_tb": 0,
+            "spacing_v_tb": 0,
+            "spacing_h_mb": 0,
+            "spacing_v_mb": 24,
+            "content_position": "center",
+            "align_content": false,
+            "content_position_mb": "center-start",
+            "alignment": "left",
+            "alignment_mb": "left",
+            "background_color": "rgba(0,0,0,0)",
+            "rounded": "none"
+          },
+          "blocks": {
+            "text_6EWAW8": {
+              "type": "text",
+              "settings": {
+                "text": "<h6>A MESSAGE FROM OUR FOUNDER</h6>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "2xl",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 1
+              },
+              "blocks": {}
+            },
+            "spacer_jKQEGp": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 14,
+                "space_md": 14,
+                "space": 12
+              },
+              "blocks": {}
+            },
+            "text_R8hTbV": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Sumana, the founder of IndyVogue has lived it all. A Masters in Economics from University of Calcutta, India, she started IndyVogue in her garagae. And here is a message from her.</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-text-secondary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_6EWAW8",
+            "spacer_jKQEGp",
+            "text_R8hTbV"
+          ]
+        },
+        "multi_column_m9nxBa": {
+          "type": "_multi_column",
+          "settings": {
+            "column_dk": "5",
+            "column_tb": "5",
+            "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
+            "spacing_h_dk": 0,
+            "spacing_v_dk": 0,
+            "spacing_h_tb": 0,
+            "spacing_v_tb": 0,
+            "spacing_h_mb": 0,
+            "spacing_v_mb": 0,
+            "content_position": "center",
+            "align_content": false,
+            "content_position_mb": "center",
+            "alignment": "left",
+            "alignment_mb": "center",
+            "background_color": "rgba(0,0,0,0)",
+            "rounded": "none"
+          },
+          "blocks": {
+            "media_Y934Gt": {
+              "type": "_media",
+              "name": "t:blocks.media.name",
+              "settings": {
+                "source": "video",
+                "video": "shopify://files/videos/Founder.mp4",
+                "external_video_url": "",
+                "video_loop": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "media_Y934Gt"
+          ]
+        },
         "quote_block": {
           "type": "_multi_column",
           "settings": {
@@ -574,7 +693,7 @@
             "quote_text": {
               "type": "blockquote",
               "settings": {
-                "quote": "<p><em>Trusted by thousands of patrons across the world, IndyVogue stands for authenticity, thoughtful curation, and timeless Indian elegance. </em><em><strong>We will win your heart.</strong></em></p>",
+                "quote": "<p><em>Trusted by thousands of patrons across the world, IndyVogue stands for authenticity, thoughtful curation, and timeless Indian elegance.</em></p><p><em>We will win your heart.</em></p>",
                 "text_color": "hdt-s-text"
               },
               "blocks": {}
@@ -594,6 +713,8 @@
         "difference_full",
         "purpose_image",
         "purpose_text",
+        "multi_column_azpcnW",
+        "multi_column_m9nxBa",
         "quote_block"
       ],
       "settings": {
