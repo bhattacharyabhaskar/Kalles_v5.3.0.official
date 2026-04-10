@@ -16,7 +16,7 @@
           "type": "_slide-item",
           "settings": {
             "image": "shopify://shop_images/Desktop_1.webp",
-            "image_mb": "shopify://shop_images/Home_1.png",
+            "image_mb": "shopify://shop_images/Home_1.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
@@ -148,7 +148,7 @@
           "type": "_slide-item",
           "settings": {
             "image": "shopify://shop_images/Desktop_2.webp",
-            "image_mb": "shopify://shop_images/Home_2.png",
+            "image_mb": "shopify://shop_images/Home_2.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
