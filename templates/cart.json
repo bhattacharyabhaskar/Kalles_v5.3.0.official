@@ -11,29 +11,9 @@
   "sections": {
     "main_heading_zHKQUU": {
       "type": "main-heading",
-      "blocks": {
-        "heading_liquid_zak73V": {
-          "type": "_heading_liquid",
-          "settings": {
-            "text": "{{ page_title }}",
-            "line_height": "hdt-lh-1",
-            "font_family": "hdt-font-1",
-            "text_size": "2xl",
-            "text_color": "hdt-s-text",
-            "italic": false,
-            "uppercase": true,
-            "font_size_text_lg": 16,
-            "font_size_text": 14,
-            "letter_spacing_text": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "heading_liquid_zak73V"
-      ],
       "settings": {
         "use_dynamic_source": false,
+        "image": "shopify://shop_images/Checkout-New.png",
         "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "bg_overlay": 54,
         "space_item": 0,
