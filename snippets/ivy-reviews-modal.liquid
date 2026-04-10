@@ -1,80 +1,195 @@
 {%- comment -%}
-  IndyVogue — Reviews Modal
-  Widget 1: floating badge (iframe, z-index 1000000)
-  Widget 2: full reviews overlay on badge click
+  IndyVogue — Reviews Panel
+  Floating button → opens reviews slide-in panel
 {%- endcomment -%}
 
-<!-- Widget 1: Floating Badge -->
-<div data-romw-token="B1cu6qhdMQxoHwiEVPwX8PJir6ykcauVBghOyQ2bIV59qkMBhV"></div>
+<!-- Floating Reviews Button -->
+<button id="ivy-reviews-btn" aria-label="See our reviews">
+  <span id="ivy-rb-minimize" title="Minimize">−</span>
+  <div class="ivy-rb-row ivy-rb-icons">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+      <path d="M15.5 8H13.5C13.2 8 13 8.2 13 8.5V10H15.5L15.2 12.5H13V19H10.5V12.5H9V10H10.5V8.5C10.5 6.6 11.6 5.5 13.5 5.5C14.4 5.5 15.5 5.6 15.5 5.6V8Z" fill="white"/>
+    </svg>
+    <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+      <path d="M21.8 12.2c0-.7-.1-1.3-.2-1.9H12v3.6h5.5c-.2 1.3-1 2.3-2.1 3v2.5h3.4c2-1.8 3-4.5 3-7.2z" fill="#4285F4"/>
+      <path d="M12 22c2.7 0 5-.9 6.7-2.4l-3.4-2.5c-.9.6-2 1-3.3 1-2.5 0-4.7-1.7-5.4-4H3v2.6C4.7 19.9 8.1 22 12 22z" fill="#34A853"/>
+      <path d="M6.6 14.1c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.5H3C2.4 8.8 2 10.4 2 12s.4 3.2 1 4.5l3.6-2.4z" fill="#FBBC05"/>
+      <path d="M12 5.9c1.4 0 2.7.5 3.7 1.4l2.7-2.7C16.9 3 14.7 2 12 2 8.1 2 4.7 4.1 3 7.5l3.6 2.6C7.3 7.6 9.5 5.9 12 5.9z" fill="#EA4335"/>
+    </svg>
+  </div>
+  <div class="ivy-rb-row ivy-rb-rating">
+    <span class="ivy-rb-score">4.9</span>
+    <span class="ivy-rb-stars">
+      <svg viewBox="0 0 24 24" fill="#FFAA00"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#FFAA00"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#FFAA00"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#FFAA00"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <svg viewBox="0 0 24 24" fill="#FFAA00"><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/></svg>
+    </span>
+  </div>
+  <div class="ivy-rb-row ivy-rb-cta">See all reviews</div>
+</button>
 
-<!-- Invisible click layer over badge iframe -->
-<div id="ivy-badge-click-layer"></div>
-
-<!-- Widget 2: Full Reviews Overlay -->
-<div id="ivy-reviews-overlay">
-  <div id="ivy-reviews-modal">
+<!-- Reviews Panel -->
+<div id="ivy-reviews-panel">
+  <div id="ivy-reviews-panel-header">
+    <span>Customer Reviews</span>
     <button id="ivy-reviews-close" aria-label="Close">×</button>
+  </div>
+  <div id="ivy-reviews-panel-body">
     <div data-romw-token="J9GdCnFEqEj4nlQT1H7Clc7baq4MaB7FUSgf85NbjriRhepuNa"></div>
   </div>
 </div>
 
 <style>
-#ivy-badge-click-layer {
+#ivy-reviews-btn {
   position: fixed;
-  z-index: 1000010;
-  cursor: pointer;
-}
-
-#ivy-reviews-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000020;
-  background: rgba(0,0,0,0.6);
-  overflow-y: auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-#ivy-reviews-modal {
-  position: relative;
-  max-width: 860px;
-  margin: 40px auto;
+  bottom: 24px;
+  left: 24px;
+  border: 2px solid #6B1D1D;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
   background: #fff;
-  border-radius: 16px;
-  padding: 56px 24px 32px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  border-radius: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: box-shadow 0.2s, transform 0.2s;
+  font-family: inherit;
+  min-width: 120px;
 }
 
-#ivy-reviews-close {
+#ivy-reviews-btn:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  transform: translateY(-2px);
+}
+
+#ivy-rb-minimize {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 1000030;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-  background: #fff;
-  color: #333;
-  font-size: 24px;
+  top: 4px;
+  right: 8px;
+  font-size: 18px;
+  color: #999;
   cursor: pointer;
+  line-height: 1;
+  padding: 2px 4px;
+  z-index: 1;
+}
+
+#ivy-rb-minimize:hover {
+  color: #6B1D1D;
+}
+
+#ivy-reviews-btn.is-minimized .ivy-rb-rating,
+#ivy-reviews-btn.is-minimized .ivy-rb-cta {
+  display: none;
+}
+
+.ivy-rb-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  line-height: 1;
-  padding: 0;
 }
 
-#ivy-reviews-close:hover {
-  background: #f5f5f5;
+.ivy-rb-icons { gap: 8px; }
+.ivy-rb-rating { gap: 6px; }
+
+.ivy-rb-score {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1;
+}
+
+.ivy-rb-stars {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.ivy-rb-stars svg { width: 15px; height: 15px; }
+
+.ivy-rb-cta {
+  font-size: 12px;
+  color: #6B1D1D;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  letter-spacing: 0.2px;
+}
+
+#ivy-reviews-panel {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 480px;
+  max-width: 100vw;
+  height: 100vh;
+  z-index: 2147483647;
+  background: #fff;
+  box-shadow: -4px 0 30px rgba(0,0,0,0.2);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#ivy-reviews-panel.is-open { display: flex; }
+
+#ivy-reviews-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  background: #6B1D1D;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+#ivy-reviews-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+#ivy-reviews-close:hover { background: rgba(255,255,255,0.2); }
+
+#ivy-reviews-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 767px) {
-  #ivy-reviews-overlay { padding: 10px; }
-  #ivy-reviews-modal { margin: 10px auto; padding: 56px 12px 20px; border-radius: 10px; }
-  #ivy-reviews-close { top: 15px; right: 15px; width: 36px; height: 36px; font-size: 20px; }
+  #ivy-reviews-btn {
+    bottom: 20px;
+    left: auto;
+    right: 16px;
+    padding: 10px 14px;
+    min-width: 110px;
+  }
+  .ivy-rb-score { font-size: 16px; }
+  .ivy-rb-stars svg { width: 13px; height: 13px; }
+  #ivy-reviews-panel { width: 100vw; }
 }
 </style>
 
@@ -82,59 +197,51 @@
 
 <script>
 window.addEventListener('load', function() {
-    console.log('ivy-reviews: load fired');
- {
-  var overlay  = document.getElementById('ivy-reviews-overlay');
+  var panel    = document.getElementById('ivy-reviews-panel');
   var closeBtn = document.getElementById('ivy-reviews-close');
-  var layer    = document.getElementById('ivy-badge-click-layer');
+  var btn      = document.getElementById('ivy-reviews-btn');
+  var minimize = document.getElementById('ivy-rb-minimize');
 
-  function openOverlay() {
-    overlay.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    layer.style.pointerEvents = 'none'; // disable layer while overlay open
-  }
-
-  function closeOverlay() {
-    overlay.style.display = 'none';
-    document.body.style.overflow = '';
-    layer.style.pointerEvents = 'auto';
-    layer.onclick = openOverlay;  
-  }
-
-  layer.onclick = openOverlay;
-
-  closeBtn.addEventListener('click', function(e) {
+  minimize.onclick = function(e) {
     e.stopPropagation();
-    closeOverlay();
-  });
+    var isMin = btn.classList.toggle('is-minimized');
+    minimize.textContent = isMin ? '+' : '−';
+  };
 
-  overlay.addEventListener('click', function(e) {
-    if (e.target === overlay) closeOverlay();
-  });
+  btn.onclick = function() {
+    panel.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  closeBtn.onclick = function() {
+    panel.classList.remove('is-open');
+    document.body.style.overflow = '';
+  };
 
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && overlay.style.display === 'block') closeOverlay();
+    if (e.key === 'Escape') {
+      panel.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
   });
 
-  // Fit click layer to badge iframe dimensions
-  function fitLayer() {
-    var iframe = document.querySelector('iframe[src*="localimpact.com/embed/v2/B1cu6q"]');
-    if (!iframe) return false;
-    var r = iframe.getBoundingClientRect();
-    if (r.width === 0) return false;
-    layer.style.left   = r.left   + 'px';
-    layer.style.top    = r.top    + 'px';
-    layer.style.width  = r.width  + 'px';
-    layer.style.height = r.height + 'px';
-    return true;
-  }
+  var observer = new MutationObserver(function() {
+    document.querySelectorAll('iframe[src*="localimpact.com/embed/v3/review"]').forEach(function(f) {
+      f.style.zIndex = '2147483647';
+      f.style.position = 'fixed';
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
 
-  var attempts = 0;
-  var poll = setInterval(function() {
-    if (fitLayer() || ++attempts > 20) clearInterval(poll);
-  }, 500);
-
-  window.addEventListener('resize', fitLayer);
-  window.addEventListener('scroll', fitLayer);
+  window.addEventListener('message', function() {
+    setTimeout(function() {
+      document.querySelectorAll('iframe[src*="localimpact.com"]').forEach(function(f) {
+        if (f.src.indexOf('embed/v3/review') > -1 || f.src.indexOf('id=') > -1) {
+          f.style.zIndex = '2147483647';
+          f.style.position = 'fixed';
+        }
+      });
+    }, 100);
+  });
 });
 </script>
