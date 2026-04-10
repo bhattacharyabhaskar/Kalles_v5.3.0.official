@@ -599,8 +599,8 @@
             "width_lg": 100,
             "width_md": 100,
             "width": 100,
-            "mg": ",,50px,",
-            "mg_mb": ",,30px,",
+            "mg": "",
+            "mg_mb": "",
             "pd": "",
             "pd_mb": ""
           },
@@ -635,8 +635,8 @@
       "settings": {
         "collapse": false,
         "full_width": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
+        "mg": "",
+        "mg_mb": "",
         "pd": "20px,,20px,",
         "pd_mb": "15px,,15px,",
         "colors_by_section": false,
