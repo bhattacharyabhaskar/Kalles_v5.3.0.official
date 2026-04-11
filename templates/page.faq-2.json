@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "heading": {
@@ -44,6 +53,66 @@
         "mg_mb": "",
         "pd": ",,30px,",
         "pd_mb": ",,22px,"
+      }
+    },
+    "image_text_jyCpfG": {
+      "type": "image_text",
+      "blocks": {
+        "image-text-heading": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "4",
+            "horizontal": true,
+            "alignment": "center",
+            "heading_gap": 16,
+            "margin_bottom": 0
+          },
+          "blocks": {
+            "spacer_qKtaFD": {
+              "type": "spacer",
+              "name": "t:blocks.spacer.name",
+              "settings": {
+                "direction": false,
+                "space_lg": 50,
+                "space_md": 50,
+                "space": 50
+              },
+              "blocks": {}
+            },
+            "sub_heading_section_d8HchK": {
+              "type": "_sub_heading_section",
+              "name": "t:blocks.section_heading.sub_heading",
+              "settings": {
+                "text": "<h2>Find answers to the most common questions about buying authentic Indian sarees online from IndyVogue, including shipping in the USA, blouse stitching, pre-stitched sarees, Silk Mark Certified sarees, payments, returns, and order tracking.</h2>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "text_size": "base",
+                "text_color": "hdt-s-text",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "spacer_qKtaFD",
+            "sub_heading_section_d8HchK"
+          ]
+        }
+      },
+      "name": "Image with text",
+      "settings": {
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
       }
     },
     "accordion_Tg8fN8": {
@@ -272,7 +341,7 @@
         "background_opacity": 0,
         "mg": "",
         "mg_mb": "",
-        "pd": "70px,,80px,",
+        "pd": "40px,,80px,",
         "pd_mb": "35px,,40px,"
       }
     }
@@ -280,6 +349,7 @@
   "order": [
     "heading",
     "main",
+    "image_text_jyCpfG",
     "accordion_Tg8fN8"
   ]
 }
