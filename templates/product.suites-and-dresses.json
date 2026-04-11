@@ -14,7 +14,7 @@
       "settings": {
         "back_next_pr": true,
         "colors_by_section": true,
-        "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
+        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "background_opacity": 1,
         "section_layout": "wrapper_container",
         "hdt_background_parallax": false,
@@ -501,6 +501,7 @@
         "image_ratio": "portrait",
         "image_size": true,
         "show_vendor": false,
+        "show_sku": true,
         "pr_border": "none",
         "sort_by": "new_to_old",
         "availability": "show",
