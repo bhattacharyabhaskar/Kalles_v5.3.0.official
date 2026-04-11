@@ -211,6 +211,15 @@ window.addEventListener('load', function() {
   btn.onclick = function() {
     panel.classList.add('is-open');
     document.body.style.overflow = 'hidden';
+    if (typeof gtag === 'function') {
+      gtag('event', 'reviews_panel_open', {
+        event_category: 'engagement',
+        event_label: 'Reviews Button Click',
+        page_location: window.location.href,
+        page_title: document.title,
+        page_path: window.location.pathname
+      });
+    }
   };
 
   closeBtn.onclick = function() {
