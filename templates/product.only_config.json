@@ -307,6 +307,17 @@
     "color-swatch": {
       "type": "color-swatch",
       "blocks": {
+        "color_swatch_YLp7gy": {
+          "type": "color_swatch",
+          "settings": {
+            "name": "black-white",
+            "color": "#000000",
+            "color2": "",
+            "color3": "",
+            "color4": "",
+            "image": "shopify://shop_images/swatch-black-white.svg"
+          }
+        },
         "color_swatch_tkypzj": {
           "type": "color_swatch",
           "settings": {
@@ -319,6 +330,7 @@
         }
       },
       "block_order": [
+        "color_swatch_YLp7gy",
         "color_swatch_tkypzj"
       ],
       "settings": {
