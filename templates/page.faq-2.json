@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "heading": {
@@ -58,98 +49,183 @@
     "accordion_Tg8fN8": {
       "type": "accordion",
       "blocks": {
-        "accordion_item_A96ika": {
+        "accordion_item_01": {
           "type": "_accordion-item",
           "settings": {
             "open": true,
             "icon": "none",
-            "title": "Where does IndyVogue ship the items from?",
-            "content": "<p>IndyVogue has fulfillment centers in Kolkata, West Bengal(India) and Austin, TX(USA). The Kolkata fulfillment center is managed by IndyVogue Fashions Private Limited which is responsible for shipping & handling of all items. Depending upon what you buy, items will get shipped from either of these 2 fulfillment centers.</p>"
+            "title": "Where does IndyVogue ship sarees from in the USA and India?",
+            "content": "<p>IndyVogue has fulfillment centers in Kolkata, India and Austin, Texas, USA. Depending on the item you purchase and product availability, your order may ship from either location.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_dGWCqH": {
+        "accordion_item_02": {
           "type": "_accordion-item",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "Which are the countries that you ship your items to?",
-            "content": "<p>Currently, we ship our items the following countries - North America: United States, Canada. Europe: Austria, Belgium, France, Germany, Ireland, Italy, Netherlands, Norway, Sweden, Switzerland & United Kingdom. Australia</p>"
+            "title": "Does IndyVogue offer free shipping on sarees?",
+            "content": "<p>Yes, IndyVogue offers free shipping on all sarees.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_rdKgg9": {
+        "accordion_item_03": {
           "type": "_accordion-item",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "I just bought a saree from your site but now I cannot see it under the saree section anymore. Where did it go?",
-            "content": "<p>Once an item is sold(we only keep one piece of each item), is removed from the main collection. But you can always search for the items with the SKU number OR title and it will show up.</p>"
+            "title": "How long does IndyVogue take to deliver sarees in the USA?",
+            "content": "<p>Most USA orders are delivered within 5 to 10 business days. Orders with blouse stitching or pre-stitched saree customization may take additional processing time.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_8bVaFV": {
+        "accordion_item_04": {
           "type": "_accordion-item",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "I want to buy a saree from IndyVogue and also would like to get a blouse stitched. How do I give you the measurements?",
-            "content": "<p>Good question. All Sarees that have the option of getting blouse stitched has a variant called \"Saree & Stitched Designer Blouse\". Please choose the same and place your order. Once an order is placed with a stitched blouse option, the order confirmation email will contain a link to fill up the Blouse measurement form. Please fill up that form and submit to us. Please note that sometimes this email might end up in your spam / junk mail folder. Make sure you check that.</p>"
+            "title": "Which countries does IndyVogue ship to?",
+            "content": "<p>Currently, we ship to the United States, Canada, United Kingdom, Australia, and selected countries in Europe including Austria, Belgium, France, Germany, Ireland, Italy, Netherlands, Norway, Sweden, and Switzerland.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_RLCHiY": {
+        "accordion_item_05": {
           "type": "_accordion-item",
-          "name": "t:sections.accordion.blocks.accordion_item.label",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "How do I know the status of my order?",
-            "content": "<p>We will send you email communication once the status of an order changes. You will receive an Order Confirmation Email, a blouse measurement form(optional, if you have chosen designer blouse option), a shipping confirmation email with the tracking number. Also, feel free to email us at sales.indyvogye@gmail.com OR call/whatsapp at +1 913 579 2118 (9 AM to 10:30 PM CST)</p>"
+            "title": "Are IndyVogue sarees authentic and Silk Mark Certified?",
+            "content": "<p>IndyVogue specializes in authentic Indian sarees. Many of our pure silk sarees are Silk Mark Certified where applicable. Please note that not every saree category, such as certain cotton or Jamdani sarees, carries Silk Mark certification.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_TdnMCL": {
+        "accordion_item_06": {
           "type": "_accordion-item",
-          "name": "t:sections.accordion.blocks.accordion_item.label",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "I really like your saree but don't want to pay by paypal or credit card. Is there a way to still get it?",
-            "content": "<p>Sure, just call / whatapp us at +19135792118 or email at sumanab@indyvogue.com and we will be happy to take care of it. Also, we have added a new Payment method in the checkout called \"Pay by Bank Deposit\" specifically for patrons like you. Use that payment method to complete your online order and we will keep the item on hold for you for upto 12 hours for you to complete the order.</p>"
+            "title": "Will the saree look exactly like the picture?",
+            "content": "<p>Yes, the product photographs are taken of the actual saree. However, slight color variation may occur due to natural lighting, screen brightness, and device settings. Most of our patrons say the saree looks even better in person.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_hXQN78": {
+        "accordion_item_07": {
           "type": "_accordion-item",
-          "name": "t:sections.accordion.blocks.accordion_item.label",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "Will the saree look exactly like in the picture?",
-            "content": "<p>Good question.....the saree will \"look\" exactly like the picture as this is the same saree for which the picture was taken. As far as color is concerned, we take the picture in day light. And as you know, the same saree under different lightning conditions might look different. Till date, the only comment we have heard from people is \"The actual Saree looks better than the picture\" !!!! It seems that we need to get better at photography. :-)</p>"
+            "title": "Why is a saree no longer visible after I buy it from IndyVogue?",
+            "content": "<p>Most of our sarees are unique single-piece designs. Once sold, the item is removed from the main collection. You may still be able to find it by searching with the product title or SKU.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_jKdRQp": {
+        "accordion_item_08": {
           "type": "_accordion-item",
-          "name": "t:sections.accordion.blocks.accordion_item.label",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "Can I select the design of the blouse that Sonakshi wore? I do not see that in your form.",
-            "content": "<p>Of course you can. In the case if you want to get a design of the blouse that is not in our form, call / whatsapp at +1 913 378 4722 & we can discuss and confirm the design.</p>"
+            "title": "How do I provide blouse measurements after ordering a saree?",
+            "content": "<p>If your saree includes the stitched blouse option, choose the appropriate variant such as Saree &amp; Stitched Designer Blouse before placing the order. After purchase, you will receive a blouse measurement form link by email. Please check your spam or junk folder if you do not see it.</p>"
           },
           "blocks": {}
         },
-        "accordion_item_BDkFUh": {
+        "accordion_item_09": {
           "type": "_accordion-item",
-          "name": "t:sections.accordion.blocks.accordion_item.label",
           "settings": {
             "open": false,
             "icon": "none",
-            "title": "Can I get additional discount on SALE items?",
-            "content": "<p>Unfortunately we cannot give any additional discounts on the SALE items as the prices for those items are already at its lowest. Discount / Promo Codes only apply to Full Priced / Non-Sale Items.</p>"
+            "title": "Can I customize the blouse design for my saree order?",
+            "content": "<p>Yes, blouse customization is available. You can choose from available blouse options in our form, or contact us by WhatsApp to discuss a custom blouse design.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_10": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "What is a pre-stitched or Minute Drape saree?",
+            "content": "<p>A pre-stitched saree, also called a Minute Drape Saree, is designed for easy wearing in less than a minute while still giving the elegant look of a traditional saree. This option is available only on selected products.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_11": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "How do I track my IndyVogue order?",
+            "content": "<p>You will receive email updates when your order status changes. These may include your order confirmation, blouse measurement form if applicable, and shipping confirmation with tracking details. You may also contact us directly for updates.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_12": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "What payment methods does IndyVogue accept?",
+            "content": "<p>We accept major credit cards, PayPal, and select alternative payment methods available at checkout.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_13": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "Can I place an order without PayPal or credit card?",
+            "content": "<p>Yes. You may use the Pay by Bank Deposit option at checkout where available. If you need help placing the order, please contact us by email or WhatsApp and we will assist you. Orders placed with bank deposit can be held for a limited time while payment is completed.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_14": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "Can discount codes be used on sale items at IndyVogue?",
+            "content": "<p>No. Sale items are already marked at their lowest price, so additional promo codes and discount codes do not apply to sale products. Discount codes are valid only on eligible full-priced items.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_15": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "What is IndyVogue’s return and exchange policy?",
+            "content": "<p>Returns or exchanges are accepted only in specific cases such as damaged or defective items. Customized products including stitched blouses and pre-stitched sarees are generally non-returnable. Please review the full return policy on our website before placing your order.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_16": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "What should I do if I receive a damaged item?",
+            "content": "<p>If your order arrives damaged, please contact us within 48 hours of delivery with clear photos of the item and packaging. Our team will review the issue and work to resolve it quickly.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_17": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "How can I contact IndyVogue customer support?",
+            "content": "<p>You can reach IndyVogue by email at sumanab@indyvogue.com or by call or WhatsApp at +1 913 579 2118. Our usual support hours are 9 AM to 10:30 PM CST.</p>"
+          },
+          "blocks": {}
+        },
+        "accordion_item_18": {
+          "type": "_accordion-item",
+          "settings": {
+            "open": false,
+            "icon": "none",
+            "title": "Why should I trust IndyVogue when buying sarees online in the USA?",
+            "content": "<p>IndyVogue has been serving patrons for years with authentic Indian sarees, strong customer support, free shipping on sarees, and hundreds of verified 5-star reviews. We take pride in quality, trust, and personal service.</p>"
           },
           "blocks": {}
         },
@@ -167,15 +243,24 @@
         }
       },
       "block_order": [
-        "accordion_item_A96ika",
-        "accordion_item_dGWCqH",
-        "accordion_item_rdKgg9",
-        "accordion_item_8bVaFV",
-        "accordion_item_RLCHiY",
-        "accordion_item_TdnMCL",
-        "accordion_item_hXQN78",
-        "accordion_item_jKdRQp",
-        "accordion_item_BDkFUh"
+        "accordion_item_01",
+        "accordion_item_02",
+        "accordion_item_03",
+        "accordion_item_04",
+        "accordion_item_05",
+        "accordion_item_06",
+        "accordion_item_07",
+        "accordion_item_08",
+        "accordion_item_09",
+        "accordion_item_10",
+        "accordion_item_11",
+        "accordion_item_12",
+        "accordion_item_13",
+        "accordion_item_14",
+        "accordion_item_15",
+        "accordion_item_16",
+        "accordion_item_17",
+        "accordion_item_18"
       ],
       "name": "t:sections.accordion.name",
       "settings": {
