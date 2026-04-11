@@ -37,7 +37,7 @@
             "text": "{{ collection.title }}",
             "line_height": "hdt-lh-1",
             "font_family": "hdt-font-1",
-            "text_size": "custom",
+            "text_size": "2xl",
             "text_color": "hdt-s-text",
             "italic": false,
             "uppercase": true,
