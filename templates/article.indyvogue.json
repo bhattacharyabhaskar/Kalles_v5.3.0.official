@@ -83,7 +83,17 @@
           "type": "_liquid",
           "settings": {
             "option_type": "liquid",
-            "text": "{{ 'ivy-article.css' | asset_url | stylesheet_tag }}{{ article.content }}"
+            "page": "",
+            "text": "{{ 'ivy-article.css' | asset_url | stylesheet_tag }}{{ article.content }}",
+            "hidden_br_mobile": false,
+            "hidden_on_mobile": false,
+            "ffamily": "",
+            "text_size": "base",
+            "font_weight": "normal",
+            "text_color": "hdt-s-text",
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
           },
           "blocks": {}
         },
@@ -263,10 +273,27 @@
         "sidebar_position": "right",
         "sidebar_size": "medium"
       }
+    },
+    "custom_liquid_ERjPFB": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "{%- render 'ivy-reviews-modal' -%}",
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
     }
   },
   "order": [
     "main_heading",
-    "main-article"
+    "main-article",
+    "custom_liquid_ERjPFB"
   ]
 }
