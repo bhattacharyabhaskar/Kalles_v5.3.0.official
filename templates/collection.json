@@ -187,6 +187,22 @@
         "pd": "",
         "pd_mb": ""
       }
+    },
+    "custom_liquid_W8qLqe": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "{%- render 'ivy-reviews-modal' -%}",
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
     }
   },
   "order": [
@@ -196,6 +212,7 @@
     "custom_liquid_mhDtCh",
     "custom_line_GyqgA8",
     "custom_liquid_439TND",
-    "custom_line_mGTmEC"
+    "custom_line_mGTmEC",
+    "custom_liquid_W8qLqe"
   ]
 }
