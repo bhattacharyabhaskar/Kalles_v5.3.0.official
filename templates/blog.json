@@ -174,10 +174,27 @@
         "pd": "60px,,60px,",
         "pd_mb": "60px,,60px,"
       }
+    },
+    "custom_liquid_4n3ezh": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "{%- render 'ivy-reviews-modal' -%}",
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
     }
   },
   "order": [
     "blog_slider_h7yXkz",
-    "main"
+    "main",
+    "custom_liquid_4n3ezh"
   ]
 }
