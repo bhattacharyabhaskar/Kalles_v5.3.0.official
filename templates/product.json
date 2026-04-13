@@ -116,6 +116,7 @@
             },
             "ivy_shipping_timeline_block": {
               "type": "_liquid",
+              "disabled": true,
               "settings": {
                 "option_type": "liquid",
                 "page": "",
