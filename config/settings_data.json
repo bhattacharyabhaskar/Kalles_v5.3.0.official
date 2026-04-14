@@ -68,7 +68,7 @@
     "blog_card_radius": 10,
     "price_varies_style": "1",
     "badge_shape": "rectangle",
-    "label_onsale_style": "percentage",
+    "label_onsale_style": "text",
     "use_preorder_badge": false,
     "use_custom_badge": false,
     "wis_atc_added": "2",
