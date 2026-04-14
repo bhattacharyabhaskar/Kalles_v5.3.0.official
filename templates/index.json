@@ -1351,6 +1351,49 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "marquee_NfBbPH": {
+      "type": "marquee",
+      "blocks": {
+        "item_JiWykx": {
+          "type": "item",
+          "settings": {
+            "text": "<h6>10,000+ Happy Patrons Worldwide</h6>",
+            "icon_svg": "dividing_icon",
+            "custom_svg": "",
+            "icon_width": 20,
+            "icon_width_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "item_JiWykx"
+      ],
+      "name": "t:sections.marquee.name",
+      "settings": {
+        "space_item": 30,
+        "speed": 0.2,
+        "direction": "rtl",
+        "marquee_pause_when_hover": true,
+        "enable_effect": false,
+        "width_marquee": 300,
+        "angle": -4,
+        "color_scheme_effect": "",
+        "text_fs": "h4",
+        "font_size_heading_lg": 50,
+        "font_size_heading": 24,
+        "font_weight_heading": 600,
+        "letter_spacing_heading": 0,
+        "text_uppercase": true,
+        "adding_border": true,
+        "border_bottom": false,
+        "icon_position_between": true,
+        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
     }
   },
   "order": [
@@ -1362,6 +1405,7 @@
     "collections_packery_NNr3d8",
     "banner_VyWanM",
     "blog_post_DcUjga",
-    "1755067183c661e3bf"
+    "1755067183c661e3bf",
+    "marquee_NfBbPH"
   ]
 }
