@@ -1374,7 +1374,7 @@
         "space_item": 30,
         "speed": 0.2,
         "direction": "rtl",
-        "marquee_pause_when_hover": true,
+        "marquee_pause_when_hover": false,
         "enable_effect": false,
         "width_marquee": 300,
         "angle": -4,
