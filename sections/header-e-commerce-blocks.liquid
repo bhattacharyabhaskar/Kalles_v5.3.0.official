@@ -291,6 +291,16 @@
     {%- if section.settings.logo %}
     "logo": {{ section.settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif -%}
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Austin, USA",
+      "postalCode": "78717",
+      "streetAddress": "9724 Castle Pines Dr"
+    },
+    "email": "sumanab@indyvogue.com",
+     "name": "Sumana Bhattacharya",
+    "telephone": "+1 913-378-4722",
+    "url" : "https://www.indyvogue.com/",
     "sameAs": [
       {%- capture socials -%}
       {{ settings.social_facebook_link | json }},
