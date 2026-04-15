@@ -3780,7 +3780,7 @@ html[scroll-lock] {
   min-width: 100%;
   overflow-wrap: anywhere;
   object-fit: cover;
-  /* object-position: center; */
+  object-position: center;
   border-radius: inherit;
   /* -webkit-user-select: none; */
   /* user-select: none; */
