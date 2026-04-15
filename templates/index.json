@@ -597,111 +597,11 @@
     "tabs_collection_dWUhRB": {
       "type": "tabs-collection",
       "blocks": {
-        "tab_collection_3zV7ji": {
-          "type": "_tab-collection",
-          "settings": {
-            "title": "Assam Silk",
-            "collection": "",
-            "hdt_show_icon_image": false,
-            "hdt_icon_spacing": 8
-          },
-          "blocks": {
-            "product_grid_Uz9Kw3": {
-              "type": "_product-grid",
-              "settings": {
-                "collection": "assam-silk-sarees",
-                "products_count": 4,
-                "product_list": [],
-                "pr_border": "none",
-                "product_des": "1",
-                "image_ratio": "adapt_image",
-                "image_size": true,
-                "show_vendor": false,
-                "show_sku": true,
-                "col_dk": "4",
-                "col_tb": "3",
-                "col_mb": "2",
-                "space_items": "x",
-                "pagination": true,
-                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-                "pagination_type": "view_all",
-                "enable_progressbar": false,
-                "paginate_pos": "center",
-                "dis_pagination": 30,
-                "btn_label": "",
-                "btn_style": "",
-                "endable_btn_icon": false,
-                "size": "m",
-                "btn_fw": "medium",
-                "rounded": "",
-                "font_size_btn": 14,
-                "padding_btn": 30,
-                "min_width_btn": 100,
-                "min_width_dt_btn": 100,
-                "min_height_btn": 40
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_grid_Uz9Kw3"
-          ]
-        },
-        "tab_collection_BjUW6T": {
-          "type": "_tab-collection",
-          "settings": {
-            "title": "Bishnupuri Silk",
-            "collection": "",
-            "hdt_show_icon_image": false,
-            "hdt_icon_spacing": 8
-          },
-          "blocks": {
-            "product_grid_QhFbxx": {
-              "type": "_product-grid",
-              "settings": {
-                "collection": "bishnupur-silk-saree",
-                "products_count": 4,
-                "product_list": [],
-                "pr_border": "none",
-                "product_des": "1",
-                "image_ratio": "adapt_image",
-                "image_size": true,
-                "show_vendor": false,
-                "show_sku": true,
-                "col_dk": "4",
-                "col_tb": "3",
-                "col_mb": "2",
-                "space_items": "x",
-                "pagination": true,
-                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-                "pagination_type": "view_all",
-                "enable_progressbar": false,
-                "paginate_pos": "center",
-                "dis_pagination": 30,
-                "btn_label": "",
-                "btn_style": "",
-                "endable_btn_icon": false,
-                "size": "m",
-                "btn_fw": "medium",
-                "rounded": "",
-                "font_size_btn": 14,
-                "padding_btn": 30,
-                "min_width_btn": 100,
-                "min_width_dt_btn": 100,
-                "min_height_btn": 40
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_grid_QhFbxx"
-          ]
-        },
         "tab_collection_xw8mXx": {
           "type": "_tab-collection",
           "settings": {
             "title": "White N Red",
-            "collection": "",
+            "collection": "red-and-white-saree-collection",
             "hdt_show_icon_image": false,
             "hdt_icon_spacing": 8
           },
@@ -747,6 +647,106 @@
             "product_grid_n3kbxw"
           ]
         },
+        "tab_collection_3zV7ji": {
+          "type": "_tab-collection",
+          "settings": {
+            "title": "Jamdani",
+            "collection": "dhakai-jamdani-sarees",
+            "hdt_show_icon_image": false,
+            "hdt_icon_spacing": 8
+          },
+          "blocks": {
+            "product_grid_Uz9Kw3": {
+              "type": "_product-grid",
+              "settings": {
+                "collection": "dhakai-jamdani-sarees",
+                "products_count": 4,
+                "product_list": [],
+                "pr_border": "none",
+                "product_des": "1",
+                "image_ratio": "adapt_image",
+                "image_size": true,
+                "show_vendor": false,
+                "show_sku": true,
+                "col_dk": "4",
+                "col_tb": "3",
+                "col_mb": "2",
+                "space_items": "x",
+                "pagination": true,
+                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+                "pagination_type": "view_all",
+                "enable_progressbar": false,
+                "paginate_pos": "center",
+                "dis_pagination": 30,
+                "btn_label": "",
+                "btn_style": "",
+                "endable_btn_icon": false,
+                "size": "m",
+                "btn_fw": "medium",
+                "rounded": "",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_grid_Uz9Kw3"
+          ]
+        },
+        "tab_collection_BjUW6T": {
+          "type": "_tab-collection",
+          "settings": {
+            "title": "Silk Mark",
+            "collection": "silk-mark",
+            "hdt_show_icon_image": false,
+            "hdt_icon_spacing": 8
+          },
+          "blocks": {
+            "product_grid_QhFbxx": {
+              "type": "_product-grid",
+              "settings": {
+                "collection": "silk-mark",
+                "products_count": 4,
+                "product_list": [],
+                "pr_border": "none",
+                "product_des": "1",
+                "image_ratio": "adapt_image",
+                "image_size": true,
+                "show_vendor": false,
+                "show_sku": true,
+                "col_dk": "4",
+                "col_tb": "3",
+                "col_mb": "2",
+                "space_items": "x",
+                "pagination": true,
+                "pagination_color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+                "pagination_type": "view_all",
+                "enable_progressbar": false,
+                "paginate_pos": "center",
+                "dis_pagination": 30,
+                "btn_label": "",
+                "btn_style": "",
+                "endable_btn_icon": false,
+                "size": "m",
+                "btn_fw": "medium",
+                "rounded": "",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_grid_QhFbxx"
+          ]
+        },
         "tabs-collection-heading": {
           "type": "section-heading",
           "static": true,
@@ -779,9 +779,9 @@
         }
       },
       "block_order": [
+        "tab_collection_xw8mXx",
         "tab_collection_3zV7ji",
-        "tab_collection_BjUW6T",
-        "tab_collection_xw8mXx"
+        "tab_collection_BjUW6T"
       ],
       "name": "t:sections.tabs_collections.grid_name",
       "settings": {
