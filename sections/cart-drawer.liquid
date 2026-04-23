@@ -61,6 +61,8 @@
                 </form>
               </div>
               {% render 'shipping-protection', protect_product: protect_product, is_protect_active: is_protect_active, data_page_id: 'cart-items-component' %}
+              
+              {%- if section.settings.show_cart_note or section.settings.show_gift_wrap or section.settings.show_shipping_estimator or section.settings.show_cart_discount -%}
               <div class="hdt-mini-cart__tool hdt-s-text hdt-text-center">
                 {%- if section.settings.show_cart_note -%}
                   <div data-label-note class="hdt-btn-tool-note__wrap hdt-inline-block">
@@ -102,6 +104,7 @@
                 {%- endif -%}
               </div>
               {% comment %}{%- render 'cart-complementary' -%}{% endcomment %}
+                {% endif %}
             {%- endif -%}
           </div>
         </div>
