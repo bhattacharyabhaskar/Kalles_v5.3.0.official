@@ -37,7 +37,6 @@
         },
         "btn_cart_74AGUK": {
           "type": "btn_cart",
-          "disabled": true,
           "settings": {
             "style_class": "",
             "icon": "none",
