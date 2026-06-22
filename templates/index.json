@@ -650,8 +650,8 @@
         "tab_collection_3zV7ji": {
           "type": "_tab-collection",
           "settings": {
-            "title": "Jamdani",
-            "collection": "dhakai-jamdani-sarees",
+            "title": "Tissue",
+            "collection": "tissue-silk-saree",
             "hdt_show_icon_image": false,
             "hdt_icon_spacing": 8
           },
@@ -659,7 +659,7 @@
             "product_grid_Uz9Kw3": {
               "type": "_product-grid",
               "settings": {
-                "collection": "dhakai-jamdani-sarees",
+                "collection": "tissue-silk-saree",
                 "products_count": 4,
                 "product_list": [],
                 "pr_border": "none",
