@@ -14,6 +14,18 @@
     "announcement_bar_QKnWCh": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_gHttdF": {
+          "type": "announcement",
+          "settings": {
+            "link": "",
+            "text": "Over <strong>200+</strong> exclusive Sarees added every month. <a href=\"/collections/buy-silk-mark-certified-saree\" title=\"Latest Saree Collection\"><strong>Shop Now</strong></a>",
+            "adding_border": true,
+            "countdown": "2024-12-30 15:00:00",
+            "txt_day": "days",
+            "text_highlight": "",
+            "hdt_font_size": 16
+          }
+        },
         "announcement_izeF7X": {
           "type": "announcement",
           "settings": {
@@ -40,6 +52,7 @@
         }
       },
       "block_order": [
+        "announcement_gHttdF",
         "announcement_izeF7X",
         "announcement_fekMnb"
       ],
