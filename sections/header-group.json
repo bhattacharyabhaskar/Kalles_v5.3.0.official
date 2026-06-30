@@ -97,7 +97,7 @@
             "countdown": "2024-12-30 15:00:00",
             "txt_day": "days",
             "effect": "carousel",
-            "au_time": 3,
+            "au_time": 4,
             "pause_when_hover": false,
             "hide": false
           }
@@ -123,7 +123,7 @@
       "name": "t:sections.top-bar.name",
       "settings": {
         "height": 41,
-        "fontsize": 12,
+        "fontsize": 13,
         "show_line_separator": false,
         "full_width": false,
         "colors_by_section": false,
