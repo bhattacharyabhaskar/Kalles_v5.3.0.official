@@ -14,18 +14,6 @@
     "announcement_bar_QKnWCh": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_gHttdF": {
-          "type": "announcement",
-          "settings": {
-            "link": "",
-            "text": "Over <strong>200+</strong> exclusive Sarees added every month. <a href=\"/collections/buy-silk-mark-certified-saree\" title=\"Latest Saree Collection\"><strong>Shop Now</strong></a>",
-            "adding_border": true,
-            "countdown": "2024-12-30 15:00:00",
-            "txt_day": "days",
-            "text_highlight": "",
-            "hdt_font_size": 16
-          }
-        },
         "announcement_izeF7X": {
           "type": "announcement",
           "settings": {
@@ -38,8 +26,21 @@
             "hdt_font_size": 16
           }
         },
+        "announcement_gHttdF": {
+          "type": "announcement",
+          "settings": {
+            "link": "",
+            "text": "Over <strong>200+</strong> exclusive Sarees added every month. <a href=\"/collections/buy-silk-mark-certified-saree\" title=\"Latest Saree Collection\"><strong>Shop Now</strong></a>",
+            "adding_border": true,
+            "countdown": "2024-12-30 15:00:00",
+            "txt_day": "days",
+            "text_highlight": "",
+            "hdt_font_size": 16
+          }
+        },
         "announcement_fekMnb": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "link": "",
             "text": "🌼 <strong>Spring Special, UP TO 10% OFF </strong>🌼 <a href=\"/collections/buy-silk-mark-certified-saree\" title=\"Latest Saree Collection\"><strong>Shop Now</strong></a>",
@@ -52,8 +53,8 @@
         }
       },
       "block_order": [
-        "announcement_gHttdF",
         "announcement_izeF7X",
+        "announcement_gHttdF",
         "announcement_fekMnb"
       ],
       "settings": {
@@ -82,16 +83,16 @@
         "liquid_BWdJTA": {
           "type": "liquid",
           "settings": {
-            "custom_liquid": "Welcome to IndyVogue where Tradition Meets Elegance",
+            "custom_liquid": "",
             "hide": false
           }
         },
         "text_iRiP87": {
           "type": "text",
           "settings": {
-            "text1": "<strong>FREE SHIPPING ON ALL ORDERS ABOVE $75 USD</strong>",
-            "text2": "<strong>YOU ENJOY SHOPPING, WE TAKE CARE OF DUTIES</strong>",
-            "text3": "",
+            "text1": "<strong>Welcome to IndyVogue where Tradition Meets Elegance</strong>",
+            "text2": "<strong>FREE SHIPPING ON ALL ORDERS ABOVE $75 USD</strong>",
+            "text3": "<strong>YOU ENJOY SHOPPING, WE TAKE CARE OF DUTIES</strong>",
             "adding_border": false,
             "countdown": "2024-12-30 15:00:00",
             "txt_day": "days",
