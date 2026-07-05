@@ -525,25 +525,6 @@
                 "space": 16
               },
               "blocks": {}
-            },
-            "footer_socials": {
-              "type": "socials",
-              "settings": {
-                "text_color": "hdt-text-secondary",
-                "type": "share",
-                "share_facebook": true,
-                "share_x": true,
-                "share_pinterest": true,
-                "share_tumblr": false,
-                "share_telegram": false,
-                "share_email": true,
-                "share_whatsapp": true,
-                "socials_style": "simple",
-                "socials_size": "small",
-                "bd_radius": 30,
-                "space_item": 30
-              },
-              "blocks": {}
             }
           },
           "block_order": [
@@ -551,8 +532,7 @@
             "spacer_contact",
             "heading_contact",
             "contact_details",
-            "spacer_social",
-            "footer_socials"
+            "spacer_social"
           ]
         }
       },
