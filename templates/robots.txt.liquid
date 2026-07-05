@@ -17,6 +17,9 @@ Disallow: /carts
 Disallow: /account
 Disallow: /services/login_with_shop/
 
+# Block native Shopify vendor-browsing route (mirrors entire catalog, duplicate of real collections)
+Disallow: /collections/vendors
+
 # Block collection sort and filter duplicates
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
@@ -162,6 +165,7 @@ Disallow: /14697362/checkouts
 Disallow: /14697362/orders
 Disallow: /carts
 Disallow: /account
+Disallow: /collections/vendors
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
 Disallow: /collections/*+*
@@ -272,6 +276,7 @@ Disallow: /14697362/checkouts
 Disallow: /14697362/orders
 Disallow: /carts
 Disallow: /account
+Disallow: /collections/vendors
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
 Disallow: /collections/*+*
