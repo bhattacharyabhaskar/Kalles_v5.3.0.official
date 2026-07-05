@@ -65,6 +65,7 @@
         if lazy_load == false
           assign img_priority = 'high'
         endif
+        assign sizes = sizes | default: '(min-width: 768px) 50vw, 100vw'
       -%}
       {{ image | image_url: width: 1946 | image_tag: loading: lazy, sizes: sizes, widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946', hdt-el: '', fetchpriority: img_priority }}    </div>
   </div>
