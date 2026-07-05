@@ -60,8 +60,13 @@
 {%- if media.media_type == 'image' -%}
   <div {{ media_hidden }}{% if variant_images contains media.src %} data-variants-id="{{ product.images | where: 'src', image.src | map: 'variants' | map: 'id' | join: ';' }}"{% endif %} class="{{ class }} hdt-product__media-item" data-media-id="{{ media.id }}" data-media-type="{{ media.media_type }}" data-group-name="{{ media_option_name }}"  data-group-value="{{ media_option_value | escape }}">
     <div class="hdt-ratio hdt-product__media" {{ imgatt }}style="--aspect-ratioapt:{{ image.aspect_ratio }};--mw-media:{{ image.width }}px">
-      {{ image | image_url: width: image.width | image_tag: loading: lazy, sizes: sizes, widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946', hdt-el: '' }}
-    </div>
+      {%- liquid
+        assign img_priority = 'auto'
+        if lazy_load == false
+          assign img_priority = 'high'
+        endif
+      -%}
+      {{ image | image_url: width: 1946 | image_tag: loading: lazy, sizes: sizes, widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946', hdt-el: '', fetchpriority: img_priority }}    </div>
   </div>
 {%- else -%}
   <div {{ media_hidden }} class="{{ class }} hdt-product__media-item" data-media-id="{{ media.id }}" data-media-type="{{ media.media_type }}" data-vhost="{{ media.host }}" data-group-name="{{ media_option_name }}" data-group-value="{{ media_option_value | escape }}">
