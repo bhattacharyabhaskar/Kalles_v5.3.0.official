@@ -24,10 +24,11 @@
 
 {%- comment -%}
 Robots policy:
- - Search pages and any URL with a query string => noindex, follow (avoid indexing thin / faceted pages)
+ - Search pages, faceted filter URLs, and sort-order URLs => noindex, follow (avoid indexing thin / faceted pages)
+ - Real product/collection pages keep index,follow even when a tracking parameter (ads, email, Pinterest) is attached
  - Keep index,follow for others (unless other templates set noindex)
 {% endcomment -%}
-{%- if t_name == 'search' or request.query_string != blank -%}
+{%- if t_name == 'search' or request.query_string contains 'filter.' or request.query_string contains 'sort_by' -%}
   <meta name="robots" content="noindex, follow">
 {%- endif -%}
 
