@@ -57,6 +57,11 @@ Disallow: /cdn/wpm/*.js
 Disallow: /recommendations/products
 Disallow: /*/recommendations/products
 
+# Block tracking/personalization parameter URLs (product recommendation apps)
+Disallow: /*?_pos=
+Disallow: /*&_fid=
+Disallow: /*&_ss=
+
 # Block Web Pixel Manager sandbox URLs (causing 404s)
 Disallow: /wpm@
 Disallow: /*/wpm@
@@ -367,9 +372,3 @@ Crawl-delay: 10
 
 User-agent: Pinterest
 Crawl-delay: 1
-
-User-agent: Googlebot
-Disallow:
-
-User-agent: Googlebot-image
-Disallow:
