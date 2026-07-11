@@ -258,7 +258,7 @@
           "static": true,
           "settings": {
             "media_box_size": 50,
-            "desktop_media_layout": "column",
+            "desktop_media_layout": "thumbnail_bottom",
             "media_size": "medium",
             "mobile_media_layout": "thumbnails",
             "show_first_media": false,
