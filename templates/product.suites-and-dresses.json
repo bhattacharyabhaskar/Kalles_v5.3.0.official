@@ -139,20 +139,19 @@
               },
               "blocks": {}
             },
-            "text_AHAi7f": {
-              "type": "text",
-              "name": "t:blocks.text.name",
+            "liquid_aeYRjy": {
+              "type": "_liquid",
+              "name": "t:blocks.liquid.name",
               "settings": {
-                "text": "<p>This piece is <strong>made to order</strong> and <strong>hand-embroidered(where applicable)</strong> — once you place your order, our artisans in India begin <strong>hand-stitching</strong> the <strong>chikankari</strong> <strong>work</strong> and <strong>tailoring</strong> it to your exact size. <em><strong>Hand embroidery means every piece carries small natural variations that no machine can replicate — that's part of its authenticity</strong></em>. </p><p>Expect shipping in 2 weeks. If you need it sooner for an event, message us and we'll do our best to expedite.</p>",
+                "option_type": "liquid",
+                "page": "",
+                "text": "{% assign work_types = product.metafields.saree.new_work.value %}\n\n{% if work_types contains \"Hand Embroidery\" %}\n  <p class=\"made-to-order-note\" style=\"font-style: italic; color: #6b4226;\">\n    This piece is <strong>made to order</strong> and <strong>hand-embroidered</strong> — once you place your order, our artisans begin hand-stitching the chikankari work and tailoring it to your exact size. Hand embroidery means every piece carries small natural variations that no machine can replicate — that's part of its authenticity.\n    <br>\n    Expect shipping in 2–3 weeks. If you need it sooner for an event, message us and we'll do our best to expedite.\n  </p>\n{% else %}\n  <p class=\"made-to-order-note\" style=\"font-style: italic; color: #6b4226;\">\n    This piece is <strong>made to order</strong> — once you place your order, our artisans begin stitching it in your exact size. That means no mass production and no compromise on fit, but it also means a short wait.\n    <br><br>\n    Expect shipping in 2 weeks. If you need it sooner for an event, message us and we'll do our best to expedite.\n  </p>\n{% endif %}",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "base",
-                "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-s-text",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 0
@@ -258,7 +257,7 @@
             "product_back_instock_qMdMA6",
             "product_pickup_Jpchr6",
             "product_trust_badge_QALnxQ",
-            "text_AHAi7f",
+            "liquid_aeYRjy",
             "product_extra_link_HfDmDV",
             "product_meta_hnDEjn",
             "socials_XYJPwj"
