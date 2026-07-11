@@ -139,6 +139,26 @@
               },
               "blocks": {}
             },
+            "text_AHAi7f": {
+              "type": "text",
+              "name": "t:blocks.text.name",
+              "settings": {
+                "text": "<p>This piece is <strong>made to order</strong> and <strong>hand-embroidered(where applicable)</strong> — once you place your order, our artisans in India begin <strong>hand-stitching</strong> the <strong>chikankari</strong> <strong>work</strong> and <strong>tailoring</strong> it to your exact size. <em><strong>Hand embroidery means every piece carries small natural variations that no machine can replicate — that's part of its authenticity</strong></em>. </p><p>Expect shipping in 2 weeks. If you need it sooner for an event, message us and we'll do our best to expedite.</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
             "product_extra_link_HfDmDV": {
               "type": "_product-extra-link",
               "disabled": true,
@@ -238,6 +258,7 @@
             "product_back_instock_qMdMA6",
             "product_pickup_Jpchr6",
             "product_trust_badge_QALnxQ",
+            "text_AHAi7f",
             "product_extra_link_HfDmDV",
             "product_meta_hnDEjn",
             "socials_XYJPwj"
