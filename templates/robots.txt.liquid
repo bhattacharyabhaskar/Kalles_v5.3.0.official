@@ -20,6 +20,9 @@ Disallow: /services/login_with_shop/
 # Block native Shopify vendor-browsing route (mirrors entire catalog, duplicate of real collections)
 Disallow: /collections/vendors
 
+# Block the full-catalog "all" collection and all its pagination/variants
+Disallow: /collections/all
+
 # Block collection sort and filter duplicates
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
@@ -64,6 +67,13 @@ Disallow: /*/recommendations/products
 Disallow: /*?_pos=
 Disallow: /*&_fid=
 Disallow: /*&_ss=
+
+# Block product recommendation widget tracking parameters
+Disallow: /*?pr_prod_strat=
+Disallow: /*&pr_prod_strat=
+Disallow: /*&pr_rec_id=
+Disallow: /*&pr_ref_pid=
+Disallow: /*&pr_seq=
 
 # Block Web Pixel Manager sandbox URLs (causing 404s)
 Disallow: /wpm@
@@ -166,6 +176,7 @@ Disallow: /14697362/orders
 Disallow: /carts
 Disallow: /account
 Disallow: /collections/vendors
+Disallow: /collections/all
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
 Disallow: /collections/*+*
@@ -196,6 +207,11 @@ Disallow: /cdn/wpm/*.js
 Disallow: /*?_pos=
 Disallow: /*&_fid=
 Disallow: /*&_ss=
+Disallow: /*?pr_prod_strat=
+Disallow: /*&pr_prod_strat=
+Disallow: /*&pr_rec_id=
+Disallow: /*&pr_ref_pid=
+Disallow: /*&pr_seq=
 
 # Block Web Pixel Manager sandbox URLs (causing 404s)
 Disallow: /wpm@
@@ -277,6 +293,7 @@ Disallow: /14697362/orders
 Disallow: /carts
 Disallow: /account
 Disallow: /collections/vendors
+Disallow: /collections/all
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
 Disallow: /collections/*+*
@@ -304,6 +321,11 @@ Disallow: /search
 Disallow: /apple-app-site-association
 Disallow: /.well-known/shopify/monorail
 Disallow: /cdn/wpm/*.js
+Disallow: /*?pr_prod_strat=
+Disallow: /*&pr_prod_strat=
+Disallow: /*&pr_rec_id=
+Disallow: /*&pr_ref_pid=
+Disallow: /*&pr_seq=
 
 # Block Web Pixel Manager sandbox URLs (causing 404s)
 Disallow: /wpm@
@@ -371,16 +393,6 @@ Disallow: /*.atom
 # Block asset files that shouldn't be indexed
 Disallow: /cdn/shop/t/*/assets/*.js
 Disallow: /cdn/shop/t/*/assets/*.css
-
-# Block the full-catalog "all" collection and all its pagination/variants
-Disallow: /collections/all
-
-# Block product recommendation widget tracking parameters
-Disallow: /*?pr_prod_strat=
-Disallow: /*&pr_prod_strat=
-Disallow: /*&pr_rec_id=
-Disallow: /*&pr_ref_pid=
-Disallow: /*&pr_seq=
 
 User-agent: MJ12bot
 Crawl-delay: 10
