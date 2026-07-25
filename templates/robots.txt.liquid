@@ -372,6 +372,16 @@ Disallow: /*.atom
 Disallow: /cdn/shop/t/*/assets/*.js
 Disallow: /cdn/shop/t/*/assets/*.css
 
+# Block the full-catalog "all" collection and all its pagination/variants
+Disallow: /collections/all
+
+# Block product recommendation widget tracking parameters
+Disallow: /*?pr_prod_strat=
+Disallow: /*&pr_prod_strat=
+Disallow: /*&pr_rec_id=
+Disallow: /*&pr_ref_pid=
+Disallow: /*&pr_seq=
+
 User-agent: MJ12bot
 Crawl-delay: 10
 
