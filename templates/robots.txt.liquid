@@ -1,26 +1,45 @@
 {%- comment -%}
 We use Shopify as our ecommerce platform.
 Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file.
+
+IMPORTANT - READ BEFORE ADDING ANY RULE:
+robots.txt matching is PREFIX-based and UNANCHORED. "Disallow: /b" does not
+mean the path /b - it means EVERY path beginning with /b, which includes the
+entire /blogs/ tree. "Disallow: /products/r" blocks every product handle
+starting with the letter r.
+
+Never add a partial path. If you must block one exact URL, anchor it with $:
+  Disallow: /products/some-exact-handle$
+
+Do NOT add rules to block 404ing URLs. Blocking a 404 stops Google from ever
+seeing the 404, so the URL stays in the index forever. Let 404s 404.
 {%- endcomment -%}
 
 User-agent: *
-# Block sensitive or duplicate Shopify paths
+# Sensitive / system Shopify paths
 Disallow: /a/downloads/-/*
 Disallow: /admin
 Disallow: /cart
+Disallow: /carts
 Disallow: /orders
-Disallow: /checkouts/
 Disallow: /checkout
+Disallow: /checkouts/
 Disallow: /14697362/checkouts
 Disallow: /14697362/orders
-Disallow: /carts
 Disallow: /account
 Disallow: /services/login_with_shop/
+Disallow: /search
+Disallow: /policies/
+Disallow: /*/policies/
+Disallow: /apple-app-site-association
+Disallow: /.well-known/shopify/monorail
+Disallow: /discount/
+Disallow: /surveys/
 
-# Block native Shopify vendor-browsing route (mirrors entire catalog, duplicate of real collections)
+# Native vendor-browsing route (mirrors the entire catalog)
 Disallow: /collections/vendors
 
-# Block collection sort and filter duplicates
+# Collection sort / filter / variant duplicates
 Disallow: /collections/*sort_by*
 Disallow: /*/collections/*sort_by*
 Disallow: /collections/*+*
@@ -29,14 +48,11 @@ Disallow: /collections/*%2b*
 Disallow: /*/collections/*+*
 Disallow: /*/collections/*%2B*
 Disallow: /*/collections/*%2b*
-# Disallow: */collections/*filter*&*filter*
-Disallow: /collections/*sort_by*
+Disallow: /collections/*?variant=
+Disallow: /collections/*/1000
+Disallow: /collections/*/tag
 
-# Note: Collection-based product URLs (/collections/*/products/*) are allowed
-# Canonical tags in meta-tags.liquid ensure proper SEO handling
-# Disallow: /*?variant=
-
-# Block duplicate blog URLs
+# Duplicate blog URLs (encoded-plus variants only - NOT the blog itself)
 Disallow: /blogs/*+*
 Disallow: /blogs/*%2B*
 Disallow: /blogs/*%2b*
@@ -44,110 +60,67 @@ Disallow: /*/blogs/*+*
 Disallow: /*/blogs/*%2B*
 Disallow: /*/blogs/*%2b*
 
-# Misc disallow rules for session IDs, preview scripts, policy pages, etc.
+# Session IDs, preview scripts, modal views
 Disallow: /*?*oseid=*
 Disallow: /*preview_theme_id*
 Disallow: /*preview_script_id*
-Disallow: /policies/
-Disallow: /*/policies/
 Disallow: /*/*?*ls=*&ls=*
 Disallow: /*/*?*ls%3D*%3Fls%3D*
 Disallow: /*/*?*ls%3d*%3fls%3d*
-Disallow: /search
-Disallow: /apple-app-site-association
-Disallow: /.well-known/shopify/monorail
-Disallow: /cdn/wpm/*.js
-Disallow: /recommendations/products
-Disallow: /*/recommendations/products
-
-# Block tracking/personalization parameter URLs (product recommendation apps)
-Disallow: /*?_pos=
-Disallow: /*&_fid=
-Disallow: /*&_ss=
-
-# Block product recommendation widget tracking parameters
-Disallow: /*?pr_prod_strat=
-Disallow: /*&pr_prod_strat=
-Disallow: /*&pr_rec_id=
-Disallow: /*&pr_ref_pid=
-Disallow: /*&pr_seq=
-
-# Block Web Pixel Manager sandbox URLs (causing 404s)
-Disallow: /wpm@
-Disallow: /*/wpm@
-Disallow: /web-pixel
-Disallow: /*/web-pixel
-Disallow: /sandbox/
-Disallow: /*/sandbox/
-
-# Block alternate/sandbox paths (causing 404s)
-Disallow: /a/s/
-Disallow: /a/s/products/
-Disallow: /a/s/collections/
-
-# Block invalid single-character and broken paths
-Disallow: /s
-Disallow: /b
-Disallow: /start
-Disallow: /surveys/
-Disallow: /discount/
-
-# Block broken collection URLs with trailing dashes or incomplete names
-Disallow: /collections/suites-$
-Disallow: /collections/buy-silk-$
-
-# Block incomplete product URLs (specific broken product slugs)
-Disallow: /products/l
-Disallow: /products/r
-Disallow: /products/golden-and-
-Disallow: /products/chocolate-wine
-Disallow: /products/tussar-and-
-Disallow: /products/royal-wine-red
-Disallow: /products/dash-ash-color
-Disallow: /products/pure-black-and
-Disallow: /products/turquoise-blue-
-Disallow: /products/green-and-red-
-Disallow: /products/roroyal-red-color-muga-silk-saree
-Disallow: /products/dark-ochre-
-Disallow: /products/milk-white-
-Disallow: /products/sky-blue-color-
-Disallow: /products/corn-yellow-
-Disallow: /products/dark-navy-blue
-Disallow: /products/white-black-
-Disallow: /products/rich-cream-
-
-# Block invalid page URLs with malformed query parameters
+Disallow: /*?view=quickshop
+Disallow: /*?view=quick_view
 Disallow: /pages/*?page=*&page%3D*
 Disallow: /pages/*?page=*&logged_in_customer_id
 
-# Block invalid collection paths (pagination numbers, tags, etc.)
-Disallow: /collections/*/1000
-Disallow: /collections/*/tag
+# Shopify search / pagination parameters (both ? and & positions)
+Disallow: /*?_pos=
+Disallow: /*&_pos=
+Disallow: /*?_fid=
+Disallow: /*&_fid=
+Disallow: /*?_ss=
+Disallow: /*&_ss=
+Disallow: /*?_sid=
+Disallow: /*&_sid=
 
-# Block collection URLs with variant parameters (should redirect to product page)
-Disallow: /collections/*?variant=
+# Product recommendation widget parameters (both ? and & positions)
+Disallow: /*?pr_prod_strat=
+Disallow: /*&pr_prod_strat=
+Disallow: /*?pr_rec_id=
+Disallow: /*&pr_rec_id=
+Disallow: /*?pr_rec_pid=
+Disallow: /*&pr_rec_pid=
+Disallow: /*?pr_ref_pid=
+Disallow: /*&pr_ref_pid=
+Disallow: /*?pr_seq=
+Disallow: /*&pr_seq=
 
-# Block product URLs with view parameters (modal views, should redirect)
-Disallow: /*?view=quickshop
-Disallow: /*?view=quick_view
+# Web Pixel Manager sandbox URLs (these return 200 and get indexed)
+Disallow: /web-pixels
+Disallow: /web-pixel
+Disallow: /wpm@
+Disallow: /*/wpm@
+Disallow: /sandbox/
+Disallow: /*/sandbox/
 
-# Block video URLs and media files (should not be indexed)
+# Assets, media, feeds, recommendation endpoints
+Disallow: /cdn/wpm/*.js
 Disallow: /cdn/shop/videos/
-Disallow: /*.mp4
-Disallow: /*.mp4?*
-
-# Block RSS/Atom feeds (should not be indexed)
-Disallow: /*.atom
-
-# Block asset files that shouldn't be indexed
 Disallow: /cdn/shop/t/*/assets/*.js
 Disallow: /cdn/shop/t/*/assets/*.css
+Disallow: /*.mp4
+Disallow: /*.mp4?*
+Disallow: /*.atom
+Disallow: /recommendations/products
+Disallow: /*/recommendations/products
+
+# DELIBERATELY NOT BLOCKED: /products/*  /blogs/*  /sitemap.xml
+# See the warning in the comment block at the top of this file.
 
 Sitemap: https://www.indyvogue.com/sitemap.xml
 
 User-agent: adsbot-google
-Disallow: /checkouts/
 Disallow: /checkout
+Disallow: /checkouts/
 Disallow: /carts
 Disallow: /orders
 Disallow: /14697362/checkouts
@@ -160,238 +133,66 @@ Disallow: /cdn/wpm/*.js
 User-agent: Nutch
 Disallow: /
 
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: Pinterest
+Crawl-delay: 1
+
 User-agent: AhrefsBot
 Crawl-delay: 10
 Disallow: /a/downloads/-/*
 Disallow: /admin
 Disallow: /cart
-Disallow: /orders
-Disallow: /checkouts/
-Disallow: /checkout
-Disallow: /14697362/checkouts
-Disallow: /14697362/orders
 Disallow: /carts
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
 Disallow: /account
+Disallow: /search
+Disallow: /policies/
 Disallow: /collections/vendors
 Disallow: /collections/*sort_by*
-Disallow: /*/collections/*sort_by*
 Disallow: /collections/*+*
 Disallow: /collections/*%2B*
 Disallow: /collections/*%2b*
-Disallow: /*/collections/*+*
-Disallow: /*/collections/*%2B*
-Disallow: /*/collections/*%2b*
-Disallow: */collections/*filter*&*filter*
 Disallow: /blogs/*+*
 Disallow: /blogs/*%2B*
 Disallow: /blogs/*%2b*
-Disallow: /*/blogs/*+*
-Disallow: /*/blogs/*%2B*
-Disallow: /*/blogs/*%2b*
-Disallow: /*?*oseid=*
-Disallow: /*preview_theme_id*
-Disallow: /*preview_script_id*
-Disallow: /policies/
-Disallow: /*/policies/
-Disallow: /*/*?*ls=*&ls=*
-Disallow: /*/*?*ls%3D*%3Fls%3D*
-Disallow: /*/*?*ls%3d*%3fls%3d*
-Disallow: /search
-Disallow: /apple-app-site-association
-Disallow: /.well-known/shopify/monorail
-Disallow: /cdn/wpm/*.js
 Disallow: /*?_pos=
+Disallow: /*&_pos=
+Disallow: /*?_fid=
 Disallow: /*&_fid=
+Disallow: /*?_ss=
 Disallow: /*&_ss=
 Disallow: /*?pr_prod_strat=
 Disallow: /*&pr_prod_strat=
-Disallow: /*&pr_rec_id=
-Disallow: /*&pr_ref_pid=
-Disallow: /*&pr_seq=
-
-# Block Web Pixel Manager sandbox URLs (causing 404s)
-Disallow: /wpm@
-Disallow: /*/wpm@
-Disallow: /web-pixel
-Disallow: /*/web-pixel
-Disallow: /sandbox/
-Disallow: /*/sandbox/
-
-# Block alternate/sandbox paths (causing 404s)
-Disallow: /a/s/
-Disallow: /a/s/products/
-Disallow: /a/s/collections/
-
-# Block invalid single-character and broken paths
-Disallow: /s
-Disallow: /b
-Disallow: /start
-Disallow: /surveys/
-Disallow: /discount/
-
-# Block broken collection URLs with trailing dashes
-Disallow: /collections/suites-$
-Disallow: /collections/buy-silk-$
-
-# Block incomplete product URLs (specific broken product slugs)
-Disallow: /products/l
-Disallow: /products/r
-Disallow: /products/golden-and-
-Disallow: /products/chocolate-wine
-Disallow: /products/tussar-and-
-Disallow: /products/royal-wine-red
-Disallow: /products/dash-ash-color
-Disallow: /products/pure-black-and
-Disallow: /products/turquoise-blue-
-Disallow: /products/green-and-red-
-Disallow: /products/roroyal-red-color-muga-silk-saree
-Disallow: /products/dark-ochre-
-Disallow: /products/milk-white-
-Disallow: /products/sky-blue-color-
-Disallow: /products/corn-yellow-
-Disallow: /products/dark-navy-blue
-Disallow: /products/white-black-
-Disallow: /products/rich-cream-
-
-# Block invalid collection paths (pagination numbers, tags, etc.)
-Disallow: /collections/*/1000
-Disallow: /collections/*/tag
-
-# Block collection URLs with variant parameters (should redirect to product page)
-Disallow: /collections/*?variant=
-
-# Block product URLs with view parameters (modal views, should redirect)
-Disallow: /*?view=quickshop
-Disallow: /*?view=quick_view
-
-# Block video URLs and media files (should not be indexed)
-Disallow: /cdn/shop/videos/
-Disallow: /*.mp4
-Disallow: /*.mp4?*
-
-# Block RSS/Atom feeds (should not be indexed)
-Disallow: /*.atom
-
-# Block asset files that shouldn't be indexed
-Disallow: /cdn/shop/t/*/assets/*.js
-Disallow: /cdn/shop/t/*/assets/*.css
 
 User-agent: AhrefsSiteAudit
 Crawl-delay: 10
 Disallow: /a/downloads/-/*
 Disallow: /admin
 Disallow: /cart
-Disallow: /orders
-Disallow: /checkouts/
-Disallow: /checkout
-Disallow: /14697362/checkouts
-Disallow: /14697362/orders
 Disallow: /carts
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
 Disallow: /account
+Disallow: /search
+Disallow: /policies/
 Disallow: /collections/vendors
-Disallow: /collections/all
 Disallow: /collections/*sort_by*
-Disallow: /*/collections/*sort_by*
 Disallow: /collections/*+*
 Disallow: /collections/*%2B*
 Disallow: /collections/*%2b*
-Disallow: /*/collections/*+*
-Disallow: /*/collections/*%2B*
-Disallow: /*/collections/*%2b*
-Disallow: */collections/*filter*&*filter*
 Disallow: /blogs/*+*
 Disallow: /blogs/*%2B*
 Disallow: /blogs/*%2b*
-Disallow: /*/blogs/*+*
-Disallow: /*/blogs/*%2B*
-Disallow: /*/blogs/*%2b*
-Disallow: /*?*oseid=*
-Disallow: /*preview_theme_id*
-Disallow: /*preview_script_id*
-Disallow: /policies/
-Disallow: /*/policies/
-Disallow: /*/*?*ls=*&ls=*
-Disallow: /*/*?*ls%3D*%3Fls%3D*
-Disallow: /*/*?*ls%3d*%3fls%3d*
-Disallow: /search
-Disallow: /apple-app-site-association
-Disallow: /.well-known/shopify/monorail
-Disallow: /cdn/wpm/*.js
+Disallow: /*?_pos=
+Disallow: /*&_pos=
+Disallow: /*?_fid=
+Disallow: /*&_fid=
+Disallow: /*?_ss=
+Disallow: /*&_ss=
 Disallow: /*?pr_prod_strat=
 Disallow: /*&pr_prod_strat=
-Disallow: /*&pr_rec_id=
-Disallow: /*&pr_ref_pid=
-Disallow: /*&pr_seq=
-
-# Block Web Pixel Manager sandbox URLs (causing 404s)
-Disallow: /wpm@
-Disallow: /*/wpm@
-Disallow: /web-pixel
-Disallow: /*/web-pixel
-Disallow: /sandbox/
-Disallow: /*/sandbox/
-
-# Block alternate/sandbox paths (causing 404s)
-Disallow: /a/s/
-Disallow: /a/s/products/
-Disallow: /a/s/collections/
-
-# Block invalid single-character and broken paths
-Disallow: /s
-Disallow: /b
-Disallow: /start
-Disallow: /surveys/
-Disallow: /discount/
-
-# Block broken collection URLs with trailing dashes
-Disallow: /collections/suites-$
-Disallow: /collections/buy-silk-$
-
-# Block incomplete product URLs (specific broken product slugs)
-Disallow: /products/l
-Disallow: /products/r
-Disallow: /products/golden-and-
-Disallow: /products/chocolate-wine
-Disallow: /products/tussar-and-
-Disallow: /products/royal-wine-red
-Disallow: /products/dash-ash-color
-Disallow: /products/pure-black-and
-Disallow: /products/turquoise-blue-
-Disallow: /products/green-and-red-
-Disallow: /products/roroyal-red-color-muga-silk-saree
-Disallow: /products/dark-ochre-
-Disallow: /products/milk-white-
-Disallow: /products/sky-blue-color-
-Disallow: /products/corn-yellow-
-Disallow: /products/dark-navy-blue
-Disallow: /products/white-black-
-Disallow: /products/rich-cream-
-
-# Block invalid collection paths (pagination numbers, tags, etc.)
-Disallow: /collections/*/1000
-Disallow: /collections/*/tag
-
-# Block collection URLs with variant parameters (should redirect to product page)
-Disallow: /collections/*?variant=
-
-# Block product URLs with view parameters (modal views, should redirect)
-Disallow: /*?view=quickshop
-Disallow: /*?view=quick_view
-
-# Block video URLs and media files (should not be indexed)
-Disallow: /cdn/shop/videos/
-Disallow: /*.mp4
-Disallow: /*.mp4?*
-
-# Block RSS/Atom feeds (should not be indexed)
-Disallow: /*.atom
-
-# Block asset files that shouldn't be indexed
-Disallow: /cdn/shop/t/*/assets/*.js
-Disallow: /cdn/shop/t/*/assets/*.css
-
-User-agent: MJ12bot
-Crawl-delay: 10
-
-User-agent: Pinterest
-Crawl-delay: 1
