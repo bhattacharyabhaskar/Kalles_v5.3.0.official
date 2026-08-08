@@ -24,12 +24,17 @@
   assign shop_name_escape = shop_name | escape
   assign shop_domain = shop.domain
 
+  # Do NOT trust the passed-in t_name. It was not resolving to 'product',
+  # which broke og:type, og:price and the og:title override. request.page_type
+  # is set by Shopify itself and is always correct.
+  assign pg = request.page_type
+
   # og:title - never let Shopify's 70-char page_title cut appear in shares.
-  if t_name == 'product' and product != blank
+  if pg == 'product' and product != blank
     assign og_title = product.title
-  elsif t_name == 'collection' and collection != blank
+  elsif pg == 'collection' and collection != blank
     assign og_title = collection.title
-  elsif t_name == 'article' and article != blank
+  elsif pg == 'article' and article != blank
     assign og_title = article.title
   else
     assign og_title = page_title | default: shop_name
@@ -40,11 +45,11 @@
   assign og_description = page_description | default: shop.description | default: shop_name
   assign page_image = page_image | default: settings.share_image | default: settings.logo
 
-  if t_name == 'product'
+  if pg == 'product'
     assign og_type = 'product'
-  elsif t_name == 'article'
+  elsif pg == 'article'
     assign og_type = 'article'
-  elsif t_name == 'password'
+  elsif pg == 'password'
     assign og_url = request.origin
   endif
 -%}
@@ -57,11 +62,11 @@
   noindex,follow. Real product/collection pages stay index,follow even when
   a tracking parameter is attached.
 {%- endcomment -%}
-{%- if t_name == 'search' or request.query_string contains 'filter.' or request.query_string contains 'sort_by' -%}
+{%- if pg == 'search' or request.query_string contains 'filter.' or request.query_string contains 'sort_by' -%}
   <meta name="robots" content="noindex, follow">
 {%- endif -%}
 
-{%- case t_name -%}
+{%- case pg -%}
   {%- when 'index' -%}
     {%- if settings.home_keywords != blank -%}
       <meta name="keywords" content="{{ settings.home_keywords }}">
@@ -116,7 +121,7 @@
   {%- if page_image.height %}<meta property="og:image:height" content="{{ page_image.height }}">{%- endif -%}
 {%- endif -%}
 
-{%- if t_name == 'product' -%}
+{%- if pg == 'product' and product != blank -%}
   <meta property="og:price:amount" content="{{ product.selected_or_first_available_variant.price | money_without_currency | strip_html }}">
   <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
 {%- endif -%}
