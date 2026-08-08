@@ -47,7 +47,6 @@
     {%- if page_description %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
 
     {%- liquid
-      render 'social-meta-tags'
       render 'css-variables', is_rtl: is_rtl
       render 'js-variables'
       render 'scripts'
