@@ -1,15 +1,45 @@
+{%- comment -%}
+  snippets/meta-tags.liquid
+
+  This snippet is now the SINGLE source of Open Graph / X / keywords tags.
+  Delete the `render 'social-meta-tags'` line from layout/theme.liquid when
+  you deploy this, otherwise every tag is emitted twice and the old snippet
+  wins on og:image (it hardcodes an insecure http: URL).
+
+  FIXES
+  - og:title no longer uses page_title on products. Shopify caps page_title
+    at 70 chars with a hard mid-word cut, which produced
+    "...Dual Tone Color with Allo" in every Facebook/WhatsApp share.
+    Products now use the full product.title; collections use collection.title.
+  - og:image is always https. The old social-meta-tags.liquid emitted
+    `content="http:{{ page_image | image_url }}"`, and Facebook/WhatsApp can
+    silently drop insecure images referenced from an https page.
+  - x: tags folded in from social-meta-tags.liquid so nothing is lost when
+    that snippet stops being rendered. twitter: tags kept for older scrapers.
+  - Duplicate brand removed from meta keywords (shop.name was output twice).
+{%- endcomment -%}
+
 {%- liquid
-  # Basic page variables
   assign shop_name = shop.name
   assign shop_name_escape = shop_name | escape
   assign shop_domain = shop.domain
-  assign og_title = page_title | default: shop_name
+
+  # og:title - never let Shopify's 70-char page_title cut appear in shares.
+  if t_name == 'product' and product != blank
+    assign og_title = product.title
+  elsif t_name == 'collection' and collection != blank
+    assign og_title = collection.title
+  elsif t_name == 'article' and article != blank
+    assign og_title = article.title
+  else
+    assign og_title = page_title | default: shop_name
+  endif
+
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
   assign og_description = page_description | default: shop.description | default: shop_name
   assign page_image = page_image | default: settings.share_image | default: settings.logo
 
-  # Page-specific types
   if t_name == 'product'
     assign og_type = 'product'
   elsif t_name == 'article'
@@ -19,49 +49,48 @@
   endif
 -%}
 
-{%- comment -%} Canonical — single source of truth using Shopify canonical_url {% endcomment -%}
+{%- comment -%} Canonical - single source of truth. Remove the duplicate in theme.liquid. {%- endcomment -%}
 <link rel="canonical" href="{{ canonical_url | default: request.origin }}"/>
 
 {%- comment -%}
-Robots policy:
- - Search pages, faceted filter URLs, and sort-order URLs => noindex, follow (avoid indexing thin / faceted pages)
- - Real product/collection pages keep index,follow even when a tracking parameter (ads, email, Pinterest) is attached
- - Keep index,follow for others (unless other templates set noindex)
-{% endcomment -%}
+  Robots: search pages, faceted filter URLs and sort-order URLs get
+  noindex,follow. Real product/collection pages stay index,follow even when
+  a tracking parameter is attached.
+{%- endcomment -%}
 {%- if t_name == 'search' or request.query_string contains 'filter.' or request.query_string contains 'sort_by' -%}
   <meta name="robots" content="noindex, follow">
 {%- endif -%}
 
 {%- case t_name -%}
   {%- when 'index' -%}
-    {% if settings.home_keywords != blank %}
+    {%- if settings.home_keywords != blank -%}
       <meta name="keywords" content="{{ settings.home_keywords }}">
-    {% else %}
+    {%- else -%}
       <meta name="keywords" content="{{ shop_name_escape }}, {{ shop_domain }}">
-    {% endif %}
+    {%- endif -%}
   {%- when 'product' -%}
-    <meta name="keywords" content="{{ product.title | escape }}, {{ shop_name_escape }}, {{ shop_domain }}">
+    <meta name="keywords" content="{{ product.title | escape }}, {{ shop_name_escape }}">
   {%- when 'collection' -%}
-    <meta name="keywords" content="{{ collection.title | escape }}, {{ shop_name_escape }}, {{ shop_domain }}">
+    <meta name="keywords" content="{{ collection.title | escape }}, {{ shop_name_escape }}">
   {%- when 'blog' -%}
-    <meta name="keywords" content="{{ blog.title | escape }}, {{ shop_name_escape }}, {{ shop_domain }}">
+    <meta name="keywords" content="{{ blog.title | escape }}, {{ shop_name_escape }}">
   {%- when 'article' -%}
-    <meta name="keywords" content="{{ article.title | escape }}, {{ blog.title | escape }}, {{ shop_name_escape }}, {{ shop_domain }}">
+    <meta name="keywords" content="{{ article.title | escape }}, {{ blog.title | escape }}, {{ shop_name_escape }}">
   {%- when 'search' -%}
     {%- assign search_name = 'search ' | append: shop_name -%}
-    {%- if template == 'search.wish' -%}
-      {% assign og_title = 'wishlist_page.meta' | t %}
-    {%- elsif template == 'search.compe' -%}
-      {% assign og_title = 'compare_page.meta' | t %}
+    {%- if template.suffix == 'wish' or template.suffix == 'wishlist' -%}
+      {%- assign og_title = 'wishlist_page.meta' | t -%}
+    {%- elsif template.suffix == 'compe' or template.suffix == 'compare' -%}
+      {%- assign og_title = 'compare_page.meta' | t -%}
     {%- endif -%}
-    <meta name="keywords" content="{{ title_term | default: search.terms | default: search_name | escape }}, {{ shop_name_escape }}, {{ shop_domain }}">
+    <meta name="keywords" content="{{ title_term | default: search.terms | default: search_name | escape }}, {{ shop_name_escape }}">
   {%- else -%}
-    <meta name="keywords" content="{{ page_title | escape }}, {{ shop_name_escape }}, {{ shop_domain }}">
+    <meta name="keywords" content="{{ page_title | escape }}, {{ shop_name_escape }}">
 {%- endcase -%}
 
-<meta name="author" content="{{ settings.shop_author | default: 'The4' | escape }}">
+<meta name="author" content="{{ settings.shop_author | default: shop_name | escape }}">
 
-{%- comment -%}{# -- Open Graph / Twitter -- #}{%- endcomment -%}
+{%- comment -%} ---------- Open Graph ---------- {%- endcomment -%}
 <meta property="og:site_name" content="{{ shop_name_escape }}">
 <meta property="og:url" content="{{ og_url }}">
 <meta property="og:title" content="{{ og_title | escape }}">
@@ -69,19 +98,18 @@ Robots policy:
 <meta property="og:description" content="{{ og_description | escape }}">
 
 {%- if page_image -%}
-  {%- comment -%}
-    image_url often returns protocol-relative URLs (//cdn...). Convert to secure absolute URL for og:image:secure_url.
-  {%- endcomment -%}
-  {% assign img_path = page_image | image_url %}
-  {% if img_path contains '//' %}
-    {% assign og_image_secure = img_path | replace_first: '//', 'https://' %}
-  {% elsif img_path startswith 'http' %}
-    {% assign og_image_secure = img_path %}
-  {% else %}
-    {% assign og_image_secure = img_path | prepend: 'https://' %}
-  {% endif %}
-
-  {%- comment -%}{# Provide og:image and secure_url (preferred). Width/height are rendered if available on the image object. #}{%- endcomment -%}
+  {%- liquid
+    # image_url returns a protocol-relative URL (//cdn...). Force https.
+    assign img_path = page_image | image_url
+    if img_path contains '//'
+      assign og_image_secure = img_path | replace_first: '//', 'https://'
+    elsif img_path startswith 'http'
+      assign og_image_secure = img_path
+    else
+      assign og_image_secure = img_path | prepend: 'https://'
+    endif
+    assign og_image_secure = og_image_secure | replace_first: 'http://', 'https://'
+  -%}
   <meta property="og:image" content="{{ og_image_secure }}">
   <meta property="og:image:secure_url" content="{{ og_image_secure }}">
   {%- if page_image.width %}<meta property="og:image:width" content="{{ page_image.width }}">{%- endif -%}
@@ -93,12 +121,24 @@ Robots policy:
   <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">
 {%- endif -%}
 
+{%- comment -%} ---------- X / Twitter ---------- {%- endcomment -%}
+{%- if settings.social_x_link != blank -%}
+  <meta name="x:site" content="{{ settings.social_x_link | split: 'x.com/' | last | prepend: '@' }}">
+{%- elsif settings.social_twitter_link != blank -%}
+  <meta name="x:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+{%- endif -%}
 {%- if settings.social_twitter_link != blank -%}
   <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
 {%- endif -%}
+
+<meta name="x:card" content="summary_large_image">
+<meta name="x:title" content="{{ og_title | escape }}">
+<meta name="x:description" content="{{ og_description | escape }}">
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ og_title | escape }}">
 <meta name="twitter:description" content="{{ og_description | escape }}">
 {%- if page_image -%}
+  <meta name="x:image" content="{{ og_image_secure }}">
   <meta name="twitter:image" content="{{ og_image_secure }}">
 {%- endif -%}
