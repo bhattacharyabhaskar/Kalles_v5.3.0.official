@@ -1,25 +1,38 @@
 {%- comment -%}
   page-title-meta-desc.liquid
 
-  CHANGES FROM PREVIOUS VERSION
-  1. Products now respect the SEO title/description set in Shopify admin.
-     If nothing is set in admin, output is byte-identical to before
-     ("Buy {title} At IndyVogue" + the generated saree description).
-  2. Collections now respect the SEO title set in admin (same fallback rule).
-  3. Search/wishlist/compare template detection fixed. The old code used
-     `template == 'search'`, a strict match that fails whenever a suffix is
-     present (search.wish, search.compe). Now uses `template.name`, which
-     ignores the suffix. Both old and new suffix spellings are handled.
-  4. The `product.type == 'Saree'` description block was running on EVERY
-     template, so non-product pages fell into its else branch and got
-     shop.description. It is now scoped inside the product branch only.
+  WHAT CHANGED
+  1. Product <title> now targets 50-60 characters instead of ~108.
+     Old:  Buy Pure Kanjeevaram Silk Saree in Brown Color with Allover Golden Zari and Buti with Contrast Golden Zari Border and Pallu At IndyVogue   (137 ch)
+     New:  Pure Kanjeevaram Silk Saree in Brown Color | IndyVogue                                                                                   (54 ch)
+     Long titles are rewritten by Google ~99.9% of the time; 51-60 chars is
+     the band where titles survive intact most often.
 
-  HOW THE OVERRIDE WORKS
-  We read the metafields directly rather than relying on `page_title`,
-  because `page_title` silently falls back to product.title when no SEO
-  title is set, which makes "set" and "unset" indistinguishable.
-    global.title_tag       = SEO title field in admin
-    global.description_tag = SEO meta description field in admin
+  2. Admin SEO fields (global.title_tag / global.description_tag) now
+     override everything, for both products and collections. Read from the
+     metafields directly, NOT page_title, because page_title silently falls
+     back to product.title when nothing is set, so you cannot tell "unset"
+     from "set to the same string".
+
+  3. Search / wishlist / compare detection fixed. Old code used
+     `template == 'search'`, a strict match that fails whenever a suffix is
+     present (search.wish, search.compe). Now uses template.name, which
+     ignores the suffix. Both suffix spellings handled, since meta-tags.liquid
+     and this file previously disagreed ('wish' vs 'wishlist').
+
+  4. The `product.type == 'Saree'` description block used to run on EVERY
+     template, so non-product pages fell into its else branch. Now scoped
+     to products only.
+
+  HOW THE PRODUCT TITLE IS BUILT
+    a. Cut everything from " with " onward. Titles follow the pattern
+       "<Weave> Saree in <Color> Color with <ornamentation>"; the tail after
+       "with" is what blows past the character limit and is the least
+       distinguishing part.
+    b. Cap at 8 words for titles that have no " with " separator.
+    c. Strip a dangling connector left by the word cap (and / in / the / of / ,).
+    d. Append " | IndyVogue" only if it still fits under ~58 chars total.
+       Google strips brand suffixes when space is tight anyway.
 {%- endcomment -%}
 
 {%- liquid
@@ -28,7 +41,6 @@
 
   assign seo_title_override = ''
   assign seo_desc_override = ''
-
   if tpl == 'product'
     assign seo_title_override = product.metafields.global.title_tag
     assign seo_desc_override = product.metafields.global.description_tag
@@ -40,43 +52,67 @@
 
 {%- if tpl != 'list-collections' -%}
 
-  {%- comment -%} ---------- TITLE ---------- {%- endcomment -%}
-  {%- capture seo_title -%}
-    {%- if tpl == 'search' and tpl_suffix == blank and search.performed -%}
-      {{ 'search.general.heading' | t: count: search.results_count }}: {{ 'search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}
-    {%- elsif tpl == 'search' and tpl_suffix == blank -%}
-      {{ 'search.general.title' | t | default: 'Search' }}
-    {%- elsif tpl_suffix == 'wish' or tpl_suffix == 'wishlist' -%}
-      {{ 'wishlist_page.meta' | t }}
-    {%- elsif tpl_suffix == 'compe' or tpl_suffix == 'compare' -%}
-      {{ 'compare_page.meta' | t }}
-    {%- else -%}
-      {{ page_title }}
-    {%- endif -%}
-    {%- if current_tags -%}
-      {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
-    {%- endif -%}
-    {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{%- endif -%}
-    {%- assign escaped_page_title = page_title | escape -%}
-    {%- unless escaped_page_title contains shop.name %} &ndash; {{ shop.name }}{%- endunless -%}
-  {%- endcapture -%}
+  {%- comment -%} ---------------- TITLE ---------------- {%- endcomment -%}
 
   {%- if seo_title_override != blank -%}
-    {%- comment -%} Admin SEO title wins, used verbatim. {%- endcomment -%}
+
     <title>{{ seo_title_override | escape }}</title>
+
   {%- elsif tpl == 'product' -%}
-    {%- comment -%} Unchanged legacy fallback. {%- endcomment -%}
-    <title>Buy {{ product.title | escape }} At IndyVogue</title>
+
+    {%- liquid
+      assign pt = product.title | split: ' with ' | first | strip
+      assign pt_words = pt | split: ' '
+      if pt_words.size > 8
+        assign pt = ''
+        for w in pt_words limit: 8
+          assign pt = pt | append: w | append: ' '
+        endfor
+        assign pt = pt | strip
+      endif
+      assign pt = pt | remove_last: ' and' | remove_last: ' in' | remove_last: ' the' | remove_last: ' of' | remove_last: ',' | strip
+      assign pt_size = pt | size
+      if pt_size <= 46
+        assign product_seo_title = pt | append: ' | ' | append: shop.name
+      else
+        assign product_seo_title = pt
+      endif
+    -%}
+    <title>{{ product_seo_title | escape }}</title>
+
   {%- else -%}
+
+    {%- capture seo_title -%}
+      {%- if tpl == 'search' and tpl_suffix == blank and search.performed -%}
+        {{ 'search.general.heading' | t: count: search.results_count }}: {{ 'search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}
+      {%- elsif tpl == 'search' and tpl_suffix == blank -%}
+        {{ 'search.general.title' | t | default: 'Search' }}
+      {%- elsif tpl_suffix == 'wish' or tpl_suffix == 'wishlist' -%}
+        {{ 'wishlist_page.meta' | t }}
+      {%- elsif tpl_suffix == 'compe' or tpl_suffix == 'compare' -%}
+        {{ 'compare_page.meta' | t }}
+      {%- else -%}
+        {{ page_title }}
+      {%- endif -%}
+      {%- if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{%- endif -%}
+      {%- assign escaped_page_title = page_title | escape -%}
+      {%- unless escaped_page_title contains shop.name %} &ndash; {{ shop.name }}{%- endunless -%}
+    {%- endcapture -%}
     <title>{{ seo_title | strip }}</title>
+
   {%- endif -%}
 
-  {%- comment -%} ---------- META DESCRIPTION ---------- {%- endcomment -%}
+  {%- comment -%} ---------------- META DESCRIPTION ---------------- {%- endcomment -%}
+
   {%- if seo_desc_override != blank -%}
 
     <meta name="description" content="{{ seo_desc_override | escape }}">
 
   {%- elsif tpl == 'product' -%}
+
     {%- if product.type == 'Saree' and product.metafields.mm-google-shopping.custom_label_0 != blank -%}
       {%- liquid
         assign work_hand = ''
@@ -103,7 +139,7 @@
 
   {%- endif -%}
 
-  {%- comment -%} ---------- ROBOTS ---------- {%- endcomment -%}
+  {%- comment -%} ---------------- ROBOTS ---------------- {%- endcomment -%}
   {%- if collection.handle == 'all' -%}
     <meta name="robots" content="noindex, follow">
   {%- endif -%}
