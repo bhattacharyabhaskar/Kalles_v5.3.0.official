@@ -1,58 +1,169 @@
 {%- comment -%}
-  Replace ONLY the product branch of the TITLE section in
   snippets/page-title-meta-desc.liquid
 
-  Fixes: Shopify's remove_last strips the last occurrence of a substring
-  ANYWHERE in the string, not just at the end. `remove_last: ' in'` turned
-  "Silk Saree in Yellow" into "Silk Saree Yellow". The sentinel below anchors
-  the match to the end of the string.
+  Replaces the whole file. Do not paste fragments of this into the old one.
 
-  Note: inside a {% liquid %} block, comments must use `#`.
-  comment/endcomment does not behave as a block comment there.
+  BEHAVIOUR
+  - Product pages: short SEO title (~50-60 chars) built from product.title.
+  - Collection pages: unchanged from original theme behaviour.
+  - Search / wishlist / compare: template suffix detection fixed.
+  - Admin SEO fields (global.title_tag / global.description_tag) override
+    everything, on both products and collections.
+
+  NOTES FOR FUTURE EDITS
+  - Inside a {% liquid %} tag, comments MUST use `#`.
+    comment / endcomment does not work as a block comment there.
+  - Shopify's `remove_last` removes the last occurrence of a substring
+    ANYWHERE in the string, not only at the end. Do not use it to strip
+    trailing words. The sentinel technique below is end-anchored.
+  - Every branch below is guarded. If you edit one, keep its guard.
 {%- endcomment -%}
 
 {%- liquid
-  # Cut everything from " with " onward - that tail is the long, least
-  # distinguishing part of the title.
-  assign pt = product.title | split: ' with ' | first | strip
-  assign pt_size = pt | size
+  assign tpl = template.name
+  assign tpl_suffix = template.suffix
 
-  # Only truncate if the natural phrase is itself too long.
-  if pt_size > 60
-    assign pt_words = pt | split: ' '
-    assign built = ''
-    for w in pt_words
-      assign candidate = built | append: w
-      assign candidate_size = candidate | size
-      if candidate_size > 57
-        break
-      endif
-      assign built = candidate | append: ' '
-    endfor
-    assign pt = built | strip
-  endif
+  assign seo_title_override = ''
+  assign seo_desc_override = ''
 
-  # Strip a dangling connector, anchored to the END only.
-  # The sentinel makes ' in§' matchable only when 'in' is the final word.
-  assign pt = pt | append: '§'
-  assign pt = pt | replace: ' and§', '§'
-  assign pt = pt | replace: ' in§', '§'
-  assign pt = pt | replace: ' the§', '§'
-  assign pt = pt | replace: ' of§', '§'
-  assign pt = pt | replace: ' a§', '§'
-  assign pt = pt | replace: ' to§', '§'
-  assign pt = pt | replace: ',§', '§'
-  assign pt = pt | remove: '§' | strip
-
-  # Append brand only if the whole title still fits in 60 characters.
-  assign pt_size = pt | size
-  assign brand_size = shop.name | size | plus: 3
-  assign total_size = pt_size | plus: brand_size
-
-  if total_size <= 60
-    assign product_seo_title = pt | append: ' | ' | append: shop.name
-  else
-    assign product_seo_title = pt
+  if tpl == 'product' and product != blank
+    assign seo_title_override = product.metafields.global.title_tag
+    assign seo_desc_override = product.metafields.global.description_tag
+  elsif tpl == 'collection' and collection != blank
+    assign seo_title_override = collection.metafields.global.title_tag
+    assign seo_desc_override = collection.metafields.global.description_tag
   endif
 -%}
-<title>{{ product_seo_title | escape }}</title>
+
+{%- if tpl != 'list-collections' -%}
+
+  {%- comment -%} ================= TITLE ================= {%- endcomment -%}
+
+  {%- if seo_title_override != blank -%}
+
+    <title>{{ seo_title_override | escape }}</title>
+
+  {%- elsif tpl == 'product' and product != blank -%}
+
+    {%- liquid
+      # Cut everything from " with " onward. That tail is the longest and
+      # least distinguishing part of an IndyVogue product title.
+      assign pt = product.title | split: ' with ' | first | strip
+      assign pt_size = pt | size
+
+      # Only truncate when the natural phrase is itself too long.
+      if pt_size > 60
+        assign pt_words = pt | split: ' '
+        assign built = ''
+        for w in pt_words
+          assign candidate = built | append: w
+          assign candidate_size = candidate | size
+          if candidate_size > 57
+            break
+          endif
+          assign built = candidate | append: ' '
+        endfor
+        assign pt = built | strip
+      endif
+
+      # Strip a dangling connector, anchored to the END only.
+      assign pt = pt | append: '§'
+      assign pt = pt | replace: ' and§', '§'
+      assign pt = pt | replace: ' in§', '§'
+      assign pt = pt | replace: ' the§', '§'
+      assign pt = pt | replace: ' of§', '§'
+      assign pt = pt | replace: ' a§', '§'
+      assign pt = pt | replace: ' to§', '§'
+      assign pt = pt | replace: ',§', '§'
+      assign pt = pt | remove: '§' | strip
+
+      # Append brand only if the whole title still fits in 60 characters.
+      assign pt_size = pt | size
+      assign brand_size = shop.name | size | plus: 3
+      assign total_size = pt_size | plus: brand_size
+
+      if total_size <= 60
+        assign product_seo_title = pt | append: ' | ' | append: shop.name
+      else
+        assign product_seo_title = pt
+      endif
+
+      # Final safety net: never emit an empty title.
+      if pt == blank
+        assign product_seo_title = product.title | default: shop.name
+      endif
+    -%}
+    <title>{{ product_seo_title | escape }}</title>
+
+  {%- else -%}
+
+    {%- comment -%} Collections, pages, blogs, search, index - original logic {%- endcomment -%}
+    {%- capture seo_title -%}
+      {%- if tpl == 'search' and tpl_suffix == blank and search.performed -%}
+        {{ 'search.general.heading' | t: count: search.results_count }}: {{ 'search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}
+      {%- elsif tpl == 'search' and tpl_suffix == blank -%}
+        {{ 'search.general.title' | t | default: 'Search' }}
+      {%- elsif tpl_suffix == 'wish' or tpl_suffix == 'wishlist' -%}
+        {{ 'wishlist_page.meta' | t }}
+      {%- elsif tpl_suffix == 'compe' or tpl_suffix == 'compare' -%}
+        {{ 'compare_page.meta' | t }}
+      {%- else -%}
+        {{ page_title }}
+      {%- endif -%}
+      {%- if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+      {%- endif -%}
+      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{%- endif -%}
+      {%- assign escaped_page_title = page_title | escape -%}
+      {%- unless escaped_page_title contains shop.name %} &ndash; {{ shop.name }}{%- endunless -%}
+    {%- endcapture -%}
+    {%- assign seo_title = seo_title | strip -%}
+    <title>{{ seo_title | default: shop.name }}</title>
+
+  {%- endif -%}
+
+  {%- comment -%} ============ META DESCRIPTION ============ {%- endcomment -%}
+
+  {%- if seo_desc_override != blank -%}
+
+    <meta name="description" content="{{ seo_desc_override | escape }}">
+
+  {%- elsif tpl == 'product' and product != blank -%}
+
+    {%- if product.type == 'Saree' and product.metafields.mm-google-shopping.custom_label_0 != blank -%}
+      {%- liquid
+        assign work_hand = ''
+        assign input_arr = product.metafields.saree.new_work | split: ','
+        for item in input_arr
+          if item contains 'Hand Woven'
+            assign work_hand = 'is Hand Woven and '
+          endif
+        endfor
+        assign work_type = product.metafields.saree.new_work | replace: '[', '' | replace: ']', '' | replace: '"', '' | replace: 'Hand Woven,', '' | replace: 'Hand Woven', '' | replace: ',', ', '
+      -%}
+      {%- if work_type == blank -%}
+        <meta name="description" content="Explore {{ product.title | escape }} online and add a touch of elegance to your wardrobe. This {{ product.metafields.mm-google-shopping.custom_label_0 }} saree {{ work_hand }}is perfect for special occasions. Free shipping and easy returns are available!">
+      {%- else -%}
+        <meta name="description" content="Explore {{ product.title | escape }} online and add a touch of elegance to your wardrobe. This {{ product.metafields.mm-google-shopping.custom_label_0 }} saree {{ work_hand }} features {{ work_type }} and is perfect for special occasions. Free shipping and easy returns are available!">
+      {%- endif -%}
+    {%- else -%}
+      <meta name="description" content="{{ page_description | default: shop.description | default: shop.name | escape }}">
+    {%- endif -%}
+
+  {%- else -%}
+
+    <meta name="description" content="{{ page_description | default: shop.description | default: shop.name | escape }}">
+
+  {%- endif -%}
+
+  {%- comment -%} ================ ROBOTS ================= {%- endcomment -%}
+  {%- if collection.handle == 'all' -%}
+    <meta name="robots" content="noindex, follow">
+  {%- endif -%}
+
+{%- else -%}
+
+  <title>{{ 'list_collections.meta_title' | t | escape }}</title>
+  <meta name="description" content="{{ 'list_collections.meta_description' | t | escape }}">
+
+{%- endif -%}
