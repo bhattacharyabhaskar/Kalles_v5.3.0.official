@@ -450,7 +450,7 @@
               "type": "button",
               "name": "t:blocks.button.name",
               "settings": {
-                "label": "Know More",
+                "label": "Our Story",
                 "link": "shopify://pages/about-us",
                 "open_in_new_tab": false,
                 "full_width": false,
