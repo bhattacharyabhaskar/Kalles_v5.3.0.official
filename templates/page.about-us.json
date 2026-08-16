@@ -51,6 +51,7 @@
       ],
       "settings": {
         "use_dynamic_source": false,
+        "image": "shopify://shop_images/indyvogue_banner_festival_light_e358849c-4500-4d07-912e-eed4e7fc9d3e.webp",
         "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
         "bg_overlay": 42,
         "space_item": 12,
