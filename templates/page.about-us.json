@@ -524,11 +524,11 @@
             "purpose_copy": {
               "type": "text",
               "settings": {
-                "text": "<p>IndyVogue is also a bridge — between the artistry of Indian weavers and the women across the world who cherish hand-crafted beauty. Behind every saree is a story of labor, tradition, and skill.</p><p>Our purpose is to honor that story while making each patron feel seen, guided, and confident in what she chooses.</p>",
+                "text": "<p>Behind every saree on this site is a loom, and behind the loom is a family. A Baluchari can take a weaver weeks. A Jamdani motif is placed thread by thread, by hand, with no pattern to follow but memory.</p><p>That work is disappearing — younger generations are leaving the looms because the money isn't there. Every saree we buy directly, at a fair price, is a small argument against that.</p><p>This is what a handloom actually looks like.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
-                "text_size": "base",
+                "text_size": "2xl",
                 "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
