@@ -414,8 +414,39 @@
                 "space": 20
               },
               "blocks": {}
-            },
-            "button_9qehJ7": {
+            }
+          },
+          "block_order": [
+            "text_kM4tjV",
+            "spacer_9NNBBe"
+          ]
+        },
+        "multi_column_hQhBJr": {
+          "type": "_multi_column",
+          "name": "t:blocks.column.name",
+          "settings": {
+            "column_dk": "6",
+            "column_tb": "6",
+            "column_mb": "12",
+            "column_dk_10": "10",
+            "column_tb_10": "10",
+            "column_mb_10": "10",
+            "spacing_h_dk": 30,
+            "spacing_v_dk": 0,
+            "spacing_h_tb": 30,
+            "spacing_v_tb": 0,
+            "spacing_h_mb": 15,
+            "spacing_v_mb": 0,
+            "content_position": "auto",
+            "align_content": false,
+            "content_position_mb": "auto",
+            "alignment": "center",
+            "alignment_mb": "center",
+            "background_color": "#fff",
+            "rounded": "none"
+          },
+          "blocks": {
+            "button_WzjXfY": {
               "type": "button",
               "name": "t:blocks.button.name",
               "settings": {
@@ -424,13 +455,13 @@
                 "open_in_new_tab": false,
                 "full_width": false,
                 "btn_style": "",
-                "color_btn": "#ffffff",
-                "color_hover_btn": "#ffffff",
-                "background_btn": "#222222",
-                "background_hover_btn": "#333333",
+                "color_btn": "#fff",
+                "color_hover_btn": "#fff",
+                "background_btn": "#222",
+                "background_hover_btn": "#333",
                 "border_w_btn": "",
-                "border_btn": "#222222",
-                "border_hover_btn": "#333333",
+                "border_btn": "#222",
+                "border_hover_btn": "#333",
                 "size": "m",
                 "text_size": "hdt-text-base",
                 "font_weight": "normal",
@@ -449,15 +480,14 @@
             }
           },
           "block_order": [
-            "text_kM4tjV",
-            "spacer_9NNBBe",
-            "button_9qehJ7"
+            "button_WzjXfY"
           ]
         }
       },
       "block_order": [
         "multi_column_yngVR8",
-        "multi_column_NDzgXJ"
+        "multi_column_NDzgXJ",
+        "multi_column_hQhBJr"
       ],
       "name": "t:sections.custom_section.name",
       "settings": {
