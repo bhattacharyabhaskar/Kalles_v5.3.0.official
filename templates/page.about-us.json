@@ -603,11 +603,11 @@
             "text_R8hTbV": {
               "type": "text",
               "settings": {
-                "text": "<p>Sumana, the founder of IndyVogue has lived it all. A Masters in Economics from University of Calcutta, India, she started IndyVogue in her garagae. And here is a message from her.</p>",
+                "text": "<p>Sumana Bhattacharya holds a Masters in Economics from the University of Calcutta. She started IndyVogue in her garage in 2016. Nine years later, more than 10,000 patrons have shopped with us, and over 700 have left us five-star reviews.'</p><p>Ten thousand women have trusted us with something that matters to them. That's not a number I take lightly.</p><p>We will win your heart.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
-                "text_size": "base",
+                "text_size": "2xl",
                 "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
@@ -668,43 +668,6 @@
           "block_order": [
             "video_hhVQVm"
           ]
-        },
-        "quote_block": {
-          "type": "_multi_column",
-          "settings": {
-            "column_dk": "12",
-            "column_tb": "12",
-            "column_mb": "12",
-            "column_dk_10": "5",
-            "column_tb_10": "5",
-            "column_mb_10": "10",
-            "spacing_h_dk": 0,
-            "spacing_v_dk": 0,
-            "spacing_h_tb": 0,
-            "spacing_v_tb": 0,
-            "spacing_h_mb": 0,
-            "spacing_v_mb": 0,
-            "content_position": "center",
-            "align_content": false,
-            "content_position_mb": "center",
-            "alignment": "center",
-            "alignment_mb": "center",
-            "background_color": "#f6f1ea",
-            "rounded": "none"
-          },
-          "blocks": {
-            "quote_text": {
-              "type": "blockquote",
-              "settings": {
-                "quote": "<p><em>Trusted by thousands of patrons across the world, IndyVogue stands for authenticity, thoughtful curation, and timeless Indian elegance.</em></p><p><em>We will win your heart.</em></p>",
-                "text_color": "hdt-s-text"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "quote_text"
-          ]
         }
       },
       "block_order": [
@@ -717,8 +680,7 @@
         "purpose_image",
         "purpose_text",
         "multi_column_azpcnW",
-        "multi_column_m9nxBa",
-        "quote_block"
+        "multi_column_m9nxBa"
       ],
       "settings": {
         "layout": "12",
