@@ -15,8 +15,8 @@
         "slide_item_GJUjrM": {
           "type": "_slide-item",
           "settings": {
-            "image": "shopify://shop_images/Desktop_1.webp",
-            "image_mb": "shopify://shop_images/Home_1.webp",
+            "image": "shopify://shop_images/banner-03-gold-pink-twirl.webp",
+            "image_mb": "shopify://shop_images/mobile-03-gold-pink-twirl.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
@@ -52,7 +52,7 @@
             "text_YrQhtV": {
               "type": "text",
               "settings": {
-                "text": "<p>UP TO 10% OFF</p>",
+                "text": "<p>SILK MARK CERTIFIED</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
@@ -81,7 +81,7 @@
             "heading_MzV9Ty": {
               "type": "heading",
               "settings": {
-                "heading": "<h2>Best Indian Sarees Online</h2>",
+                "heading": "<h2>Pure Silk, Pure Celebration</h2>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "line_height": "hdt-lh-1",
@@ -108,7 +108,7 @@
               "type": "button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/buy-silk-mark-certified-saree",
+                "link": "shopify://collections/silk-mark",
                 "open_in_new_tab": false,
                 "full_width": false,
                 "btn_style": "hdt-btn-hover-accent",
