@@ -147,16 +147,16 @@
         "slide_item_GJUjrL": {
           "type": "_slide-item",
           "settings": {
-            "image": "shopify://shop_images/Desktop_2.webp",
-            "image_mb": "shopify://shop_images/Home_2.webp",
+            "image": "shopify://shop_images/banner-02-three-patrons-field_807f30ae-e3de-453d-b389-ce22ab96f112.webp",
+            "image_mb": "shopify://shop_images/mobile-02-three-patrons.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
             "content_position_type": "container",
             "position_x": 50,
             "position_y": 50,
-            "content_position": "center-end",
-            "alignment": "right",
+            "content_position": "end-center",
+            "alignment": "center",
             "position_x_mb": 50,
             "position_y_mb": 50,
             "content_position_mb": "center",
@@ -184,7 +184,7 @@
             "text_dp3CAh": {
               "type": "text",
               "settings": {
-                "text": "<p>HANDWOVEN JAMDANI</p>",
+                "text": "<p>FESTIVAL 2026</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
@@ -213,7 +213,7 @@
             "heading_MzV9T1": {
               "type": "heading",
               "settings": {
-                "heading": "<h2>Heritage meets Elegance</h2>",
+                "heading": "<h2>Three Weaves, One Story</h2>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "line_height": "hdt-lh-1",
@@ -240,7 +240,7 @@
               "type": "button",
               "settings": {
                 "label": "Shop Now",
-                "link": "shopify://collections/dhakai-jamdani-sarees",
+                "link": "shopify://collections/festival-collection",
                 "open_in_new_tab": false,
                 "full_width": false,
                 "btn_style": "hdt-btn-hover-accent",
