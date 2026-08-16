@@ -159,11 +159,11 @@
             "sumana_copy": {
               "type": "text",
               "settings": {
-                "text": "<p>I am a Bengali at heart, living in Texas, with an endless love for sarees. What began as a personal passion slowly became a larger purpose — to bring timeless Indian textiles closer to women who value authenticity, beauty, and heritage.</p><p>IndyVogue was born from that journey, and from a desire to make buying a saree online feel more personal, trustworthy, and special.</p>",
+                "text": "<p>I grew up in Kolkata surrounded by sarees — my mother's, my grandmother's, the ones brought out for Durga Puja and folded carefully away again.</p><p>I moved to Texas, and buying a saree suddenly became difficult.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
-                "text_size": "base",
+                "text_size": "2xl",
                 "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
@@ -286,11 +286,11 @@
             "began_copy": {
               "type": "text",
               "settings": {
-                "text": "<p>Living in the United States, I often felt that buying sarees online lacked the trust, clarity, and experience that such a meaningful garment deserves. The drape, the texture, the authenticity — these are things that matter deeply.</p><p>So I set out to create a destination where every saree feels thoughtfully presented, honestly described, and beautifully experienced.</p>",
+                "text": "<p>Online, a saree was four photos and a paragraph. No weight, no drape, no way to know whether the silk was silk. I bought things that arrived nothing like the picture, and I stopped trusting the whole category.</p><p>So in 2016 I started IndyVogue out of my garage in Austin, with a handful of pieces from weavers I already knew back home. I photographed every one myself.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
-                "text_size": "base",
+                "text_size": "2xl",
                 "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
@@ -405,11 +405,11 @@
             "difference_copy": {
               "type": "text",
               "settings": {
-                "text": "<p>At IndyVogue, we believe the experience should be as beautiful as the saree itself. That is why we focus on detailed presentation, authentic sourcing, personal service, and transparency in every collection we curate.</p><p>From Silk Mark Certified pure silk sarees to rich handloom weaves, every piece reflects craftsmanship, heritage, and intention.</p>",
+                "text": "<p><strong>Every saree is one piece.</strong> We don't restock. When a saree sells, it's gone — and no one else will be wearing it.</p><p><strong>Silk Mark certified.</strong> Our pure silk carries the Silk Mark hologram, issued by the Silk Mark Organisation of India under the Central Silk Board. It's an independent guarantee of pure natural silk, not a claim we make about ourselves.</p><p><strong>Direct from the weavers.</strong> No agents, no wholesale floor. We buy from the families who make the cloth, in Kolkata and across the weaving clusters of India.</p><p><strong>Around 200 new sarees every month.</strong> I am very choosy about what I get.....Baluchari, Banarasi, Kanjeevaram, Jamdani, Tussar, Garad, and more — photographed and described honestly, so what arrives is what you saw.</p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
-                "text_size": "base",
+                "text_size": "2xl",
                 "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-text-secondary",
@@ -457,7 +457,7 @@
               "name": "t:blocks.media.name",
               "settings": {
                 "source": "video",
-                "video": "shopify://files/videos/VIDEO-2023-08-18-10-14-14.mp4",
+                "video": "shopify://files/videos/bd0e0fc2-5719-4e7d-9b8f-303caa8bfe69 (1).MP4",
                 "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
                 "video_loop": true
               },
