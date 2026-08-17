@@ -349,7 +349,7 @@
                 "hidden_on_mobile": false,
                 "line_height": "",
                 "font_weight": "normal",
-                "heading_size": "h3",
+                "heading_size": "h_custom",
                 "text_color": "hdt-s-text",
                 "font_size_heading_lg": 50,
                 "font_size_heading": 24,
