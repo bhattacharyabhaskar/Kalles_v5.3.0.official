@@ -872,7 +872,7 @@
           "settings": {
             "banner_url": "shopify://collections/festival-collection",
             "banner_target": false,
-            "img_effect": "zoom",
+            "img_effect": "none",
             "b_effect": "none",
             "colors_by_block": false,
             "color_scheme": "scheme-1",
@@ -949,6 +949,21 @@
               },
               "blocks": {}
             },
+            "space_html_qyFVTt": {
+              "type": "_space_html",
+              "name": "t:blocks.space_htmlx.name",
+              "settings": {
+                "color": "#FFFFFF00",
+                "width": 100,
+                "height": 39,
+                "margin_bottom": 0,
+                "width_mobile": 85,
+                "height_mobile": 6,
+                "hide_on_mobile": false,
+                "margin_bottom_mobile": 0
+              },
+              "blocks": {}
+            },
             "button_custom_6qpnXW": {
               "type": "button_custom",
               "name": "t:blocks.button_custom.name",
@@ -996,6 +1011,7 @@
           "block_order": [
             "text_RiyxUF",
             "text_eEcADE",
+            "space_html_qyFVTt",
             "button_custom_6qpnXW"
           ]
         },
