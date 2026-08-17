@@ -953,8 +953,8 @@
               "type": "button_custom",
               "name": "t:blocks.button_custom.name",
               "settings": {
-                "text": "Create Memory Now",
-                "link": "",
+                "text": "SHOP NOW",
+                "link": "shopify://collections/festival-collection",
                 "target": "_self",
                 "font_family": "",
                 "icon_width": 0,
