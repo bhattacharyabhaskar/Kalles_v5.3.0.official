@@ -672,7 +672,7 @@
                 "enable_progressbar": false,
                 "paginate_pos": "center",
                 "dis_pagination": 30,
-                "btn_label": "",
+                "btn_label": "VIEW ALL",
                 "btn_style": "",
                 "endable_btn_icon": false,
                 "size": "xl",
