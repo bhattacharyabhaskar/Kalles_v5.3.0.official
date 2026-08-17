@@ -582,7 +582,7 @@
               "type": "button",
               "name": "t:blocks.button.name",
               "settings": {
-                "label": "Our Story",
+                "label": "OUR STORY",
                 "link": "shopify://pages/about-us",
                 "open_in_new_tab": false,
                 "full_width": false,
@@ -603,7 +603,7 @@
                 "min_width_dt_btn": 100,
                 "min_height_btn": 40,
                 "rounded": "",
-                "icon": "none",
+                "icon": "arrow_right",
                 "icon_position": "after",
                 "icon_height": 14,
                 "icon_spacing": 5
