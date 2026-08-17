@@ -676,7 +676,7 @@
               "settings": {
                 "heading": "Hot Trends of the Week",
                 "line_height": "",
-                "heading_size": "h5",
+                "heading_size": "h_custom",
                 "text_color": "hdt-s-text",
                 "font_size_heading_lg": 50,
                 "font_size_heading": 24,
