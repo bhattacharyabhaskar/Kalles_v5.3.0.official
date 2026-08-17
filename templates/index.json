@@ -512,8 +512,8 @@
         "tab_collection_xw8mXx": {
           "type": "_tab-collection",
           "settings": {
-            "title": "Paithani",
-            "collection": "paithani-silk-sarees",
+            "title": "GADWAL",
+            "collection": "gadwal-silk-saree",
             "hdt_show_icon_image": false,
             "hdt_icon_spacing": 8
           },
@@ -953,7 +953,7 @@
               "type": "_space_html",
               "name": "t:blocks.space_htmlx.name",
               "settings": {
-                "color": "#FFFFFF00",
+                "color": "rgba(0,0,0,0)",
                 "width": 100,
                 "height": 39,
                 "margin_bottom": 0,
