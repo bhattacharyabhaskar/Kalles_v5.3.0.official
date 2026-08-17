@@ -506,154 +506,6 @@
         "pd_mb": ""
       }
     },
-    "logo_list_xmLAtH": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_item_NJeWpA": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Sik-Mark-New-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_FjpK7D": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Free-Shipping-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_f3WVAa": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Stitched-Designer-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_RMPTFp": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Pre-Stitched-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_Y8qTXa": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Hand-Woven-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_rDxxWy": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Secured-Payment-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "section-heading-logo-list": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "1",
-            "horizontal": false,
-            "alignment": "left",
-            "heading_gap": 15,
-            "margin_bottom": 30
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "logo_item_NJeWpA",
-        "logo_item_FjpK7D",
-        "logo_item_f3WVAa",
-        "logo_item_RMPTFp",
-        "logo_item_Y8qTXa",
-        "logo_item_rDxxWy"
-      ],
-      "name": "t:sections.logo_list.name",
-      "settings": {
-        "image_ratio": "adapt_image",
-        "col_dk": "6",
-        "col_tb": "3",
-        "col_mb": "2",
-        "space_items": "x",
-        "layout_mode": "grid",
-        "loop": true,
-        "autoplay": 3,
-        "pauseOnHover": false,
-        "navUI": true,
-        "navUICenter": false,
-        "nav_position": "default",
-        "nav_visible": "always",
-        "nav_style": "default",
-        "nav_shape": "default",
-        "nav_size": "small",
-        "nav_hide_mobile": false,
-        "dotUI": false,
-        "pag_style": "default",
-        "pag_rounded": false,
-        "pag_space": 10,
-        "pag_mgt": 10,
-        "pag_hide_mobile": false,
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "wrapper_container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
-    },
-    "custom_liquid_UJhBxJ": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.name",
-      "settings": {
-        "custom_liquid": "<div data-romw-token=\"hWgYjUoN5hQTBoogWfUZrBaxzCjskm5C0iBlPN5u5g872IuAPM\" data-romw-lazy></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
-    },
     "tabs_collection_dWUhRB": {
       "type": "tabs-collection",
       "blocks": {
@@ -864,6 +716,346 @@
         "pd_mb": ""
       }
     },
+    "logo_list_xmLAtH": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_item_NJeWpA": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Sik-Mark-New-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_FjpK7D": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Free-Shipping-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_f3WVAa": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Stitched-Designer-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_RMPTFp": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Pre-Stitched-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_Y8qTXa": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Hand-Woven-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_rDxxWy": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Secured-Payment-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "section-heading-logo-list": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "1",
+            "horizontal": false,
+            "alignment": "left",
+            "heading_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "logo_item_NJeWpA",
+        "logo_item_FjpK7D",
+        "logo_item_f3WVAa",
+        "logo_item_RMPTFp",
+        "logo_item_Y8qTXa",
+        "logo_item_rDxxWy"
+      ],
+      "name": "t:sections.logo_list.name",
+      "settings": {
+        "image_ratio": "adapt_image",
+        "col_dk": "6",
+        "col_tb": "3",
+        "col_mb": "2",
+        "space_items": "x",
+        "layout_mode": "grid",
+        "loop": true,
+        "autoplay": 3,
+        "pauseOnHover": false,
+        "navUI": true,
+        "navUICenter": false,
+        "nav_position": "default",
+        "nav_visible": "always",
+        "nav_style": "default",
+        "nav_shape": "default",
+        "nav_size": "small",
+        "nav_hide_mobile": false,
+        "dotUI": false,
+        "pag_style": "default",
+        "pag_rounded": false,
+        "pag_space": 10,
+        "pag_mgt": 10,
+        "pag_hide_mobile": false,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "wrapper_container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_liquid_UJhBxJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<div data-romw-token=\"hWgYjUoN5hQTBoogWfUZrBaxzCjskm5C0iBlPN5u5g872IuAPM\" data-romw-lazy></div>\n    \n        <script src=\"https://localimpact.com/js/v2/embed.js?id=1f20bba7a0b19c74df97d87d1a9e782a\" type=\"text/javascript\" defer></script>",
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
+    "banner_VyWanM": {
+      "type": "banners",
+      "blocks": {
+        "banner_item_CCbabr": {
+          "type": "_banner-item",
+          "settings": {
+            "banner_url": "shopify://collections/festival-collection",
+            "banner_target": false,
+            "img_effect": "zoom",
+            "b_effect": "none",
+            "colors_by_block": false,
+            "color_scheme": "scheme-1",
+            "content_position_type": "container",
+            "position_x": 50,
+            "position_y": 50,
+            "gap_r": 20,
+            "gap_c": 19,
+            "content_position": "center",
+            "alignment": "center",
+            "position_x_mb": 50,
+            "position_y_mb": 50,
+            "gap_r_mb": 20,
+            "gap_c_mb": 20,
+            "content_position_mb": "end-center",
+            "alignment_mb": "center",
+            "overlay_content": false,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background_content": false,
+            "background_content_color": "#ffffff",
+            "bg_opacity": 0,
+            "box_square": false,
+            "content_rounded": false,
+            "use_border_content": false,
+            "border_color": "#ffffff",
+            "background_border": "#ffffff",
+            "border_opacity": 0,
+            "border_style": "none",
+            "border_pd_dk": 0,
+            "padding_vertical": 30,
+            "padding_horizontal": 30,
+            "min_width_content": 350,
+            "border_pd": 0
+          },
+          "blocks": {
+            "text_RiyxUF": {
+              "type": "text",
+              "name": "t:blocks.text.name",
+              "settings": {
+                "text": "<p>FESTIVAL COLLECTION</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "custom",
+                "line_height": "",
+                "font_weight": "semibold",
+                "text_color": "hdt-text-tertiary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 65,
+                "font_size_text": 14,
+                "letter_spacing_text": 4
+              },
+              "blocks": {}
+            },
+            "text_eEcADE": {
+              "type": "text",
+              "name": "t:blocks.text.name",
+              "settings": {
+                "text": "<p>Up To 10% Off</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "custom",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-text-tertiary",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 41,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
+            "button_custom_6qpnXW": {
+              "type": "button_custom",
+              "name": "t:blocks.button_custom.name",
+              "settings": {
+                "text": "Create Memory Now",
+                "link": "",
+                "target": "_self",
+                "font_family": "",
+                "icon_width": 0,
+                "button_style": "default",
+                "button_effect": "default",
+                "primary_color": "#222",
+                "secondary_color": "#fff",
+                "primary_color_hover": "#56cfe1",
+                "secondary_color_hover": "#fff",
+                "font_size": 21,
+                "font_weight": 400,
+                "letter_spacing": 0,
+                "min_height": 42,
+                "border_radius": 0,
+                "padding_left_right": 30,
+                "margin_bottom": 0,
+                "hide_on_mobile": false,
+                "icon_width_mobile": 0,
+                "font_size_mobile": 12,
+                "min_height_mobile": 36,
+                "padding_left_right_mobile": 30,
+                "letter_spacing_mobile": 0,
+                "margin_bottom_mobile": 0
+              },
+              "blocks": {}
+            },
+            "banner-media": {
+              "type": "_media",
+              "static": true,
+              "settings": {
+                "source": "image",
+                "image": "shopify://shop_images/home-festival-backdrop-800x400.webp",
+                "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+                "video_loop": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_RiyxUF",
+            "text_eEcADE",
+            "button_custom_6qpnXW"
+          ]
+        },
+        "banner-heading": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "11",
+            "horizontal": false,
+            "alignment": "center",
+            "heading_gap": 18,
+            "margin_bottom": 30
+          },
+          "blocks": {
+            "heading_section_z6H7FV": {
+              "type": "_heading_section",
+              "name": "t:blocks.section_heading.name",
+              "settings": {
+                "heading": "Special Collections",
+                "line_height": "",
+                "heading_size": "h_custom",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_section_z6H7FV"
+          ]
+        }
+      },
+      "block_order": [
+        "banner_item_CCbabr"
+      ],
+      "settings": {
+        "image_height": "adapt_image",
+        "fixed_height": 860,
+        "image_height_mb": "adapt_image",
+        "fixed_height_mb": 300,
+        "space_items": "var(--spacing-x)",
+        "space_items_tb": "var(--spacing-x)",
+        "space_items_mb": "var(--spacing-x)",
+        "col_dk": "1",
+        "col_tb": "1",
+        "col_mb": "1",
+        "scrollsnap": false,
+        "colors_by_section": true,
+        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": "",
+        "mg_mb": "",
+        "pd": ",,100px,",
+        "pd_mb": ",,75px,"
+      }
+    },
     "collections_packery_NNr3d8": {
       "type": "collections-packery",
       "blocks": {
@@ -1031,7 +1223,7 @@
               "settings": {
                 "heading": "IndyVogue Exclusives",
                 "line_height": "",
-                "heading_size": "h5",
+                "heading_size": "h_custom",
                 "text_color": "hdt-s-text",
                 "font_size_heading_lg": 50,
                 "font_size_heading": 24,
@@ -1085,198 +1277,6 @@
         "mg_mb": ",,30px,",
         "pd": "",
         "pd_mb": ""
-      }
-    },
-    "banner_VyWanM": {
-      "type": "banners",
-      "blocks": {
-        "banner_item_CCbabr": {
-          "type": "_banner-item",
-          "settings": {
-            "banner_url": "shopify://collections/festival-collection",
-            "banner_target": false,
-            "img_effect": "zoom",
-            "b_effect": "none",
-            "colors_by_block": false,
-            "color_scheme": "scheme-1",
-            "content_position_type": "container",
-            "position_x": 50,
-            "position_y": 50,
-            "gap_r": 20,
-            "gap_c": 19,
-            "content_position": "center",
-            "alignment": "center",
-            "position_x_mb": 50,
-            "position_y_mb": 50,
-            "gap_r_mb": 20,
-            "gap_c_mb": 20,
-            "content_position_mb": "center",
-            "alignment_mb": "center",
-            "overlay_content": false,
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "background_content": false,
-            "background_content_color": "#ffffff",
-            "bg_opacity": 0,
-            "box_square": false,
-            "content_rounded": false,
-            "use_border_content": false,
-            "border_color": "#ffffff",
-            "background_border": "#ffffff",
-            "border_opacity": 0,
-            "border_style": "none",
-            "border_pd_dk": 0,
-            "padding_vertical": 30,
-            "padding_horizontal": 30,
-            "min_width_content": 350,
-            "border_pd": 0
-          },
-          "blocks": {
-            "text_RiyxUF": {
-              "type": "text",
-              "name": "t:blocks.text.name",
-              "settings": {
-                "text": "<p>FESTIVAL COLLECTION</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "custom",
-                "line_height": "",
-                "font_weight": "semibold",
-                "text_color": "hdt-text-tertiary",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
-                "font_size_text_lg": 65,
-                "font_size_text": 14,
-                "letter_spacing_text": 4
-              },
-              "blocks": {}
-            },
-            "text_eEcADE": {
-              "type": "text",
-              "name": "t:blocks.text.name",
-              "settings": {
-                "text": "<p>Up To 10% Off</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "custom",
-                "line_height": "",
-                "font_weight": "normal",
-                "text_color": "hdt-text-tertiary",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
-                "font_size_text_lg": 41,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
-            "button_custom_6qpnXW": {
-              "type": "button_custom",
-              "name": "t:blocks.button_custom.name",
-              "settings": {
-                "text": "Create Memory Now",
-                "link": "",
-                "target": "_self",
-                "font_family": "",
-                "icon_width": 0,
-                "button_style": "default",
-                "button_effect": "default",
-                "primary_color": "#222",
-                "secondary_color": "#fff",
-                "primary_color_hover": "#56cfe1",
-                "secondary_color_hover": "#fff",
-                "font_size": 21,
-                "font_weight": 400,
-                "letter_spacing": 0,
-                "min_height": 42,
-                "border_radius": 0,
-                "padding_left_right": 30,
-                "margin_bottom": 0,
-                "hide_on_mobile": false,
-                "icon_width_mobile": 0,
-                "font_size_mobile": 12,
-                "min_height_mobile": 36,
-                "padding_left_right_mobile": 30,
-                "letter_spacing_mobile": 0,
-                "margin_bottom_mobile": 0
-              },
-              "blocks": {}
-            },
-            "banner-media": {
-              "type": "_media",
-              "static": true,
-              "settings": {
-                "source": "image",
-                "image": "shopify://shop_images/indyvogue_banner_festival_notext_cdbd745b-6e05-42ea-9e62-cd1a82971a80.jpg",
-                "external_video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-                "video_loop": true
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_RiyxUF",
-            "text_eEcADE",
-            "button_custom_6qpnXW"
-          ]
-        },
-        "banner-heading": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "11",
-            "horizontal": false,
-            "alignment": "center",
-            "heading_gap": 18,
-            "margin_bottom": 30
-          },
-          "blocks": {
-            "heading_section_z6H7FV": {
-              "type": "_heading_section",
-              "name": "t:blocks.section_heading.name",
-              "settings": {
-                "heading": "Special Collections",
-                "line_height": "",
-                "heading_size": "h_custom",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 50,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_section_z6H7FV"
-          ]
-        }
-      },
-      "block_order": [
-        "banner_item_CCbabr"
-      ],
-      "settings": {
-        "image_height": "adapt_image",
-        "fixed_height": 860,
-        "image_height_mb": "adapt_image",
-        "fixed_height_mb": 300,
-        "space_items": "var(--spacing-x)",
-        "space_items_tb": "var(--spacing-x)",
-        "space_items_mb": "var(--spacing-x)",
-        "col_dk": "1",
-        "col_tb": "1",
-        "col_mb": "1",
-        "scrollsnap": false,
-        "colors_by_section": true,
-        "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": "",
-        "mg_mb": "",
-        "pd": ",,100px,",
-        "pd_mb": ",,75px,"
       }
     },
     "blog_post_DcUjga": {
@@ -1445,11 +1445,11 @@
   "order": [
     "slideshow_EVrUzi",
     "custom_section_8hKy4G",
+    "tabs_collection_dWUhRB",
     "logo_list_xmLAtH",
     "custom_liquid_UJhBxJ",
-    "tabs_collection_dWUhRB",
-    "collections_packery_NNr3d8",
     "banner_VyWanM",
+    "collections_packery_NNr3d8",
     "blog_post_DcUjga",
     "1755067183c661e3bf",
     "marquee_NfBbPH"
