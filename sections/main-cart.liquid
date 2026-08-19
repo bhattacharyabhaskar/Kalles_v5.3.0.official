@@ -27,6 +27,40 @@
 
 {% style %}
   {% render 'spacing-vars', box: section %}
+
+  .ivy-cart-meta { display: none; }
+
+  @media screen and (max-width: 767px) {
+    #hdt-page-cart .ivy-cart-meta {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 6px 0 8px;
+      flex-wrap: wrap;
+    }
+    #hdt-page-cart .ivy-cart-meta__was { opacity: .55; font-size: 13px; text-decoration: line-through; }
+    #hdt-page-cart .ivy-cart-meta__now { font-weight: 600; font-size: 15px; }
+    #hdt-page-cart .ivy-cart-meta__qty { font-size: 13px; opacity: .65; }
+
+    #hdt-page-cart .hdt-cart-item__price,
+    #hdt-page-cart .hdt-cart-item__quantity,
+    #hdt-page-cart .hdt-cart-item__total { display: none !important; }
+
+    #hdt-page-cart .hdt-cart-items thead { display: none !important; }
+    #hdt-page-cart .hdt-cart-items,
+    #hdt-page-cart .hdt-cart-items tbody,
+    #hdt-page-cart .hdt-cart-items tr { display: block !important; }
+    #hdt-page-cart .hdt-cart-items { margin: 0 !important; }
+
+    #hdt-page-cart .hdt-page-cart__item { display: block !important; padding-bottom: 12px !important; }
+    #hdt-page-cart .hdt-page-cart__item:last-child { padding-bottom: 0 !important; border-bottom: 0 !important; }
+    #hdt-page-cart .hdt-cart-item__product { display: block !important; padding: 0 !important; width: 100% !important; }
+    #hdt-page-cart .hdt-page-cart__infos-wrap { align-items: flex-start !important; }
+
+    #hdt-page-cart .hdt-cart-page__items { margin: 0 !important; padding: 0 !important; }
+    #hdt-page-cart .hdt-page-cart__footer { margin-top: 10px !important; padding-top: 0 !important; }
+    #hdt-page-cart .hdt-page-cart__footer-wrap { margin-top: 0 !important; }
+  }
 {% endstyle %}
 <hdt-main-cart ref="hdt-cart" section-id="{{ section.id }}"  data-count="{{ cart.item_count | minus: has_protect_product }}" data-total-price="{{ cart.total_price | money | strip_html }}" main-content class="hdt-block hdt-page-cart hdt-section-spacing hdt-section-spacing-{{ section.id }} hdt-s-gradient" id="hdt-page-cart" color-scheme="{{ section.settings.color_scheme }}">
   <div class="hdt-container">

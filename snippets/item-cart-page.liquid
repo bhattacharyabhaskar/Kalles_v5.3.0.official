@@ -25,6 +25,18 @@
       {%- if item.sku != blank -%}
         <p class="ivy-cart-sku">SKU: {{ item.sku }}</p>
       {%- endif -%}
+
+      {%- comment -%} Inline price + quantity (mobile-only; desktop keeps table columns) {%- endcomment -%}
+      <div class="ivy-cart-meta">
+        {%- if item.original_price > item.final_price -%}
+          <s class="ivy-cart-meta__was"><span class="money">{{ item.original_price | money }}</span></s>
+        {%- endif -%}
+        <span class="ivy-cart-meta__now"><span class="money">{{ item.final_price | money }}</span></span>
+        {%- if item.quantity > 1 -%}
+          <span class="ivy-cart-meta__qty">Qty: {{ item.quantity }}</span>
+        {%- endif -%}
+      </div>
+
       {%- if item.product.type == 'Saree' -%}
         {%- assign fabric_value = item.product.metafields.saree.fabric_type | metafield_text -%}
         {%- assign work_value = item.product.metafields.saree.new_work | metafield_text -%}

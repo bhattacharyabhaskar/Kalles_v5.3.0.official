@@ -69,9 +69,11 @@
     {%- if col.handle == 'sale' -%}{%- assign ivy_is_sale = true -%}{%- endif -%}
     {%- if col.handle == 'suits-dresses' -%}{%- assign ivy_is_suite = true -%}{%- endif -%}
   {%- endfor -%}
+  {%- comment -%}
   {%- capture ivy_raw -%}
     {%- render 'ivy-discount-calc', price_cents: price, is_sale_collection: ivy_is_sale, is_suite_collection: ivy_is_suite -%}
   {%- endcapture -%}
+   {%- endcomment -%}
   {%- assign ivy_final = ivy_raw | split: '<!-- IVY PRICE START -->' | last | split: '<!-- IVY PRICE END -->' | first | strip | plus: 0 -%}
   {%- if ivy_final > 0 and ivy_final != price -%}
     {%- assign on_sale = true -%}

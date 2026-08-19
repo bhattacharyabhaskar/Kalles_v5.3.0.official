@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // --- Get parent variant ID ---
-  const formEl = document.querySelector('form[action="/cart/add"]') 
+  const formEl = document.querySelector('form[action="/cart/add"]')
     || document.querySelector('form[data-type="add-to-cart-form"]');
   const submitButton = formEl?.querySelector('button[type="submit"]');
   const hiddenInput = formEl?.querySelector('input[name="id"]');
@@ -10,18 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const parentVariantId = hiddenInput?.value
     || window.product?.selected_or_first_available_variant?.id?.toString();
 
-  if (!formEl || !submitButton || !parentVariantId) {
-    console.error("❌ Missing required elements — script stopped");
-    return;
-  }
+  if (!formEl || !submitButton || !parentVariantId) return;
 
-  // --- Check addon boxes and checkboxes ---
   const addonBoxes = document.querySelectorAll('.js-addon-box');
-  const checkboxes = document.querySelectorAll('.addon-checkbox');
-  
-  checkboxes.forEach((cb, i) => {
-    console.log(`  checkbox[${i}] data-variant-id:`, cb.getAttribute('data-variant-id'));
-  });
 
   // --- Update button text ---
   function updateButtonText() {
@@ -29,16 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const label = anyChecked ? 'Add to Cart with Add-ons' : 'Add to Cart';
     const span = submitButton.querySelector('.hdt-btn-atc_text');
     if (span) span.textContent = label;
-    else submitButton.firstChild.textContent = label;
+    else if (submitButton.firstChild) submitButton.firstChild.textContent = label;
+
+    const stickyBtn = document.getElementById('ivy-sticky-atc-btn');
+    if (stickyBtn) {
+      const stickyText = stickyBtn.querySelector('.hdt-btn-atc_text');
+      if (stickyText) stickyText.textContent = label;
+    }
   }
 
   // --- Checkbox interaction ---
-  addonBoxes.forEach((box, i) => {
+  addonBoxes.forEach(function (box) {
     const checkbox = box.querySelector('.addon-checkbox');
-    if (!checkbox) {
-      console.warn(`❌ No checkbox found in box[${i}]`);
-      return;
-    }
+    if (!checkbox) return;
 
     box.addEventListener('click', function (e) {
       if (e.target.tagName === 'INPUT') return;
@@ -53,78 +47,110 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // --- Cached cart snapshot -------------------------------------------------
+  // The old script fetched /cart.js on every click purely to check whether this
+  // saree was already in the cart. We prefetch it once instead, and refresh it
+  // after each successful add, so the click path does no extra round trips.
+  let cartSnapshot = null;
+
+  function refreshSnapshot(cart) {
+    if (cart && Array.isArray(cart.items)) {
+      cartSnapshot = cart;
+      return Promise.resolve(cart);
+    }
+    return fetch('/cart.js')
+      .then(function (r) { return r.json(); })
+      .then(function (c) { cartSnapshot = c; return c; })
+      .catch(function () { return null; });
+  }
+
+  refreshSnapshot();
+
+  function buildRemovalUpdates(cart) {
+    const updates = {};
+    if (!cart || !Array.isArray(cart.items)) return updates;
+    cart.items.forEach(function (item) {
+      const linked = item.properties && item.properties['Linked to Saree'];
+      if (String(item.variant_id) === parentVariantId || linked === parentVariantId) {
+        updates[item.key] = 0;
+      }
+    });
+    return updates;
+  }
+
   // --- Add to cart ---
   let isSubmitting = false;
 
   async function handleAddToCart(e) {
-    e.preventDefault();
-    e.stopPropagation();
+    if (e) { e.preventDefault(); e.stopPropagation(); }
     if (isSubmitting) return;
     isSubmitting = true;
 
     submitButton.disabled = true;
     const span = submitButton.querySelector('.hdt-btn-atc_text');
+    const originalLabel = span ? span.textContent : null;
     if (span) span.textContent = 'Adding...';
 
     const checkedAddons = Array.from(document.querySelectorAll('.addon-checkbox:checked'))
-      .map(cb => cb.getAttribute('data-variant-id'))
+      .map(function (cb) { return cb.getAttribute('data-variant-id'); })
       .filter(Boolean);
 
+    const cartDrawer = document.querySelector('hdt-cart-drawer');
+    const sectionId = cartDrawer ? cartDrawer.getAttribute('section-id') : null;
+
+    const itemsToAdd = checkedAddons.map(function (id) {
+      return { id: id, quantity: 1, properties: { 'Linked to Saree': parentVariantId } };
+    });
+    itemsToAdd.push({ id: parentVariantId, quantity: 1 });
+
     try {
-      // Remove previously linked items
-      const cart = await fetch('/cart.js').then(r => r.json());
-      const updates = {};
-      cart.items.forEach(item => {
-        const linked = item.properties?.['Linked to Saree'];
-        if (String(item.variant_id) === parentVariantId || linked === parentVariantId) {
-          updates[item.key] = 0;
-        }
-      });
+      // Only clear prior copies if the snapshot says there are any.
+      // For single-piece sarees this is almost always empty, so the two
+      // round trips and the 300ms sleep are skipped entirely.
+      const updates = buildRemovalUpdates(cartSnapshot);
       if (Object.keys(updates).length > 0) {
         await fetch('/cart/update.js', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ updates })
+          body: JSON.stringify({ updates: updates })
         });
-        await new Promise(r => setTimeout(r, 300));
       }
 
-      // Build items array
-      const itemsToAdd = [
-        ...checkedAddons.map(id => ({
-          id,
-          quantity: 1,
-          properties: { 'Linked to Saree': parentVariantId }
-        })),
-        { id: parentVariantId, quantity: 1 }
-      ];
+      // Add items AND request the drawer section in the same call.
+      // The old script did these as two separate requests.
+      const addBody = { items: itemsToAdd };
+      if (sectionId) addBody.sections = sectionId;
 
       const addRes = await fetch('/cart/add.js', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: itemsToAdd })
+        body: JSON.stringify(addBody)
       });
+
+      let addJson = null;
       if (!addRes.ok) {
         const errBody = await addRes.text();
-        const errJson = JSON.parse(errBody);
-        if (addRes.status === 422 && errJson.message?.includes('maximum quantity')) {
-          console.warn("⚠️ Item already at max quantity in cart — continuing");
-        } else {
-          console.error("❌ addRes error body:", errBody);
-          throw new Error('Failed to add items to cart');
-        }
+        let errJson = {};
+        try { errJson = JSON.parse(errBody); } catch (parseErr) { errJson = {}; }
+        const atMax = addRes.status === 422
+          && errJson.message
+          && errJson.message.indexOf('maximum quantity') !== -1;
+        if (!atMax) throw new Error('Failed to add items to cart');
+      } else {
+        addJson = await addRes.json();
       }
 
-      // Fetch cart with sections
-      const cartDrawer = document.querySelector('hdt-cart-drawer');
-      const sectionId = cartDrawer?.getAttribute('section-id');
-
-      const sectionsRes = await fetch('/cart/update.js', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sections: sectionId })
-      });
-      const cartWithSections = await sectionsRes.json();
+      // /cart/add.js with `sections` returns the rendered section markup, but
+      // not full cart state. Fetch state only if we still need it.
+      let cartWithSections = addJson;
+      if (!cartWithSections || !cartWithSections.sections) {
+        const sectionsRes = await fetch('/cart/update.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(sectionId ? { sections: sectionId } : {})
+        });
+        cartWithSections = await sectionsRes.json();
+      }
 
       document.dispatchEvent(new CustomEvent('cart:update', {
         bubbles: true,
@@ -137,9 +163,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }));
 
+      // Refresh the snapshot in the background — does not block the user.
+      refreshSnapshot();
+
     } catch (err) {
-      console.error("❌ Cart Error:", err);
+      if (span && originalLabel) span.textContent = originalLabel;
       alert("Something went wrong. Please try again.");
+      refreshSnapshot();
     } finally {
       submitButton.disabled = false;
       isSubmitting = false;
@@ -152,17 +182,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // --- Sticky ATC ---
   const stickyBtn = document.getElementById('ivy-sticky-atc-btn');
   if (stickyBtn) {
-    const origUpdateButtonText = updateButtonText;
-    updateButtonText = function() {
-      origUpdateButtonText();
-      const anyChecked = document.querySelectorAll('.addon-checkbox:checked').length > 0;
-      const stickyText = stickyBtn.querySelector('.hdt-btn-atc_text');
-      if (stickyText) stickyText.textContent = anyChecked ? 'Add to Cart with Add-ons' : 'Add to Cart';
-    };
-
     const stickyForm = stickyBtn.closest('form');
     if (stickyForm) {
-      stickyForm.addEventListener('submit', function(e) {
+      stickyForm.addEventListener('submit', function (e) {
         e.preventDefault();
         e.stopImmediatePropagation();
         handleAddToCart(e);
