@@ -66,7 +66,6 @@
     endif
   endunless
 -%}
-{%- comment -%}
 {%- comment -%} IndyVogue — promo price calculation (PDP) {%- endcomment -%}
 {%- unless product.price_varies -%}
   {%- assign ivy_is_sale = false -%}
@@ -93,7 +92,6 @@
      {%- assign ivy_discount_pct = price | minus: ivy_final | times: 100 | divided_by: price -%}
    {%- endif -%}
 {%- endunless -%}
-{%- endcomment -%}
 <div class="hdt-price-wrapp {{ price_class }}{% if show_badges %} hdt-price--show-badge{% endif %}">
   <div class="hdt-price__container">
     {%- if use_variant == false and price_varies_item != '' -%}
