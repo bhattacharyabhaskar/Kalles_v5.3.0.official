@@ -506,6 +506,22 @@
         "pd_mb": ""
       }
     },
+    "custom_line_96GYdc": {
+      "type": "custom-line",
+      "name": "t:sections.custom_line.name",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 3,
+        "line_cl": "#EBEBEB",
+        "line_pos": "center",
+        "full_width": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "tabs_collection_dWUhRB": {
       "type": "tabs-collection",
       "blocks": {
@@ -1461,6 +1477,7 @@
   "order": [
     "slideshow_EVrUzi",
     "custom_section_8hKy4G",
+    "custom_line_96GYdc",
     "tabs_collection_dWUhRB",
     "logo_list_xmLAtH",
     "custom_liquid_UJhBxJ",
