@@ -647,7 +647,7 @@
         "line_height": 3,
         "line_cl": "#ebebeb",
         "line_pos": "center",
-        "full_width": true,
+        "full_width": false,
         "mg": ",,50px,",
         "mg_mb": ",,30px,",
         "pd": "",
