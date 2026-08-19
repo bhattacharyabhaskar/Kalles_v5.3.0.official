@@ -313,6 +313,138 @@
         "pd_mb": ",,22px,"
       }
     },
+    "logo_list_xmLAtH": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_item_NJeWpA": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Sik-Mark-New-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_FjpK7D": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Free-Shipping-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_f3WVAa": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Stitched-Designer-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_RMPTFp": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Pre-Stitched-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_Y8qTXa": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Hand-Woven-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "logo_item_rDxxWy": {
+          "type": "_logo-item",
+          "settings": {
+            "image": "shopify://shop_images/Secured-Payment-min.webp",
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "custom_width": false,
+            "hdt_max_width_image": 250
+          },
+          "blocks": {}
+        },
+        "section-heading-logo-list": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "1",
+            "horizontal": false,
+            "alignment": "left",
+            "heading_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "logo_item_NJeWpA",
+        "logo_item_FjpK7D",
+        "logo_item_f3WVAa",
+        "logo_item_RMPTFp",
+        "logo_item_Y8qTXa",
+        "logo_item_rDxxWy"
+      ],
+      "name": "t:sections.logo_list.name",
+      "settings": {
+        "image_ratio": "adapt_image",
+        "col_dk": "6",
+        "col_tb": "3",
+        "col_mb": "2",
+        "space_items": "x",
+        "layout_mode": "grid",
+        "loop": true,
+        "autoplay": 3,
+        "pauseOnHover": false,
+        "navUI": true,
+        "navUICenter": false,
+        "nav_position": "default",
+        "nav_visible": "always",
+        "nav_style": "default",
+        "nav_shape": "default",
+        "nav_size": "small",
+        "nav_hide_mobile": false,
+        "dotUI": false,
+        "pag_style": "default",
+        "pag_rounded": false,
+        "pag_space": 10,
+        "pag_mgt": 10,
+        "pag_hide_mobile": false,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "wrapper_container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "custom_section_8hKy4G": {
       "type": "custom-section",
       "blocks": {
@@ -725,138 +857,6 @@
         "color_scheme": "scheme-c5d07187-e90f-456c-8bd9-e02cbea91dd5",
         "background_opacity": 0,
         "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
-    },
-    "logo_list_xmLAtH": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_item_NJeWpA": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Sik-Mark-New-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_FjpK7D": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Free-Shipping-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_f3WVAa": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Stitched-Designer-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_RMPTFp": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Pre-Stitched-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_Y8qTXa": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Hand-Woven-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "logo_item_rDxxWy": {
-          "type": "_logo-item",
-          "settings": {
-            "image": "shopify://shop_images/Secured-Payment-min.webp",
-            "url": "",
-            "img_effect": "none",
-            "b_effect": "none",
-            "custom_width": false,
-            "hdt_max_width_image": 250
-          },
-          "blocks": {}
-        },
-        "section-heading-logo-list": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "1",
-            "horizontal": false,
-            "alignment": "left",
-            "heading_gap": 15,
-            "margin_bottom": 30
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "logo_item_NJeWpA",
-        "logo_item_FjpK7D",
-        "logo_item_f3WVAa",
-        "logo_item_RMPTFp",
-        "logo_item_Y8qTXa",
-        "logo_item_rDxxWy"
-      ],
-      "name": "t:sections.logo_list.name",
-      "settings": {
-        "image_ratio": "adapt_image",
-        "col_dk": "6",
-        "col_tb": "3",
-        "col_mb": "2",
-        "space_items": "x",
-        "layout_mode": "grid",
-        "loop": true,
-        "autoplay": 3,
-        "pauseOnHover": false,
-        "navUI": true,
-        "navUICenter": false,
-        "nav_position": "default",
-        "nav_visible": "always",
-        "nav_style": "default",
-        "nav_shape": "default",
-        "nav_size": "small",
-        "nav_hide_mobile": false,
-        "dotUI": false,
-        "pag_style": "default",
-        "pag_rounded": false,
-        "pag_space": 10,
-        "pag_mgt": 10,
-        "pag_hide_mobile": false,
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "wrapper_container",
         "hdt_background_parallax": false,
         "mg": ",,50px,",
         "mg_mb": ",,30px,",
@@ -1476,10 +1476,10 @@
   },
   "order": [
     "slideshow_EVrUzi",
+    "logo_list_xmLAtH",
     "custom_section_8hKy4G",
     "custom_line_96GYdc",
     "tabs_collection_dWUhRB",
-    "logo_list_xmLAtH",
     "custom_liquid_UJhBxJ",
     "banner_VyWanM",
     "collections_packery_NNr3d8",
