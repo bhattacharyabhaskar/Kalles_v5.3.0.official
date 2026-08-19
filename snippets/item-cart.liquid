@@ -63,11 +63,7 @@
       {%- endif -%}
     {%- if item.selling_plan_allocation != null %}<p class="hdt-product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>{% endif -%}
     <div class="hdt-mini-cart__actions">
-      <hdt-quantity-wrapp class="hdt-mini-cart__quantity" form="id:{{ form_id }}">
-        <div data-quantity-wrapper class="hdt-quantity-wrapper hdt-quantity-cart-item hdt-block hdt-text-center hdt-relative hdt-align-center">
-          <input will-change-cart class="hdt-quantity-input hdt-text-center hdt-text-lg hdt-font-semibold hdt-p-0" type="number" name="updates[]" min="{{ quantity_rule.min }}" data-max="{{ max_qty }}" max="{{ max_qty }}" value="{{ item.quantity }}" aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}" data-index="{{ item.index | plus: 1 }}">
-        </div>
-      </hdt-quantity-wrapp>
+      
       <div class="hdt-flex hdt-align-center hdt-justify-start">
         <wrapp-remove-item-oncart inner placement="top" class="hdt-inline-flex hdt-align-center" data-index="{{ item.index | plus: 1 }}" form="id:{{ form_id }}" style="margin-inline-end: 10px">
           <a href="{{ routes.cart_change_url }}?line={{ item.index | plus: 1 }}&quantity=0" class="hdt-mini-cart__remove hdt-s-text">
