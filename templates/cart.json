@@ -28,6 +28,7 @@
       "blocks": {
         "tax_WBJRLG": {
           "type": "tax",
+          "disabled": true,
           "settings": {
             "url": ""
           }
@@ -98,6 +99,7 @@
     },
     "custom_liquid_bJ4dhh": {
       "type": "custom-liquid",
+      "disabled": true,
       "name": "t:sections.custom-liquid.name",
       "settings": {
         "custom_liquid": "{%- render 'ivy-reviews-modal' -%}",
