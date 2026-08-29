@@ -139,7 +139,7 @@
               "settings": {
                 "option_type": "liquid",
                 "page": "",
-                "text": "{%- if product.type == 'Saree' -%}\n  {% assign bottom_border = product.metafields.custom.bottom_border_width %}\n  {% assign top_border = product.metafields.custom.top_border_width %}\n  {% assign fabric_value = product.metafields.saree.fabric_type | metafield_text %}\n  {% assign work_value = product.metafields.saree.new_work | metafield_text %}\n  {% assign bp_value = product.metafields.saree.BlousePiece %}\n\n  <div class=\"ivy-highlights-wrapper\" style=\"margin-bottom: 16px; position: relative; text-align: center;\">\n    <h4 class=\"ivy-highlights-header\">Saree Highlights</h4>\n\n    <div class=\"ivy-highlights-box\">\n      <ul style=\"list-style: none; padding: 0; margin: 0;\">\n        {%- if fabric_value contains 'Silk Mark' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #d5f2df; background-color: #f6fff5; margin-bottom: 5px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761\" width=\"40\" height=\"40\" alt=\"Silk Mark Certified\">\n            <span style=\"font-weight: 600;\">Silk Mark Certified</span>\n          </li>\n        {%- endif -%}\n\n        {%- if fabric_value == 'Cotton' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #d5f2df; background-color: #f6fff5; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/Pure-Cotton_49865569-8059-47e0-9cac-973cf9be781a.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Pure Cotton\">\n            <span style=\"font-weight: 600;\">Pure Cotton</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Hand Woven' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #d5f2df; background-color: #f6fff5; margin-bottom: 5px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/hand-woven_245c9de2-4c0c-4207-81db-6b826019fc7a.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Handwoven\">\n            <span style=\"font-weight: 600;\">Handwoven</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Hand Embroidery' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #d5f2df; background-color: #f6fff5; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/hand-stitched_1e8fc4c7-d53d-4308-bae3-9ddf0248fedb.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Hand Embroidered\">\n            <span style=\"font-weight: 600;\">Hand Embroidered</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Hand Paint' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #d5f2df; background-color: #f6fff5; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/hand-painted_7b3bbdb2-3a9a-4e30-980f-da9cf87397a1.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Hand Painted\">\n            <span style=\"font-weight: 600;\">Hand Painted</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Print' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #d5f2df; background-color: #f6fff5; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/printed_495e220b-a25e-4d94-b585-4eb282e1fde3.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Printed\">\n            <span style=\"font-weight: 600;\">Printed</span>\n          </li>\n        {%- endif -%}\n        <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #fce9e3; background-color: #fff7f2; margin-bottom: 6px;\">\n          <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/fall-pico_354c6f50-c915-453a-82c5-e5812eecf41b.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Fall & Pico Ready\">\n          <span style=\"font-weight: 600;\">Fall & Pico Ready</span>\n        </li>\n\n        {%- if bp_value contains 'Contrast' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #dfe2e7; background-color: #f5f6f7; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/contrast_41c16f34-c484-4dc0-942e-e7fb084f512a.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Contrast Blouse Piece\">\n            <span style=\"font-weight: 600;\">Contrast Blouse Piece</span>\n          </li> <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #fce9e3; background-color: #fff7f2; margin-bottom: 6px;\">\n              <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/blouse-stitching.webp?v=1747618807\" width=\"40\" height=\"40\" alt=\"Stitched Designer Blouse Option\">\n              <span style=\"font-weight: 600;\">Stitched Designer Blouse Option</span>\n            </li>\n        {%- endif -%}\n\n        {%- if bp_value contains 'Matching' -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #dfe2e7; background-color: #f5f6f7; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/matching_d62abb0d-7c6f-487c-90df-48567b2a2b8c.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Matching Blouse Piece\">\n            <span style=\"font-weight: 600;\">Matching Blouse Piece</span>\n          </li> <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #fce9e3; background-color: #fff7f2; margin-bottom: 6px;\">\n              <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/blouse-stitching.webp?v=1747618807\" width=\"40\" height=\"40\" alt=\"Stitched Designer Blouse Option\">\n              <span style=\"font-weight: 600;\">Stitched Designer Blouse Option</span>\n            </li>\n        {%- endif -%}<li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #fce9e3; background-color: #fff7f2; margin-bottom: 6px;\">\n              <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/pre-stitched.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Pre-Stitched Saree Option\">\n              <span style=\"font-weight: 600;\">Pre-Stitched Saree Option <span style=\"color: red; font-size: 12px; font-weight: bold; margin-left: 6px; background: #fff0f0; padding: 2px 6px; border-radius: 4px;\">NEW</span></span>\n            </li>\n\n        {%- if top_border != null -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #dfe2e7; background-color: #f5f6f7; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/top-border-icon.jpg?v=1748972755\" width=\"40\" height=\"40\" alt=\"Top Border\">\n            <span style=\"font-weight: 600;\">Top Border Width: {{top_border.value}} / {{ top_border.value.value | times:2.54 | round: 2}} cm</span>\n          </li>\n        {%- endif -%}\n\n        {%- if bottom_border != null -%}\n          <li style=\"display: flex; align-items: center; gap: 10px; padding: 5px 14px; border-radius: 8px; border: 2px solid #dfe2e7; background-color: #f5f6f7; margin-bottom: 6px;\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/bottom-border-icon.jpg?v=1748972776\" width=\"40\" height=\"40\" alt=\"Bottom Border\">\n            <span style=\"font-weight: 600;\">Bottom Border Width: {{bottom_border.value}} / {{ bottom_border.value.value | times:2.54 | round: 2}} cm</span>\n          </li>\n        {%- endif -%}\n      </ul>\n<div class=\"sku-number\" id=\"customization-note\" style=\"display: block;\"><strong>SKU: {{ product.variants.first.sku }} </strong></div>\n\n  </div>\n    </div>\n   \n\n  <style>\n .ivy-highlights-wrapper {\n  text-align: center;\n  margin: 40px auto 20px;\n}\n\n.ivy-highlights-box {\n  position: relative;\n  border: 1.5px solid #b7499b;\n  border-radius: 10px;\n  background: #fff;\n  padding: 30px 10px 10px; /* leave space for label */\n}\n\n.ivy-highlights-header {\n  position: absolute;\n  top: 0;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: #fefaf8;\n  color: #4b0000;\n  font-size: 1.4rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  padding: 6px 20px;\n  border: 2px solid #b7499b;\n  border-radius: 10px;\n  font-family: 'Poppins', sans-serif;\n  margin: 0;\n  z-index: 2;\n}\n.sku-number {\n  flex-basis: 100%;\n  font-size: 14px;\n  text-align: center;\n  color: #FF0000;\n  background: #f7f7f7;\n  padding: 4px 8px;\n  border-radius: 6px;\n  margin-top: 5px;\n}\n  </style>\n{%- endif -%}",
+                "text": "{%- if product.type == 'Saree' -%}\n  {% assign bottom_border = product.metafields.custom.bottom_border_width %}\n  {% assign top_border = product.metafields.custom.top_border_width %}\n  {% assign fabric_value = product.metafields.saree.fabric_type | metafield_text %}\n  {% assign work_value = product.metafields.saree.new_work | metafield_text %}\n  {% assign bp_value = product.metafields.saree.BlousePiece | metafield_text %}\n\n  {%- assign is_mto = false -%}\n  {%- for t in product.tags -%}\n    {%- assign tl = t | downcase -%}\n    {%- if tl == 'mto' -%}{%- assign is_mto = true -%}{%- endif -%}\n  {%- endfor -%}\n  {%- assign mto_days = product.metafields.custom.mto_days | metafield_text | default: '8 - 10' -%}\n\n  <div class=\"ivy-highlights-wrapper\">\n    <h4 class=\"ivy-highlights-header\">Saree Highlights</h4>\n\n    <div class=\"ivy-highlights-box\">\n      <ul class=\"ivy-badge-list\">\n\n        {%- if is_mto -%}\n          <li class=\"ivy-badge ivy-badge--mto\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/shipping-time.webp?v=1788015377\" width=\"40\" height=\"40\" alt=\"Made to Order\" loading=\"lazy\">\n            <span><strong>Shipping time: {{ mto_days }} business days</strong> </span>\n          </li>\n        {%- endif -%}\n\n        {%- if fabric_value contains 'Silk Mark' -%}\n          <li class=\"ivy-badge ivy-badge--green\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/Silk-Mark-Product.jpg?v=1753640761\" width=\"40\" height=\"40\" alt=\"Silk Mark Certified\" loading=\"lazy\">\n            <span>Silk Mark Certified</span>\n          </li>\n        {%- endif -%}\n\n        {%- if fabric_value contains 'Cotton' -%}\n          <li class=\"ivy-badge ivy-badge--green\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/Pure-Cotton_49865569-8059-47e0-9cac-973cf9be781a.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Pure Cotton\" loading=\"lazy\">\n            <span>Pure Cotton</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Hand Woven' -%}\n          <li class=\"ivy-badge ivy-badge--green\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/hand-woven_245c9de2-4c0c-4207-81db-6b826019fc7a.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Handwoven\" loading=\"lazy\">\n            <span>Handwoven</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Hand Embroidery' -%}\n          <li class=\"ivy-badge ivy-badge--green\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/hand-stitched_1e8fc4c7-d53d-4308-bae3-9ddf0248fedb.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Hand Embroidered\" loading=\"lazy\">\n            <span>Hand Embroidered</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Hand Paint' -%}\n          <li class=\"ivy-badge ivy-badge--green\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/hand-painted_7b3bbdb2-3a9a-4e30-980f-da9cf87397a1.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Hand Painted\" loading=\"lazy\">\n            <span>Hand Painted</span>\n          </li>\n        {%- endif -%}\n\n        {%- if work_value contains 'Print' -%}\n          <li class=\"ivy-badge ivy-badge--green\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/printed_495e220b-a25e-4d94-b585-4eb282e1fde3.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Printed\" loading=\"lazy\">\n            <span>Printed</span>\n          </li>\n        {%- endif -%}\n\n        <li class=\"ivy-badge ivy-badge--warm\">\n          <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/fall-pico_354c6f50-c915-453a-82c5-e5812eecf41b.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Fall &amp; Pico Ready\" loading=\"lazy\">\n          <span>Fall &amp; Pico Ready</span>\n        </li>\n\n        {%- if bp_value contains 'Contrast' -%}\n          <li class=\"ivy-badge ivy-badge--grey\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/contrast_41c16f34-c484-4dc0-942e-e7fb084f512a.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Contrast Blouse Piece\" loading=\"lazy\">\n            <span>Contrast Blouse Piece</span>\n          </li>\n        {%- endif -%}\n\n        {%- if bp_value contains 'Matching' -%}\n          <li class=\"ivy-badge ivy-badge--grey\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/matching_d62abb0d-7c6f-487c-90df-48567b2a2b8c.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Matching Blouse Piece\" loading=\"lazy\">\n            <span>Matching Blouse Piece</span>\n          </li>\n        {%- endif -%}\n\n        {%- if bp_value contains 'Contrast' or bp_value contains 'Matching' -%}\n          <li class=\"ivy-badge ivy-badge--warm\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/blouse-stitching.webp?v=1747618807\" width=\"40\" height=\"40\" alt=\"Stitched Designer Blouse Option\" loading=\"lazy\">\n            <span>Stitched Designer Blouse Option</span>\n          </li>\n        {%- endif -%}\n\n        <li class=\"ivy-badge ivy-badge--warm\">\n          <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/pre-stitched.webp?v=1747610113\" width=\"40\" height=\"40\" alt=\"Pre-Stitched Saree Option\" loading=\"lazy\">\n          <span>Pre-Stitched Saree Option <span class=\"ivy-new-tag\">NEW</span></span>\n        </li>\n\n        {%- if top_border -%}\n          <li class=\"ivy-badge ivy-badge--grey\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/top-border-icon.jpg?v=1748972755\" width=\"40\" height=\"40\" alt=\"Top Border\" loading=\"lazy\">\n            <span>Top Border Width: {{ top_border.value }} / {{ top_border.value.value | times: 2.54 | round: 2 }} cm</span>\n          </li>\n        {%- endif -%}\n\n        {%- if bottom_border -%}\n          <li class=\"ivy-badge ivy-badge--grey\">\n            <img src=\"https://cdn.shopify.com/s/files/1/1469/7362/files/bottom-border-icon.jpg?v=1748972776\" width=\"40\" height=\"40\" alt=\"Bottom Border\" loading=\"lazy\">\n            <span>Bottom Border Width: {{ bottom_border.value }} / {{ bottom_border.value.value | times: 2.54 | round: 2 }} cm</span>\n          </li>\n        {%- endif -%}\n\n      </ul>\n\n      {%- if product.variants.first.sku != blank -%}\n        <div class=\"sku-number\"><strong>SKU: {{ product.variants.first.sku }}</strong></div>\n      {%- endif -%}\n    </div>\n  </div>\n\n  <style>\n    .ivy-highlights-wrapper {\n      text-align: center;\n      margin: 40px auto 20px;\n      position: relative;\n    }\n\n    .ivy-highlights-box {\n      position: relative;\n      border: 1.5px solid #b7499b;\n      border-radius: 10px;\n      background: #fff;\n      padding: 30px 10px 10px;\n    }\n\n    .ivy-highlights-header {\n      position: absolute;\n      top: 0;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      background: #fefaf8;\n      color: #4b0000;\n      font-size: 1.4rem;\n      font-weight: 700;\n      text-transform: uppercase;\n      padding: 6px 20px;\n      border: 2px solid #b7499b;\n      border-radius: 10px;\n      font-family: 'Poppins', sans-serif;\n      margin: 0;\n      z-index: 2;\n    }\n\n    .ivy-badge-list {\n      list-style: none;\n      padding: 0;\n      margin: 0;\n    }\n\n    .ivy-badge {\n      display: flex;\n      align-items: center;\n      gap: 10px;\n      padding: 5px 14px;\n      border-radius: 8px;\n      border: 2px solid transparent;\n      margin-bottom: 6px;\n      text-align: left;\n    }\n\n    .ivy-badge span {\n      font-weight: 600;\n    }\n\n    .ivy-badge--green {\n      border-color: #d5f2df;\n      background-color: #f6fff5;\n    }\n\n    .ivy-badge--warm {\n      border-color: #fce9e3;\n      background-color: #fff7f2;\n    }\n\n    .ivy-badge--grey {\n      border-color: #dfe2e7;\n      background-color: #f5f6f7;\n    }\n\n    .ivy-badge--mto {\n      border-color: #f5c4b3;\n      background-color: #faece7;\n      padding: 8px 14px;\n      margin-bottom: 10px;\n    }\n\n    .ivy-badge--mto span {\n      font-weight: 400;\n      color: #4a1b0c;\n    }\n\n    .ivy-badge--mto strong {\n      font-weight: 600;\n    }\n\n    .ivy-new-tag {\n      color: red;\n      font-size: 12px;\n      font-weight: bold;\n      margin-left: 6px;\n      background: #fff0f0;\n      padding: 2px 6px;\n      border-radius: 4px;\n    }\n\n    .sku-number {\n      font-size: 14px;\n      text-align: center;\n      color: #FF0000;\n      background: #f7f7f7;\n      padding: 4px 8px;\n      border-radius: 6px;\n      margin-top: 5px;\n    }\n  </style>\n{%- endif -%}",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
@@ -467,6 +467,71 @@
         "pd_mb": "37px,,37px,"
       }
     },
+    "hero_image_r3HLTF": {
+      "type": "hero-image",
+      "blocks": {
+        "spacer_rdg33H": {
+          "type": "spacer",
+          "settings": {
+            "direction": false,
+            "space_lg": 10,
+            "space_md": 10,
+            "space": 10
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "spacer_rdg33H"
+      ],
+      "name": "t:sections.hero-image.name",
+      "settings": {
+        "image": "shopify://shop_images/Blouse-Stitching-PDP-New.jpg",
+        "link_img": "",
+        "target": false,
+        "image_height": "adapt_image",
+        "fixed_height": 860,
+        "image_height_mb": "adapt_image",
+        "fixed_height_mb": 300,
+        "image_behavior": "none",
+        "content_position_type": "container",
+        "position_x": 50,
+        "position_y": 50,
+        "content_position": "center",
+        "alignment": "center",
+        "position_x_mb": 50,
+        "position_y_mb": 50,
+        "content_position_mb": "center",
+        "alignment_mb": "left",
+        "overlay_content": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "background_content": false,
+        "background_content_color": "#fff",
+        "bg_opacity": 0,
+        "box_square": false,
+        "content_rounded": false,
+        "use_border_content": false,
+        "border_color": "#fff",
+        "background_border": "#fff",
+        "border_opacity": 0,
+        "border_style": "none",
+        "border_pd_dk": 0,
+        "padding_vertical": 30,
+        "padding_horizontal": 30,
+        "min_width_content": 350,
+        "border_pd": 0,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "recently-products": {
       "type": "recently-products",
       "blocks": {
@@ -540,71 +605,6 @@
         "mg_mb": "",
         "pd": ",,50px,",
         "pd_mb": ",,40px,"
-      }
-    },
-    "hero_image_r3HLTF": {
-      "type": "hero-image",
-      "blocks": {
-        "spacer_rdg33H": {
-          "type": "spacer",
-          "settings": {
-            "direction": false,
-            "space_lg": 10,
-            "space_md": 10,
-            "space": 10
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "spacer_rdg33H"
-      ],
-      "name": "t:sections.hero-image.name",
-      "settings": {
-        "image": "shopify://shop_images/Blouse-Stitching-PDP-New.jpg",
-        "link_img": "",
-        "target": false,
-        "image_height": "adapt_image",
-        "fixed_height": 860,
-        "image_height_mb": "adapt_image",
-        "fixed_height_mb": 300,
-        "image_behavior": "none",
-        "content_position_type": "container",
-        "position_x": 50,
-        "position_y": 50,
-        "content_position": "center",
-        "alignment": "center",
-        "position_x_mb": 50,
-        "position_y_mb": 50,
-        "content_position_mb": "center",
-        "alignment_mb": "left",
-        "overlay_content": false,
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "background_content": false,
-        "background_content_color": "#fff",
-        "bg_opacity": 0,
-        "box_square": false,
-        "content_rounded": false,
-        "use_border_content": false,
-        "border_color": "#fff",
-        "background_border": "#fff",
-        "border_opacity": 0,
-        "border_style": "none",
-        "border_pd_dk": 0,
-        "padding_vertical": 30,
-        "padding_horizontal": 30,
-        "min_width_content": 350,
-        "border_pd": 0,
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
       }
     }
   },
