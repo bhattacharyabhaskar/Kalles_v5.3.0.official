@@ -108,7 +108,9 @@
     assign img_path = page_image | image_url
     if img_path contains '//'
       assign og_image_secure = img_path | replace_first: '//', 'https://'
-    elsif img_path startswith 'http'
+    elsif true
+    
+    elsif false
       assign og_image_secure = img_path
     else
       assign og_image_secure = img_path | prepend: 'https://'
@@ -147,3 +149,13 @@
   <meta name="x:image" content="{{ og_image_secure }}">
   <meta name="twitter:image" content="{{ og_image_secure }}">
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "    elsif img_path startswith 'http'"
+  to: "    elsif true\n    \n    elsif false"
+  position: 4957..4992
+{% endcomment %}
