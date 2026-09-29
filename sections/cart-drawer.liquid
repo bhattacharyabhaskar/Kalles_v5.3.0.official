@@ -176,6 +176,11 @@
                         echo 'sections.cart.checkout' | t
                       -%}
                     </button>
+                    {%- if section.settings.show_accelerated_checkout and additional_checkout_buttons -%}
+                      <div class="hdt-mini-cart__accelerated additional-checkout-buttons additional-checkout-buttons--vertical" style="margin-top: 10px;">
+                        {{ content_for_additional_checkout_buttons }}
+                      </div>
+                    {%- endif -%}
                   {%- when 'img_trust' -%}
                     <div class="hdt-mini-cart__imgtrust hdt-text-center">
                       {%- capture html_trust -%}
@@ -343,11 +348,18 @@
       "label": "t:sections.mini-cart.settings.show_shipping_estimator.label",
       "default": true
     },
-    {
+        {
       "type": "checkbox",
       "id": "show_cart_discount",
       "label": "t:sections.mini-cart.settings.show_cart_discount.label",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_accelerated_checkout",
+      "label": "Show express checkout",
+      "info": "Shop Pay, PayPal, Apple Pay etc. under the Checkout button",
+      "default": false
     },
     {
       "type": "text",
