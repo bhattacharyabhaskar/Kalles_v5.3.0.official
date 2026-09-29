@@ -12,6 +12,138 @@
     "slideshow_EVrUzi": {
       "type": "slideshow",
       "blocks": {
+        "slide_item_ftpiW4": {
+          "type": "_slide-item",
+          "name": "t:sections.slideshow.blocks.slide.name",
+          "settings": {
+            "image": "shopify://shop_images/indyvogue-hero-1920x1080.webp",
+            "url": "",
+            "banner_target": false,
+            "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
+            "content_position_type": "container",
+            "position_x": 50,
+            "position_y": 50,
+            "content_position": "center-start",
+            "alignment": "left",
+            "position_x_mb": 50,
+            "position_y_mb": 50,
+            "content_position_mb": "center",
+            "alignment_mb": "left",
+            "overlay_content": false,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background_content": true,
+            "background_content_color": "#DCC475",
+            "bg_opacity": 0,
+            "box_square": false,
+            "content_rounded": false,
+            "use_border_content": false,
+            "border_color": "#fff",
+            "background_border": "#fff",
+            "border_opacity": 0,
+            "border_style": "none",
+            "border_pd_dk": 0,
+            "padding_vertical": 30,
+            "padding_horizontal": 30,
+            "min_width_content": 350,
+            "border_pd": 0
+          },
+          "blocks": {
+            "text_XJ3HMa": {
+              "type": "text",
+              "settings": {
+                "text": "<p>MA ASCHEN</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "2xl",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
+            "spacer_XMYbfw": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 6,
+                "space_md": 6,
+                "space": 6
+              },
+              "blocks": {}
+            },
+            "heading_37xDGX": {
+              "type": "heading",
+              "settings": {
+                "heading": "<p><strong>Timeless Red. Timeless You.</strong></p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "line_height": "hdt-lh-1",
+                "font_weight": "normal",
+                "heading_size": "h1",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            },
+            "spacer_Xt9nh4": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 20,
+                "space_md": 16,
+                "space": 10
+              },
+              "blocks": {}
+            },
+            "button_NBV8Cr": {
+              "type": "button",
+              "settings": {
+                "label": "Shop Now",
+                "link": "shopify://collections/festival-collection",
+                "open_in_new_tab": false,
+                "full_width": false,
+                "btn_style": "hdt-btn-hover-accent",
+                "color_btn": "#fff",
+                "color_hover_btn": "#fff",
+                "background_btn": "#222",
+                "background_hover_btn": "#333",
+                "border_w_btn": "",
+                "border_btn": "#222",
+                "border_hover_btn": "#333",
+                "size": "xl",
+                "text_size": "hdt-text-base",
+                "font_weight": "semibold",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40,
+                "rounded": "",
+                "icon": "none",
+                "icon_position": "after",
+                "icon_height": 16,
+                "icon_spacing": 5
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_XJ3HMa",
+            "spacer_XMYbfw",
+            "heading_37xDGX",
+            "spacer_Xt9nh4",
+            "button_NBV8Cr"
+          ]
+        },
         "slide_item_GJUjrM": {
           "type": "_slide-item",
           "settings": {
@@ -278,6 +410,7 @@
         }
       },
       "block_order": [
+        "slide_item_ftpiW4",
         "slide_item_GJUjrM",
         "slide_item_GJUjrL"
       ],
@@ -287,7 +420,7 @@
         "image_height_mb": "adapt_image_first",
         "fixed_height_mb": 400,
         "is_fade": false,
-        "loop": true,
+        "loop": false,
         "autoplay": 6,
         "pauseOnHover": true,
         "navUI": true,
@@ -912,22 +1045,6 @@
         "pd_mb": ""
       }
     },
-    "custom_line_tUjTYw": {
-      "type": "custom-line",
-      "name": "t:sections.custom_line.name",
-      "settings": {
-        "line_style": "solid",
-        "line_width": 100,
-        "line_height": 3,
-        "line_cl": "#ebebeb",
-        "line_pos": "center",
-        "full_width": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
-      }
-    },
     "banner_VyWanM": {
       "type": "banners",
       "blocks": {
@@ -1353,6 +1470,22 @@
         "background_opacity": 0,
         "section_layout": "container",
         "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
+    "custom_line_tUjTYw": {
+      "type": "custom-line",
+      "name": "t:sections.custom_line.name",
+      "settings": {
+        "line_style": "solid",
+        "line_width": 100,
+        "line_height": 3,
+        "line_cl": "#ebebeb",
+        "line_pos": "center",
+        "full_width": false,
         "mg": ",,50px,",
         "mg_mb": ",,30px,",
         "pd": "",
