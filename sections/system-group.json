@@ -69,6 +69,7 @@
         "show_gift_wrap": false,
         "show_shipping_estimator": false,
         "show_cart_discount": false,
+        "show_accelerated_checkout": true,
         "discount_error_message": "Enter a valid discount code",
         "show_cart_complementary": false,
         "heading": "Customers also bought",
