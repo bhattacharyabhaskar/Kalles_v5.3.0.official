@@ -177,8 +177,33 @@
                       -%}
                     </button>
                     {%- if section.settings.show_accelerated_checkout and additional_checkout_buttons -%}
-                      <div class="hdt-mini-cart__accelerated additional-checkout-buttons additional-checkout-buttons--vertical" style="margin-top: 10px;">
-                        {{ content_for_additional_checkout_buttons }}
+                      <style>
+                        .ivy-express { margin-top: 14px; }
+                        .ivy-express__divider {
+                          display: flex; align-items: center; gap: 10px;
+                          margin-bottom: 10px;
+                          font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+                          opacity: 0.6;
+                        }
+                        .ivy-express__divider::before,
+                        .ivy-express__divider::after {
+                          content: ""; flex: 1; height: 1px; background: currentColor; opacity: 0.35;
+                        }
+                        .ivy-express shopify-accelerated-checkout-cart {
+                          --shopify-accelerated-checkout-button-block-size: 40px;
+                          --shopify-accelerated-checkout-button-inline-size: 40px;
+                          --shopify-accelerated-checkout-button-border-radius: 20px;
+                          --shopify-accelerated-checkout-button-box-shadow: none;
+                          --shopify-accelerated-checkout-inline-alignment: center;
+                          --shopify-accelerated-checkout-row-gap: 8px;
+                          --shopify-accelerated-checkout-skeleton-background-color: #efe9e1;
+                        }
+                      </style>
+                      <div class="ivy-express">
+                        <div class="ivy-express__divider">or pay with</div>
+                        <div class="additional-checkout-buttons{% if section.settings.accelerated_layout == 'stack' %} additional-checkout-buttons--vertical{% endif %}">
+                          {{ content_for_additional_checkout_buttons }}
+                        </div>
                       </div>
                     {%- endif -%}
                   {%- when 'img_trust' -%}
@@ -360,6 +385,16 @@
       "label": "Show express checkout",
       "info": "Shop Pay, PayPal, Apple Pay etc. under the Checkout button",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "accelerated_layout",
+      "label": "Express checkout layout",
+      "default": "row",
+      "options": [
+        { "value": "row", "label": "Row (compact logos)" },
+        { "value": "stack", "label": "Stack (full width)" }
+      ]
     },
     {
       "type": "text",
