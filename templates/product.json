@@ -400,7 +400,7 @@
         "tab_collection_rP8yCM": {
           "type": "_tab-collection",
           "settings": {
-            "title": "Exclusive Stoles",
+            "title": "",
             "collection": "stole",
             "hdt_show_icon_image": false,
             "hdt_icon_spacing": 8
@@ -472,25 +472,7 @@
             "heading_gap": 15,
             "margin_bottom": 30
           },
-          "blocks": {
-            "heading_section_neKzUk": {
-              "type": "_heading_section",
-              "name": "t:blocks.section_heading.name",
-              "settings": {
-                "heading": "Exclusive",
-                "line_height": "",
-                "heading_size": "h5",
-                "text_color": "hdt-s-text",
-                "font_size_heading_lg": 50,
-                "font_size_heading": 24,
-                "letter_spacing_heading": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_section_neKzUk"
-          ]
+          "blocks": {}
         }
       },
       "block_order": [
