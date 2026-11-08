@@ -72,9 +72,15 @@
         "show_accelerated_checkout": false,
         "accelerated_layout": "row",
         "discount_error_message": "Enter a valid discount code",
-        "show_cart_complementary": false,
+        "show_cart_complementary": true,
         "heading": "Customers also bought",
-        "product_list": [],
+        "product_list": [
+          "deep-rust-color-pashmina-shawl-with-kalamkari-and-ari-work",
+          "fine-wool-dusty-beige-color-sozni-embroidery-work-stole",
+          "fine-wool-offwhite-color-stole-with-sozni-embroidery-work",
+          "fine-wool-stole-in-carmine-red-color-with-ari-embroidery-work",
+          "fine-woollen-stole-in-red-color-with-golden-and-silver-zari-ari-embroidery-work"
+        ],
         "replaces_products_selected": true,
         "limit": 5
       }
