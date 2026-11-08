@@ -394,6 +394,129 @@
         "space": 50
       }
     },
+    "tabs_collection_XyYJKV": {
+      "type": "tabs-collection",
+      "blocks": {
+        "tab_collection_rP8yCM": {
+          "type": "_tab-collection",
+          "settings": {
+            "title": "Exclusive Stoles",
+            "collection": "stole",
+            "hdt_show_icon_image": false,
+            "hdt_icon_spacing": 8
+          },
+          "blocks": {
+            "product_carousel_Mixyw6": {
+              "type": "_product-carousel",
+              "settings": {
+                "collection": "stole",
+                "products_count": 8,
+                "product_list": [],
+                "pr_border": "none",
+                "product_des": "1",
+                "image_ratio": "adapt_image",
+                "image_size": true,
+                "show_vendor": false,
+                "show_sku": true,
+                "hdt_slide_center": false,
+                "hdt_opacity_out_container": false,
+                "col_dk": "4",
+                "col_tb": "3",
+                "col_mb": "2",
+                "space_items": "x",
+                "pagination": true,
+                "paginate_pos": "center",
+                "dis_pagination": 30,
+                "btn_label": "",
+                "btn_style": "",
+                "icon": "none",
+                "size": "m",
+                "btn_fw": "medium",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40,
+                "loop": false,
+                "autoplay": 0,
+                "pauseOnHover": false,
+                "navUI": false,
+                "nav_position": "default",
+                "nav_visible": "always",
+                "nav_style": "default",
+                "nav_shape": "default",
+                "nav_size": "small",
+                "nav_hide_mobile": false,
+                "dotUI": false,
+                "pag_style": "default",
+                "pag_rounded": true,
+                "pag_space": 10,
+                "pag_mgt": 10,
+                "only_show_mobile": false,
+                "pag_hide_mobile": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "product_carousel_Mixyw6"
+          ]
+        },
+        "tabs-collection-heading": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "1",
+            "horizontal": false,
+            "alignment": "left",
+            "heading_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {
+            "heading_section_neKzUk": {
+              "type": "_heading_section",
+              "name": "t:blocks.section_heading.name",
+              "settings": {
+                "heading": "Exclusive",
+                "line_height": "",
+                "heading_size": "h5",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_section_neKzUk"
+          ]
+        }
+      },
+      "block_order": [
+        "tab_collection_rP8yCM"
+      ],
+      "name": "t:sections.tabs_collections.carousel_name",
+      "settings": {
+        "enable_tabs_on_heading": false,
+        "tabs_des": "base",
+        "tabs_list_pos": "center",
+        "tab_item_size": "lg",
+        "tab_item_border": "solid",
+        "border_width": 2,
+        "spacing_tabs_items": 30,
+        "tabs_head_spacing": 30,
+        "colors_by_section": false,
+        "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "blocks": {
@@ -606,111 +729,6 @@
         "mg_mb": "",
         "pd": ",,50px,",
         "pd_mb": ",,40px,"
-      }
-    },
-    "tabs_collection_XyYJKV": {
-      "type": "tabs-collection",
-      "blocks": {
-        "tab_collection_rP8yCM": {
-          "type": "_tab-collection",
-          "settings": {
-            "title": "Exclusive Stoles",
-            "collection": "stole",
-            "hdt_show_icon_image": false,
-            "hdt_icon_spacing": 8
-          },
-          "blocks": {
-            "product_carousel_Mixyw6": {
-              "type": "_product-carousel",
-              "settings": {
-                "collection": "stole",
-                "products_count": 8,
-                "product_list": [],
-                "pr_border": "none",
-                "product_des": "1",
-                "image_ratio": "adapt_image",
-                "image_size": true,
-                "show_vendor": false,
-                "show_sku": true,
-                "hdt_slide_center": false,
-                "hdt_opacity_out_container": false,
-                "col_dk": "4",
-                "col_tb": "3",
-                "col_mb": "2",
-                "space_items": "x",
-                "pagination": true,
-                "paginate_pos": "center",
-                "dis_pagination": 30,
-                "btn_label": "",
-                "btn_style": "",
-                "icon": "none",
-                "size": "m",
-                "btn_fw": "medium",
-                "font_size_btn": 14,
-                "padding_btn": 30,
-                "min_width_btn": 100,
-                "min_width_dt_btn": 100,
-                "min_height_btn": 40,
-                "loop": false,
-                "autoplay": 0,
-                "pauseOnHover": false,
-                "navUI": false,
-                "nav_position": "default",
-                "nav_visible": "always",
-                "nav_style": "default",
-                "nav_shape": "default",
-                "nav_size": "small",
-                "nav_hide_mobile": false,
-                "dotUI": false,
-                "pag_style": "default",
-                "pag_rounded": true,
-                "pag_space": 10,
-                "pag_mgt": 10,
-                "only_show_mobile": false,
-                "pag_hide_mobile": false
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_carousel_Mixyw6"
-          ]
-        },
-        "tabs-collection-heading": {
-          "type": "section-heading",
-          "static": true,
-          "settings": {
-            "design_heading": "1",
-            "horizontal": false,
-            "alignment": "left",
-            "heading_gap": 15,
-            "margin_bottom": 30
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "tab_collection_rP8yCM"
-      ],
-      "name": "t:sections.tabs_collections.carousel_name",
-      "settings": {
-        "enable_tabs_on_heading": false,
-        "tabs_des": "base",
-        "tabs_list_pos": "center",
-        "tab_item_size": "lg",
-        "tab_item_border": "solid",
-        "border_width": 2,
-        "spacing_tabs_items": 30,
-        "tabs_head_spacing": 30,
-        "colors_by_section": false,
-        "color_scheme": "",
-        "background_opacity": 0,
-        "section_layout": "container",
-        "hdt_background_parallax": false,
-        "mg": ",,50px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": ""
       }
     }
   },
