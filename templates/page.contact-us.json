@@ -15,7 +15,7 @@
         "heading_liquid_gEADwf": {
           "type": "_heading_liquid",
           "settings": {
-            "text": "{{ page.title }}",
+            "text": "Contact us",
             "line_height": "hdt-lh-1",
             "font_family": "hdt-font-1",
             "text_size": "2xl",
@@ -79,7 +79,7 @@
             "text_MXnny3": {
               "type": "text",
               "settings": {
-                "text": "<h3>DROP US A LINE</h3>",
+                "text": "<h3>GET IN TOUCH</h3>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
