@@ -2,3 +2,6 @@
 **/.DS_Store
 node_modules/
 .shopifyignore
+.env
+.env.*
+!.env.example

@@ -10,6 +10,7 @@
 {%- liquid
   assign is_sale_collection = false
   assign is_suite_collection = false
+  assign is_excluded_collection = false
   for collection in product.collections
     if collection.handle == 'sale'
       assign is_sale_collection = true
@@ -17,10 +18,22 @@
     if collection.handle == 'suits-dresses'
       assign is_suite_collection = true
     endif
+    for excluded_col in settings.excluded_discount_collections
+      if collection.id == excluded_col.id
+        assign is_excluded_collection = true
+      endif
+    endfor
   endfor
+  if is_excluded_collection
+    assign is_sale_collection = false
+    assign is_suite_collection = false
+  endif
 -%}
 
-{%- if is_sale_collection -%}
+{%- if is_excluded_collection -%}
+  {%- comment -%} No discount messaging for excluded collections. {%- endcomment -%}
+
+{%- elsif is_sale_collection -%}
   <div class="ivy-discount-bar ivy-discount-bar--sale">
     😎 Incredible Markdown Sale!
   </div>
@@ -41,11 +54,15 @@
   {%- for item in cart.items -%}
     {%- assign item_in_sale = false -%}
     {%- assign item_in_suite = false -%}
+    {%- assign item_in_excluded_collection = false -%}
     {%- for col in item.product.collections -%}
       {%- if col.handle == 'sale' -%}{%- assign item_in_sale = true -%}{%- endif -%}
       {%- if col.handle == 'suits-dresses' -%}{%- assign item_in_suite = true -%}{%- endif -%}
+      {%- for excluded_col in settings.excluded_discount_collections -%}
+        {%- if col.id == excluded_col.id -%}{%- assign item_in_excluded_collection = true -%}{%- endif -%}
+      {%- endfor -%}
     {%- endfor -%}
-    {%- unless item_in_sale or item_in_suite -%}
+    {%- unless item_in_sale or item_in_suite or item_in_excluded_collection -%}
       {%- assign cart_total = cart_total | plus: item.line_price -%}
     {%- endunless -%}
   {%- endfor -%}

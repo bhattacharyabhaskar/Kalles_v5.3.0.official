@@ -2451,6 +2451,12 @@
       "label": "Suites & Dresses Discount",
       "default": "10%",
       "info": "Enter the discount for the Suites & Dresses collection (e.g., 10% or a fixed amount like 500)."
+    },
+    {
+      "type": "collection_list",
+      "id": "excluded_discount_collections",
+      "label": "Excluded Collections",
+      "info": "Products in these collections will not receive custom theme discounts or contribute to the tier discount total."
     }
   ]
 }

@@ -6,6 +6,7 @@
   - price_cents: {Number} Product price in cents (required)
   - is_sale_collection: {Boolean} True if product is in 'sale' collection
   - is_suite_collection: {Boolean} True if product is in 'suits-dresses' collection
+  - is_excluded_collection: {Boolean} True if product is in an admin-selected excluded collection
 
   Returns (via capture):
   <!-- IVY PRICE START -->{{ final_price_cents }}<!-- IVY PRICE END -->
@@ -15,7 +16,9 @@
   assign final_price_cents = price_cents
 -%}
 
-{%- if is_suite_collection -%}
+{%- if is_excluded_collection -%}
+  {%- assign final_price_cents = price_cents -%}
+{%- elsif is_suite_collection -%}
 
   {%- assign suites_discount = settings.suites_dresses_discount | default: '10%' -%}
   {%- if suites_discount contains '%' -%}

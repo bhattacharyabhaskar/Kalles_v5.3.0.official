@@ -70,12 +70,16 @@
 {%- unless product.price_varies -%}
   {%- assign ivy_is_sale = false -%}
   {%- assign ivy_is_suite = false -%}
+  {%- assign ivy_is_excluded = false -%}
   {%- for col in product.collections -%}
     {%- if col.handle == 'sale' -%}{%- assign ivy_is_sale = true -%}{%- endif -%}
     {%- if col.handle == 'suits-dresses' -%}{%- assign ivy_is_suite = true -%}{%- endif -%}
+    {%- for excluded_col in settings.excluded_discount_collections -%}
+      {%- if col.id == excluded_col.id -%}{%- assign ivy_is_excluded = true -%}{%- endif -%}
+    {%- endfor -%}
   {%- endfor -%}
    {%- capture ivy_raw -%}
-     {%- render 'ivy-discount-calc', price_cents: price, is_sale_collection: ivy_is_sale, is_suite_collection: ivy_is_suite -%}
+     {%- render 'ivy-discount-calc', price_cents: price, is_sale_collection: ivy_is_sale, is_suite_collection: ivy_is_suite, is_excluded_collection: ivy_is_excluded -%}
    {%- endcapture -%}
    {%- assign ivy_final = ivy_raw | split: '<!-- IVY PRICE START -->' | last | split: '<!-- IVY PRICE END -->' | first | strip | plus: 0 -%}
    {%- if ivy_final > 0 and ivy_final != price -%}
