@@ -148,6 +148,7 @@
         "slide_item_ftpiW4": {
           "type": "_slide-item",
           "name": "t:sections.slideshow.blocks.slide.name",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Festive_Diya_Portrait_in_Silk_Saree.webp",
             "image_mb": "shopify://shop_images/Festive_Diya_Offering_Portrait.webp",
@@ -280,6 +281,7 @@
         },
         "slide_item_GJUjrM": {
           "type": "_slide-item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/banner-03-gold-pink-twirl.webp",
             "image_mb": "shopify://shop_images/mobile-03-gold-pink-twirl.webp",
@@ -412,6 +414,7 @@
         },
         "slide_item_GJUjrL": {
           "type": "_slide-item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/banner-02-three-patrons-field_807f30ae-e3de-453d-b389-ce22ab96f112.webp",
             "image_mb": "shopify://shop_images/mobile-02-three-patrons.webp",
